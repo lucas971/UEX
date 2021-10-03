@@ -13,7 +13,7 @@ const clock = new THREE.Clock()
 
 const noActiveScene = -1
 const cityActiveScene = 0
-const cameraSize = 30
+const cameraSize = 25
 //#endregion
 
 //#region VARIABLES
@@ -43,7 +43,7 @@ const setup = () => {
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( canvas.clientWidth, canvas.clientHeight );
     renderer.shadowMapEnabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap
+    renderer.shadowMapType = THREE.PCFSoftShadowMap;
     canvas.appendChild( renderer.domElement );
     window.addEventListener('resize', Resize)
     

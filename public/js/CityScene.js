@@ -55,9 +55,18 @@ export const resize = (d) => {
 const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
     
+    gltf.scene.traverse((obj) => {
+        if (obj.castShadow !== undefined) {
+            if (obj.name!== "Eau" && !obj.name.includes("Sol") && obj.name !== "Terrain") {
+                obj.castShadow = true
+                console.log(obj.name)
+            }
+            obj.receiveShadow = true;
+        }
+    });
+    
     d.scene.add(gltf.scene)
-    gltf.scene.castShadow = true
-    gltf.scene.receiveShadow = true
+    
     generateLightning(d)
 
     setCameraPosition(d)
@@ -80,16 +89,22 @@ const setCameraPosition = (d) => {
 
 //Add lighting to the scene
 const generateLightning = (d) => {
-    const color = 0xFFFFFF;
-    const intensity = 4;
     
-    const dirLight = new d.THREE.DirectionalLight(color, intensity)
-   //const light = new d.THREE.AmbientLight(color, intensity/2)
-    dirLight.position.set(0, 10, 0);
-    dirLight.target.position.set(1, -1, -1);
-    dirLight.castShadow = true
-    d.scene.add(dirLight)
-    //d.scene.add(light)
+    const light = new d.THREE.DirectionalLight(0XB9CDFF,7)
+    light.position.set(-100, 120, -100)
+    light.target.position.set(0, -10, 0);
+    light.castShadow = true
+    light.shadow.mapSize.width = 2048
+    light.shadow.mapSize.height = 2048
+    light.shadowCameraRight    =  50;
+    light.shadowCameraLeft     = -50;
+    light.shadowCameraTop      =  50;
+    light.shadowCameraBottom   = -50;
+    light.shadowDarkness = 0.5;
+    
+    const ambient = new d.THREE.AmbientLight(0XB9CDFF,2)
+    d.scene.add(ambient)
+    d.scene.add(light)
 }
 
 //#endregion
