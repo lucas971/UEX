@@ -13,4 +13,4 @@ app.get('/hotspot/:id', (req, res) => {
     res.render("hotspot-" + req.params.id)
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
