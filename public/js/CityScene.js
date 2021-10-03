@@ -1,7 +1,6 @@
 //File managing the main scene : the city view.
 
 //#region IMPORTS
-
 import {UpdateIconsPosition} from "./IconsHandler.js";
 import * as CameraHandler from "./CameraHandler.js"
 //#endregion

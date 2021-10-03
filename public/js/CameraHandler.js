@@ -1,3 +1,8 @@
+//#region IMPORTS
+import {easeInOutCirc, easeInOutSine, easeOutQuad} from "./Ease.js";
+
+//#endregion
+
 //#region MOVEMENT PARAMS
 const panningSpeed = 20
 
@@ -21,7 +26,7 @@ const boundaries = {
 
 //#region TRANSITION PARAMS
 const animationSpeed = 0.5
-const animationZoom = 3
+const animationZoom = 5
 
 let fadeDiv
 let requestedAnimation
@@ -98,8 +103,10 @@ const TryMove = (delta) => {
 
 //#region TRANSITION
 export const RequestTransition = (pos, href) => {
-    ad.initialPos = city.position
-    ad.targetPos = pos
+    ad.initialPos = city.position.clone()
+    ad.targetPos = pos.clone()
+    ad.targetPos.x
+    ad.targetPos.z
     ad.href = href
     ad.state = 0
     requestedAnimation = true
@@ -111,17 +118,26 @@ export const Update = (delta) => {
     if (requestedAnimation) {
         return Animate(delta)
     }
-    return TryMove(delta)
+    //return TryMove(delta)
+    return false
 }
 
 const Animate = (delta) => {
-    city.position.x = ad.initialPos.x * (1 - ad.state/50) - ad.targetPos.x * ad.state/50
-    city.position.z = ad.initialPos.z * (1 - ad.state/50) - ad.targetPos.z * ad.state/50
-    city.position.y = ad.initialPos.y * (1 - ad.state/50) + ad.targetPos.y * ad.state/50
+    
+    const t = easeInOutSine(ad.state)
+    
+    //pos
+    city.position.x = ad.initialPos.x * (1 - t) - ad.targetPos.x * t
+    city.position.z = ad.initialPos.z * (1 - t) - ad.targetPos.z * t
+    city.position.y = ad.initialPos.y * (1 - t) + ad.targetPos.y * t
 
-    camera.zoom = 1 + (animationZoom - 1) * ad.state
+    //zoom
+    camera.zoom = 1 + (animationZoom - 1) * t
     camera.updateProjectionMatrix()
-    UpdateFade(ad.state)
+    
+    //fade
+    const fadeAmount = easeOutQuad(ad.state)
+    UpdateFade(fadeAmount)
     
     ad.state += animationSpeed * delta
     
@@ -141,3 +157,4 @@ const UpdateFade = (newValue) =>{
 }
 
 //#endreion
+
