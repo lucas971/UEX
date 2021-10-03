@@ -1,0 +1,31 @@
+.normalText{
+    font-size: 20px;
+    color: white;
+}
+
+.boldText{
+    font-size: 30px;
+
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width: 600px), (max-height: 800px) {
+    .normalText{
+        font-size: 16px;
+    }
+
+    .boldText{
+        font-size: 22px;
+    }
+}
+
+@media (max-height: 600px) {
+    .normalText{
+        font-size: 12px;
+    }
+
+    .boldText{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "icons": [
+    {
+      "id" : "Quizz1Building",
+      "width": 50,
+      "height": 50,
+      "worldYMod": 0,
+      "type": 0,
+      "htmlData": "hotspot-1-inner.html"
+    },
+    {
+      "id" : "Quizz2Building",
+      "width": 50,
+      "height": 50,
+      "worldYMod": 0,
+      "type": 0,
+      "htmlData": "hotspot-1-inner.html"
+    },
+    {
+      "id" : "Enter1Building",
+      "width": 50,
+      "height": 50,
+      "worldYMod": 0,
+      "type": 1,
+      "htmlData": "hotspot-1-inner.html"
+    }
+  ]
+}
