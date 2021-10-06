@@ -59,7 +59,6 @@ const setupScene = (gltf, d) => {
         if (obj.castShadow !== undefined) {
             if (obj.name!== "Eau" && !obj.name.includes("Sol") && obj.name !== "Terrain") {
                 obj.castShadow = true
-                console.log(obj.name)
             }
             obj.receiveShadow = true;
         }

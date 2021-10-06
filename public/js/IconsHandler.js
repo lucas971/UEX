@@ -45,7 +45,7 @@ export const UpdateIconsPosition = (d) => {
         const toScreen = toScreenPosition(obj, d, icons[i].worldYMod)
         
         icons[i].image.style.left = `${toScreen.x - icons[i].width/2}px`
-        icons[i].image.style.top = `${toScreen.y}px`
+        icons[i].image.style.top = `${toScreen.y - icons[i].height/2}px`
     }
 }
 
@@ -59,18 +59,16 @@ const GenerateHtml = (d) => {
     
     const iconDiv = document.getElementById('icons')
     for (let i = 0; i< icons.length; i++) {
-        icons[i].image = document.createElement('img')
+        icons[i].image = document.createElement('lottie-player')
         icons[i].image.classList.add("icon")
         icons[i].image.style.width = `${icons[i].width}px`
         icons[i].image.style.height = `${icons[i].height}px`
         icons[i].image.style.display = 'inherit'
         icons[i].image.draggable = false
-        if (icons[i].type === 0) {
-            icons[i].image.src = 'icons/dice.svg'
-        }
-        if (icons[i].type === 1) {
-            icons[i].image.src = 'icons/enter.svg'
-        }
+        icons[i].image.autoplay = true
+        icons[i].image.loop = true
+        icons[i].image.mode="normal"
+        icons[i].image.src = "lottie/icon.json"
         icons[i].image.addEventListener('click', () => LaunchHotspot(d.scene.getObjectByName(icons[i].id).position, i))
         iconDiv.appendChild(icons[i].image)
     }
@@ -87,7 +85,6 @@ const LaunchHotspot = (pos, i) => {
     clickedLink = true
 
     RequestTransition(pos, "hotspot/" + icons[i].type)
-    //window.location.href = "hotspot/" + icons[i].type
 }
 
 //#endregion
