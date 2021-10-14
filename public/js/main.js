@@ -3,6 +3,7 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
 import {GLTFLoader} from  'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
 
 import * as CityScene from './CityScene.js'
+import * as InteriorScene from './InteriorScene.js'
 import {InitializeIcons} from "./IconsHandler.js";
 
 //#endregion
@@ -13,6 +14,7 @@ const clock = new THREE.Clock()
 
 const noActiveScene = -1
 const cityActiveScene = 0
+const interiorActiveScene = 1
 const cameraSize = 25
 //#endregion
 
@@ -28,12 +30,7 @@ let activeScene = noActiveScene
 const setup = () => {
     const scene = new THREE.Scene()
     
-    var aspect = window.innerWidth / window.innerHeight;
-    var camera = new THREE.OrthographicCamera( - cameraSize * aspect, cameraSize * aspect, cameraSize, - cameraSize, 0.01, 1000 );
-    scene.add(camera)
-    camera.rotation.order = 'YXZ';
-    camera.rotation.y = - Math.PI / 4;
-    camera.rotation.x = Math.atan( - 1 / Math.sqrt( 2 ) );
+    var camera = null
     
     const renderer = new THREE.WebGLRenderer({antialias: true});
     const canvas = document.getElementById("canvas")
@@ -46,9 +43,7 @@ const setup = () => {
     renderer.shadowMapType = THREE.PCFSoftShadowMap;
     canvas.appendChild( renderer.domElement );
     window.addEventListener('resize', Resize)
-    
     threeData = {THREE, GLTFLoader, clock, scene, camera, renderer, canvas}
-    
 }
 
 //#endregion
@@ -63,10 +58,25 @@ const ClearScene = () => {
 
 const LoadCityScene = () => {
     ClearScene()
+    const aspect = window.innerWidth / window.innerHeight;
+    threeData.camera = new THREE.OrthographicCamera( - cameraSize * aspect, cameraSize * aspect, cameraSize, - cameraSize, 0.01, 1000 )
+    threeData.scene.add(threeData.camera)
+    threeData.camera.rotation.order = 'YXZ'
+    threeData.camera.rotation.y = - Math.PI / 4
+    threeData.camera.rotation.x = Math.atan( - 1 / Math.sqrt( 2 ) )
     CityScene.generateCity(threeData)
     activeScene = cityActiveScene
 }
 
+const LoadInteriorScene = () => {
+    ClearScene()
+    const aspect = window.innerWidth / window.innerHeight;
+    threeData.camera = new THREE.PerspectiveCamera(90, aspect, 1, 1000)
+    threeData.camera.rotation.order = 'XYZ'
+    threeData.scene.add(threeData.camera)
+    InteriorScene.generateInterior(threeData)
+    activeScene = interiorActiveScene
+}
 //#endregion
 
 //#region UPDATE
@@ -75,6 +85,9 @@ const animate = () => {
     requestAnimationFrame( animate );
     if (activeScene === cityActiveScene) {
         CityScene.update(threeData)
+    }
+    else if (activeScene === interiorActiveScene) {
+        InteriorScene.update(threeData)
     }
     render()
 }
@@ -88,12 +101,17 @@ const render = () => {
 //#region RESPONSIVE
 
 const Resize = () => {
-    var aspect = window.innerWidth / window.innerHeight;
-    threeData.camera.left = -cameraSize * aspect
-    threeData.camera.right = cameraSize * aspect
-    threeData.camera.top = cameraSize
-    threeData.camera.bottom = -cameraSize
-    threeData.camera.updateProjectionMatrix()
+    
+    //If we're using an orthographic camera
+    if (activeScene === cityActiveScene) {
+        const aspect = window.innerWidth / window.innerHeight;
+        threeData.camera.left = -cameraSize * aspect
+        threeData.camera.right = cameraSize * aspect
+        threeData.camera.top = cameraSize
+        threeData.camera.bottom = -cameraSize
+        threeData.camera.updateProjectionMatrix()
+    }
+    
     threeData.renderer.setSize(threeData.canvas.clientWidth, threeData.canvas.clientHeight)
     render()
     

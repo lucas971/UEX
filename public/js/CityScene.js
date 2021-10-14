@@ -83,7 +83,7 @@ const setupAnimMixer = (gltf, d) => {
 
 //Place the camera accordingly
 const setCameraPosition = (d) => {
-    d.camera.position.set(-cameraPos,cameraPos,cameraPos)
+    d.camera.position.set(-20,50,20)
 }
 
 //Add lighting to the scene
