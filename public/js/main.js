@@ -1,7 +1,7 @@
 //#region IMPORTS
 import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
 import {GLTFLoader} from  'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
-
+import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js';
 import * as CityScene from './CityScene.js'
 import * as InteriorScene from './InteriorScene.js'
 import {InitializeIcons} from "./IconsHandler.js";
@@ -39,11 +39,20 @@ const setup = () => {
     renderer.setClearColor( 0xEDE89F );
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( canvas.clientWidth, canvas.clientHeight );
-    renderer.shadowMapEnabled = true;
-    renderer.shadowMapType = THREE.PCFSoftShadowMap;
+    
+    //renderer.shadowMapEnabled = true;
+    //renderer.shadowMapType = THREE.PCFSoftShadowMap;
+    
     canvas.appendChild( renderer.domElement );
     window.addEventListener('resize', Resize)
-    threeData = {THREE, GLTFLoader, clock, scene, camera, renderer, canvas}
+
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath( 'js/libs/draco/gltf/' );
+
+    const loader = new GLTFLoader();
+    loader.setDRACOLoader( dracoLoader );
+    
+    threeData = {THREE, loader, clock, scene, camera, renderer, canvas}
 }
 
 //#endregion

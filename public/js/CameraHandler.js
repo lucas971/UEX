@@ -118,8 +118,7 @@ export const Update = (delta) => {
     if (requestedAnimation) {
         return Animate(delta)
     }
-    //return TryMove(delta)
-    return false
+    return TryMove(delta)
 }
 
 const Animate = (delta) => {

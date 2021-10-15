@@ -20,7 +20,7 @@ let ready
 //Loads the city model and setup the camera and lighting.
 export const generateInterior = (d) => {
     
-    new d.GLTFLoader().load(
+    d.loader.load(
         './model/interior.glb', 
         (gltf) => {
             setupScene(gltf, d)

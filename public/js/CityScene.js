@@ -25,7 +25,7 @@ let ready
 //Loads the city model and setup the camera and lighting.
 export const generateCity = (d) => {
     
-    new d.GLTFLoader().load(
+    d.loader.load(
         './model/port.glb', 
         (gltf) => {
             setupScene(gltf, d)
@@ -55,6 +55,7 @@ export const resize = (d) => {
 const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
     
+    /*
     gltf.scene.traverse((obj) => {
         if (obj.castShadow !== undefined) {
             if (obj.name!== "Eau" && !obj.name.includes("Sol") && obj.name !== "Terrain") {
@@ -62,7 +63,7 @@ const setupScene = (gltf, d) => {
             }
             obj.receiveShadow = true;
         }
-    });
+    });*/
     
     d.scene.add(gltf.scene)
     
@@ -92,14 +93,14 @@ const generateLightning = (d) => {
     const light = new d.THREE.DirectionalLight(0XB9CDFF,7)
     light.position.set(-100, 120, -100)
     light.target.position.set(0, -10, 0);
-    light.castShadow = true
+    /*light.castShadow = true
     light.shadow.mapSize.width = 2048
     light.shadow.mapSize.height = 2048
     light.shadowCameraRight    =  50;
     light.shadowCameraLeft     = -50;
     light.shadowCameraTop      =  50;
     light.shadowCameraBottom   = -50;
-    light.shadowDarkness = 0.5;
+    light.shadowDarkness = 0.5;*/
     
     const ambient = new d.THREE.AmbientLight(0XB9CDFF,2)
     d.scene.add(ambient)
