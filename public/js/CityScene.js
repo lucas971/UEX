@@ -5,12 +5,6 @@ import {UpdateIconsPosition} from "./IconsHandler.js";
 import * as CameraHandler from "./CameraHandler.js"
 //#endregion
 
-//#region CONST
-
-//The initial position of the camera in the world
-const cameraPos = 50
-//#endregion
-
 //#region VARIABLES
 
 //The animation mixer.
@@ -55,19 +49,7 @@ export const resize = (d) => {
 const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
     
-    /*
-    gltf.scene.traverse((obj) => {
-        if (obj.castShadow !== undefined) {
-            if (obj.name!== "Eau" && !obj.name.includes("Sol") && obj.name !== "Terrain") {
-                obj.castShadow = true
-            }
-            obj.receiveShadow = true;
-        }
-    });*/
-    
     d.scene.add(gltf.scene)
-    
-    generateLightning(d)
 
     setCameraPosition(d)
     
@@ -77,6 +59,7 @@ const setupScene = (gltf, d) => {
 //Create an animation mixer and launches the looping animation of the city.
 const setupAnimMixer = (gltf, d) => {
     mixer = new d.THREE.AnimationMixer(gltf.scene)
+    console.log(gltf.scene)
     gltf.animations.forEach((clip) => {
         mixer.clipAction(clip).reset().play()
     })
@@ -85,26 +68,6 @@ const setupAnimMixer = (gltf, d) => {
 //Place the camera accordingly
 const setCameraPosition = (d) => {
     d.camera.position.set(-20,50,20)
-}
-
-//Add lighting to the scene
-const generateLightning = (d) => {
-    
-    const light = new d.THREE.DirectionalLight(0XB9CDFF,7)
-    light.position.set(-100, 120, -100)
-    light.target.position.set(0, -10, 0);
-    /*light.castShadow = true
-    light.shadow.mapSize.width = 2048
-    light.shadow.mapSize.height = 2048
-    light.shadowCameraRight    =  50;
-    light.shadowCameraLeft     = -50;
-    light.shadowCameraTop      =  50;
-    light.shadowCameraBottom   = -50;
-    light.shadowDarkness = 0.5;*/
-    
-    const ambient = new d.THREE.AmbientLight(0XB9CDFF,2)
-    d.scene.add(ambient)
-    d.scene.add(light)
 }
 
 //#endregion
