@@ -13,6 +13,7 @@ let requestIconRefresh
 let spots
 let const_y
 let requestedTranslation
+let currentSpot
 let translation = {
     initialPos : null,
     targetPos : null,
@@ -72,6 +73,7 @@ const Initialize = (threeData) => {
     fadeDiv = document.getElementById("fade")
     loadJSON("./cameraData.json",
         (data) => {
+            currentSpot = 0
             spots = data["spots"]
             const_y = data["const_y"]
             d.camera.position.set(spots[0].x, const_y, spots[0].z)
@@ -93,7 +95,7 @@ const Initialize = (threeData) => {
 //#region TRANSLATION
 
 const RequestTranslation = (id) => {
-    if (requestedTranslation || requestedTransition) {
+    if (requestedTranslation || requestedTransition || id === currentSpot) {
         return
     }
     translation.initialPos = d.camera.position.clone()
@@ -102,6 +104,7 @@ const RequestTranslation = (id) => {
     translation.targetZoom = spots[id].zoom
     translation.state = 0
     requestedTranslation=true
+    currentSpot = id
 }
 
 const AnimateTranslation = (delta) => {
