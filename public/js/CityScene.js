@@ -2,7 +2,7 @@
 
 //#region IMPORTS
 import {UpdateIconsPosition} from "./IconsHandler.js";
-import * as CameraHandler from "./CameraHandler.js"
+import {SetupCameraHandler, UpdateCamera, RequestIconsRefresh} from "./CityCameraHandler.js"
 //#endregion
 
 //#region VARIABLES
@@ -23,8 +23,8 @@ export const generateCity = (d) => {
         './model/port.glb', 
         (gltf) => {
             setupScene(gltf, d)
+            SetupCameraHandler(d)
             UpdateIconsPosition(d)
-            CameraHandler.SetupCameraHandler(d, gltf.scene)
         }, 
         (xhr) => {
             console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -50,8 +50,6 @@ const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
     
     d.scene.add(gltf.scene)
-
-    setCameraPosition(d)
     
     ready = true
 }
@@ -64,12 +62,6 @@ const setupAnimMixer = (gltf, d) => {
         mixer.clipAction(clip).reset().play()
     })
 }
-
-//Place the camera accordingly
-const setCameraPosition = (d) => {
-    d.camera.position.set(-20,50,20)
-}
-
 //#endregion
 
 //#region UPDATE
@@ -79,9 +71,11 @@ export const update = (d) => {
     let delta = d.clock.getDelta()
     if (ready) {
         mixer.update(delta)
-        if (CameraHandler.Update(delta)) {
+        UpdateCamera(delta)
+        if (RequestIconsRefresh()) {
             UpdateIconsPosition(d)
         }
+        
     }
 }
 

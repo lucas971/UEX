@@ -4,7 +4,7 @@
 
 import {toScreenPosition} from './ScreenProjection.js'
 import {loadJSON} from './JSONLoader.js'
-import {RequestTransition} from "./CameraHandler.js";
+import {RequestTransition} from "./CityCameraHandler.js";
 
 //#endregion
 

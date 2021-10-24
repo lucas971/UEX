@@ -1,7 +1,9 @@
 //#region IMPORTS
+// noinspection JSFileReferences
+
 import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
-import {GLTFLoader} from  'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
-import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js';
+import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js'
 import * as CityScene from './CityScene.js'
 import * as InteriorScene from './InteriorScene.js'
 import {InitializeIcons} from "./IconsHandler.js";
@@ -29,9 +31,9 @@ let activeScene = noActiveScene
 
 const setup = () => {
     const scene = new THREE.Scene()
-    
-    var camera = null
-    
+
+    const camera = null;
+
     const renderer = new THREE.WebGLRenderer({antialias: true});
     const canvas = document.getElementById("canvas")
     renderer.physicallyCorrectLights = true;

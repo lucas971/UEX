@@ -1,0 +1,26 @@
+{
+  "const_y": 50,
+  "spots": [
+    {
+      "name" : "Airport",
+      "id" : "Airport_button",
+      "x": 20,
+      "z": -50,
+      "zoom": 2
+    },
+    {
+      "name" : "Port",
+      "id" : "Port_button",
+      "x": -50,
+      "z": 50,
+      "zoom": 1.2
+    },
+    {
+      "name" : "Centrale",
+      "id" : "Centrale_button",
+      "x": -40,
+      "z": -30,
+      "zoom": 1
+    }
+  ]
+}
