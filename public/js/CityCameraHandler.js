@@ -9,6 +9,21 @@ let d
 let requestIconRefresh
 //#endregion
 
+//#region FREEFORM PARAMS
+const acceleration = 0.25
+const deceleration = 0.75
+const maxVelocity = 0.5
+let initialPosX = 0
+let initialPosY = 0
+let offsetX = 0
+let offsetY = 0
+let xVelocity = 0
+let zVelocity = 0
+let currentMouseX = null
+let currentMouseY = null
+
+//#endregion
+
 //#region TRANSLATION PARAMS
 let spots
 let const_y
@@ -84,11 +99,61 @@ const Initialize = (threeData) => {
             for (let i = 0; i < spots.length; i++) {
                 document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
             }
+            
+            window.addEventListener("mousemove", OnMouseMove)
+            window.addEventListener("mousedown", OnMouseClick)
+            window.addEventListener("mouseup", OnMouseRelease)
         },
         (error) => {
             console.error(error)
         })
 }
+
+//#endregion
+
+//#region FREEFORM
+const OnMouseRelease = () => {
+    currentMouseX = null
+}
+const OnMouseClick = (e) => {
+    currentMouseX = e.clientX
+    currentMouseY = e.clientY
+    initialPosX = currentMouseX
+    initialPosY = currentMouseY
+}
+const OnMouseMove = (e) => {
+    if (currentMouseX === null) {
+        return
+    }
+    
+    offsetX = -e.clientX + currentMouseX
+    offsetY = e.clientY - currentMouseY
+    currentMouseX = e.clientX
+    currentMouseY = e.clientY
+}
+
+const UpdateFreeform = (delta) => {
+    xVelocity += offsetX * delta * acceleration
+    zVelocity += offsetY * delta * acceleration
+    
+    d.camera.translateX(xVelocity)
+    d.camera.translateY(zVelocity)
+    
+    const newXVelocity = xVelocity + (xVelocity > 0 ? -1 : 1) * delta * deceleration
+    xVelocity = newXVelocity * xVelocity > 0 ? newXVelocity : 0
+    xVelocity = xVelocity > maxVelocity ? maxVelocity : xVelocity
+    xVelocity = xVelocity < -maxVelocity ? -maxVelocity : xVelocity
+
+    const newZVelocity = zVelocity + (zVelocity > 0 ? -1 : 1) * delta * deceleration
+    zVelocity = newZVelocity * zVelocity > 0 ? newZVelocity : 0
+    zVelocity = zVelocity > maxVelocity ? maxVelocity : zVelocity
+    zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
+    
+    console.log(xVelocity)
+    offsetX = 0
+    offsetY = 0
+}
+
 
 //#endregion
 
@@ -164,8 +229,11 @@ export const UpdateCamera = (delta) => {
     if (requestedTransition) {
         AnimateTransition(delta)
     }
-    if (requestedTranslation) {
+    else if (requestedTranslation) {
         AnimateTranslation(delta)
+    }
+    else {
+        UpdateFreeform(delta)
     }
 }
 

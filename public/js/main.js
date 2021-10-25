@@ -70,7 +70,7 @@ const ClearScene = () => {
 const LoadCityScene = () => {
     ClearScene()
     const aspect = window.innerWidth / window.innerHeight;
-    threeData.camera = new THREE.OrthographicCamera( - cameraSize * aspect, cameraSize * aspect, cameraSize, - cameraSize, 0.01, 1000 )
+    threeData.camera = new THREE.OrthographicCamera( - cameraSize * aspect, cameraSize * aspect, cameraSize, - cameraSize, 0.001, 10000 )
     threeData.scene.add(threeData.camera)
     threeData.camera.rotation.order = 'YXZ'
     threeData.camera.rotation.y = - Math.PI / 4
