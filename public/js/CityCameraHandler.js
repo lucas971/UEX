@@ -24,6 +24,15 @@ let currentMouseY = null
 
 //#endregion
 
+//#region ZOOM PARAMS
+
+const maxZoomLevel = 3
+const minZoomLevel = 0.2
+const zoomSpeed = 0.3
+const zoomDeceleration = 0.7
+let currentZoomSpeed = 0
+//#endregion
+
 //#region TRANSLATION PARAMS
 let spots
 let const_y
@@ -103,6 +112,7 @@ const Initialize = (threeData) => {
             window.addEventListener("mousemove", OnMouseMove)
             window.addEventListener("mousedown", OnMouseClick)
             window.addEventListener("mouseup", OnMouseRelease)
+            window.addEventListener("wheel", OnWheel)
         },
         (error) => {
             console.error(error)
@@ -149,7 +159,6 @@ const UpdateFreeform = (delta) => {
     zVelocity = zVelocity > maxVelocity ? maxVelocity : zVelocity
     zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
     
-    console.log(xVelocity)
     offsetX = 0
     offsetY = 0
 }
@@ -157,6 +166,31 @@ const UpdateFreeform = (delta) => {
 
 //#endregion
 
+//#region ZOOM
+
+const OnWheel = (e) => {
+    if (e.deltaY > 0) {
+        currentZoomSpeed = zoomSpeed
+    } else {
+        currentZoomSpeed = -zoomSpeed
+    }
+}
+
+const UpdateZoom = (delta) => {
+    if (currentZoomSpeed === 0) {
+        return
+    }
+    d.camera.zoom = Math.max( minZoomLevel, Math.min( maxZoomLevel, d.camera.zoom * Math.pow( 0.95, currentZoomSpeed )))
+    d.camera.updateProjectionMatrix()
+    if (currentZoomSpeed < 0) {
+        currentZoomSpeed = Math.min(0, currentZoomSpeed + delta * zoomDeceleration)
+    } else {
+        currentZoomSpeed = Math.max(0, currentZoomSpeed - delta * zoomDeceleration)
+    }
+}
+
+
+//#endregion
 //#region TRANSLATION
 
 const RequestTranslation = (id) => {
@@ -234,6 +268,7 @@ export const UpdateCamera = (delta) => {
     }
     else {
         UpdateFreeform(delta)
+        UpdateZoom(delta)
     }
 }
 
