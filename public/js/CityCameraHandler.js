@@ -149,12 +149,20 @@ const UpdateFreeform = (delta) => {
     d.camera.translateX(xVelocity)
     d.camera.translateY(zVelocity)
     
-    const newXVelocity = xVelocity + (xVelocity > 0 ? -1 : 1) * delta * deceleration
+    //The use of ratio during deceleration allow to simulate a vector magnitude diminution without using an actual vector.
+    let xRatio = 1, zRatio = 1
+    if (Math.abs(zVelocity) < Math.abs(xVelocity)) {
+        zRatio = Math.abs(zVelocity / xVelocity)
+    } else {
+        xRatio =  Math.abs(xVelocity / zVelocity)
+    }
+    
+    const newXVelocity = xVelocity + (xVelocity > 0 ? -1 : 1) * delta * deceleration * xRatio
     xVelocity = newXVelocity * xVelocity > 0 ? newXVelocity : 0
     xVelocity = xVelocity > maxVelocity ? maxVelocity : xVelocity
     xVelocity = xVelocity < -maxVelocity ? -maxVelocity : xVelocity
 
-    const newZVelocity = zVelocity + (zVelocity > 0 ? -1 : 1) * delta * deceleration
+    const newZVelocity = zVelocity + (zVelocity > 0 ? -1 : 1) * delta * deceleration * zRatio
     zVelocity = newZVelocity * zVelocity > 0 ? newZVelocity : 0
     zVelocity = zVelocity > maxVelocity ? maxVelocity : zVelocity
     zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
@@ -191,6 +199,7 @@ const UpdateZoom = (delta) => {
 
 
 //#endregion
+
 //#region TRANSLATION
 
 const RequestTranslation = (id) => {
