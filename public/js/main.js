@@ -40,12 +40,14 @@ const setup = () => {
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.setClearColor( 0xEDE89F );
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( canvas.clientWidth, canvas.clientHeight );
+    renderer.setSize(window.innerWidth, window.innerHeight)
     
     //renderer.shadowMapEnabled = true;
     //renderer.shadowMapType = THREE.PCFSoftShadowMap;
     
     canvas.appendChild( renderer.domElement );
+    renderer.domElement.style.position = 'fixed'
+    renderer.domElement.style.zIndex = '-1'
     window.addEventListener('resize', Resize)
 
     const dracoLoader = new DRACOLoader();
@@ -123,7 +125,7 @@ const Resize = () => {
         threeData.camera.updateProjectionMatrix()
     }
     
-    threeData.renderer.setSize(threeData.canvas.clientWidth, threeData.canvas.clientHeight)
+    threeData.renderer.setSize(window.innerWidth, window.innerHeight)
     render()
     
     if (activeScene === cityActiveScene) {

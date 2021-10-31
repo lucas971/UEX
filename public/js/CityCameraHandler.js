@@ -106,7 +106,7 @@ const Initialize = (threeData) => {
             requestIconRefresh = true
 
             for (let i = 0; i < spots.length; i++) {
-                document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
+                //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
             }
             
             window.addEventListener("mousemove", OnMouseMove)
