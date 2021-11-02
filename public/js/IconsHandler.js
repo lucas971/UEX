@@ -69,7 +69,7 @@ const GenerateHtml = (d) => {
         icons[i].image.loop = true
         icons[i].image.mode="normal"
         icons[i].image.src = "lottie/icon.json"
-        icons[i].image.addEventListener('click', () => LaunchHotspot(d.scene.getObjectByName(icons[i].id).position, i))
+        icons[i].image.addEventListener('click', () => LaunchHotspot(icons[i]))
         iconDiv.appendChild(icons[i].image)
     }
 }
@@ -78,13 +78,8 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 
-const LaunchHotspot = (pos, i) => {
-    if (clickedLink) {
-        return
-    }
-    clickedLink = true
-
-    RequestTransition(pos, "hotspot/" + icons[i].type)
+const LaunchHotspot = (icon) => {
+    document.getElementById(icon.iconid).click()
 }
 
 //#endregion

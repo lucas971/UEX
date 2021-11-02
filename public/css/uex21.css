@@ -1325,6 +1325,7 @@ body {
 }
 
 .logo-menu-div {
+  pointer-events: none;
   position: relative;
   z-index: 10;
   overflow: hidden;
@@ -1342,6 +1343,13 @@ body {
 }
 
 .logo-image {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
   position: relative;
   z-index: 2;
   width: 65%;
@@ -1351,6 +1359,7 @@ body {
 }
 
 .hamburger-div {
+  pointer-events: all;
   position: absolute;
   left: 25px;
   top: auto;
@@ -2209,6 +2218,7 @@ body {
 }
 
 .triangle-svg-inside {
+  pointer-events: none;
   position: absolute;
   left: 0%;
   top: 0%;

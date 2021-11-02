@@ -2,6 +2,7 @@
   "icons": [
     {
       "id" : "Quizz1Building",
+      "iconid" : "hotspot-1",
       "width": 50,
       "height": 50,
       "worldYMod": 0,
@@ -9,6 +10,7 @@
     },
     {
       "id" : "Quizz2Building",
+      "iconid" : "hotspot-1",
       "width": 50,
       "height": 50,
       "worldYMod": 0,
@@ -16,6 +18,7 @@
     },
     {
       "id" : "Enter1Building",
+      "iconid" : "hotspot-1",
       "width": 50,
       "height": 50,
       "worldYMod": 0,

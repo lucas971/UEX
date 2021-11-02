@@ -109,10 +109,11 @@ const Initialize = (threeData) => {
                 //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
             }
             
-            window.addEventListener("mousemove", OnMouseMove)
-            window.addEventListener("mousedown", OnMouseClick)
-            window.addEventListener("mouseup", OnMouseRelease)
-            window.addEventListener("wheel", OnWheel)
+            d.canvas.addEventListener("mousemove", OnMouseMove)
+            d.canvas.addEventListener("mousedown", OnMouseClick)
+            d.canvas.addEventListener("mouseup", OnMouseRelease)
+            d.canvas.addEventListener("mouseout", OnMouseRelease)
+            d.canvas.addEventListener("wheel", OnWheel)
         },
         (error) => {
             console.error(error)
@@ -145,6 +146,9 @@ const OnMouseMove = (e) => {
 const UpdateFreeform = (delta) => {
     xVelocity += offsetX * delta * acceleration
     zVelocity += offsetY * delta * acceleration
+    if (xVelocity === zVelocity && zVelocity === 0) {
+        return 
+    }
     
     d.camera.translateX(xVelocity)
     d.camera.translateY(zVelocity)
@@ -169,6 +173,8 @@ const UpdateFreeform = (delta) => {
     
     offsetX = 0
     offsetY = 0
+
+    requestIconRefresh = true
 }
 
 
@@ -195,6 +201,7 @@ const UpdateZoom = (delta) => {
     } else {
         currentZoomSpeed = Math.max(0, currentZoomSpeed - delta * zoomDeceleration)
     }
+    requestIconRefresh = true
 }
 
 
