@@ -52,6 +52,7 @@ const setupScene = (gltf, d) => {
     d.scene.add(gltf.scene)
     
     ready = true
+    
 }
 
 //Create an animation mixer and launches the looping animation of the city.
