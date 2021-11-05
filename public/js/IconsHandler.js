@@ -4,7 +4,7 @@
 
 import {toScreenPosition} from './ScreenProjection.js'
 import {loadJSON} from './JSONLoader.js'
-import {RequestTransition} from "./CityCameraHandler.js";
+import {InitializeWebflow} from './uex21.js'
 
 //#endregion
 
@@ -59,7 +59,7 @@ const GenerateHtml = (d) => {
     
     const iconDiv = document.getElementById('icons')
     for (let i = 0; i< icons.length; i++) {
-        icons[i].image = document.createElement('lottie-player')
+       /* icons[i].image = document.createElement('lottie-player')
         icons[i].image.classList.add("icon")
         icons[i].image.style.width = `${icons[i].width}px`
         icons[i].image.style.height = `${icons[i].height}px`
@@ -70,8 +70,15 @@ const GenerateHtml = (d) => {
         icons[i].image.mode="normal"
         icons[i].image.src = "lottie/icon.json"
         icons[i].image.addEventListener('click', () => LaunchHotspot(icons[i]))
+        iconDiv.appendChild(icons[i].image)*/
+        
+        const original = document.getElementById(icons[i].iconid)
+        icons[i].image = original.cloneNode(original)
+        icons[i].image.removeAttribute('id')
         iconDiv.appendChild(icons[i].image)
     }
+
+    InitializeWebflow()
 }
 
 //#endregion

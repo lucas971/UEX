@@ -7,7 +7,7 @@ import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/
 import * as CityScene from './CityScene.js'
 import * as InteriorScene from './InteriorScene.js'
 import {InitializeIcons} from "./IconsHandler.js";
-
+import {InitializeCursor} from "./Cursor.js";
 //#endregion
 
 //#region CONST
@@ -138,9 +138,11 @@ const Resize = () => {
 const main = () => {
     setup()
 
-    InitializeIcons(threeData)
     LoadCityScene()
 
+    InitializeIcons(threeData)
+
+    InitializeCursor(threeData);
     animate()
 }
 

@@ -1,6 +1,8 @@
 //#region IMPORTS
 import {easeInOutSine, easeOutQuad} from "./Ease.js";
 import {loadJSON} from './JSONLoader.js'
+import * as Cursor from './Cursor.js';
+import {IsNormal} from "./Cursor.js";
 
 //#endregion
 
@@ -109,11 +111,11 @@ const Initialize = (threeData) => {
                 //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
             }
             
-            d.canvas.addEventListener("mousemove", OnMouseMove)
-            d.canvas.addEventListener("mousedown", OnMouseClick)
-            d.canvas.addEventListener("mouseup", OnMouseRelease)
-            d.canvas.addEventListener("mouseout", OnMouseRelease)
-            d.canvas.addEventListener("wheel", OnWheel)
+            document.body.addEventListener("mousemove", OnMouseMove)
+            document.body.addEventListener("mousedown", OnMouseClick)
+            document.body.addEventListener("mouseup", OnMouseRelease)
+            document.body.addEventListener("mouseout", OnMouseRelease)
+            document.body.addEventListener("wheel", OnWheel)
         },
         (error) => {
             console.error(error)
@@ -124,9 +126,17 @@ const Initialize = (threeData) => {
 
 //#region FREEFORM
 const OnMouseRelease = () => {
+    if (!Cursor.IsDrag()) {
+        return;
+    }
+    Cursor.NormalMode();
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
+    if (!Cursor.IsNormal() || e.target.tagName!== 'CANVAS') {
+        return
+    }
+    Cursor.DragMode();
     currentMouseX = e.clientX
     currentMouseY = e.clientY
     initialPosX = currentMouseX

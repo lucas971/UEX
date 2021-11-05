@@ -4,6 +4,7 @@ body, html {
     width: 100%;
     height: 100%;
     text-align: center;
+    cursor: none;
 }
 
 #canvas {
@@ -25,8 +26,16 @@ body, html {
     pointer-events: none;
 }
 
+#custom-cursor{
+    pointer-events: none;
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+    
+    position: absolute;
+}
 #hotspot-1,
 #hotspot-2{
-    display:none;
+    display: none;
     pointer-events: none;
 }
