@@ -15,6 +15,7 @@ let requestIconRefresh
 const acceleration = 0.25
 const deceleration = 0.75
 const maxVelocity = 0.5
+const maxCameraMovement = 400
 let initialPosX = 0
 let initialPosY = 0
 let offsetX = 0
@@ -29,7 +30,7 @@ let currentMouseY = null
 //#region ZOOM PARAMS
 
 const maxZoomLevel = 3
-const minZoomLevel = 0.2
+const minZoomLevel = 0.5
 const zoomSpeed = 0.2
 const zoomDeceleration = 0.2
 let currentZoomSpeed = 0
@@ -156,6 +157,8 @@ const OnMouseMove = (e) => {
     currentMouseY = e.clientY
 }
 
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
 const UpdateFreeform = (delta) => {
     xVelocity += offsetX * delta * acceleration
     zVelocity += offsetZ * delta * acceleration
@@ -165,6 +168,7 @@ const UpdateFreeform = (delta) => {
     
     d.camera.translateX(xVelocity)
     d.camera.translateY(zVelocity)
+    
     
     //The use of ratio during deceleration allow to simulate a vector magnitude diminution without using an actual vector.
     let xRatio = 1, zRatio = 1

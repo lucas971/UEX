@@ -34,6 +34,15 @@ body, html {
     
     position: absolute;
 }
+
+#custom-grab{
+    pointer-events: none;
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+
+    position: absolute;
+}
 #hotspot-1,
 #hotspot-2{
     display: none;
