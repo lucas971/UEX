@@ -23,6 +23,9 @@ let clickedLink = false
 
 //#region API
 
+export const IsLinkActive = () => {
+    return clickedLink;
+}
 //Creates the icons array from the json file and add the html images inside the Icons div.
 export const InitializeIcons = (d) => {
     
@@ -59,23 +62,16 @@ const GenerateHtml = (d) => {
     
     const iconDiv = document.getElementById('icons')
     for (let i = 0; i< icons.length; i++) {
-       /* icons[i].image = document.createElement('lottie-player')
-        icons[i].image.classList.add("icon")
-        icons[i].image.style.width = `${icons[i].width}px`
-        icons[i].image.style.height = `${icons[i].height}px`
-        icons[i].image.style.display = 'inherit'
-        icons[i].image.draggable = false
-        icons[i].image.autoplay = true
-        icons[i].image.loop = true
-        icons[i].image.mode="normal"
-        icons[i].image.src = "lottie/icon.json"
-        icons[i].image.addEventListener('click', () => LaunchHotspot(icons[i]))
-        iconDiv.appendChild(icons[i].image)*/
-        
         const original = document.getElementById(icons[i].iconid)
         icons[i].image = original.cloneNode(original)
         icons[i].image.removeAttribute('id')
+        icons[i].image.addEventListener("click", TryClickedLink)
         iconDiv.appendChild(icons[i].image)
+    }
+    
+    let backButtons = document.getElementsByClassName("hotspot-back-button")
+    for (let i = 0; i < backButtons.length; i++) {
+        backButtons[i].addEventListener("click", TryLeaveLink)
     }
 
     InitializeWebflow()
@@ -85,8 +81,11 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 
-const LaunchHotspot = (icon) => {
-    document.getElementById(icon.iconid).click()
+const TryClickedLink = () => {
+    clickedLink = true
 }
 
+const TryLeaveLink = () => {
+    clickedLink = false
+}
 //#endregion

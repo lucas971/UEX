@@ -2,7 +2,7 @@
 import {easeInOutSine, easeOutQuad} from "./Ease.js";
 import {loadJSON} from './JSONLoader.js'
 import * as Cursor from './Cursor.js';
-import {IsNormal} from "./Cursor.js";
+import * as IconsHandler from './IconsHandler.js'
 
 //#endregion
 
@@ -18,7 +18,7 @@ const maxVelocity = 0.5
 let initialPosX = 0
 let initialPosY = 0
 let offsetX = 0
-let offsetY = 0
+let offsetZ = 0
 let xVelocity = 0
 let zVelocity = 0
 let currentMouseX = null
@@ -151,14 +151,14 @@ const OnMouseMove = (e) => {
         OnMouseRelease()
     }
     offsetX = -e.clientX + currentMouseX
-    offsetY = e.clientY - currentMouseY
+    offsetZ = e.clientY - currentMouseY
     currentMouseX = e.clientX
     currentMouseY = e.clientY
 }
 
 const UpdateFreeform = (delta) => {
     xVelocity += offsetX * delta * acceleration
-    zVelocity += offsetY * delta * acceleration
+    zVelocity += offsetZ * delta * acceleration
     if (xVelocity === zVelocity && zVelocity === 0) {
         return 
     }
@@ -185,7 +185,7 @@ const UpdateFreeform = (delta) => {
     zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
     
     offsetX = 0
-    offsetY = 0
+    offsetZ = 0
 
     requestIconRefresh = true
 }
@@ -289,6 +289,10 @@ const AnimateTransition = (delta) => {
 //#region UPDATE
 
 export const UpdateCamera = (delta) => {
+    if (IconsHandler.IsLinkActive()) {
+        currentZoomSpeed = offsetZ =offsetX = xVelocity = zVelocity = 0
+        return
+    }
     if (requestedTransition) {
         AnimateTransition(delta)
     }
