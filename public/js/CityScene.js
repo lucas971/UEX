@@ -58,7 +58,6 @@ const setupScene = (gltf, d) => {
 //Create an animation mixer and launches the looping animation of the city.
 const setupAnimMixer = (gltf, d) => {
     mixer = new d.THREE.AnimationMixer(gltf.scene)
-    console.log(gltf.scene)
     gltf.animations.forEach((clip) => {
         mixer.clipAction(clip).reset().play()
     })
@@ -70,6 +69,7 @@ const setupAnimMixer = (gltf, d) => {
 //Update the city animation and check camera movements
 export const update = (d) => {
     let delta = d.clock.getDelta()
+    delta = Math.min(delta, 0.05)
     if (ready) {
         mixer.update(delta)
         UpdateCamera(delta)

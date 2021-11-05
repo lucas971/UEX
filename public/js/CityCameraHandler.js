@@ -9,13 +9,17 @@ import * as IconsHandler from './IconsHandler.js'
 //#region GENERAL DATA
 let d
 let requestIconRefresh
+let cameraHolder
 //#endregion
 
 //#region FREEFORM PARAMS
 const acceleration = 0.25
 const deceleration = 0.75
 const maxVelocity = 0.5
-const maxCameraMovement = 400
+const maxX = 150
+const minX= -70
+const maxZ = 120
+const minZ= -120
 let initialPosX = 0
 let initialPosY = 0
 let offsetX = 0
@@ -28,7 +32,6 @@ let currentMouseY = null
 //#endregion
 
 //#region ZOOM PARAMS
-
 const maxZoomLevel = 3
 const minZoomLevel = 0.5
 const zoomSpeed = 0.2
@@ -103,9 +106,13 @@ const Initialize = (threeData) => {
             currentSpot = 0
             spots = data["spots"]
             const_y = data["const_y"]
-            d.camera.position.set(spots[0].x, const_y, spots[0].z)
+            cameraHolder = d.scene.getObjectByName("CAMERACONTAINER")
+            
+            cameraHolder.attach( d.camera)
+            d.camera.position.set(-100, 100, 100)
             d.camera.zoom = spots[0].zoom
             d.camera.updateProjectionMatrix()
+            console.log(cameraHolder)
             requestIconRefresh = true
 
             for (let i = 0; i < spots.length; i++) {
@@ -161,15 +168,18 @@ const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 const UpdateFreeform = (delta) => {
     xVelocity += offsetX * delta * acceleration
-    zVelocity += offsetZ * delta * acceleration
+    zVelocity += offsetZ * delta * acceleration *2
     if (xVelocity === zVelocity && zVelocity === 0) {
         return 
     }
     
-    d.camera.translateX(xVelocity)
-    d.camera.translateY(zVelocity)
+    let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
+    let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
     
+    cameraHolder.position.x = targetXPos
+    cameraHolder.position.z = targetZPos
     
+    console.log(cameraHolder.position.z)
     //The use of ratio during deceleration allow to simulate a vector magnitude diminution without using an actual vector.
     let xRatio = 1, zRatio = 1
     if (Math.abs(zVelocity) < Math.abs(xVelocity)) {
