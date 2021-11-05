@@ -24,20 +24,20 @@ const MoveCursor = (e) => {
 }
 
 export const NormalMode = () => {
-    cursor.style.backgroundColor = "white"
     let interactibles = document.getElementsByClassName('interactible');
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "all"
     }
+    cursor.src = "images/Cursor.png"
     mode = normal
 }
 
 export const DragMode = () => {
-    cursor.style.backgroundColor = "yellow"
     let interactibles = document.getElementsByClassName('interactible');
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
     }
+    cursor.src = "images/Grab.png"
     mode = drag
 }
 

@@ -30,8 +30,8 @@ let currentMouseY = null
 
 const maxZoomLevel = 3
 const minZoomLevel = 0.2
-const zoomSpeed = 0.3
-const zoomDeceleration = 0.7
+const zoomSpeed = 0.2
+const zoomDeceleration = 0.2
 let currentZoomSpeed = 0
 //#endregion
 
@@ -147,6 +147,9 @@ const OnMouseMove = (e) => {
         return
     }
     
+    if (e.target.tagName!== 'CANVAS') {
+        OnMouseRelease()
+    }
     offsetX = -e.clientX + currentMouseX
     offsetY = e.clientY - currentMouseY
     currentMouseX = e.clientX
