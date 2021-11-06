@@ -177,7 +177,7 @@ const IsLinkActive = () => {
 //Creates the icons array from the json file and add the html images inside the Icons div.
 const InitializeIcons = (d) => {
 
-    loadJSON("https://cdn.jsdelivr.net/gh/lucas971/UEX@master/public/iconsData.json",
+    loadJSON("https://github.com/lucas971/UEX/blob/master/public/iconsData.json",
         (data) => {
             icons = data["icons"]
             GenerateHtml(d)
@@ -334,7 +334,7 @@ const RequestIconsRefresh = () => {
 const Initialize = (threeData) => {
     d = threeData
     fadeDiv = document.getElementById("fade")
-    loadJSON("https://cdn.jsdelivr.net/gh/lucas971/UEX@master/public/cameraData.json",
+    loadJSON("https://github.com/lucas971/UEX/blob/master/public/cameraData.json",
         (data) => {
             currentSpot = 0
             spots = data["spots"]
@@ -582,7 +582,7 @@ let ready
 const generateCity = (d) => {
 
     d.loader.load(
-        'https://cdn.jsdelivr.net/gh/lucas971/UEX@master/public/model/port.glb',
+        'https://github.com/lucas971/UEX/blob/master/public/model/port.glb',
         (gltf) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
