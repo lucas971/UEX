@@ -195,8 +195,8 @@ const UpdateIconsPosition = (d) => {
         const obj = d.scene.getObjectByName(icons[i].id)
         const toScreen = toScreenPosition(obj, d)
 
-        icons[i].image.style.left = `${toScreen.x - icons[i].width}px`
-        icons[i].image.style.top = `${toScreen.y - icons[i].height}px`
+        icons[i].image.style.left = `${toScreen.x}px`
+        icons[i].image.style.top = `${toScreen.y}px`
     }
 }
 
