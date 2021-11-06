@@ -304,7 +304,7 @@ let transition = {
 //#region API
 
 //ASK FOR INITIALIZATION
-const SetupCameraHandler = (threeData) => Initialize(threeData)
+const SetupCameraHandler = (threeData) => InitializeCameraHandler(threeData)
 
 //REQUEST A TRANSITION
 const RequestTransition = (pos, href) => {
@@ -331,7 +331,7 @@ const RequestIconsRefresh = () => {
 
 //#region INITIALIZATION
 
-const Initialize = (threeData) => {
+const InitializeCameraHandler = (threeData) => {
     d = threeData
     fadeDiv = document.getElementById("fade")
     loadJSON("https://lucas971.github.io/UEX/public/cameraData.json",
@@ -351,11 +351,11 @@ const Initialize = (threeData) => {
                 //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
             }
 
-            document.body.addEventListener("mousemove", OnMouseMove)
-            document.body.addEventListener("mousedown", OnMouseClick)
-            document.body.addEventListener("mouseup", OnMouseRelease)
-            document.body.addEventListener("mouseout", OnMouseRelease)
-            document.body.addEventListener("wheel", OnWheel)
+            document.addEventListener("mousemove", OnMouseMove)
+            document.addEventListener("mousedown", OnMouseClick)
+            document.addEventListener("mouseup", OnMouseRelease)
+            document.addEventListener("mouseout", OnMouseRelease)
+            document.addEventListener("wheel", OnWheel)
         },
         (error) => {
             console.error(error)
