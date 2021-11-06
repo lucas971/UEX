@@ -351,11 +351,11 @@ const InitializeCameraHandler = (threeData) => {
                 //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
             }
 
-            document.addEventListener("mousemove", OnMouseMove)
-            document.addEventListener("mousedown", OnMouseClick)
-            document.addEventListener("mouseup", OnMouseRelease)
-            document.addEventListener("mouseout", OnMouseRelease)
-            document.addEventListener("wheel", OnWheel)
+            document.body.addEventListener("mousemove", OnMouseMove)
+            document.body.addEventListener("mousedown", OnMouseClick)
+            document.body.addEventListener("mouseup", OnMouseRelease)
+            document.body.addEventListener("mouseout", OnMouseRelease)
+            document.body.addEventListener("wheel", OnWheel)
         },
         (error) => {
             console.error(error)
@@ -373,7 +373,7 @@ const OnMouseRelease = () => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
-    if (!IsNormal() || e.target.tagName!== 'CANVAS') {
+    if (!IsNormal() || e.target.id!== 'canvas') {
         return
     }
     DragMode()
