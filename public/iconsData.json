@@ -2,21 +2,28 @@
   "icons": [
     {
       "id" : "Quizz1Building",
-      "iconid" : "hotspot-1",
+      "iconid" : "trigger1",
       "width": 50,
       "height": 50,
       "type": 1
     },
     {
       "id" : "Quizz2Building",
-      "iconid" : "hotspot-1",
+      "iconid" : "trigger2",
       "width": 50,
       "height": 50,
       "type": 1
     },
     {
       "id" : "Enter1Building",
-      "iconid" : "hotspot-1",
+      "iconid" : "trigger3",
+      "width": 50,
+      "height": 50,
+      "type": 1
+    },
+    {
+      "id" : "Enter1Building",
+      "iconid" : "trigger4",
       "width": 50,
       "height": 50,
       "type": 1

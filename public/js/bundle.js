@@ -209,10 +209,9 @@ const GenerateHtml = (d) => {
     content = document.getElementById('content')
 
     const iconDiv = document.getElementById('icons')
+    
     for (let i = 0; i< icons.length; i++) {
-        const original = document.getElementById(icons[i].iconid)
-        icons[i].image = original.cloneNode(original)
-        icons[i].image.removeAttribute('id')
+        icons[i].image  = document.getElementById(icons[i].iconid)
         icons[i].image.addEventListener("click", TryClickedLink)
         iconDiv.appendChild(icons[i].image)
     }
@@ -335,7 +334,7 @@ const RequestIconsRefresh = () => {
 const Initialize = (threeData) => {
     d = threeData
     fadeDiv = document.getElementById("fade")
-    loadJSON("./cameraData.json",
+    loadJSON("https://cdn.jsdelivr.net/gh/lucas971/UEX@master/public/cameraData.json",
         (data) => {
             currentSpot = 0
             spots = data["spots"]
