@@ -177,7 +177,7 @@ const IsLinkActive = () => {
 //Creates the icons array from the json file and add the html images inside the Icons div.
 const InitializeIcons = (d) => {
 
-    loadJSON("https://github.com/lucas971/UEX/blob/master/public/iconsData.json",
+    loadJSON("https://cdn.jsdelivr.net/gh/lucas971/UEX@master/public/iconsData.json",
         (data) => {
             icons = data["icons"]
             GenerateHtml(d)
@@ -583,7 +583,7 @@ let ready
 const generateCity = (d) => {
 
     d.loader.load(
-        'https://github.com/lucas971/UEX/blob/master/public/model/port.glb',
+        'https://cdn.jsdelivr.net/gh/lucas971/UEX@master/public/model/port.glb',
         (gltf) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
