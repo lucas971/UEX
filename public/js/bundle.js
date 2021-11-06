@@ -387,7 +387,7 @@ const OnMouseMove = (e) => {
         return
     }
 
-    if (e.target.tagName!== 'CANVAS') {
+    if (e.target.id!== 'canvas') {
         OnMouseRelease()
     }
     offsetX = -e.clientX + currentMouseX
