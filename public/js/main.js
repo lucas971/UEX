@@ -5,7 +5,6 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js'
 import * as CityScene from './CityScene.js'
-import * as InteriorScene from './InteriorScene.js'
 import {InitializeIcons} from "./IconsHandler.js";
 import {InitializeCursor} from "./Cursor.js";
 //#endregion
@@ -16,7 +15,6 @@ const clock = new THREE.Clock()
 
 const noActiveScene = -1
 const cityActiveScene = 0
-const interiorActiveScene = 1
 const cameraSize = 25
 //#endregion
 
@@ -81,15 +79,6 @@ const LoadCityScene = () => {
     activeScene = cityActiveScene
 }
 
-const LoadInteriorScene = () => {
-    ClearScene()
-    const aspect = window.innerWidth / window.innerHeight;
-    threeData.camera = new THREE.PerspectiveCamera(90, aspect, 1, 1000)
-    threeData.camera.rotation.order = 'XYZ'
-    threeData.scene.add(threeData.camera)
-    InteriorScene.generateInterior(threeData)
-    activeScene = interiorActiveScene
-}
 //#endregion
 
 //#region UPDATE
@@ -98,9 +87,6 @@ const animate = () => {
     requestAnimationFrame( animate );
     if (activeScene === cityActiveScene) {
         CityScene.update(threeData)
-    }
-    else if (activeScene === interiorActiveScene) {
-        InteriorScene.update(threeData)
     }
     render()
 }

@@ -1,0 +1,783 @@
+//#region Screen Projection
+//Auxiliary function allowing to project 3D objects into the 2D screen space.
+const toScreenPosition = (obj, d) => {
+    const vector = new d.THREE.Vector3()
+
+    const widthHalf = d.canvas.clientWidth/2
+    const heightHalf = d.canvas.clientHeight/2
+
+    obj.updateMatrixWorld()
+    vector.setFromMatrixPosition(obj.matrixWorld)
+    vector.set(vector.x, vector.y, vector.z)
+    vector.project(d.camera)
+
+    vector.normX = vector.x
+    vector.normY = vector.y
+    vector.x = ( vector.x * widthHalf ) + widthHalf
+    vector.y = - ( vector.y * heightHalf ) + heightHalf
+
+    return {
+        x: vector.x,
+        y: vector.y,
+        normX: vector.normX,
+        normY: vector.normY
+    }
+}
+//#endregion
+
+//#region Cursor
+const normal = 0
+const drag = 1
+
+let cursor
+let grab
+let mode
+
+const InitializeCursor = (d) => {
+    cursor = document.getElementById('custom-cursor')
+    grab = document.getElementById('custom-grab')
+    NormalMode()
+    window.addEventListener('mousemove', MoveCursor)
+    window.addEventListener('mouseout', HideCursor)
+    window.addEventListener('mouseleave', HideCursor)
+    window.addEventListener('mouseover', ShowCursor)
+}
+
+const IsNormal = () => {
+    return mode === normal
+}
+
+const IsDrag = () => {
+    return mode === drag
+}
+
+const HideCursor = (e) => {
+    cursor.style.display = "none"
+    grab.style.display = "none"
+}
+
+const ShowCursor = (e) => {
+    if (IsNormal()) {
+        cursor.style.display = "inherit"
+    }
+    else {
+        grab.style.display = "inherit"
+    }
+
+}
+const MoveCursor = (e) => {
+    cursor.style.top = e.pageY+"px"
+    cursor.style.left = (e.pageX-20)+"px"
+    grab.style.top = e.pageY+"px"
+    grab.style.left = (e.pageX-20)+"px"
+}
+
+const NormalMode = () => {
+    let interactibles = document.getElementsByClassName('interactible')
+    for (let i = 0; i < interactibles.length; i++) {
+        interactibles[i].style.pointerEvents = "all"
+    }
+    cursor.style.display = "inherit"
+    grab.style.display = "none"
+    mode = normal
+}
+
+const DragMode = () => {
+    let interactibles = document.getElementsByClassName('interactible')
+    for (let i = 0; i < interactibles.length; i++) {
+        interactibles[i].style.pointerEvents = "none"
+    }
+    cursor.style.display = "none"
+    grab.style.display = "inherit"
+    mode = drag
+}
+
+
+//#endregion
+
+//#region JSON Loader
+
+//Path : path to access the json file from the current repertory.
+//Success : function that takes the successful json object constructed from parsing as an argument
+//Error : function that takes the error string as an argument
+const loadJSON = (path, success, error) => {
+
+    //Building the Http Request
+    const xhr = new XMLHttpRequest()
+
+    xhr.onreadystatechange = function()
+    {
+        //Once the request is completed
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            //In case of success, execute the success method
+            if (xhr.status === 200) {
+                if (success) {
+                    success(JSON.parse(xhr.responseText))
+                }
+            }
+            //In case of failure, execute the error method
+            else {
+                if (error) {
+                    error(xhr)
+                }
+            }
+        }
+    }
+
+    xhr.open("GET", path, true)
+    xhr.send()
+}
+
+//#endregion
+
+//#region EASING
+
+const easeInOutCirc = (x) => {
+    return x < 0.5
+        ? (1 - Math.sqrt(1 - Math.pow(2 * x, 2))) / 2
+        : (Math.sqrt(1 - Math.pow(-2 * x + 2, 2)) + 1) / 2
+}
+
+const easeInOutSine = (x) => {
+    return -(Math.cos(Math.PI * x) - 1) / 2
+}
+
+const easeInCube = (x) => {
+    return x * x * x
+}
+
+const easeOutQuad = (x) => {
+    return 1 - (1 - x) * (1 - x)
+}
+
+//#endregion
+
+//#region Icons Handler
+
+//Manages the 2D icons sizes and positions on the screen
+
+//#region VARIABLES
+
+//Array of icons struct. See ../iconsData.json for more information on the structure.
+let icons
+
+//The general content div from which enabling/disabling the pointer events.
+let content
+
+//Is the zoom animation playing?
+let clickedLink = false
+
+//#endregion
+
+//#region API
+
+const IsLinkActive = () => {
+    return clickedLink
+}
+//Creates the icons array from the json file and add the html images inside the Icons div.
+const InitializeIcons = (d) => {
+
+    loadJSON("./iconsData.json",
+        (data) => {
+            icons = data["icons"]
+            GenerateHtml(d)
+        },
+        (error) => {
+            console.error(error)
+        })
+}
+
+//Update the icons position on the screen using the 3D world space position of the building of interests.
+const UpdateIconsPosition = (d) => {
+    d.camera.updateMatrixWorld()
+
+    for (let i = 0; i < icons.length; i++) {
+        const obj = d.scene.getObjectByName(icons[i].id)
+        const toScreen = toScreenPosition(obj, d)
+
+        icons[i].image.style.left = `${toScreen.x - icons[i].width}px`
+        icons[i].image.style.top = `${toScreen.y - icons[i].height}px`
+    }
+}
+
+//#endregion
+
+//#region HTML Generation
+
+//Used at initialization to create the Image elements inside the icons div.
+const GenerateHtml = (d) => {
+    content = document.getElementById('content')
+
+    const iconDiv = document.getElementById('icons')
+    for (let i = 0; i< icons.length; i++) {
+        const original = document.getElementById(icons[i].iconid)
+        icons[i].image = original.cloneNode(original)
+        icons[i].image.removeAttribute('id')
+        icons[i].image.addEventListener("click", TryClickedLink)
+        iconDiv.appendChild(icons[i].image)
+    }
+
+    let backButtons = document.getElementsByClassName("hotspot-back-button")
+    for (let i = 0; i < backButtons.length; i++) {
+        backButtons[i].addEventListener("click", TryLeaveLink)
+    }
+}
+
+//#endregion
+
+//#region Hotspots
+
+const TryClickedLink = () => {
+    clickedLink = true
+}
+
+const TryLeaveLink = () => {
+    clickedLink = false
+}
+//#endregion
+
+//#endregion
+
+//#region City Camera 
+
+//#region GENERAL DATA
+let d
+let requestIconRefresh
+let cameraHolder
+//#endregion
+
+//#region FREEFORM PARAMS
+const acceleration = 0.25
+const deceleration = 0.75
+const maxVelocity = 0.5
+const maxX = 150
+const minX= -70
+const maxZ = 120
+const minZ= -120
+let initialPosX = 0
+let initialPosY = 0
+let offsetX = 0
+let offsetZ = 0
+let xVelocity = 0
+let zVelocity = 0
+let currentMouseX = null
+let currentMouseY = null
+
+//#endregion
+
+//#region ZOOM PARAMS
+const maxZoomLevel = 3
+const minZoomLevel = 0.5
+const zoomSpeed = 0.2
+const zoomDeceleration = 0.2
+let currentZoomSpeed = 0
+//#endregion
+
+//#region TRANSLATION PARAMS
+let spots
+let const_y
+let requestedTranslation
+let currentSpot
+let translation = {
+    initialPos : null,
+    targetPos : null,
+    initialZoom : null,
+    targetZoom : null,
+    state : 0,
+}
+//#endregion
+
+//#region TRANSITION PARAMS
+const animationSpeed = 0.5
+const animationZoom = 5
+
+let fadeDiv
+let requestedTransition
+let transition = {
+    initialPos : null,
+    initialZoom : null,
+    targetPos : null,
+    href: null,
+    state : 0
+}
+//#endregion
+
+//#region API
+
+//ASK FOR INITIALIZATION
+const SetupCameraHandler = (threeData) => Initialize(threeData)
+
+//REQUEST A TRANSITION
+const RequestTransition = (pos, href) => {
+    if (requestedTransition || requestedTranslation) {
+        return
+    }
+    transition.targetPos = pos.clone()
+    transition.initialZoom = d.camera.zoom
+    transition.href = href
+    transition.state = 0
+    requestedTransition = true
+}
+
+//ASK IF ICON REFRESH
+const RequestIconsRefresh = () => {
+    if (requestIconRefresh) {
+        requestIconRefresh = false
+        return true
+    }
+    return false
+}
+
+//#endregion
+
+//#region INITIALIZATION
+
+const Initialize = (threeData) => {
+    d = threeData
+    fadeDiv = document.getElementById("fade")
+    loadJSON("./cameraData.json",
+        (data) => {
+            currentSpot = 0
+            spots = data["spots"]
+            const_y = data["const_y"]
+            cameraHolder = d.scene.getObjectByName("CAMERACONTAINER")
+
+            cameraHolder.attach( d.camera)
+            d.camera.position.set(-100, 100, 100)
+            d.camera.zoom = spots[0].zoom
+            d.camera.updateProjectionMatrix()
+            console.log(cameraHolder)
+            requestIconRefresh = true
+
+            for (let i = 0; i < spots.length; i++) {
+                //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
+            }
+
+            document.body.addEventListener("mousemove", OnMouseMove)
+            document.body.addEventListener("mousedown", OnMouseClick)
+            document.body.addEventListener("mouseup", OnMouseRelease)
+            document.body.addEventListener("mouseout", OnMouseRelease)
+            document.body.addEventListener("wheel", OnWheel)
+        },
+        (error) => {
+            console.error(error)
+        })
+}
+
+//#endregion
+
+//#region FREEFORM
+const OnMouseRelease = () => {
+    if (!IsDrag()) {
+        return
+    }
+    NormalMode()
+    currentMouseX = null
+}
+const OnMouseClick = (e) => {
+    if (!IsNormal() || e.target.tagName!== 'CANVAS') {
+        return
+    }
+    DragMode()
+    currentMouseX = e.clientX
+    currentMouseY = e.clientY
+    initialPosX = currentMouseX
+    initialPosY = currentMouseY
+}
+const OnMouseMove = (e) => {
+    if (currentMouseX === null) {
+        return
+    }
+
+    if (e.target.tagName!== 'CANVAS') {
+        OnMouseRelease()
+    }
+    offsetX = -e.clientX + currentMouseX
+    offsetZ = e.clientY - currentMouseY
+    currentMouseX = e.clientX
+    currentMouseY = e.clientY
+}
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+
+const UpdateFreeform = (delta) => {
+    xVelocity += offsetX * delta * acceleration
+    zVelocity += offsetZ * delta * acceleration *2
+    if (xVelocity === zVelocity && zVelocity === 0) {
+        return
+    }
+
+    let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
+    let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
+
+    cameraHolder.position.x = targetXPos
+    cameraHolder.position.z = targetZPos
+
+    console.log(cameraHolder.position.z)
+    //The use of ratio during deceleration allow to simulate a vector magnitude diminution without using an actual vector.
+    let xRatio = 1, zRatio = 1
+    if (Math.abs(zVelocity) < Math.abs(xVelocity)) {
+        zRatio = Math.abs(zVelocity / xVelocity)
+    } else {
+        xRatio =  Math.abs(xVelocity / zVelocity)
+    }
+
+    const newXVelocity = xVelocity + (xVelocity > 0 ? -1 : 1) * delta * deceleration * xRatio
+    xVelocity = newXVelocity * xVelocity > 0 ? newXVelocity : 0
+    xVelocity = xVelocity > maxVelocity ? maxVelocity : xVelocity
+    xVelocity = xVelocity < -maxVelocity ? -maxVelocity : xVelocity
+
+    const newZVelocity = zVelocity + (zVelocity > 0 ? -1 : 1) * delta * deceleration * zRatio
+    zVelocity = newZVelocity * zVelocity > 0 ? newZVelocity : 0
+    zVelocity = zVelocity > maxVelocity ? maxVelocity : zVelocity
+    zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
+
+    offsetX = 0
+    offsetZ = 0
+
+    requestIconRefresh = true
+}
+
+
+//#endregion
+
+//#region ZOOM
+
+const OnWheel = (e) => {
+    if (e.deltaY > 0) {
+        currentZoomSpeed = zoomSpeed
+    } else {
+        currentZoomSpeed = -zoomSpeed
+    }
+}
+
+const UpdateZoom = (delta) => {
+    if (currentZoomSpeed === 0) {
+        return
+    }
+    d.camera.zoom = Math.max( minZoomLevel, Math.min( maxZoomLevel, d.camera.zoom * Math.pow( 0.95, currentZoomSpeed )))
+    d.camera.updateProjectionMatrix()
+    if (currentZoomSpeed < 0) {
+        currentZoomSpeed = Math.min(0, currentZoomSpeed + delta * zoomDeceleration)
+    } else {
+        currentZoomSpeed = Math.max(0, currentZoomSpeed - delta * zoomDeceleration)
+    }
+    requestIconRefresh = true
+}
+
+
+//#endregion
+
+//#region TRANSLATION
+
+const RequestTranslation = (id) => {
+    if (requestedTranslation || requestedTransition || id === currentSpot) {
+        return
+    }
+    translation.initialPos = d.camera.position.clone()
+    translation.targetPos = new d.THREE.Vector3(spots[id].x, const_y, spots[id].z)
+    translation.initialZoom = d.camera.zoom
+    translation.targetZoom = spots[id].zoom
+    translation.state = 0
+    requestedTranslation=true
+    currentSpot = id
+}
+
+const AnimateTranslation = (delta) => {
+    let t = easeInOutSine(translation.state)
+    if (translation.state >= 1) {
+        t=1
+    }
+
+    //zoom
+    d.camera.zoom = (1-t) * translation.initialZoom + t * translation.targetZoom
+    d.camera.updateProjectionMatrix()
+
+    //pos
+    d.camera.position.lerpVectors(translation.initialPos, translation.targetPos, t)
+
+    if (t===1) {
+        requestedTranslation = false
+    }
+    else {
+        translation.state += animationSpeed * delta
+    }
+
+    requestIconRefresh = true
+}
+
+//#endregion
+
+//#region TRANSITION
+
+const AnimateTransition = (delta) => {
+
+    const t = easeInOutSine(transition.state)
+
+    //zoom
+    d.camera.zoom = (1-t) * transition.initialZoom + t * animationZoom
+    d.camera.updateProjectionMatrix()
+
+    //fade
+    const fadeAmount = easeOutQuad(transition.state)
+    UpdateFade(fadeAmount)
+
+    transition.state += animationSpeed * delta
+
+    if (transition.state >= 1) {
+        requestedTransition = false
+        window.location.href = transition.href
+    }
+
+    requestIconRefresh = true
+}
+
+//#endregion
+
+//#region UPDATE
+
+const UpdateCamera = (delta) => {
+    if (IsLinkActive()) {
+        currentZoomSpeed = offsetZ =offsetX = xVelocity = zVelocity = 0
+        return
+    }
+    if (requestedTransition) {
+        AnimateTransition(delta)
+    }
+    else if (requestedTranslation) {
+        AnimateTranslation(delta)
+    }
+    else {
+        UpdateFreeform(delta)
+        UpdateZoom(delta)
+    }
+}
+
+//#endregion
+
+//#region FADE
+
+const UpdateFade = (newValue) =>{
+    fadeDiv.style.opacity = newValue
+}
+
+//#endregion
+
+
+
+//#endregion
+
+//#region City
+//File managing the main scene : the city view.
+
+//#region VARIABLES
+
+//The animation mixer.
+let mixer
+//True once the city is loaded.
+let ready
+
+//#endregion
+
+//#region API
+
+//Loads the city model and setup the camera and lighting.
+const generateCity = (d) => {
+
+    d.loader.load(
+        './model/port.glb',
+        (gltf) => {
+            setupScene(gltf, d)
+            SetupCameraHandler(d)
+            UpdateIconsPosition(d)
+        },
+        (xhr) => {
+            console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+        },
+        (error) => {
+            console.log(error)
+        })
+}
+
+//Reposition the icons when the screen changes size.
+const citySceneResize = (d) => {
+    if (ready) {
+        UpdateIconsPosition(d)
+    }
+}
+
+//#endregion
+
+//#region SCENE SETUP
+
+//Create the scene from the gltf model, generate lightning, setup camera
+const setupScene = (gltf, d) => {
+    setupAnimMixer(gltf, d)
+
+    d.scene.add(gltf.scene)
+
+    ready = true
+
+}
+
+//Create an animation mixer and launches the looping animation of the city.
+const setupAnimMixer = (gltf, d) => {
+    mixer = new d.THREE.AnimationMixer(gltf.scene)
+    gltf.animations.forEach((clip) => {
+        mixer.clipAction(clip).reset().play()
+    })
+}
+//#endregion
+
+//#region UPDATE
+
+//Update the city animation and check camera movements
+const UpdateCity = (d) => {
+    let delta = d.clock.getDelta()
+    delta = Math.min(delta, 0.05)
+    if (ready) {
+        mixer.update(delta)
+        UpdateCamera(delta)
+        if (RequestIconsRefresh()) {
+            UpdateIconsPosition(d)
+        }
+
+    }
+}
+
+//#endregion
+
+//#endregion
+
+//#region MAIN
+
+//#region IMPORTS
+// noinspection JSFileReferences
+
+import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
+import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js'
+//#endregion
+
+//#region CONST
+
+const clock = new THREE.Clock()
+
+const noActiveScene = -1
+const cityActiveScene = 0
+const cameraSize = 25
+//#endregion
+
+//#region VARIABLES
+
+let threeData
+let activeScene = noActiveScene
+
+//#endregion
+
+//#region SETUP
+
+const setup = () => {
+    const scene = new THREE.Scene()
+
+    const camera = null
+
+    const renderer = new THREE.WebGLRenderer({antialias: true})
+    const canvas = document.getElementById("canvas")
+    renderer.physicallyCorrectLights = true
+    renderer.outputEncoding = THREE.sRGBEncoding
+    renderer.setClearColor( 0xEDE89F )
+    renderer.setPixelRatio( window.devicePixelRatio )
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    canvas.appendChild( renderer.domElement )
+    renderer.domElement.style.position = 'fixed'
+    renderer.domElement.style.zIndex = '-1'
+    window.addEventListener('resize', Resize)
+
+    const dracoLoader = new DRACOLoader()
+    dracoLoader.setDecoderPath( 'js/libs/draco/gltf/' )
+
+    const loader = new GLTFLoader()
+    loader.setDRACOLoader( dracoLoader )
+
+    threeData = {THREE, loader, clock, scene, camera, renderer, canvas}
+}
+
+//#endregion
+
+//#region SCENE MANAGEMENT
+
+const ClearScene = () => {
+    while(threeData.scene.children.length > 0){
+        threeData.scene.remove(threeData.scene.children[0])
+    }
+}
+
+const LoadCityScene = () => {
+    ClearScene()
+    const aspect = window.innerWidth / window.innerHeight
+    threeData.camera = new THREE.OrthographicCamera( - cameraSize * aspect, cameraSize * aspect, cameraSize, - cameraSize, 0.001, 10000 )
+    threeData.scene.add(threeData.camera)
+    threeData.camera.rotation.order = 'YXZ'
+    threeData.camera.rotation.y = - Math.PI / 4
+    threeData.camera.rotation.x = Math.atan( - 1 / Math.sqrt( 2 ) )
+    generateCity(threeData)
+    activeScene = cityActiveScene
+}
+
+//#endregion
+
+//#region UPDATE
+
+const animate = () => {
+    requestAnimationFrame( animate )
+    if (activeScene === cityActiveScene) {
+        UpdateCity(threeData)
+    }
+    render()
+}
+
+const render = () => {
+    threeData.renderer.render( threeData.scene, threeData.camera )
+}
+
+//#endregion
+
+//#region RESPONSIVE
+
+const Resize = () => {
+
+    //If we're using an orthographic camera
+    if (activeScene === cityActiveScene) {
+        const aspect = window.innerWidth / window.innerHeight
+        threeData.camera.left = -cameraSize * aspect
+        threeData.camera.right = cameraSize * aspect
+        threeData.camera.top = cameraSize
+        threeData.camera.bottom = -cameraSize
+        threeData.camera.updateProjectionMatrix()
+    }
+
+    threeData.renderer.setSize(window.innerWidth, window.innerHeight)
+    render()
+
+    if (activeScene === cityActiveScene) {
+        citySceneResize(threeData)
+    }
+}
+
+//#endregion
+
+const main = () => {
+    setup()
+
+    LoadCityScene()
+
+    InitializeIcons(threeData)
+
+    InitializeCursor(threeData)
+    animate()
+}
+
+main()
+
+//#endregion

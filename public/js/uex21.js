@@ -41912,6928 +41912,6924 @@ MaskIndexEffect, NoValueEffect, DynamicPropertyContainer */
  * Webflow: Interactions 2.0: Init
  */
 
-export const InitializeWebflow = () => {
 
-
-    Webflow.require('ix2').init(
-        {
-            "events": {
-                "e-7": {
-                    "id": "e-7",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-48"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6155d63bb3fc53f6027f658b|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6155d63bb3fc53f6027f658b|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1633019074646
-                },
-                "e-11": {
-                    "id": "e-11",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-12"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6155d63bb3fc53f6027f658b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6155d63bb3fc53f6027f658b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1633019125338
-                },
-                "e-13": {
-                    "id": "e-13",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-14"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6155d63bb3fc53f6027f658b|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6155d63bb3fc53f6027f658b|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1633019148641
-                },
-                "e-15": {
-                    "id": "e-15",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "POP_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "pop", "autoStopEventId": "e-16"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1633315135824
-                },
-                "e-17": {
-                    "id": "e-17",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-2",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-18"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1633315177410
-                },
-                "e-18": {
-                    "id": "e-18",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-3",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-17"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1633315177410
-                },
-                "e-19": {
-                    "id": "e-19",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInLeft", "autoStopEventId": "e-20"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6155d63bb3fc53f6027f658b|9f75cbec-82da-62ca-9ef1-d7191cfc28a8",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6155d63bb3fc53f6027f658b|9f75cbec-82da-62ca-9ef1-d7191cfc28a8",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 80,
-                        "direction": "LEFT",
-                        "effectIn": true
-                    },
-                    "createdOn": 1634342773420
-                },
-                "e-25": {
-                    "id": "e-25",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-26"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "616a19718868227d619f899f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "616a19718868227d619f899f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1634343281983
-                },
-                "e-33": {
-                    "id": "e-33",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-4",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-34"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "616a19718868227d619f899f|968c659c-5ae8-a62a-23e6-4cd92af50516",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "616a19718868227d619f899f|968c659c-5ae8-a62a-23e6-4cd92af50516",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634347228586
-                },
-                "e-35": {
-                    "id": "e-35",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-36"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634349130554
-                },
-                "e-37": {
-                    "id": "e-37",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-38"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "616a38cc894d992798934c7d|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "616a38cc894d992798934c7d|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1634351309002
-                },
-                "e-41": {
-                    "id": "e-41",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-42"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "616a38cc894d992798934c7d|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "616a38cc894d992798934c7d|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634351309002
-                },
-                "e-45": {
-                    "id": "e-45",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-8",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-46"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "selector": ".link",
-                        "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
-                        "appliesTo": "CLASS"
-                    },
-                    "targets": [{
-                        "selector": ".link",
-                        "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
-                        "appliesTo": "CLASS"
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1543899561020
-                },
-                "e-46": {
-                    "id": "e-46",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-9",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-45"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "selector": ".link",
-                        "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
-                        "appliesTo": "CLASS"
-                    },
-                    "targets": [{
-                        "selector": ".link",
-                        "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
-                        "appliesTo": "CLASS"
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1543899561020
-                },
-                "e-47": {
-                    "id": "e-47",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-21",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-48"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634770223320
-                },
-                "e-48": {
-                    "id": "e-48",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-22",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-47"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634770223321
-                },
-                "e-49": {
-                    "id": "e-49",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-50"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170c1c46c29398cba2740cc|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170c1c46c29398cba2740cc|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1634779590979
-                },
-                "e-51": {
-                    "id": "e-51",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-4",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-52"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170c1c46c29398cba2740cc|968c659c-5ae8-a62a-23e6-4cd92af50516",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170c1c46c29398cba2740cc|968c659c-5ae8-a62a-23e6-4cd92af50516",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634779590979
-                },
-                "e-53": {
-                    "id": "e-53",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-54"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170c1c46c29398cba2740cc|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170c1c46c29398cba2740cc|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634779590979
-                },
-                "e-55": {
-                    "id": "e-55",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-13",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-56"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634785753591
-                },
-                "e-56": {
-                    "id": "e-56",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-14",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-55"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634785753592
-                },
-                "e-57": {
-                    "id": "e-57",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-15",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-58"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": true,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634787634302
-                },
-                "e-58": {
-                    "id": "e-58",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-16",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-57"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634787634302
-                },
-                "e-59": {
-                    "id": "e-59",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-17",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-60"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": true,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": false
-                    },
-                    "createdOn": 1634787742204
-                },
-                "e-60": {
-                    "id": "e-60",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-18",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-59"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634787742204
-                },
-                "e-63": {
-                    "id": "e-63",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-13",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-64"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634794327102
-                },
-                "e-64": {
-                    "id": "e-64",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-14",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-63"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634794327102
-                },
-                "e-65": {
-                    "id": "e-65",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-15",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-66"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": true,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634794327102
-                },
-                "e-66": {
-                    "id": "e-66",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-16",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-65"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634794327102
-                },
-                "e-67": {
-                    "id": "e-67",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-17",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-68"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": true,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": false
-                    },
-                    "createdOn": 1634794327102
-                },
-                "e-68": {
-                    "id": "e-68",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-18",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-67"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634794327102
-                },
-                "e-71": {
-                    "id": "e-71",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-10",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-72"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634799001505
-                },
-                "e-72": {
-                    "id": "e-72",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-20",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-71"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1634799001506
-                },
-                "e-79": {
-                    "id": "e-79",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-80"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6175c30f6e460396079ecc2b|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6175c30f6e460396079ecc2b|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635107599672
-                },
-                "e-81": {
-                    "id": "e-81",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-82"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6175c30f6e460396079ecc2b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6175c30f6e460396079ecc2b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635107599672
-                },
-                "e-83": {
-                    "id": "e-83",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-84"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6175c30f6e460396079ecc2b|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6175c30f6e460396079ecc2b|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635107599672
-                },
-                "e-85": {
-                    "id": "e-85",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-86"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "selector": ".content-wrapper",
-                        "originalId": "6175c30f6e460396079ecc2b|dad6ade0-d672-e321-87b4-28af6d13e87e",
-                        "appliesTo": "CLASS"
-                    },
-                    "targets": [{
-                        "selector": ".content-wrapper",
-                        "originalId": "6175c30f6e460396079ecc2b|dad6ade0-d672-e321-87b4-28af6d13e87e",
-                        "appliesTo": "CLASS"
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635109323679
-                },
-                "e-87": {
-                    "id": "e-87",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-88"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6175ccdf9298f0efa14320a6|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6175ccdf9298f0efa14320a6|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635110111942
-                },
-                "e-89": {
-                    "id": "e-89",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-90"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6175ccdf9298f0efa14320a6|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6175ccdf9298f0efa14320a6|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635110111942
-                },
-                "e-91": {
-                    "id": "e-91",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-92"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6175ccdf9298f0efa14320a6|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6175ccdf9298f0efa14320a6|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635110111942
-                },
-                "e-94": {
-                    "id": "e-94",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "PAGE_FINISH",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-23",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-93"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {"id": "6179eb2b715617ed93feee24", "appliesTo": "PAGE", "styleBlockIds": []},
-                    "targets": [{"id": "6179eb2b715617ed93feee24", "appliesTo": "PAGE", "styleBlockIds": []}],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635393819961
-                },
-                "e-95": {
-                    "id": "e-95",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_MOVE",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_CONTINUOUS_ACTION",
-                        "config": {"actionListId": "a-24", "affectedElements": {}, "duration": 0}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "selector": ".cursor-wrapper",
-                        "originalId": "617a244d0fc14d1396cf47be|5ce77e92-8d6b-9292-9032-b9757bfe941f",
-                        "appliesTo": "CLASS"
-                    },
-                    "targets": [{
-                        "selector": ".cursor-wrapper",
-                        "originalId": "617a244d0fc14d1396cf47be|5ce77e92-8d6b-9292-9032-b9757bfe941f",
-                        "appliesTo": "CLASS"
-                    }],
-                    "config": [{
-                        "continuousParameterGroupId": "a-24-p",
-                        "selectedAxis": "X_AXIS",
-                        "basedOn": "ELEMENT",
-                        "reverse": false,
-                        "smoothing": 50,
-                        "restingState": 50
-                    }, {
-                        "continuousParameterGroupId": "a-24-p-2",
-                        "selectedAxis": "Y_AXIS",
-                        "basedOn": "ELEMENT",
-                        "reverse": false,
-                        "smoothing": 50,
-                        "restingState": 50
-                    }],
-                    "createdOn": 1593717021811
-                },
-                "e-96": {
-                    "id": "e-96",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_MOVE",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_CONTINUOUS_ACTION",
-                        "config": {"actionListId": "a-25", "affectedElements": {}, "duration": 0}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "selector": ".cursor-wrapper",
-                        "originalId": "617097960941452dee864afb|6cb69a9c-59f5-f922-e41b-287bb1468703",
-                        "appliesTo": "CLASS"
-                    },
-                    "targets": [{
-                        "selector": ".cursor-wrapper",
-                        "originalId": "617097960941452dee864afb|6cb69a9c-59f5-f922-e41b-287bb1468703",
-                        "appliesTo": "CLASS"
-                    }],
-                    "config": [{
-                        "continuousParameterGroupId": "a-25-p",
-                        "selectedAxis": "X_AXIS",
-                        "basedOn": "ELEMENT",
-                        "reverse": false,
-                        "smoothing": 50,
-                        "restingState": 50
-                    }, {
-                        "continuousParameterGroupId": "a-25-p-2",
-                        "selectedAxis": "Y_AXIS",
-                        "basedOn": "ELEMENT",
-                        "reverse": false,
-                        "smoothing": 50,
-                        "restingState": 50
-                    }],
-                    "createdOn": 1596746814054
-                },
-                "e-99": {
-                    "id": "e-99",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-10",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-100"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635482401622
-                },
-                "e-100": {
-                    "id": "e-100",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-20",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-99"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635482401622
-                },
-                "e-101": {
-                    "id": "e-101",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-26",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-102"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635483828106
-                },
-                "e-103": {
-                    "id": "e-103",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-27",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-104"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617097960941452dee864afb|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617097960941452dee864afb|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635484329419
-                },
-                "e-105": {
-                    "id": "e-105",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-106"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617dc2463b4bfdc0b8b4681c|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617dc2463b4bfdc0b8b4681c|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635631686231
-                },
-                "e-107": {
-                    "id": "e-107",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-108"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617dc2463b4bfdc0b8b4681c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617dc2463b4bfdc0b8b4681c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635631686231
-                },
-                "e-109": {
-                    "id": "e-109",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-110"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "617dc2463b4bfdc0b8b4681c|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "617dc2463b4bfdc0b8b4681c|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635631686231
-                },
-                "e-111": {
-                    "id": "e-111",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-112"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180879674306b9df6e961b4|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180879674306b9df6e961b4|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635813270552
-                },
-                "e-113": {
-                    "id": "e-113",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-114"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180879674306b9df6e961b4|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180879674306b9df6e961b4|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635813270552
-                },
-                "e-115": {
-                    "id": "e-115",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-116"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180879674306b9df6e961b4|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180879674306b9df6e961b4|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635813270552
-                },
-                "e-117": {
-                    "id": "e-117",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-118"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "618088190b1d71b026dab13b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "618088190b1d71b026dab13b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635813401238
-                },
-                "e-121": {
-                    "id": "e-121",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-122"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "618088190b1d71b026dab13b|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "618088190b1d71b026dab13b|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635813401238
-                },
-                "e-123": {
-                    "id": "e-123",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-124"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "61808b9d80683a520e23d58e|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "61808b9d80683a520e23d58e|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635814301568
-                },
-                "e-125": {
-                    "id": "e-125",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-126"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "61808b9d80683a520e23d58e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "61808b9d80683a520e23d58e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635814301568
-                },
-                "e-127": {
-                    "id": "e-127",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-128"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "61808b9d80683a520e23d58e|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "61808b9d80683a520e23d58e|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635814301568
-                },
-                "e-129": {
-                    "id": "e-129",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-130"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "61808dea00fd8d539598b997|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "61808dea00fd8d539598b997|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635814890783
-                },
-                "e-131": {
-                    "id": "e-131",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-132"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "61808dea00fd8d539598b997|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "61808dea00fd8d539598b997|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635814890783
-                },
-                "e-133": {
-                    "id": "e-133",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-134"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "61808dea00fd8d539598b997|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "61808dea00fd8d539598b997|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635814890783
-                },
-                "e-135": {
-                    "id": "e-135",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-136"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180900e05c2a3feebd8959e|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180900e05c2a3feebd8959e|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635815440023
-                },
-                "e-137": {
-                    "id": "e-137",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-138"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180900e05c2a3feebd8959e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180900e05c2a3feebd8959e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635815440023
-                },
-                "e-139": {
-                    "id": "e-139",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-140"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180900e05c2a3feebd8959e|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180900e05c2a3feebd8959e|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635815440023
-                },
-                "e-141": {
-                    "id": "e-141",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-142"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180906334741fddf7298862|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180906334741fddf7298862|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635815526582
-                },
-                "e-143": {
-                    "id": "e-143",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-144"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180906334741fddf7298862|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180906334741fddf7298862|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635815526582
-                },
-                "e-145": {
-                    "id": "e-145",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-146"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180906334741fddf7298862|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180906334741fddf7298862|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635815526582
-                },
-                "e-147": {
-                    "id": "e-147",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-148"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180927a30d8666392c08a35|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180927a30d8666392c08a35|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635816060677
-                },
-                "e-149": {
-                    "id": "e-149",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-150"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180927a30d8666392c08a35|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180927a30d8666392c08a35|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635816060677
-                },
-                "e-151": {
-                    "id": "e-151",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-152"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180927a30d8666392c08a35|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180927a30d8666392c08a35|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635816060677
-                },
-                "e-153": {
-                    "id": "e-153",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-154"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180937100fd8d044298ec81|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180937100fd8d044298ec81|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635816306529
-                },
-                "e-155": {
-                    "id": "e-155",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-156"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180937100fd8d044298ec81|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180937100fd8d044298ec81|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635816306529
-                },
-                "e-157": {
-                    "id": "e-157",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-158"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180963a2ca765ef89916f5f|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180963a2ca765ef89916f5f|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635817018989
-                },
-                "e-159": {
-                    "id": "e-159",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-160"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180963a2ca765ef89916f5f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180963a2ca765ef89916f5f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635817018989
-                },
-                "e-163": {
-                    "id": "e-163",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-164"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a326b0961c037fbfdd28|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a326b0961c037fbfdd28|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635820326663
-                },
-                "e-165": {
-                    "id": "e-165",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-166"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a326b0961c037fbfdd28|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a326b0961c037fbfdd28|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635820326663
-                },
-                "e-167": {
-                    "id": "e-167",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-168"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a326b0961c037fbfdd28|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a326b0961c037fbfdd28|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635820326663
-                },
-                "e-169": {
-                    "id": "e-169",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-170"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a4688b29575a620dc6cb|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a4688b29575a620dc6cb|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635820649678
-                },
-                "e-171": {
-                    "id": "e-171",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-172"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a4688b29575a620dc6cb|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a4688b29575a620dc6cb|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635820649678
-                },
-                "e-173": {
-                    "id": "e-173",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-174"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a6f7b536a4441077a901|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a6f7b536a4441077a901|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635821303489
-                },
-                "e-175": {
-                    "id": "e-175",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-176"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a6f7b536a4441077a901|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a6f7b536a4441077a901|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635821303489
-                },
-                "e-177": {
-                    "id": "e-177",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-178"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a6f7b536a4441077a901|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a6f7b536a4441077a901|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635821303489
-                },
-                "e-179": {
-                    "id": "e-179",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-180"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a8eda9ec3a2b66196cf0|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a8eda9ec3a2b66196cf0|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635821806315
-                },
-                "e-181": {
-                    "id": "e-181",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-182"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180a8eda9ec3a2b66196cf0|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180a8eda9ec3a2b66196cf0|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635821806315
-                },
-                "e-183": {
-                    "id": "e-183",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-184"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180aa802ce13f83259b6bba|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180aa802ce13f83259b6bba|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635822209430
-                },
-                "e-185": {
-                    "id": "e-185",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-186"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180aa802ce13f83259b6bba|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180aa802ce13f83259b6bba|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635822209430
-                },
-                "e-187": {
-                    "id": "e-187",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-188"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180aa802ce13f83259b6bba|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180aa802ce13f83259b6bba|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635822209430
-                },
-                "e-189": {
-                    "id": "e-189",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-190"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180ab7ef4f5814256920dca|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180ab7ef4f5814256920dca|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635822462725
-                },
-                "e-191": {
-                    "id": "e-191",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-192"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180ab7ef4f5814256920dca|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180ab7ef4f5814256920dca|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635822462725
-                },
-                "e-193": {
-                    "id": "e-193",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-194"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180ab7ef4f5814256920dca|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180ab7ef4f5814256920dca|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635822462725
-                },
-                "e-195": {
-                    "id": "e-195",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-196"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180af42b0961c32f3c01b7f|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180af42b0961c32f3c01b7f|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635823426560
-                },
-                "e-197": {
-                    "id": "e-197",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-198"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180af42b0961c32f3c01b7f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180af42b0961c32f3c01b7f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635823426560
-                },
-                "e-199": {
-                    "id": "e-199",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-200"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180af42b0961c32f3c01b7f|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180af42b0961c32f3c01b7f|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635823426560
-                },
-                "e-201": {
-                    "id": "e-201",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-202"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180b02881cc4870b1e5d011|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180b02881cc4870b1e5d011|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635823659098
-                },
-                "e-203": {
-                    "id": "e-203",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-204"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180b02881cc4870b1e5d011|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180b02881cc4870b1e5d011|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635823659098
-                },
-                "e-205": {
-                    "id": "e-205",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-206"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180b2722e0b38bb9814b25c|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180b2722e0b38bb9814b25c|75888f7c-1ae4-a2f6-fb48-5368db054726",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635824243614
-                },
-                "e-207": {
-                    "id": "e-207",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-208"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180b2722e0b38bb9814b25c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180b2722e0b38bb9814b25c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635824243614
-                },
-                "e-209": {
-                    "id": "e-209",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-210"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180b2722e0b38bb9814b25c|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180b2722e0b38bb9814b25c|32a57918-a627-bc25-0498-910dca1922e5",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635824243614
-                },
-                "e-211": {
-                    "id": "e-211",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-21",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-212"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-212": {
-                    "id": "e-212",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-22",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-211"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-213": {
-                    "id": "e-213",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-13",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-214"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-214": {
-                    "id": "e-214",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-14",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-213"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-215": {
-                    "id": "e-215",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-15",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-216"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": true,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-216": {
-                    "id": "e-216",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-16",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-215"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-217": {
-                    "id": "e-217",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-17",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-218"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": true,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": false
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-218": {
-                    "id": "e-218",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-18",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-217"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-219": {
-                    "id": "e-219",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-10",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-220"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-220": {
-                    "id": "e-220",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_SECOND_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-20",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-219"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-221": {
-                    "id": "e-221",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-28",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-222"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-223": {
-                    "id": "e-223",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-29",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-224"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827168794
-                },
-                "e-225": {
-                    "id": "e-225",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "POP_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "pop", "autoStopEventId": "e-226"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827204910
-                },
-                "e-227": {
-                    "id": "e-227",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-2",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-228"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827204910
-                },
-                "e-228": {
-                    "id": "e-228",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-3",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-227"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635827204910
-                },
-                "e-231": {
-                    "id": "e-231",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-232"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704cc",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704cc",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635828190831
-                },
-                "e-233": {
-                    "id": "e-233",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-234"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704d2",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704d2",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635828190831
-                },
-                "e-235": {
-                    "id": "e-235",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-30",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-236"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635828202804
-                },
-                "e-237": {
-                    "id": "e-237",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-238"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f398f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f398f",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635831400081
-                },
-                "e-239": {
-                    "id": "e-239",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-240"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f39a0",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f39a0",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635831400081
-                },
-                "e-241": {
-                    "id": "e-241",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-242"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180c91874306b27deea94db|fb72f319-6e76-68af-6169-ba3202c93182",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [{
-                        "id": "6180c91874306b27deea94db|fb72f319-6e76-68af-6169-ba3202c93182",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    }],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635834728554
-                },
-                "e-243": {
-                    "id": "e-243",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-2",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-244"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635841763524
-                },
-                "e-244": {
-                    "id": "e-244",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OUT",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-3",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-243"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635841763524
-                },
-                "e-245": {
-                    "id": "e-245",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-31",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-246"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635841763524
-                },
-                "e-247": {
-                    "id": "e-247",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "MOUSE_OVER",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "POP_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "pop", "autoStopEventId": "e-248"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": 0,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635841763524
-                },
-                "e-249": {
-                    "id": "e-249",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GROW_BIG_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "growBigIn", "autoStopEventId": "e-250"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee54",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 200,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635841793251
-                },
-                "e-251": {
-                    "id": "e-251",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "FADE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "fadeIn", "autoStopEventId": "e-252"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee63",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 300,
-                        "direction": null,
-                        "effectIn": true
-                    },
-                    "createdOn": 1635841793251
-                },
-                "e-253": {
-                    "id": "e-253",
-                    "name": "",
-                    "animationType": "preset",
-                    "eventTypeId": "SCROLL_INTO_VIEW",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "SLIDE_EFFECT",
-                        "instant": false,
-                        "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-254"}
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee69",
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": []
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": 0,
-                        "scrollOffsetUnit": "%",
-                        "delay": 100,
-                        "direction": "BOTTOM",
-                        "effectIn": true
-                    },
-                    "createdOn": 1635841793251
-                },
-                "e-255": {
-                    "id": "e-255",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-32",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-256"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": [],
-                        "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee54"
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635841980634
-                },
-                "e-257": {
-                    "id": "e-257",
-                    "name": "",
-                    "animationType": "custom",
-                    "eventTypeId": "MOUSE_CLICK",
-                    "action": {
-                        "id": "",
-                        "actionTypeId": "GENERAL_START_ACTION",
-                        "config": {
-                            "delay": 0,
-                            "easing": "",
-                            "duration": 0,
-                            "actionListId": "a-5",
-                            "affectedElements": {},
-                            "playInReverse": false,
-                            "autoStopEventId": "e-258"
-                        }
-                    },
-                    "mediaQueries": ["main", "medium", "small", "tiny"],
-                    "target": {
-                        "appliesTo": "ELEMENT",
-                        "styleBlockIds": [],
-                        "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bd"
-                    },
-                    "targets": [],
-                    "config": {
-                        "loop": false,
-                        "playInReverse": false,
-                        "scrollOffsetValue": null,
-                        "scrollOffsetUnit": null,
-                        "delay": null,
-                        "direction": null,
-                        "effectIn": null
-                    },
-                    "createdOn": 1635842441093
-                }
+Webflow.require('ix2').init(
+    {
+        "events": {
+            "e-7": {
+                "id": "e-7",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-48"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6155d63bb3fc53f6027f658b|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6155d63bb3fc53f6027f658b|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1633019074646
             },
-            "actionLists": {
-                "a-2": {
-                    "id": "a-2", "title": "MapSpotAnim In", "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-2-n-9",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-2-n-11",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-2-n-15",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "xValue": 0.7,
-                                "yValue": 0.7,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-2-n-17",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-2-n-19",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-dot",
-                                    "selectorGuids": ["010c21aa-cdcd-4ac2-6ac0-ad298b3205a2"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-2-n-10",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bounce",
-                                "duration": 400,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "xValue": 1.1,
-                                "yValue": 1.1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-2-n-2",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bouncePast",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "zValue": 90,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }, {
-                            "id": "a-2-n-18",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-2-n-20",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 250,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-dot",
-                                    "selectorGuids": ["010c21aa-cdcd-4ac2-6ac0-ad298b3205a2"]
-                                },
-                                "xValue": 0.5,
-                                "yValue": 0.5,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-2-n-8",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 400,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-2-n-16",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 400,
-                                "easing": "swingFromTo",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }]
-                    }], "useFirstGroupAsInitialState": true, "createdOn": 1633315180685
+            "e-11": {
+                "id": "e-11",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-12"}
                 },
-                "a-3": {
-                    "id": "a-3", "title": "MapSpotAnim Out", "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-3-n",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-3-n-2",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-3-n-3",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".hotspot-name-div",
-                                    "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
-                                },
-                                "xValue": 0.7,
-                                "yValue": 0.7,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-3-n-4",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-3-n-5",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bounce",
-                                "duration": 800,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c"
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-3-n-7",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-dot",
-                                    "selectorGuids": ["010c21aa-cdcd-4ac2-6ac0-ad298b3205a2"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-3-n-6",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".lottie-picto",
-                                    "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }], "useFirstGroupAsInitialState": false, "createdOn": 1633315180685
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6155d63bb3fc53f6027f658b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
                 },
-                "a-4": {
-                    "id": "a-4", "title": "Slide Hotspot", "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-4-n-8",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-back-button",
-                                    "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-11",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-descrip-div",
-                                    "selectorGuids": ["8e49bc72-8449-e6e3-787c-e9f8cccdf99c"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-13",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".title-header-div",
-                                    "selectorGuids": ["70e13c9e-c2c8-ea35-5495-40a25e1fdc24"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-15",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-back-button",
-                                    "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
-                                },
-                                "xValue": null,
-                                "yValue": -200,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-4-n-17",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-header-section",
-                                    "selectorGuids": ["df50c3bf-eb45-91d6-7111-ec7424c14a0b"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-19",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-partner-div",
-                                    "selectorGuids": ["0c3f12cd-06d5-6723-183b-bfb87b9887f2"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-21",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {"delay": 0, "easing": "", "duration": 0, "value": "none", "target": {}}
-                        }, {
-                            "id": "a-4-n-25",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {"delay": 0, "easing": "", "duration": 500, "target": {}, "value": 0, "unit": ""}
-                        }, {
-                            "id": "a-4-n-27",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".content-wrapper",
-                                    "selectorGuids": ["c3b65f67-18b8-2148-ee16-d922d58261cc"]
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-4-n-22",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {"delay": 0, "easing": "", "duration": 0, "value": "block", "target": {}}
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-4-n-26",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {"delay": 0, "easing": "", "duration": 500, "target": {}, "value": 1, "unit": ""}
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-4-n-14",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 300,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".title-header-div",
-                                    "selectorGuids": ["70e13c9e-c2c8-ea35-5495-40a25e1fdc24"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-18",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 300,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-header-section",
-                                    "selectorGuids": ["df50c3bf-eb45-91d6-7111-ec7424c14a0b"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-28",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 300,
-                                "easing": "outCirc",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".content-wrapper",
-                                    "selectorGuids": ["c3b65f67-18b8-2148-ee16-d922d58261cc"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-12",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 1000,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-descrip-div",
-                                    "selectorGuids": ["8e49bc72-8449-e6e3-787c-e9f8cccdf99c"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-4-n-20",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 1100,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-partner-div",
-                                    "selectorGuids": ["0c3f12cd-06d5-6723-183b-bfb87b9887f2"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-4-n-16",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 1200,
-                                "easing": "swingTo",
-                                "duration": 2000,
-                                "target": {
-                                    "selector": ".hotspot-back-button",
-                                    "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
-                                },
-                                "xValue": null,
-                                "yValue": 0,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-4-n-7",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 1200,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".hotspot-back-button",
-                                    "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }]
-                    }], "useFirstGroupAsInitialState": true, "createdOn": 1634347201362
+                "targets": [{
+                    "id": "6155d63bb3fc53f6027f658b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
                 },
-                "a-5": {
-                    "id": "a-5",
-                    "title": "Slide Hotspot (Fermeture) EDF",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-5-n-6",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuad",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5"
-                                },
-                                "xValue": -16,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-5-n-19",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutElastic",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "xValue": 37,
-                                "xUnit": "%",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-5-n-18",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-5-n-17",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "value": "none"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1634347201362
-                },
-                "a-8": {
-                    "id": "a-8",
-                    "title": "bg color change",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-8-n",
-                            "actionTypeId": "STYLE_BACKGROUND_COLOR",
-                            "config": {
-                                "delay": 0,
-                                "easing": "ease",
-                                "duration": 500,
-                                "target": {},
-                                "globalSwatchId": "2e0a9839",
-                                "rValue": 75,
-                                "bValue": 242,
-                                "gValue": 126,
-                                "aValue": 1
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1543899369676
-                },
-                "a-9": {
-                    "id": "a-9",
-                    "title": "bg change (hover out)",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-9-n",
-                            "actionTypeId": "STYLE_BACKGROUND_COLOR",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {},
-                                "globalSwatchId": "",
-                                "rValue": 0,
-                                "bValue": 0,
-                                "gValue": 0,
-                                "aValue": 0
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1543899410896
-                },
-                "a-21": {
-                    "id": "a-21",
-                    "title": "Open Sidebar 2",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-21-n-13",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".color-div.credits",
-                                    "selectorGuids": ["f96951bb-ca0d-04ef-6102-9e1f17882464", "6756f702-8e5e-7559-a456-d740d3a25959"]
-                                },
-                                "yValue": 234,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-21-n-15",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutBack",
-                                "duration": 1000,
-                                "target": {
-                                    "selector": ".color-div-wrapper",
-                                    "selectorGuids": ["55dc3b1f-9d7e-8871-efb5-41db8c6c5dab"]
-                                },
-                                "xValue": -480,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-21-n-17",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".inside-menu-div",
-                                    "selectorGuids": ["c1018af7-a791-f964-7cd3-40ac698abb5c"]
-                                },
-                                "xValue": -105,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-21-n-19",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
-                                },
-                                "zValue": -39,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }, {
-                            "id": "a-21-n-14",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {
-                                    "selector": ".color-div.credits",
-                                    "selectorGuids": ["f96951bb-ca0d-04ef-6102-9e1f17882464", "6756f702-8e5e-7559-a456-d740d3a25959"]
-                                },
-                                "xValue": 0,
-                                "yValue": 0,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-21-n-16",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 100,
-                                "easing": "inOutBack",
-                                "duration": 700,
-                                "target": {
-                                    "selector": ".color-div-wrapper",
-                                    "selectorGuids": ["55dc3b1f-9d7e-8871-efb5-41db8c6c5dab"]
-                                },
-                                "xValue": 0,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-21-n-20",
-                            "actionTypeId": "STYLE_BORDER",
-                            "config": {
-                                "delay": 100,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
-                                },
-                                "globalSwatchId": "ec0d4579",
-                                "rValue": 254,
-                                "bValue": 75,
-                                "gValue": 0,
-                                "aValue": 1
-                            }
-                        }, {
-                            "id": "a-21-n-18",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 500,
-                                "easing": "swingTo",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".inside-menu-div",
-                                    "selectorGuids": ["c1018af7-a791-f964-7cd3-40ac698abb5c"]
-                                },
-                                "xValue": 0,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1634843570214
-                },
-                "a-22": {
-                    "id": "a-22", "title": "Open Sidebar 3", "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-22-n-2",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {
-                                    "selector": ".color-div-wrapper",
-                                    "selectorGuids": ["55dc3b1f-9d7e-8871-efb5-41db8c6c5dab"]
-                                },
-                                "xValue": -444,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-22-n-3",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {},
-                                "xValue": -105,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-22-n",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".color-div.credits",
-                                    "selectorGuids": ["f96951bb-ca0d-04ef-6102-9e1f17882464", "6756f702-8e5e-7559-a456-d740d3a25959"]
-                                },
-                                "yValue": 234,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-22-n-4",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }, {
-                            "id": "a-22-n-5",
-                            "actionTypeId": "STYLE_BORDER",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
-                                },
-                                "globalSwatchId": "ca3a2e84",
-                                "rValue": 255,
-                                "bValue": 3,
-                                "gValue": 213,
-                                "aValue": 1
-                            }
-                        }]
-                    }], "useFirstGroupAsInitialState": false, "createdOn": 1634843570214
-                },
-                "a-13": {
-                    "id": "a-13",
-                    "title": "Sound Off",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-13-n",
-                            "actionTypeId": "PLUGIN_LOTTIE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".inside-lottie-icon",
-                                    "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
-                                },
-                                "value": 50
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1634785762567
-                },
-                "a-14": {
-                    "id": "a-14",
-                    "title": "Sound On",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-14-n",
-                            "actionTypeId": "PLUGIN_LOTTIE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".inside-lottie-icon",
-                                    "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
-                                },
-                                "value": 0
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1634785762567
-                },
-                "a-15": {
-                    "id": "a-15",
-                    "title": "Anim Collect Icon",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-15-n-3",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inSine",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-15-n-4",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inSine",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-15-n-5",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outCirc",
-                                "duration": 2000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "xValue": 0.9,
-                                "yValue": 0.9,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-15-n-6",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bounce",
-                                "duration": 2000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "zValue": 116,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-15-n-7",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inSine",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-15-n-11",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-15-n-8",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bounce",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "zValue": -116,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-15-n-9",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outCirc",
-                                "duration": 2000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-15-n-10",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bounce",
-                                "duration": 2000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1634787580674
-                },
-                "a-16": {
-                    "id": "a-16",
-                    "title": "Anim Collect Icon STOP",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-16-n-3",
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "xValue": 1,
-                                "yValue": 1,
-                                "locked": true
-                            }
-                        }, {
-                            "id": "a-16-n-4",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".ui-collect-icon",
-                                    "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1634787580674
-                },
-                "a-17": {
-                    "id": "a-17",
-                    "title": "Hover Sound Anim",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-17-n",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".inside-lottie-icon",
-                                    "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-17-n-2",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingTo",
-                                "duration": 800,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".inside-lottie-icon",
-                                    "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
-                                },
-                                "zValue": -35,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1634787775480
-                },
-                "a-18": {
-                    "id": "a-18",
-                    "title": "Hover Sound Anim 2",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-18-n",
-                            "actionTypeId": "TRANSFORM_ROTATE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "CHILDREN",
-                                    "selector": ".inside-lottie-icon",
-                                    "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
-                                },
-                                "zValue": 0,
-                                "xUnit": "DEG",
-                                "yUnit": "DEG",
-                                "zUnit": "deg"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1634787775480
-                },
-                "a-10": {
-                    "id": "a-10",
-                    "title": "open lightbox",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-10-n",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {
-                                    "selector": ".collectibles-wrapper",
-                                    "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
-                                },
-                                "value": "none"
-                            }
-                        }, {
-                            "id": "a-10-n-4",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "selector": ".collectibles-wrapper",
-                                    "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
-                                },
-                                "xValue": 500,
-                                "yValue": -200,
-                                "xUnit": "%",
-                                "yUnit": "%",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-10-n-2",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {
-                                    "selector": ".collectibles-wrapper",
-                                    "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
-                                },
-                                "value": "block"
-                            }
-                        }, {
-                            "id": "a-10-n-5",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingTo",
-                                "duration": 1250,
-                                "target": {
-                                    "selector": ".collectibles-wrapper",
-                                    "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
-                                },
-                                "xValue": 0,
-                                "yValue": 0,
-                                "xUnit": "px",
-                                "yUnit": "%",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1543900439959
-                },
-                "a-20": {
-                    "id": "a-20",
-                    "title": "close lightbox",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-20-n-2",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inExpo",
-                                "duration": 700,
-                                "target": {
-                                    "selector": ".collectibles-wrapper",
-                                    "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
-                                },
-                                "xValue": 500,
-                                "yValue": -250,
-                                "xUnit": "px",
-                                "yUnit": "%",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-20-n",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {
-                                    "selector": ".collectibles-wrapper",
-                                    "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
-                                },
-                                "value": "none"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1543900439959
-                },
-                "a-23": {
-                    "id": "a-23",
-                    "title": "Neon Lits",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-23-n",
-                            "actionTypeId": "STYLE_FILTER",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
-                                "filters": [{"type": "saturate", "filterId": "fff7", "value": 0, "unit": "%"}]
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-23-n-2",
-                            "actionTypeId": "STYLE_FILTER",
-                            "config": {
-                                "delay": 1500,
-                                "easing": "inOutExpo",
-                                "duration": 500,
-                                "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
-                                "filters": [{"type": "saturate", "filterId": "fff7", "value": 200, "unit": "%"}]
-                            }
-                        }, {
-                            "id": "a-23-n-3",
-                            "actionTypeId": "STYLE_FILTER",
-                            "config": {
-                                "delay": 1800,
-                                "easing": "inOutExpo",
-                                "duration": 400,
-                                "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
-                                "filters": [{"type": "saturate", "filterId": "fff7", "value": 57, "unit": "%"}]
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-23-n-4",
-                            "actionTypeId": "STYLE_FILTER",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutExpo",
-                                "duration": 300,
-                                "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
-                                "filters": [{"type": "saturate", "filterId": "fff7", "value": 200, "unit": "%"}]
-                            }
-                        }, {
-                            "id": "a-23-n-5",
-                            "actionTypeId": "STYLE_FILTER",
-                            "config": {
-                                "delay": 200,
-                                "easing": "ease",
-                                "duration": 200,
-                                "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
-                                "filters": [{"type": "saturate", "filterId": "fff7", "value": 124, "unit": "%"}]
-                            }
-                        }, {
-                            "id": "a-23-n-6",
-                            "actionTypeId": "STYLE_FILTER",
-                            "config": {
-                                "delay": 200,
-                                "easing": "inBack",
-                                "duration": 1000,
-                                "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
-                                "filters": [{"type": "saturate", "filterId": "fff7", "value": 151, "unit": "%"}]
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1635393822923
-                },
-                "a-24": {
-                    "id": "a-24",
-                    "title": "cursor-small",
-                    "continuousParameterGroups": [{
-                        "id": "a-24-p",
-                        "type": "MOUSE_X",
-                        "parameterLabel": "Mouse X",
-                        "continuousActionGroups": [{
-                            "keyframe": 0,
-                            "actionItems": [{
-                                "id": "a-24-n",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor-small",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
-                                    },
-                                    "xValue": -50,
-                                    "xUnit": "VW",
-                                    "yUnit": "PX",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }, {
-                            "keyframe": 100,
-                            "actionItems": [{
-                                "id": "a-24-n-2",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor-small",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
-                                    },
-                                    "xValue": 50,
-                                    "xUnit": "VW",
-                                    "yUnit": "PX",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }]
-                    }, {
-                        "id": "a-24-p-2",
-                        "type": "MOUSE_Y",
-                        "parameterLabel": "Mouse Y",
-                        "continuousActionGroups": [{
-                            "keyframe": 0,
-                            "actionItems": [{
-                                "id": "a-24-n-3",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor-small",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
-                                    },
-                                    "yValue": -50,
-                                    "xUnit": "PX",
-                                    "yUnit": "VH",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }, {
-                            "keyframe": 100,
-                            "actionItems": [{
-                                "id": "a-24-n-4",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor-small",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
-                                    },
-                                    "yValue": 50,
-                                    "xUnit": "PX",
-                                    "yUnit": "VH",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }]
-                    }],
-                    "createdOn": 1568744694505
-                },
-                "a-25": {
-                    "id": "a-25",
-                    "title": "cursor-large",
-                    "continuousParameterGroups": [{
-                        "id": "a-25-p",
-                        "type": "MOUSE_X",
-                        "parameterLabel": "Mouse X",
-                        "continuousActionGroups": [{
-                            "keyframe": 0,
-                            "actionItems": [{
-                                "id": "a-25-n",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
-                                    },
-                                    "xValue": -50,
-                                    "xUnit": "VW",
-                                    "yUnit": "PX",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }, {
-                            "keyframe": 100,
-                            "actionItems": [{
-                                "id": "a-25-n-2",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
-                                    },
-                                    "xValue": 50,
-                                    "xUnit": "VW",
-                                    "yUnit": "PX",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }]
-                    }, {
-                        "id": "a-25-p-2",
-                        "type": "MOUSE_Y",
-                        "parameterLabel": "Mouse Y",
-                        "continuousActionGroups": [{
-                            "keyframe": 0,
-                            "actionItems": [{
-                                "id": "a-25-n-3",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
-                                    },
-                                    "yValue": -50,
-                                    "xUnit": "PX",
-                                    "yUnit": "VH",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }, {
-                            "keyframe": 100,
-                            "actionItems": [{
-                                "id": "a-25-n-4",
-                                "actionTypeId": "TRANSFORM_MOVE",
-                                "config": {
-                                    "delay": 0,
-                                    "easing": "",
-                                    "duration": 500,
-                                    "target": {
-                                        "selector": ".cursor",
-                                        "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
-                                    },
-                                    "yValue": 50,
-                                    "xUnit": "PX",
-                                    "yUnit": "VH",
-                                    "zUnit": "PX"
-                                }
-                            }]
-                        }]
-                    }],
-                    "createdOn": 1568744694505
-                },
-                "a-26": {
-                    "id": "a-26",
-                    "title": "Ouverture de Liste Collectible",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-26-n-2",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-26-n-4",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "yValue": 177,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-26-n",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": "block"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-26-n-3",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutElastic",
-                                "duration": 500,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-26-n-5",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutElastic",
-                                "duration": 500,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1635483831694
-                },
-                "a-27": {
-                    "id": "a-27",
-                    "title": "Ferm de Liste Collectible",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-27-n",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-27-n-3",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": "none"
-                            }
-                        }, {
-                            "id": "a-27-n-2",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "yValue": 177,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1635483831694
-                },
-                "a-28": {
-                    "id": "a-28",
-                    "title": "Ouverture de Liste Collectible 2",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-28-n",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-28-n-2",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "yValue": 177,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-28-n-3",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": "block"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-28-n-4",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutElastic",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-28-n-5",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "inOutElastic",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": true,
-                    "createdOn": 1635483831694
-                },
-                "a-29": {
-                    "id": "a-29",
-                    "title": "Ferm de Liste Collectible 2",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-29-n",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-29-n-2",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "value": "none"
-                            }
-                        }, {
-                            "id": "a-29-n-3",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
-                                "yValue": 177,
-                                "xUnit": "PX",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1635483831694
-                },
-                "a-30": {
-                    "id": "a-30", "title": "Slide Hotspot EDF", "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-30-n",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "value": "none",
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"}
-                            }
-                        }, {
-                            "id": "a-30-n-5",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-30-n-6",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "xValue": 282,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-30-n-7",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-30-n-9",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
-                                "xValue": -185,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-30-n-2",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "value": "flex",
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"}
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-30-n-3",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "ease",
-                                "duration": 1000,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-30-n-4",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
-                                "xValue": 0,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-30-n-10",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 500,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
-                                "xValue": -32,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-30-n-8",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 500,
-                                "easing": "outQuint",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }]
-                    }], "createdOn": 1635841266911, "useFirstGroupAsInitialState": true
-                },
-                "a-31": {
-                    "id": "a-31", "title": "Slide Hotspot Elengy", "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-31-n",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "value": "none",
-                                "target": {
-                                    "useEventTarget": "SIBLINGS",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                }
-                            }
-                        }, {
-                            "id": "a-31-n-2",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "SIBLINGS",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-31-n-3",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "SIBLINGS",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "xValue": 282,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-31-n-4",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-31-n-5",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
-                                "xValue": -185,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-31-n-6",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "value": "flex",
-                                "target": {
-                                    "useEventTarget": "SIBLINGS",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                }
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-31-n-7",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "ease",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "SIBLINGS",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }, {
-                            "id": "a-31-n-8",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {
-                                    "useEventTarget": "SIBLINGS",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "xValue": 0,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-31-n-9",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 500,
-                                "easing": "swingFromTo",
-                                "duration": 1000,
-                                "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
-                                "xValue": -32,
-                                "xUnit": "px",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-31-n-10",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 500,
-                                "easing": "outQuint",
-                                "duration": 500,
-                                "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
-                                "value": 1,
-                                "unit": ""
-                            }
-                        }]
-                    }], "createdOn": 1635841266911, "useFirstGroupAsInitialState": true
-                },
-                "a-32": {
-                    "id": "a-32",
-                    "title": "Slide Hotspot (Fermeture) Elengy",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "id": "a-32-n",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuad",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": true,
-                                    "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5"
-                                },
-                                "xValue": -16,
-                                "yValue": null,
-                                "xUnit": "px",
-                                "yUnit": "px",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-32-n-3",
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bounce",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "PARENT",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "xValue": 85,
-                                "xUnit": "%",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "id": "a-32-n-2",
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "bouncePast",
-                                "duration": 500,
-                                "target": {
-                                    "useEventTarget": "PARENT",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "value": 0,
-                                "unit": ""
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "id": "a-32-n-4",
-                            "actionTypeId": "GENERAL_DISPLAY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "",
-                                "duration": 0,
-                                "target": {
-                                    "useEventTarget": "PARENT",
-                                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
-                                },
-                                "value": "none"
-                            }
-                        }]
-                    }],
-                    "useFirstGroupAsInitialState": false,
-                    "createdOn": 1634347201362
-                },
-                "slideInBottom": {
-                    "id": "slideInBottom",
-                    "useFirstGroupAsInitialState": true,
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 0
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 0,
-                                "yValue": 100,
-                                "xUnit": "PX",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 0,
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }, {
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 1
-                            }
-                        }]
-                    }]
-                },
-                "fadeIn": {
-                    "id": "fadeIn",
-                    "useFirstGroupAsInitialState": true,
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 0
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 1
-                            }
-                        }]
-                    }]
-                },
-                "growBigIn": {
-                    "id": "growBigIn",
-                    "useFirstGroupAsInitialState": true,
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 0
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 0,
-                                "yValue": 0
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 1,
-                                "yValue": 1
-                            }
-                        }, {
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 1
-                            }
-                        }]
-                    }]
-                },
-                "pop": {
-                    "id": "pop",
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 250,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 0.7500000000000001,
-                                "yValue": 0.7500000000000001
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_SCALE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outElastic",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 1,
-                                "yValue": 1
-                            }
-                        }]
-                    }]
-                },
-                "slideInLeft": {
-                    "id": "slideInLeft",
-                    "useFirstGroupAsInitialState": true,
-                    "actionItemGroups": [{
-                        "actionItems": [{
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 0
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "duration": 0,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": -100,
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }, {
-                        "actionItems": [{
-                            "actionTypeId": "STYLE_OPACITY",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "value": 1
-                            }
-                        }, {
-                            "actionTypeId": "TRANSFORM_MOVE",
-                            "config": {
-                                "delay": 0,
-                                "easing": "outQuart",
-                                "duration": 1000,
-                                "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
-                                "xValue": 0,
-                                "yValue": 0,
-                                "xUnit": "PX",
-                                "yUnit": "PX",
-                                "zUnit": "PX"
-                            }
-                        }]
-                    }]
-                }
+                "createdOn": 1633019125338
             },
-            "site": {
-                "mediaQueries": [{"key": "main", "min": 992, "max": 10000}, {
-                    "key": "medium",
-                    "min": 768,
-                    "max": 991
-                }, {"key": "small", "min": 480, "max": 767}, {"key": "tiny", "min": 0, "max": 479}]
+            "e-13": {
+                "id": "e-13",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-14"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6155d63bb3fc53f6027f658b|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6155d63bb3fc53f6027f658b|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1633019148641
+            },
+            "e-15": {
+                "id": "e-15",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "POP_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "pop", "autoStopEventId": "e-16"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1633315135824
+            },
+            "e-17": {
+                "id": "e-17",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-2",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-18"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1633315177410
+            },
+            "e-18": {
+                "id": "e-18",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-3",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-17"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1633315177410
+            },
+            "e-19": {
+                "id": "e-19",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInLeft", "autoStopEventId": "e-20"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6155d63bb3fc53f6027f658b|9f75cbec-82da-62ca-9ef1-d7191cfc28a8",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6155d63bb3fc53f6027f658b|9f75cbec-82da-62ca-9ef1-d7191cfc28a8",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 80,
+                    "direction": "LEFT",
+                    "effectIn": true
+                },
+                "createdOn": 1634342773420
+            },
+            "e-25": {
+                "id": "e-25",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-26"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "616a19718868227d619f899f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "616a19718868227d619f899f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1634343281983
+            },
+            "e-33": {
+                "id": "e-33",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-4",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-34"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "616a19718868227d619f899f|968c659c-5ae8-a62a-23e6-4cd92af50516",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "616a19718868227d619f899f|968c659c-5ae8-a62a-23e6-4cd92af50516",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634347228586
+            },
+            "e-35": {
+                "id": "e-35",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-36"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634349130554
+            },
+            "e-37": {
+                "id": "e-37",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-38"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "616a38cc894d992798934c7d|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "616a38cc894d992798934c7d|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1634351309002
+            },
+            "e-41": {
+                "id": "e-41",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-42"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "616a38cc894d992798934c7d|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "616a38cc894d992798934c7d|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634351309002
+            },
+            "e-45": {
+                "id": "e-45",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-8",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-46"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "selector": ".link",
+                    "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
+                    "appliesTo": "CLASS"
+                },
+                "targets": [{
+                    "selector": ".link",
+                    "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
+                    "appliesTo": "CLASS"
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1543899561020
+            },
+            "e-46": {
+                "id": "e-46",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-9",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-45"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "selector": ".link",
+                    "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
+                    "appliesTo": "CLASS"
+                },
+                "targets": [{
+                    "selector": ".link",
+                    "originalId": "617097960941452dee864afb|28aedca8-2a40-903f-0d33-010daf89059c",
+                    "appliesTo": "CLASS"
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1543899561020
+            },
+            "e-47": {
+                "id": "e-47",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-21",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-48"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634770223320
+            },
+            "e-48": {
+                "id": "e-48",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-22",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-47"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634770223321
+            },
+            "e-49": {
+                "id": "e-49",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-50"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170c1c46c29398cba2740cc|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170c1c46c29398cba2740cc|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1634779590979
+            },
+            "e-51": {
+                "id": "e-51",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-4",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-52"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170c1c46c29398cba2740cc|968c659c-5ae8-a62a-23e6-4cd92af50516",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170c1c46c29398cba2740cc|968c659c-5ae8-a62a-23e6-4cd92af50516",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634779590979
+            },
+            "e-53": {
+                "id": "e-53",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-54"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170c1c46c29398cba2740cc|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170c1c46c29398cba2740cc|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634779590979
+            },
+            "e-55": {
+                "id": "e-55",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-13",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-56"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634785753591
+            },
+            "e-56": {
+                "id": "e-56",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-14",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-55"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634785753592
+            },
+            "e-57": {
+                "id": "e-57",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-15",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-58"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": true,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634787634302
+            },
+            "e-58": {
+                "id": "e-58",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-16",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-57"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634787634302
+            },
+            "e-59": {
+                "id": "e-59",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-17",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-60"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": true,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": false
+                },
+                "createdOn": 1634787742204
+            },
+            "e-60": {
+                "id": "e-60",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-18",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-59"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634787742204
+            },
+            "e-63": {
+                "id": "e-63",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-13",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-64"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634794327102
+            },
+            "e-64": {
+                "id": "e-64",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-14",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-63"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634794327102
+            },
+            "e-65": {
+                "id": "e-65",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-15",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-66"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": true,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634794327102
+            },
+            "e-66": {
+                "id": "e-66",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-16",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-65"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634794327102
+            },
+            "e-67": {
+                "id": "e-67",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-17",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-68"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": true,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": false
+                },
+                "createdOn": 1634794327102
+            },
+            "e-68": {
+                "id": "e-68",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-18",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-67"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634794327102
+            },
+            "e-71": {
+                "id": "e-71",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-10",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-72"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634799001505
+            },
+            "e-72": {
+                "id": "e-72",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-20",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-71"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6170fb568b202cde824ae3a8|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1634799001506
+            },
+            "e-79": {
+                "id": "e-79",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-80"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6175c30f6e460396079ecc2b|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6175c30f6e460396079ecc2b|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635107599672
+            },
+            "e-81": {
+                "id": "e-81",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-82"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6175c30f6e460396079ecc2b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6175c30f6e460396079ecc2b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635107599672
+            },
+            "e-83": {
+                "id": "e-83",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-84"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6175c30f6e460396079ecc2b|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6175c30f6e460396079ecc2b|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635107599672
+            },
+            "e-85": {
+                "id": "e-85",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-86"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "selector": ".content-wrapper",
+                    "originalId": "6175c30f6e460396079ecc2b|dad6ade0-d672-e321-87b4-28af6d13e87e",
+                    "appliesTo": "CLASS"
+                },
+                "targets": [{
+                    "selector": ".content-wrapper",
+                    "originalId": "6175c30f6e460396079ecc2b|dad6ade0-d672-e321-87b4-28af6d13e87e",
+                    "appliesTo": "CLASS"
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635109323679
+            },
+            "e-87": {
+                "id": "e-87",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-88"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6175ccdf9298f0efa14320a6|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6175ccdf9298f0efa14320a6|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635110111942
+            },
+            "e-89": {
+                "id": "e-89",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-90"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6175ccdf9298f0efa14320a6|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6175ccdf9298f0efa14320a6|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635110111942
+            },
+            "e-91": {
+                "id": "e-91",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-92"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6175ccdf9298f0efa14320a6|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6175ccdf9298f0efa14320a6|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635110111942
+            },
+            "e-94": {
+                "id": "e-94",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "PAGE_FINISH",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-23",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-93"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {"id": "6179eb2b715617ed93feee24", "appliesTo": "PAGE", "styleBlockIds": []},
+                "targets": [{"id": "6179eb2b715617ed93feee24", "appliesTo": "PAGE", "styleBlockIds": []}],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635393819961
+            },
+            "e-95": {
+                "id": "e-95",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_MOVE",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_CONTINUOUS_ACTION",
+                    "config": {"actionListId": "a-24", "affectedElements": {}, "duration": 0}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "selector": ".cursor-wrapper",
+                    "originalId": "617a244d0fc14d1396cf47be|5ce77e92-8d6b-9292-9032-b9757bfe941f",
+                    "appliesTo": "CLASS"
+                },
+                "targets": [{
+                    "selector": ".cursor-wrapper",
+                    "originalId": "617a244d0fc14d1396cf47be|5ce77e92-8d6b-9292-9032-b9757bfe941f",
+                    "appliesTo": "CLASS"
+                }],
+                "config": [{
+                    "continuousParameterGroupId": "a-24-p",
+                    "selectedAxis": "X_AXIS",
+                    "basedOn": "ELEMENT",
+                    "reverse": false,
+                    "smoothing": 50,
+                    "restingState": 50
+                }, {
+                    "continuousParameterGroupId": "a-24-p-2",
+                    "selectedAxis": "Y_AXIS",
+                    "basedOn": "ELEMENT",
+                    "reverse": false,
+                    "smoothing": 50,
+                    "restingState": 50
+                }],
+                "createdOn": 1593717021811
+            },
+            "e-96": {
+                "id": "e-96",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_MOVE",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_CONTINUOUS_ACTION",
+                    "config": {"actionListId": "a-25", "affectedElements": {}, "duration": 0}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "selector": ".cursor-wrapper",
+                    "originalId": "617097960941452dee864afb|6cb69a9c-59f5-f922-e41b-287bb1468703",
+                    "appliesTo": "CLASS"
+                },
+                "targets": [{
+                    "selector": ".cursor-wrapper",
+                    "originalId": "617097960941452dee864afb|6cb69a9c-59f5-f922-e41b-287bb1468703",
+                    "appliesTo": "CLASS"
+                }],
+                "config": [{
+                    "continuousParameterGroupId": "a-25-p",
+                    "selectedAxis": "X_AXIS",
+                    "basedOn": "ELEMENT",
+                    "reverse": false,
+                    "smoothing": 50,
+                    "restingState": 50
+                }, {
+                    "continuousParameterGroupId": "a-25-p-2",
+                    "selectedAxis": "Y_AXIS",
+                    "basedOn": "ELEMENT",
+                    "reverse": false,
+                    "smoothing": 50,
+                    "restingState": 50
+                }],
+                "createdOn": 1596746814054
+            },
+            "e-99": {
+                "id": "e-99",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-10",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-100"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635482401622
+            },
+            "e-100": {
+                "id": "e-100",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-20",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-99"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635482401622
+            },
+            "e-101": {
+                "id": "e-101",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-26",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-102"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635483828106
+            },
+            "e-103": {
+                "id": "e-103",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-27",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-104"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617097960941452dee864afb|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617097960941452dee864afb|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635484329419
+            },
+            "e-105": {
+                "id": "e-105",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-106"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617dc2463b4bfdc0b8b4681c|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617dc2463b4bfdc0b8b4681c|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635631686231
+            },
+            "e-107": {
+                "id": "e-107",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-108"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617dc2463b4bfdc0b8b4681c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617dc2463b4bfdc0b8b4681c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635631686231
+            },
+            "e-109": {
+                "id": "e-109",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-110"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "617dc2463b4bfdc0b8b4681c|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "617dc2463b4bfdc0b8b4681c|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635631686231
+            },
+            "e-111": {
+                "id": "e-111",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-112"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180879674306b9df6e961b4|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180879674306b9df6e961b4|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635813270552
+            },
+            "e-113": {
+                "id": "e-113",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-114"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180879674306b9df6e961b4|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180879674306b9df6e961b4|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635813270552
+            },
+            "e-115": {
+                "id": "e-115",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-116"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180879674306b9df6e961b4|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180879674306b9df6e961b4|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635813270552
+            },
+            "e-117": {
+                "id": "e-117",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-118"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "618088190b1d71b026dab13b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "618088190b1d71b026dab13b|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635813401238
+            },
+            "e-121": {
+                "id": "e-121",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-122"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "618088190b1d71b026dab13b|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "618088190b1d71b026dab13b|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635813401238
+            },
+            "e-123": {
+                "id": "e-123",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-124"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "61808b9d80683a520e23d58e|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "61808b9d80683a520e23d58e|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635814301568
+            },
+            "e-125": {
+                "id": "e-125",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-126"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "61808b9d80683a520e23d58e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "61808b9d80683a520e23d58e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635814301568
+            },
+            "e-127": {
+                "id": "e-127",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-128"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "61808b9d80683a520e23d58e|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "61808b9d80683a520e23d58e|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635814301568
+            },
+            "e-129": {
+                "id": "e-129",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-130"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "61808dea00fd8d539598b997|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "61808dea00fd8d539598b997|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635814890783
+            },
+            "e-131": {
+                "id": "e-131",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-132"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "61808dea00fd8d539598b997|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "61808dea00fd8d539598b997|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635814890783
+            },
+            "e-133": {
+                "id": "e-133",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-134"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "61808dea00fd8d539598b997|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "61808dea00fd8d539598b997|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635814890783
+            },
+            "e-135": {
+                "id": "e-135",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-136"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180900e05c2a3feebd8959e|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180900e05c2a3feebd8959e|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635815440023
+            },
+            "e-137": {
+                "id": "e-137",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-138"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180900e05c2a3feebd8959e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180900e05c2a3feebd8959e|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635815440023
+            },
+            "e-139": {
+                "id": "e-139",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-140"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180900e05c2a3feebd8959e|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180900e05c2a3feebd8959e|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635815440023
+            },
+            "e-141": {
+                "id": "e-141",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-142"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180906334741fddf7298862|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180906334741fddf7298862|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635815526582
+            },
+            "e-143": {
+                "id": "e-143",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-144"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180906334741fddf7298862|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180906334741fddf7298862|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635815526582
+            },
+            "e-145": {
+                "id": "e-145",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-146"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180906334741fddf7298862|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180906334741fddf7298862|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635815526582
+            },
+            "e-147": {
+                "id": "e-147",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-148"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180927a30d8666392c08a35|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180927a30d8666392c08a35|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635816060677
+            },
+            "e-149": {
+                "id": "e-149",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-150"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180927a30d8666392c08a35|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180927a30d8666392c08a35|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635816060677
+            },
+            "e-151": {
+                "id": "e-151",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-152"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180927a30d8666392c08a35|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180927a30d8666392c08a35|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635816060677
+            },
+            "e-153": {
+                "id": "e-153",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-154"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180937100fd8d044298ec81|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180937100fd8d044298ec81|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635816306529
+            },
+            "e-155": {
+                "id": "e-155",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-156"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180937100fd8d044298ec81|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180937100fd8d044298ec81|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635816306529
+            },
+            "e-157": {
+                "id": "e-157",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-158"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180963a2ca765ef89916f5f|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180963a2ca765ef89916f5f|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635817018989
+            },
+            "e-159": {
+                "id": "e-159",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-160"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180963a2ca765ef89916f5f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180963a2ca765ef89916f5f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635817018989
+            },
+            "e-163": {
+                "id": "e-163",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-164"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a326b0961c037fbfdd28|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a326b0961c037fbfdd28|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635820326663
+            },
+            "e-165": {
+                "id": "e-165",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-166"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a326b0961c037fbfdd28|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a326b0961c037fbfdd28|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635820326663
+            },
+            "e-167": {
+                "id": "e-167",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-168"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a326b0961c037fbfdd28|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a326b0961c037fbfdd28|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635820326663
+            },
+            "e-169": {
+                "id": "e-169",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-170"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a4688b29575a620dc6cb|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a4688b29575a620dc6cb|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635820649678
+            },
+            "e-171": {
+                "id": "e-171",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-172"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a4688b29575a620dc6cb|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a4688b29575a620dc6cb|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635820649678
+            },
+            "e-173": {
+                "id": "e-173",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-174"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a6f7b536a4441077a901|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a6f7b536a4441077a901|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635821303489
+            },
+            "e-175": {
+                "id": "e-175",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-176"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a6f7b536a4441077a901|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a6f7b536a4441077a901|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635821303489
+            },
+            "e-177": {
+                "id": "e-177",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-178"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a6f7b536a4441077a901|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a6f7b536a4441077a901|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635821303489
+            },
+            "e-179": {
+                "id": "e-179",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-180"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a8eda9ec3a2b66196cf0|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a8eda9ec3a2b66196cf0|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635821806315
+            },
+            "e-181": {
+                "id": "e-181",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-182"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180a8eda9ec3a2b66196cf0|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180a8eda9ec3a2b66196cf0|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635821806315
+            },
+            "e-183": {
+                "id": "e-183",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-184"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180aa802ce13f83259b6bba|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180aa802ce13f83259b6bba|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635822209430
+            },
+            "e-185": {
+                "id": "e-185",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-186"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180aa802ce13f83259b6bba|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180aa802ce13f83259b6bba|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635822209430
+            },
+            "e-187": {
+                "id": "e-187",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-188"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180aa802ce13f83259b6bba|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180aa802ce13f83259b6bba|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635822209430
+            },
+            "e-189": {
+                "id": "e-189",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-190"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180ab7ef4f5814256920dca|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180ab7ef4f5814256920dca|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635822462725
+            },
+            "e-191": {
+                "id": "e-191",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-192"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180ab7ef4f5814256920dca|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180ab7ef4f5814256920dca|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635822462725
+            },
+            "e-193": {
+                "id": "e-193",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-194"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180ab7ef4f5814256920dca|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180ab7ef4f5814256920dca|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635822462725
+            },
+            "e-195": {
+                "id": "e-195",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-196"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180af42b0961c32f3c01b7f|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180af42b0961c32f3c01b7f|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635823426560
+            },
+            "e-197": {
+                "id": "e-197",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-198"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180af42b0961c32f3c01b7f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180af42b0961c32f3c01b7f|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635823426560
+            },
+            "e-199": {
+                "id": "e-199",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-200"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180af42b0961c32f3c01b7f|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180af42b0961c32f3c01b7f|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635823426560
+            },
+            "e-201": {
+                "id": "e-201",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-202"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180b02881cc4870b1e5d011|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180b02881cc4870b1e5d011|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635823659098
+            },
+            "e-203": {
+                "id": "e-203",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-204"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180b02881cc4870b1e5d011|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180b02881cc4870b1e5d011|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635823659098
+            },
+            "e-205": {
+                "id": "e-205",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-206"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180b2722e0b38bb9814b25c|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180b2722e0b38bb9814b25c|75888f7c-1ae4-a2f6-fb48-5368db054726",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635824243614
+            },
+            "e-207": {
+                "id": "e-207",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-208"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180b2722e0b38bb9814b25c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180b2722e0b38bb9814b25c|b859e98d-fc9c-1507-65ec-9e2b18d4bc77",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635824243614
+            },
+            "e-209": {
+                "id": "e-209",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-210"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180b2722e0b38bb9814b25c|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180b2722e0b38bb9814b25c|32a57918-a627-bc25-0498-910dca1922e5",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635824243614
+            },
+            "e-211": {
+                "id": "e-211",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-21",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-212"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-212": {
+                "id": "e-212",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-22",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-211"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-213": {
+                "id": "e-213",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-13",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-214"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-214": {
+                "id": "e-214",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-14",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-213"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-215": {
+                "id": "e-215",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-15",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-216"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": true,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-216": {
+                "id": "e-216",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-16",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-215"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe70",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-217": {
+                "id": "e-217",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-17",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-218"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": true,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": false
+                },
+                "createdOn": 1635827168794
+            },
+            "e-218": {
+                "id": "e-218",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-18",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-217"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|c640eeae-0dc8-c83f-c3fe-62c4488466fa",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-219": {
+                "id": "e-219",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-10",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-220"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-220": {
+                "id": "e-220",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_SECOND_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-20",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-219"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|d8666a22-8c25-0121-3ec9-a25e4ce5fe6f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-221": {
+                "id": "e-221",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-28",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-222"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|8ad8ae62-283f-813b-9aa9-5f4dab4abf03",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-223": {
+                "id": "e-223",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-29",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-224"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|242df5e9-b426-9e2b-af1a-afd3b4453bb9",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827168794
+            },
+            "e-225": {
+                "id": "e-225",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "POP_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "pop", "autoStopEventId": "e-226"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827204910
+            },
+            "e-227": {
+                "id": "e-227",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-2",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-228"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827204910
+            },
+            "e-228": {
+                "id": "e-228",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-3",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-227"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635827204910
+            },
+            "e-231": {
+                "id": "e-231",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-232"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704cc",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704cc",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635828190831
+            },
+            "e-233": {
+                "id": "e-233",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-234"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704d2",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704d2",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635828190831
+            },
+            "e-235": {
+                "id": "e-235",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-30",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-236"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180bde041444a7785a61fc5|50a13fda-837b-c139-245b-3ba933fe887a",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635828202804
+            },
+            "e-237": {
+                "id": "e-237",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-238"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f398f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f398f",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635831400081
+            },
+            "e-239": {
+                "id": "e-239",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-240"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f39a0",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180c91874306b27deea94db|5bf85f23-3b51-8a5e-e710-8193c89f39a0",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635831400081
+            },
+            "e-241": {
+                "id": "e-241",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-242"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180c91874306b27deea94db|fb72f319-6e76-68af-6169-ba3202c93182",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [{
+                    "id": "6180c91874306b27deea94db|fb72f319-6e76-68af-6169-ba3202c93182",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                }],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635834728554
+            },
+            "e-243": {
+                "id": "e-243",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-2",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-244"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635841763524
+            },
+            "e-244": {
+                "id": "e-244",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OUT",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-3",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-243"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635841763524
+            },
+            "e-245": {
+                "id": "e-245",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-31",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-246"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635841763524
+            },
+            "e-247": {
+                "id": "e-247",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "MOUSE_OVER",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "POP_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "pop", "autoStopEventId": "e-248"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|a6b20145-2736-27df-e6f2-7abacd9e3a61",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": 0,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635841763524
+            },
+            "e-249": {
+                "id": "e-249",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GROW_BIG_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "growBigIn", "autoStopEventId": "e-250"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee54",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 200,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635841793251
+            },
+            "e-251": {
+                "id": "e-251",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "FADE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "fadeIn", "autoStopEventId": "e-252"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee63",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 300,
+                    "direction": null,
+                    "effectIn": true
+                },
+                "createdOn": 1635841793251
+            },
+            "e-253": {
+                "id": "e-253",
+                "name": "",
+                "animationType": "preset",
+                "eventTypeId": "SCROLL_INTO_VIEW",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "SLIDE_EFFECT",
+                    "instant": false,
+                    "config": {"actionListId": "slideInBottom", "autoStopEventId": "e-254"}
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee69",
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": []
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": 0,
+                    "scrollOffsetUnit": "%",
+                    "delay": 100,
+                    "direction": "BOTTOM",
+                    "effectIn": true
+                },
+                "createdOn": 1635841793251
+            },
+            "e-255": {
+                "id": "e-255",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-32",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-256"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": [],
+                    "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee54"
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635841980634
+            },
+            "e-257": {
+                "id": "e-257",
+                "name": "",
+                "animationType": "custom",
+                "eventTypeId": "MOUSE_CLICK",
+                "action": {
+                    "id": "",
+                    "actionTypeId": "GENERAL_START_ACTION",
+                    "config": {
+                        "delay": 0,
+                        "easing": "",
+                        "duration": 0,
+                        "actionListId": "a-5",
+                        "affectedElements": {},
+                        "playInReverse": false,
+                        "autoStopEventId": "e-258"
+                    }
+                },
+                "mediaQueries": ["main", "medium", "small", "tiny"],
+                "target": {
+                    "appliesTo": "ELEMENT",
+                    "styleBlockIds": [],
+                    "id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bd"
+                },
+                "targets": [],
+                "config": {
+                    "loop": false,
+                    "playInReverse": false,
+                    "scrollOffsetValue": null,
+                    "scrollOffsetUnit": null,
+                    "delay": null,
+                    "direction": null,
+                    "effectIn": null
+                },
+                "createdOn": 1635842441093
             }
+        },
+        "actionLists": {
+            "a-2": {
+                "id": "a-2", "title": "MapSpotAnim In", "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-2-n-9",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-2-n-11",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-2-n-15",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "xValue": 0.7,
+                            "yValue": 0.7,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-2-n-17",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-2-n-19",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-dot",
+                                "selectorGuids": ["010c21aa-cdcd-4ac2-6ac0-ad298b3205a2"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-2-n-10",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bounce",
+                            "duration": 400,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "xValue": 1.1,
+                            "yValue": 1.1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-2-n-2",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bouncePast",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "zValue": 90,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }, {
+                        "id": "a-2-n-18",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-2-n-20",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 250,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-dot",
+                                "selectorGuids": ["010c21aa-cdcd-4ac2-6ac0-ad298b3205a2"]
+                            },
+                            "xValue": 0.5,
+                            "yValue": 0.5,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-2-n-8",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 400,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-2-n-16",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 400,
+                            "easing": "swingFromTo",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }]
+                }], "useFirstGroupAsInitialState": true, "createdOn": 1633315180685
+            },
+            "a-3": {
+                "id": "a-3", "title": "MapSpotAnim Out", "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-3-n",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-3-n-2",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-3-n-3",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".hotspot-name-div",
+                                "selectorGuids": ["648a3f31-5f7c-53c1-958d-331317474b8d"]
+                            },
+                            "xValue": 0.7,
+                            "yValue": 0.7,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-3-n-4",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-3-n-5",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bounce",
+                            "duration": 800,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "615a654fd0b0fe24f0ad4fac|0f1c7fe6-f743-315d-8b28-bd7dfac7788c"
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-3-n-7",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-dot",
+                                "selectorGuids": ["010c21aa-cdcd-4ac2-6ac0-ad298b3205a2"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-3-n-6",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".lottie-picto",
+                                "selectorGuids": ["6fd3d7c1-e766-c053-752f-a96ae83b6304"]
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }], "useFirstGroupAsInitialState": false, "createdOn": 1633315180685
+            },
+            "a-4": {
+                "id": "a-4", "title": "Slide Hotspot", "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-4-n-8",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-back-button",
+                                "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-11",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-descrip-div",
+                                "selectorGuids": ["8e49bc72-8449-e6e3-787c-e9f8cccdf99c"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-13",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".title-header-div",
+                                "selectorGuids": ["70e13c9e-c2c8-ea35-5495-40a25e1fdc24"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-15",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-back-button",
+                                "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
+                            },
+                            "xValue": null,
+                            "yValue": -200,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-4-n-17",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-header-section",
+                                "selectorGuids": ["df50c3bf-eb45-91d6-7111-ec7424c14a0b"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-19",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-partner-div",
+                                "selectorGuids": ["0c3f12cd-06d5-6723-183b-bfb87b9887f2"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-21",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {"delay": 0, "easing": "", "duration": 0, "value": "none", "target": {}}
+                    }, {
+                        "id": "a-4-n-25",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {"delay": 0, "easing": "", "duration": 500, "target": {}, "value": 0, "unit": ""}
+                    }, {
+                        "id": "a-4-n-27",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".content-wrapper",
+                                "selectorGuids": ["c3b65f67-18b8-2148-ee16-d922d58261cc"]
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-4-n-22",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {"delay": 0, "easing": "", "duration": 0, "value": "block", "target": {}}
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-4-n-26",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {"delay": 0, "easing": "", "duration": 500, "target": {}, "value": 1, "unit": ""}
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-4-n-14",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 300,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".title-header-div",
+                                "selectorGuids": ["70e13c9e-c2c8-ea35-5495-40a25e1fdc24"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-18",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 300,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-header-section",
+                                "selectorGuids": ["df50c3bf-eb45-91d6-7111-ec7424c14a0b"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-28",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 300,
+                            "easing": "outCirc",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".content-wrapper",
+                                "selectorGuids": ["c3b65f67-18b8-2148-ee16-d922d58261cc"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-12",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 1000,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-descrip-div",
+                                "selectorGuids": ["8e49bc72-8449-e6e3-787c-e9f8cccdf99c"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-4-n-20",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 1100,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-partner-div",
+                                "selectorGuids": ["0c3f12cd-06d5-6723-183b-bfb87b9887f2"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-4-n-16",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 1200,
+                            "easing": "swingTo",
+                            "duration": 2000,
+                            "target": {
+                                "selector": ".hotspot-back-button",
+                                "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
+                            },
+                            "xValue": null,
+                            "yValue": 0,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-4-n-7",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 1200,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".hotspot-back-button",
+                                "selectorGuids": ["4f04bae6-c39c-03b6-31ec-2090d2668283"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }]
+                }], "useFirstGroupAsInitialState": true, "createdOn": 1634347201362
+            },
+            "a-5": {
+                "id": "a-5",
+                "title": "Slide Hotspot (Fermeture) EDF",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-5-n-6",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuad",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5"
+                            },
+                            "xValue": -16,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-5-n-19",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutElastic",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "xValue": 37,
+                            "xUnit": "%",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-5-n-18",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-5-n-17",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "value": "none"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1634347201362
+            },
+            "a-8": {
+                "id": "a-8",
+                "title": "bg color change",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-8-n",
+                        "actionTypeId": "STYLE_BACKGROUND_COLOR",
+                        "config": {
+                            "delay": 0,
+                            "easing": "ease",
+                            "duration": 500,
+                            "target": {},
+                            "globalSwatchId": "2e0a9839",
+                            "rValue": 75,
+                            "bValue": 242,
+                            "gValue": 126,
+                            "aValue": 1
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1543899369676
+            },
+            "a-9": {
+                "id": "a-9",
+                "title": "bg change (hover out)",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-9-n",
+                        "actionTypeId": "STYLE_BACKGROUND_COLOR",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {},
+                            "globalSwatchId": "",
+                            "rValue": 0,
+                            "bValue": 0,
+                            "gValue": 0,
+                            "aValue": 0
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1543899410896
+            },
+            "a-21": {
+                "id": "a-21",
+                "title": "Open Sidebar 2",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-21-n-13",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".color-div.credits",
+                                "selectorGuids": ["f96951bb-ca0d-04ef-6102-9e1f17882464", "6756f702-8e5e-7559-a456-d740d3a25959"]
+                            },
+                            "yValue": 234,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-21-n-15",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutBack",
+                            "duration": 1000,
+                            "target": {
+                                "selector": ".color-div-wrapper",
+                                "selectorGuids": ["55dc3b1f-9d7e-8871-efb5-41db8c6c5dab"]
+                            },
+                            "xValue": -480,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-21-n-17",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".inside-menu-div",
+                                "selectorGuids": ["c1018af7-a791-f964-7cd3-40ac698abb5c"]
+                            },
+                            "xValue": -105,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-21-n-19",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
+                            },
+                            "zValue": -39,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }, {
+                        "id": "a-21-n-14",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {
+                                "selector": ".color-div.credits",
+                                "selectorGuids": ["f96951bb-ca0d-04ef-6102-9e1f17882464", "6756f702-8e5e-7559-a456-d740d3a25959"]
+                            },
+                            "xValue": 0,
+                            "yValue": 0,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-21-n-16",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 100,
+                            "easing": "inOutBack",
+                            "duration": 700,
+                            "target": {
+                                "selector": ".color-div-wrapper",
+                                "selectorGuids": ["55dc3b1f-9d7e-8871-efb5-41db8c6c5dab"]
+                            },
+                            "xValue": 0,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-21-n-20",
+                        "actionTypeId": "STYLE_BORDER",
+                        "config": {
+                            "delay": 100,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
+                            },
+                            "globalSwatchId": "ec0d4579",
+                            "rValue": 254,
+                            "bValue": 75,
+                            "gValue": 0,
+                            "aValue": 1
+                        }
+                    }, {
+                        "id": "a-21-n-18",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 500,
+                            "easing": "swingTo",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".inside-menu-div",
+                                "selectorGuids": ["c1018af7-a791-f964-7cd3-40ac698abb5c"]
+                            },
+                            "xValue": 0,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1634843570214
+            },
+            "a-22": {
+                "id": "a-22", "title": "Open Sidebar 3", "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-22-n-2",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {
+                                "selector": ".color-div-wrapper",
+                                "selectorGuids": ["55dc3b1f-9d7e-8871-efb5-41db8c6c5dab"]
+                            },
+                            "xValue": -444,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-22-n-3",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {},
+                            "xValue": -105,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-22-n",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".color-div.credits",
+                                "selectorGuids": ["f96951bb-ca0d-04ef-6102-9e1f17882464", "6756f702-8e5e-7559-a456-d740d3a25959"]
+                            },
+                            "yValue": 234,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-22-n-4",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }, {
+                        "id": "a-22-n-5",
+                        "actionTypeId": "STYLE_BORDER",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "617097960941452dee864afb|36bff5b2-345f-3fb0-6c9f-e6d35d72ca23"
+                            },
+                            "globalSwatchId": "ca3a2e84",
+                            "rValue": 255,
+                            "bValue": 3,
+                            "gValue": 213,
+                            "aValue": 1
+                        }
+                    }]
+                }], "useFirstGroupAsInitialState": false, "createdOn": 1634843570214
+            },
+            "a-13": {
+                "id": "a-13",
+                "title": "Sound Off",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-13-n",
+                        "actionTypeId": "PLUGIN_LOTTIE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".inside-lottie-icon",
+                                "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
+                            },
+                            "value": 50
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1634785762567
+            },
+            "a-14": {
+                "id": "a-14",
+                "title": "Sound On",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-14-n",
+                        "actionTypeId": "PLUGIN_LOTTIE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".inside-lottie-icon",
+                                "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
+                            },
+                            "value": 0
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1634785762567
+            },
+            "a-15": {
+                "id": "a-15",
+                "title": "Anim Collect Icon",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-15-n-3",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inSine",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-15-n-4",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inSine",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-15-n-5",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outCirc",
+                            "duration": 2000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "xValue": 0.9,
+                            "yValue": 0.9,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-15-n-6",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bounce",
+                            "duration": 2000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "zValue": 116,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-15-n-7",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inSine",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-15-n-11",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-15-n-8",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bounce",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "zValue": -116,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-15-n-9",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outCirc",
+                            "duration": 2000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-15-n-10",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bounce",
+                            "duration": 2000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1634787580674
+            },
+            "a-16": {
+                "id": "a-16",
+                "title": "Anim Collect Icon STOP",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-16-n-3",
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "xValue": 1,
+                            "yValue": 1,
+                            "locked": true
+                        }
+                    }, {
+                        "id": "a-16-n-4",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".ui-collect-icon",
+                                "selectorGuids": ["6a43b196-5b84-27e5-dfd4-644e64970946"]
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1634787580674
+            },
+            "a-17": {
+                "id": "a-17",
+                "title": "Hover Sound Anim",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-17-n",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".inside-lottie-icon",
+                                "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-17-n-2",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingTo",
+                            "duration": 800,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".inside-lottie-icon",
+                                "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
+                            },
+                            "zValue": -35,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1634787775480
+            },
+            "a-18": {
+                "id": "a-18",
+                "title": "Hover Sound Anim 2",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-18-n",
+                        "actionTypeId": "TRANSFORM_ROTATE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "CHILDREN",
+                                "selector": ".inside-lottie-icon",
+                                "selectorGuids": ["8426f1d2-da16-818c-38b3-6cc1507df411"]
+                            },
+                            "zValue": 0,
+                            "xUnit": "DEG",
+                            "yUnit": "DEG",
+                            "zUnit": "deg"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1634787775480
+            },
+            "a-10": {
+                "id": "a-10",
+                "title": "open lightbox",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-10-n",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {
+                                "selector": ".collectibles-wrapper",
+                                "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
+                            },
+                            "value": "none"
+                        }
+                    }, {
+                        "id": "a-10-n-4",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "selector": ".collectibles-wrapper",
+                                "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
+                            },
+                            "xValue": 500,
+                            "yValue": -200,
+                            "xUnit": "%",
+                            "yUnit": "%",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-10-n-2",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {
+                                "selector": ".collectibles-wrapper",
+                                "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
+                            },
+                            "value": "block"
+                        }
+                    }, {
+                        "id": "a-10-n-5",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingTo",
+                            "duration": 1250,
+                            "target": {
+                                "selector": ".collectibles-wrapper",
+                                "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
+                            },
+                            "xValue": 0,
+                            "yValue": 0,
+                            "xUnit": "px",
+                            "yUnit": "%",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1543900439959
+            },
+            "a-20": {
+                "id": "a-20",
+                "title": "close lightbox",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-20-n-2",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inExpo",
+                            "duration": 700,
+                            "target": {
+                                "selector": ".collectibles-wrapper",
+                                "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
+                            },
+                            "xValue": 500,
+                            "yValue": -250,
+                            "xUnit": "px",
+                            "yUnit": "%",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-20-n",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {
+                                "selector": ".collectibles-wrapper",
+                                "selectorGuids": ["03d6feda-7b6f-474d-6c32-828de400373c"]
+                            },
+                            "value": "none"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1543900439959
+            },
+            "a-23": {
+                "id": "a-23",
+                "title": "Neon Lits",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-23-n",
+                        "actionTypeId": "STYLE_FILTER",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
+                            "filters": [{"type": "saturate", "filterId": "fff7", "value": 0, "unit": "%"}]
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-23-n-2",
+                        "actionTypeId": "STYLE_FILTER",
+                        "config": {
+                            "delay": 1500,
+                            "easing": "inOutExpo",
+                            "duration": 500,
+                            "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
+                            "filters": [{"type": "saturate", "filterId": "fff7", "value": 200, "unit": "%"}]
+                        }
+                    }, {
+                        "id": "a-23-n-3",
+                        "actionTypeId": "STYLE_FILTER",
+                        "config": {
+                            "delay": 1800,
+                            "easing": "inOutExpo",
+                            "duration": 400,
+                            "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
+                            "filters": [{"type": "saturate", "filterId": "fff7", "value": 57, "unit": "%"}]
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-23-n-4",
+                        "actionTypeId": "STYLE_FILTER",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutExpo",
+                            "duration": 300,
+                            "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
+                            "filters": [{"type": "saturate", "filterId": "fff7", "value": 200, "unit": "%"}]
+                        }
+                    }, {
+                        "id": "a-23-n-5",
+                        "actionTypeId": "STYLE_FILTER",
+                        "config": {
+                            "delay": 200,
+                            "easing": "ease",
+                            "duration": 200,
+                            "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
+                            "filters": [{"type": "saturate", "filterId": "fff7", "value": 124, "unit": "%"}]
+                        }
+                    }, {
+                        "id": "a-23-n-6",
+                        "actionTypeId": "STYLE_FILTER",
+                        "config": {
+                            "delay": 200,
+                            "easing": "inBack",
+                            "duration": 1000,
+                            "target": {"id": "6179eb2b715617ed93feee24|ce9f3926-8126-925b-269d-620ffa38f23c"},
+                            "filters": [{"type": "saturate", "filterId": "fff7", "value": 151, "unit": "%"}]
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1635393822923
+            },
+            "a-24": {
+                "id": "a-24",
+                "title": "cursor-small",
+                "continuousParameterGroups": [{
+                    "id": "a-24-p",
+                    "type": "MOUSE_X",
+                    "parameterLabel": "Mouse X",
+                    "continuousActionGroups": [{
+                        "keyframe": 0,
+                        "actionItems": [{
+                            "id": "a-24-n",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor-small",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
+                                },
+                                "xValue": -50,
+                                "xUnit": "VW",
+                                "yUnit": "PX",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }, {
+                        "keyframe": 100,
+                        "actionItems": [{
+                            "id": "a-24-n-2",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor-small",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
+                                },
+                                "xValue": 50,
+                                "xUnit": "VW",
+                                "yUnit": "PX",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }]
+                }, {
+                    "id": "a-24-p-2",
+                    "type": "MOUSE_Y",
+                    "parameterLabel": "Mouse Y",
+                    "continuousActionGroups": [{
+                        "keyframe": 0,
+                        "actionItems": [{
+                            "id": "a-24-n-3",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor-small",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
+                                },
+                                "yValue": -50,
+                                "xUnit": "PX",
+                                "yUnit": "VH",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }, {
+                        "keyframe": 100,
+                        "actionItems": [{
+                            "id": "a-24-n-4",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor-small",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871cf"]
+                                },
+                                "yValue": 50,
+                                "xUnit": "PX",
+                                "yUnit": "VH",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }]
+                }],
+                "createdOn": 1568744694505
+            },
+            "a-25": {
+                "id": "a-25",
+                "title": "cursor-large",
+                "continuousParameterGroups": [{
+                    "id": "a-25-p",
+                    "type": "MOUSE_X",
+                    "parameterLabel": "Mouse X",
+                    "continuousActionGroups": [{
+                        "keyframe": 0,
+                        "actionItems": [{
+                            "id": "a-25-n",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
+                                },
+                                "xValue": -50,
+                                "xUnit": "VW",
+                                "yUnit": "PX",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }, {
+                        "keyframe": 100,
+                        "actionItems": [{
+                            "id": "a-25-n-2",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
+                                },
+                                "xValue": 50,
+                                "xUnit": "VW",
+                                "yUnit": "PX",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }]
+                }, {
+                    "id": "a-25-p-2",
+                    "type": "MOUSE_Y",
+                    "parameterLabel": "Mouse Y",
+                    "continuousActionGroups": [{
+                        "keyframe": 0,
+                        "actionItems": [{
+                            "id": "a-25-n-3",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
+                                },
+                                "yValue": -50,
+                                "xUnit": "PX",
+                                "yUnit": "VH",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }, {
+                        "keyframe": 100,
+                        "actionItems": [{
+                            "id": "a-25-n-4",
+                            "actionTypeId": "TRANSFORM_MOVE",
+                            "config": {
+                                "delay": 0,
+                                "easing": "",
+                                "duration": 500,
+                                "target": {
+                                    "selector": ".cursor",
+                                    "selectorGuids": ["10063f4d-8848-df7d-5366-6a02ff9871d2"]
+                                },
+                                "yValue": 50,
+                                "xUnit": "PX",
+                                "yUnit": "VH",
+                                "zUnit": "PX"
+                            }
+                        }]
+                    }]
+                }],
+                "createdOn": 1568744694505
+            },
+            "a-26": {
+                "id": "a-26",
+                "title": "Ouverture de Liste Collectible",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-26-n-2",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-26-n-4",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "yValue": 177,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-26-n",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": "block"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-26-n-3",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutElastic",
+                            "duration": 500,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-26-n-5",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutElastic",
+                            "duration": 500,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1635483831694
+            },
+            "a-27": {
+                "id": "a-27",
+                "title": "Ferm de Liste Collectible",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-27-n",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-27-n-3",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": "none"
+                        }
+                    }, {
+                        "id": "a-27-n-2",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "617097960941452dee864afb|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "yValue": 177,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1635483831694
+            },
+            "a-28": {
+                "id": "a-28",
+                "title": "Ouverture de Liste Collectible 2",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-28-n",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-28-n-2",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "yValue": 177,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-28-n-3",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": "block"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-28-n-4",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutElastic",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-28-n-5",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "inOutElastic",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": true,
+                "createdOn": 1635483831694
+            },
+            "a-29": {
+                "id": "a-29",
+                "title": "Ferm de Liste Collectible 2",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-29-n",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-29-n-2",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "value": "none"
+                        }
+                    }, {
+                        "id": "a-29-n-3",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|a97ef722-151f-aafa-7d0b-873186db9647"},
+                            "yValue": 177,
+                            "xUnit": "PX",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1635483831694
+            },
+            "a-30": {
+                "id": "a-30", "title": "Slide Hotspot EDF", "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-30-n",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "value": "none",
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"}
+                        }
+                    }, {
+                        "id": "a-30-n-5",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-30-n-6",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "xValue": 282,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-30-n-7",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-30-n-9",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
+                            "xValue": -185,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-30-n-2",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "value": "flex",
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"}
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-30-n-3",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "ease",
+                            "duration": 1000,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-30-n-4",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704bc"},
+                            "xValue": 0,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-30-n-10",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 500,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
+                            "xValue": -32,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-30-n-8",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 500,
+                            "easing": "outQuint",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|9c4127d5-1fd6-eafb-8227-8c529f8704c2"},
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }]
+                }], "createdOn": 1635841266911, "useFirstGroupAsInitialState": true
+            },
+            "a-31": {
+                "id": "a-31", "title": "Slide Hotspot Elengy", "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-31-n",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "value": "none",
+                            "target": {
+                                "useEventTarget": "SIBLINGS",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            }
+                        }
+                    }, {
+                        "id": "a-31-n-2",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "SIBLINGS",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-31-n-3",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "SIBLINGS",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "xValue": 282,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-31-n-4",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-31-n-5",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
+                            "xValue": -185,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-31-n-6",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "value": "flex",
+                            "target": {
+                                "useEventTarget": "SIBLINGS",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            }
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-31-n-7",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "ease",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "SIBLINGS",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }, {
+                        "id": "a-31-n-8",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {
+                                "useEventTarget": "SIBLINGS",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "xValue": 0,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-31-n-9",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 500,
+                            "easing": "swingFromTo",
+                            "duration": 1000,
+                            "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
+                            "xValue": -32,
+                            "xUnit": "px",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-31-n-10",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 500,
+                            "easing": "outQuint",
+                            "duration": 500,
+                            "target": {"id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee59"},
+                            "value": 1,
+                            "unit": ""
+                        }
+                    }]
+                }], "createdOn": 1635841266911, "useFirstGroupAsInitialState": true
+            },
+            "a-32": {
+                "id": "a-32",
+                "title": "Slide Hotspot (Fermeture) Elengy",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "id": "a-32-n",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuad",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": true,
+                                "id": "616a19718868227d619f899f|32a57918-a627-bc25-0498-910dca1922e5"
+                            },
+                            "xValue": -16,
+                            "yValue": null,
+                            "xUnit": "px",
+                            "yUnit": "px",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-32-n-3",
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bounce",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "PARENT",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "xValue": 85,
+                            "xUnit": "%",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "id": "a-32-n-2",
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "bouncePast",
+                            "duration": 500,
+                            "target": {
+                                "useEventTarget": "PARENT",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "value": 0,
+                            "unit": ""
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "id": "a-32-n-4",
+                        "actionTypeId": "GENERAL_DISPLAY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "",
+                            "duration": 0,
+                            "target": {
+                                "useEventTarget": "PARENT",
+                                "id": "6180bde041444a7785a61fc5|bd705f65-7078-fd08-ac74-e15e83a8ee53"
+                            },
+                            "value": "none"
+                        }
+                    }]
+                }],
+                "useFirstGroupAsInitialState": false,
+                "createdOn": 1634347201362
+            },
+            "slideInBottom": {
+                "id": "slideInBottom",
+                "useFirstGroupAsInitialState": true,
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 0
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 0,
+                            "yValue": 100,
+                            "xUnit": "PX",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 0,
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }, {
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 1
+                        }
+                    }]
+                }]
+            },
+            "fadeIn": {
+                "id": "fadeIn",
+                "useFirstGroupAsInitialState": true,
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 0
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 1
+                        }
+                    }]
+                }]
+            },
+            "growBigIn": {
+                "id": "growBigIn",
+                "useFirstGroupAsInitialState": true,
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 0
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 0,
+                            "yValue": 0
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 1,
+                            "yValue": 1
+                        }
+                    }, {
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 1
+                        }
+                    }]
+                }]
+            },
+            "pop": {
+                "id": "pop",
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 250,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 0.7500000000000001,
+                            "yValue": 0.7500000000000001
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_SCALE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outElastic",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 1,
+                            "yValue": 1
+                        }
+                    }]
+                }]
+            },
+            "slideInLeft": {
+                "id": "slideInLeft",
+                "useFirstGroupAsInitialState": true,
+                "actionItemGroups": [{
+                    "actionItems": [{
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 0
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "duration": 0,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": -100,
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }, {
+                    "actionItems": [{
+                        "actionTypeId": "STYLE_OPACITY",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "value": 1
+                        }
+                    }, {
+                        "actionTypeId": "TRANSFORM_MOVE",
+                        "config": {
+                            "delay": 0,
+                            "easing": "outQuart",
+                            "duration": 1000,
+                            "target": {"id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true},
+                            "xValue": 0,
+                            "yValue": 0,
+                            "xUnit": "PX",
+                            "yUnit": "PX",
+                            "zUnit": "PX"
+                        }
+                    }]
+                }]
+            }
+        },
+        "site": {
+            "mediaQueries": [{"key": "main", "min": 992, "max": 10000}, {
+                "key": "medium",
+                "min": 768,
+                "max": 991
+            }, {"key": "small", "min": 480, "max": 767}, {"key": "tiny", "min": 0, "max": 479}]
         }
-    );
-    console.log('Webflow Initialized')
-}
+    }
+);

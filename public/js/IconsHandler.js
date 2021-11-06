@@ -4,7 +4,6 @@
 
 import {toScreenPosition} from './ScreenProjection.js'
 import {loadJSON} from './JSONLoader.js'
-import {InitializeWebflow} from './uex21.js'
 
 //#endregion
 
@@ -73,8 +72,6 @@ const GenerateHtml = (d) => {
     for (let i = 0; i < backButtons.length; i++) {
         backButtons[i].addEventListener("click", TryLeaveLink)
     }
-
-    InitializeWebflow()
 }
 
 //#endregion
