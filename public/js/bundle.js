@@ -399,6 +399,7 @@ const OnMouseMove = (e) => {
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const UpdateFreeform = (delta) => {
+    console.log(xVelocity)
     xVelocity += offsetX * delta * acceleration
     zVelocity += offsetZ * delta * acceleration *2
     if (xVelocity === zVelocity && zVelocity === 0) {
