@@ -879,7 +879,7 @@ const updateVolume = (dt) => {
 
 const InitializeSound =() => {
     if (localStorage.muted === 'true') {
-        document.getElementsByClassName('sound-ui-wrapper')[0].click()
+        document.getElementsByClassName('button-ui-div')[0].click()
         swapMute()
     } else {
         localStorage.muted = 'false'
