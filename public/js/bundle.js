@@ -188,6 +188,8 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
+    div.getElementsByClassName("hotspot-title-h1")[0].style.color = newColor
+    div.getElementsByClassName("title-header-div")[0].style.shadowColor = newColor
     div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
