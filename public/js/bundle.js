@@ -699,6 +699,7 @@ const setup = () => {
     renderer.setClearColor( 0xEDE89F )
     renderer.setPixelRatio( window.devicePixelRatio )
     renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.toneMappingExposure = 0.2
     canvas.appendChild( renderer.domElement )
     renderer.domElement.style.position = 'fixed'
     renderer.domElement.style.zIndex = '-1'
