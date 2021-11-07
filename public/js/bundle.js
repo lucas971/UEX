@@ -430,12 +430,14 @@ const GenerateHtml = (d) => {
 //#region Hotspots
 
 const TryClickedLink = (id) => {
+    audio.volume = 0.05
     OpenedHotspot(id)
     AddToProgress(id)
     clickedLink = true
 }
 
 const TryLeaveLink = () => {
+    audio.volume = 0.4
     document.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
 }
@@ -976,6 +978,7 @@ let audioStarted = false
 
 const tryToPlayAudio = () => {
     if (!audioStarted){
+        audio.volume = 0.4
         audio.play()
         audioStarted = true
     }
