@@ -183,6 +183,7 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = hotspotInfo.partnerInfo
+    console.log(div)
     
     
     
