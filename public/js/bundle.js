@@ -163,7 +163,8 @@ const InitializeHotspots = () => {
     hotspotDivs[3] = document.getElementById('hotspot-content-slideshow')
     loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
         (data) => {
-            hotspotInfos = data["hotspots"]
+            hotspotInfos = data["hotspotInfos"]
+            console.log(hotspotInfos)
         },
         (error) => {
             console.error(error)
