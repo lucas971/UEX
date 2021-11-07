@@ -175,6 +175,7 @@ const OpenedHotspot = (triggerName) => {
 }
 const PopulateHotspot = (hotspotInfo) => {
     const div = hotspotDivs[hotspotInfo.type]
+    console.log(div)
     div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
@@ -266,7 +267,7 @@ const GenerateHtml = (d) => {
 //#region Hotspots
 
 const TryClickedLink = (id) => {
-    PopulateHotspot(id)
+    OpenedHotspot(id)
     clickedLink = true
 }
 
@@ -439,7 +440,6 @@ const OnMouseMove = (e) => {
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const UpdateFreeform = (delta) => {
-    console.log(xVelocity)
     xVelocity += offsetX * delta * acceleration
     zVelocity += offsetZ * delta * acceleration *2
     if (xVelocity === zVelocity && zVelocity === 0) {
