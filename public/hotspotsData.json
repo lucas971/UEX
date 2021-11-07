@@ -7,14 +7,16 @@
       "title": "Bienvenue en 2035",
       "sponsor": "EDF",
       "theme": "Usine du futur",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "video" : "https://vimeo.com/641377158/faa2f47f49"
     },
     "trigger2": {
       "type": 0,
       "title": "La fabuleuse histoire de la fée électricité",
       "sponsor": "EDF",
       "theme": "Innovation",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "video" : "https://vimeo.com/643120272/7bcaa4aacee"
     },
     "trigger3": {
       "type": 1,
@@ -28,21 +30,24 @@
       "title": "Le secret des champions",
       "sponsor": "France Chimie",
       "theme": "Développement durable",
-      "paragraphText" : "Votre premier pas au cœur de la matière ! Prenons une chaussure, portée par des champions du monde, dont le plastique (Pebax ®) est fabriqué par la société Arkema à partir d'une molécule issue de l'huile de ricin !"
+      "paragraphText" : "Votre premier pas au cœur de la matière ! Prenons une chaussure, portée par des champions du monde, dont le plastique (Pebax ®) est fabriqué par la société Arkema à partir d'une molécule issue de l'huile de ricin !",
+      "video": "https://vimeo.com/641384542/6299c29e31"
     },
     "trigger5": {
       "type": 0,
       "title": "Parlons environnement",
       "sponsor": "Sartorius",
       "theme": "Développement durable",
-      "paragraphText" : "Découvrez comment Sartorius améliore son empreinte environnementale au sein de ses sites de production et comment l’entreprise s’attache au quotidien à recycler ses déchets. "
+      "paragraphText" : "Découvrez comment Sartorius améliore son empreinte environnementale au sein de ses sites de production et comment l’entreprise s’attache au quotidien à recycler ses déchets.",
+      "video" : "https://vimeo.com/643220841/252e4ef656"
     },
     "trigger6": {
       "type": 0,
       "title": "Astana",
       "sponsor": "ITER",
       "theme": "Innovation",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "video" : "https://vimeo.com/641337198/314cfc2e7d"
     },
     "trigger7": {
       "type": 1,
@@ -63,21 +68,23 @@
       "title": "Carole Chevaleau, cheffe de quart ",
       "sponsor": "ELENGY",
       "theme": "Inclusion",
-      "paragraphText" : "Découvrez le portrait d'une de nos agent de quart, Carole Chevaleau."
+      "paragraphText" : "Découvrez le portrait d'une de nos agent de quart, Carole Chevaleau.",
+      "video" : "https://vimeo.com/641340133/0d00925d81"
     },
     "trigger10": {
       "type": 0,
       "title": "Comment vole un hélicoptère ?",
       "sponsor": "Airbus Helicopters",
       "theme": "Inclusion",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "video" : "https://vimeo.com/641352998/467426f39f"
     },
-    "trigger28": {
+    "trigger52": {
       "type": 3,
-      "title": "Découvrez ce qu’est la RSE",
-      "sponsor": "D3E",
-      "theme": "Développement durable",
-      "paragraphText" : "La RSE (Responsabilité Sociétale des Entreprises) est un domaine qui nous tient à cœur. Découvrez ce qu’est la RSE grâce à des exemples concrets répartis dans 8 questions. Les thèmes abordés seront les suivants : Insertion, alternance, inclusion, économie circulaire, développement durable, innovation et industrie du futur.  A vos clics !"
+      "title": "Cap ou pas cap de tout savoir sur le Naval de Défense ?",
+      "sponsor": "Naval Group",
+      "theme": "Innovation",
+      "paragraphText" : ""
     }
   }
 }

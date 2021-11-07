@@ -5,7 +5,7 @@
       "iconid" : "trigger1"
     },
     {
-      "id" : "EDF_002",
+      "id" : "Usine",
       "iconid" : "trigger2"
     },
     {
@@ -13,11 +13,11 @@
       "iconid" : "trigger3"
     },
     {
-      "id" : "Usine",
+      "id" : "Icosphere001",
       "iconid" : "trigger4"
     },
     {
-      "id" : "Cube648",
+      "id" : "Total",
       "iconid" : "trigger5"
     },
     {
@@ -25,15 +25,15 @@
       "iconid" : "trigger6"
     },
     {
-      "id" : "Route003",
+      "id" : "campus_roof_gardens_E",
       "iconid" : "trigger7"
     },
     {
-      "id" : "esplanade",
+      "id" : "Campus_003",
       "iconid" : "trigger8"
     },
     {
-      "id" : "Campus_001",
+      "id" : "Elengy",
       "iconid" : "trigger9"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "id" : "Chantier_Naval002",
-      "iconid" : "trigger28"
+      "iconid" : "trigger52"
     }
   ]
 }

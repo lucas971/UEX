@@ -334,6 +334,10 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = "Information partenaire à placer ici"
     
+    if (hotspotInfo.video) {
+        div.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
+    }
+    
     
     
 }
