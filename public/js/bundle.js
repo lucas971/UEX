@@ -54,7 +54,7 @@ const ShowCursor = (e) => {
 }
 
 const NormalMode = () => {
-    let interactibles = document.getElementsByClassName('interactible')
+    let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "all"
     }
@@ -62,7 +62,7 @@ const NormalMode = () => {
 }
 
 const DragMode = () => {
-    let interactibles = document.getElementsByClassName('interactible')
+    let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
     }
@@ -70,7 +70,7 @@ const DragMode = () => {
 }
 
 const HotspotMode = () => {
-    let interactibles = document.getElementsByClassName('interactible')
+    let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
     }
