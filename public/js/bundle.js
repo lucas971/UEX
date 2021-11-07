@@ -617,8 +617,17 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
 
-    ready = true
+    const light1  = new d.THREE.AmbientLight(0xffffff, 0.3);
+    light1.name = 'ambient_light';
+    d.scene.add( light1 );
 
+    const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
+    light2.position.set(0.5, 0, 0.866); // ~60º
+    light2.name = 'main_light';
+    d.scene.add( light2 );
+
+
+    ready = true
 }
 
 //Create an animation mixer and launches the looping animation of the city.
