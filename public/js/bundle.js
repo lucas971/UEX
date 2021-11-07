@@ -840,7 +840,7 @@ const setAudioOnHotspot = (isOn) => onHotspot = isOn
 
 const tryToPlayAudio = () => {
     if (!audioStarted){
-        changeVolume(maxVolume)
+        changeVolume(0)
         audio.play()
         audioStarted = true
     }
