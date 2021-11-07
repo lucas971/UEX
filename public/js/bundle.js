@@ -347,6 +347,7 @@ const UpdateView = () => {
                 futurBar.style.OTransform = 
                     futurBar.style.transform = 'translate(-' + 1 - (updateViewData["Usine du futur"] / total_Futur) + '%, 0px)'
 
+    console.log(futurBar.style)
     const inclusionBar = document.getElementsByClassName("inside-progres-ui inclusion")[0]
     inclusionBar.style.webkitTransform =
         inclusionBar.style.MozTransform =
