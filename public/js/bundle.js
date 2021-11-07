@@ -193,7 +193,9 @@ const UpdateIconsPosition = (d) => {
 
     for (let i = 0; i < icons.length; i++) {
         const obj = d.scene.getObjectByName(icons[i].id)
-        console.log(icons[i].id)
+        if (!obj) {
+            continue
+        }
         const toScreen = toScreenPosition(obj, d)
 
         icons[i].image.style.left = `${toScreen.x - icons[i].width/2}px`
