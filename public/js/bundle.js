@@ -847,6 +847,10 @@ const tryToPlayAudio = () => {
 }
 
 const changeVolume = (value) => {
+    if (muted) {
+        audio.volume = 0
+        return
+    }
     audio.volume = value
 }
 
@@ -854,10 +858,10 @@ const swapMute = () => {
     muted = !muted
     console.log(muted)
     if (muted) {
-        audio.volume = 0
+        changeVolume(0)
         localStorage.muted = true
     } else {
-        audio.volume = onHotspot? hotspotVolume : maxVolume
+        changeVolume(onHotspot? hotspotVolume : maxVolume)
         localStorage.muted = false
     }
 }
@@ -867,9 +871,9 @@ const updateVolume = (dt) => {
         return
     }
     if (onHotspot) {
-        audio.volume = Math.max(audio.volume - dt * fadeSpeed, hotspotVolume)
+        changeVolume(Math.max(audio.volume - dt * fadeSpeed, hotspotVolume))
     } else {
-        audio.volume = Math.min(audio.volume + dt * unFadeSpeed, maxVolume)
+        changeVolume(Math.min(audio.volume + dt * unFadeSpeed, maxVolume))
     }
 }
 
