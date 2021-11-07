@@ -859,10 +859,10 @@ const swapMute = () => {
     console.log(muted)
     if (muted) {
         changeVolume(0)
-        localStorage.muted = true
+        localStorage.muted = 'true'
     } else {
         changeVolume(onHotspot? hotspotVolume : maxVolume)
-        localStorage.muted = false
+        localStorage.muted = 'false'
     }
 }
 
@@ -877,11 +877,11 @@ const updateVolume = (dt) => {
     }
 }
 
-if (localStorage.muted === true) {
+if (localStorage.muted === 'true') {
     document.getElementsByClassName('sound-ui-wrapper')[0].click()
     swapMute()
 } else {
-    localStorage.muted = false
+    localStorage.muted = 'false'
 }
 
 document.addEventListener('click', tryToPlayAudio)
