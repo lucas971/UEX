@@ -617,17 +617,32 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
 
-    const light1  = new d.THREE.AmbientLight(0xffffff, 0.3);
-    light1.name = 'ambient_light';
-    d.scene.add( light1 );
+    const light1  = new d.THREE.AmbientLight(0xffffff, 0.3)
+    light1.name = 'ambient_light'
+    d.scene.add( light1 )
 
     const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
-    light2.position.set(0.5, 0, 0.866); // ~60º
-    light2.name = 'main_light';
-    d.scene.add( light2 );
+    light2.position.set(0.5, 0, 0.866) // ~60º
+    light2.name = 'main_light'
+    d.scene.add( light2 )
 
-
+    traverseMaterials(d.scene, (material) => {
+        console.log(material)
+        if (material.map) material.map.encoding = d.THREE.sRGBEncoding
+        if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
+        if (material.map || material.emissiveMap) material.needsUpdate = true;
+    });
     ready = true
+}
+
+const traverseMaterials = (object, callback) => {
+    object.traverse((node) => {
+        if (!node.isMesh) return;
+        const materials = Array.isArray(node.material)
+            ? node.material
+            : [node.material];
+        materials.forEach(callback);
+    });
 }
 
 //Create an animation mixer and launches the looping animation of the city.
