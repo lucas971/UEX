@@ -320,7 +320,7 @@ const PopulateHotspot = (hotspotInfo) => {
         themeScroll = scrollbarInnov
     }
     div.style.backgroundColor = newColor
-    div.getElementsByClassName("scrollbarcode w-embed")[0].outerHTML = ""
+    //iv.getElementsByClassName("scrollbarcode w-embed")[0].outerHTML = ""
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
@@ -438,7 +438,6 @@ const TryClickedLink = (id) => {
 
 const TryLeaveLink = () => {
     setAudioOnHotspot(false)
-    audio.volume = 0.4
     document.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
 }
@@ -991,6 +990,8 @@ const updateVolume = (dt) => {
 document.addEventListener('click', tryToPlayAudio)
 
 //#endregion
+
+
 //#region MAIN
 
 //#region IMPORTS
