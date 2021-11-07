@@ -856,7 +856,6 @@ const changeVolume = (value) => {
 
 const swapMute = () => {
     muted = !muted
-    console.log(muted)
     if (muted) {
         changeVolume(0)
         localStorage.muted = 'true'
@@ -867,7 +866,7 @@ const swapMute = () => {
 }
 
 const updateVolume = (dt) => {
-    if (muted) {
+    if (muted || !audioStarted) {
         return
     }
     if (onHotspot) {
