@@ -66,8 +66,6 @@ const DragMode = () => {
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
     }
-    cursor.style.display = "none"
-    grab.style.display = "inherit"
     mode = drag
 }
 
