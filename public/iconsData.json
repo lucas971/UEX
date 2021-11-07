@@ -1,31 +1,53 @@
 {
   "icons": [
     {
-      "id" : "Building_PRINCIPAL",
+      "id" : "EDF_001",
       "iconid" : "trigger1",
-      "width": 50,
-      "height": 50,
       "type": 1
     },
     {
       "id" : "EDF_002",
       "iconid" : "trigger2",
-      "width": 50,
-      "height": 50,
       "type": 1
     },
     {
-      "id" : "Icosphere.001",
+      "id" : "Cube.652",
       "iconid" : "trigger3",
-      "width": 50,
-      "height": 50,
       "type": 1
     },
     {
-      "id" : "KSB",
+      "id" : "Usine",
       "iconid" : "trigger4",
-      "width": 50,
-      "height": 50,
+      "type": 1
+    },
+    {
+      "id" : "Cube.648",
+      "iconid" : "trigger5",
+      "type": 1
+    },
+    {
+      "id" : "Reacteur plasma",
+      "iconid" : "trigger6",
+      "type": 1
+    },
+    {
+      "id" : "Route.003",
+      "iconid" : "trigger7",
+      "type": 1
+    },
+    {
+      "id" : "esplanade",
+      "iconid" : "trigger8",
+      "type": 1
+    },
+    {
+      "id" : "Campus_001",
+      "iconid" : "trigger9",
+      "type": 1
+    },
+    {
+      "id" : "helicoptere.002",
+      "iconid" : "trigger10",
       "type": 1
     }
   ]

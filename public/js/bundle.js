@@ -182,7 +182,7 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
     div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
-    div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = hotspotInfo.partnerInfo
+    div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = "Information partenaire à placer ici"
     console.log(div)
     
     
@@ -197,6 +197,8 @@ const PopulateHotspot = (hotspotInfo) => {
 
 //#region VARIABLES
 
+const iconWidth = 50
+const iconHeight = 50
 //Array of icons struct. See ../iconsData.json for more information on the structure.
 let icons
 
@@ -237,8 +239,8 @@ const UpdateIconsPosition = (d) => {
         }
         const toScreen = toScreenPosition(obj, d)
 
-        icons[i].image.style.left = `${toScreen.x - icons[i].width/2}px`
-        icons[i].image.style.top = `${toScreen.y - icons[i].height/2}px`
+        icons[i].image.style.left = `${toScreen.x - iconWidth/2}px`
+        icons[i].image.style.top = `${toScreen.y - iconHeight/2}px`
     }
 }
 

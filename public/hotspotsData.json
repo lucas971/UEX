@@ -1,36 +1,76 @@
+
 {
   "hotspotInfos": {
+    "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 ",
     "trigger1": {
       "type": 0,
-      "title": "title video",
-      "sponsor": "sponsor",
-      "theme": "theme",
-      "paragraphText" : "paragraph text",
-      "partnerInfo" : "partner info"
+      "title": "Bienvenue en 2035",
+      "sponsor": "EDF",
+      "theme": "Usine du futur",
+      "paragraphText" : ""
     },
     "trigger2": {
-      "type": 1,
-      "title": "title embed",
-      "sponsor": "sponsor",
-      "theme": "theme",
-      "paragraphText" : "paragraph text",
-      "partnerInfo" : "partner info"
+      "type": 0,
+      "title": "La fabuleuse histoire de la fée électricité",
+      "sponsor": "EDF",
+      "theme": "Innovation",
+      "paragraphText" : ""
     },
     "trigger3": {
-      "type": 2,
-      "title": "title slide",
-      "sponsor": "sponsor",
-      "theme": "theme",
-      "paragraphText" : "paragraph text",
-      "partnerInfo" : "partner info"
+      "type": 1,
+      "title": "Visite virtuelle de l’entreprise Stäubli",
+      "sponsor": "UIMM",
+      "theme": "Innovation",
+      "paragraphText" : "paragraph text"
     },
     "trigger4": {
-      "type": 3,
-      "title": "title quizz",
-      "sponsor": "sponsor",
-      "theme": "theme",
-      "paragraphText" : "paragraph text",
-      "partnerInfo" : "partner info"
+      "type": 0,
+      "title": "Le secret des champions",
+      "sponsor": "France Chimie",
+      "theme": "Développement Durable",
+      "paragraphText" : "Votre premier pas au cœur de la matière ! Prenons une chaussure, portée par des champions du monde, dont le plastique (Pebax ®) est fabriqué par la société Arkema à partir d'une molécule issue de l'huile de ricin !"
+    },
+    "trigger5": {
+      "type": 0,
+      "title": "Parlons environnement",
+      "sponsor": "Sartorius",
+      "theme": "Développement Durable",
+      "paragraphText" : "Découvrez comment Sartorius améliore son empreinte environnementale au sein de ses sites de production et comment l’entreprise s’attache au quotidien à recycler ses déchets. "
+    },
+    "trigger6": {
+      "type": 0,
+      "title": "Astana",
+      "sponsor": "ITER",
+      "theme": "Innovation",
+      "paragraphText" : ""
+    },
+    "trigger7": {
+      "type": 1,
+      "title": "Découverte de nos plateaux techniques orientés Industrie du Futur",
+      "sponsor": "AFPI",
+      "theme": "Usine du futur",
+      "paragraphText" : "Visitez virtuellement notre centre basé à Istres, ses ateliers et plateaux techniques, espaces co-working, hub, espaces détente et cafétéria. Pour profiter pleinement de la vision à 360°, faites pivoter l’image vers la gauche ou la droite."
+    },
+    "trigger8": {
+      "type": 2,
+      "title": "Portrait",
+      "sponsor": "OPCO2I",
+      "theme": "Inclusion",
+      "paragraphText" : ""
+    },
+    "trigger9": {
+      "type": 0,
+      "title": "Carole Chevaleau, cheffe de quart ",
+      "sponsor": "ELENGY",
+      "theme": "Inclusion",
+      "paragraphText" : "Découvrez le portrait d'une de nos agent de quart, Carole Chevaleau."
+    },
+    "trigger10": {
+      "type": 0,
+      "title": "Comment vole un hélicoptère ?",
+      "sponsor": "Airbus Helicopters",
+      "theme": "Inclusion",
+      "paragraphText" : ""
     }
   }
 }
