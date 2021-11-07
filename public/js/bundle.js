@@ -971,13 +971,12 @@ const changeVolume = (value) => {
     audio.volume = value
 }
 
-const mute = () => {
-    muted = true
+const swapMute = () => {
+    muted = !muted
+    if (muted) {
+        audio.volume = 0
+    }
     audio.volume = 0
-}
-
-const unMute = () => {
-    muted = false
 }
 
 const updateVolume = (dt) => {
@@ -991,6 +990,7 @@ const updateVolume = (dt) => {
     }
 }
 document.addEventListener('click', tryToPlayAudio)
+document.getElementsByClassName('sound-ui-wrapper')[0].addEventListener('click', swapMute)
 
 //#endregion
 
