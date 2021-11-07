@@ -293,6 +293,7 @@ const GenerateHtml = (d) => {
 
 const TryClickedLink = (id) => {
     OpenedHotspot(id)
+    AddToProgress(id)
     clickedLink = true
 }
 
@@ -300,6 +301,24 @@ const TryLeaveLink = () => {
     clickedLink = false
 }
 //#endregion
+
+//#endregion
+
+//#region Progress
+
+let currentProgress = []
+
+const LoadProgress = () => {
+    if (localStorage.progress) {
+        currentProgress = JSON.parse(localStorage.progress)
+        console.log(currentProgress)
+    }
+}
+
+const AddToProgress = (id) => {
+    currentProgress.append(id)
+    localStorage.progress = JSON.stringify(currentProgress);
+}
 
 //#endregion
 
@@ -868,6 +887,7 @@ const main = () => {
     setup()
 
     LoadCityScene()
+    LoadProgress()
     
     InitializeHotspots(threeData)
     InitializeCursor(threeData)
