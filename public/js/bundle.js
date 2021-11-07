@@ -877,7 +877,7 @@ const updateVolume = (dt) => {
     }
 }
 
-if (localStorage.muted) {
+if (localStorage.muted === true) {
     document.getElementsByClassName('sound-ui-wrapper')[0].click()
     swapMute()
 } else {
