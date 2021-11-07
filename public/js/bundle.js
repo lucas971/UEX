@@ -131,6 +131,7 @@ const easeOutQuad = (x) => {
 //#region HOTSPOT HANDLER
 let hotspotDivs = []
 let hotspotInfos = []
+let sponsorsTexts = []
 
 const blue = '#06b7ff'
 const red = '#fe004b'
@@ -146,6 +147,7 @@ const InitializeHotspots = (d) => {
     loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
         (data) => {
             hotspotInfos = data["hotspotInfos"]
+            sponsorsTexts = data["sponsorsText"]
             InitializeIcons(d)
         },
         (error) => {
@@ -200,7 +202,7 @@ const PopulateHotspot = (hotspotInfo) => {
         rgb[0].toString() +", " +rgb[1].toString() + ", " +rgb[2].toString() + ", 0.47)"
     console.log(div.getElementsByClassName("hotspot-partner-div")[0].style)
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
-    div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = "Information partenaire à placer ici"
+    div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = sponsorsTexts[hotspotInfo.sponsor]
     
     if (hotspotInfo.video) {
         div.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video

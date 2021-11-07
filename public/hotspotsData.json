@@ -1,5 +1,18 @@
 
 {
+  "sponsorsTexts": {
+    "EDF" : "Construire un avenir énergétique neutre en CO2, conciliant préservation de la planète, bien-être et développement, grâce à l'électricité et à des solutions et services innovants.",
+    "UIMM" : "L’UIMM La Fabrique de l’Avenir travaille à l’avenir de l’industrie, des Français et de la France. L’UIMM La Fabrique de l’Avenir aide les entreprises industrielles à conjuguer compétitivité, emploi et développement de leurs salariés, par la voie du dialogue social et en phase avec les nouvelles attentes de la société.",
+    "France Chimie" : "France Chimie est l’organisation professionnelle qui représente les entreprises de la Chimie en France. Elle est le porte-parole du secteur auprès des pouvoirs publics nationaux, européens et des instances internationales.",
+    "Sartorius" : "Le groupe Sartorius est un partenaire international de premier plan de l’industrie biopharmaceutique et du secteur de la recherche. Nous aidons scientifiques et ingénieurs en biotechnologies du monde entier à développer et fabriquer des médicaments de la première idée à la production. Pour que des médicaments bon marché soient accessibles au plus grand nombre.",
+    "ITER" : "ITER est l'un des projets les plus ambitieux au monde dans le domaine de l'énergie. Celui ci démontrer que la fusion — l'énergie du Soleil et des étoiles — peut être utilisée comme source d'énergie à grande échelle, non émettrice de CO2, pour produire de l'électricité.",
+    "OPCO2I" : "OPCO 2i accompagne 32 branches professionnelles dans leur stratégie de développement des compétences. Il représente plus de 60 000 entreprises et plus de 2 600 000 salariés.",
+    "ELENGY" : "Elengy est un opérateur français de terminaux méthaniers. Filiale de ENGIE, est au service de tous les opérateurs qui souhaitent importer du gaz naturel liquéfié pour approvisionner les marchés français et européens. ",
+    "Airbus Helicopters" : "Airbus Helicopters - nouveau nom d'Eurocopter, est une division du groupe Airbus, leader mondial dans les domaines de l’aéronautique, de l’espace, de la défense et des services associés. ",
+    "Naval Group" : "Maître d’œuvre industriel, concepteur et intégrateur d’ensemble des navires armés et des systèmes de combat, Naval Group est le leader européen du naval de défense et un acteur majeur dans le monde.",
+    "AFPI" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur."
+    
+  },
   "hotspotInfos": {
     "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 / classroom 4 / room 5",
     "trigger-classroom" : {
