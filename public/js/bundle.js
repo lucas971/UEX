@@ -69,6 +69,20 @@ const DragMode = () => {
     mode = drag
 }
 
+const HotspotMode = () => {
+    let interactibles = document.getElementsByClassName('interactible')
+    for (let i = 0; i < interactibles.length; i++) {
+        interactibles[i].style.pointerEvents = "none"
+    }
+}
+
+const ExitHotspotMode = () => {
+    let interactibles = document.getElementsByClassName('interactible')
+    for (let i = 0; i < interactibles.length; i++) {
+        interactibles[i].style.pointerEvents = "all"
+    }
+}
+
 
 //#endregion
 
@@ -408,12 +422,14 @@ const GenerateHtml = (d) => {
 
 const TryClickedLink = (id) => {
     setAudioOnHotspot(true)
+    HotspotMode()
     OpenedHotspot(id)
     AddToProgress(id)
     clickedLink = true
 }
 
 const TryLeaveLink = () => {
+    ExitHotspotMode()
     setAudioOnHotspot(false)
     document.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
