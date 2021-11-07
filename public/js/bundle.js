@@ -430,13 +430,14 @@ const GenerateHtml = (d) => {
 //#region Hotspots
 
 const TryClickedLink = (id) => {
-    audio.volume = 0.05
+    setAudioOnHotspot(true)
     OpenedHotspot(id)
     AddToProgress(id)
     clickedLink = true
 }
 
 const TryLeaveLink = () => {
+    setAudioOnHotspot(false)
     audio.volume = 0.4
     document.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
@@ -945,6 +946,51 @@ const UpdateCity = (d) => {
 
 //#endregion
 
+//#region Audio
+
+const fadeSpeed = 1
+const maxVolume = 0.4
+let muted = false
+let audio = document.getElementById("background-music")
+let audioStarted = false
+let onHotspot = false
+
+const setAudioOnHotspot = (isOn) => onHotspot = isOn
+
+const tryToPlayAudio = () => {
+    if (!audioStarted){
+        changeVolume(maxVolume)
+        audio.play()
+        audioStarted = true
+    }
+}
+
+const changeVolume = (value) => {
+    audio.volume = value
+}
+
+const mute = () => {
+    muted = true
+    audio.volume = 0
+}
+
+const unMute = () => {
+    muted = false
+}
+
+const updateVolume = (dt) => {
+    if (muted) {
+        return
+    }
+    if (onHotspot) {
+        audio.volume = Math.max(audio.volume - dt * fadeSpeed, 0)
+    } else {
+        audio.volume = Math.min(audio.volume + dt * fadeSpeed, maxVolume)
+    }
+}
+document.addEventListener('click', tryToPlayAudio)
+
+//#endregion
 //#region MAIN
 
 //#region IMPORTS
@@ -970,21 +1016,10 @@ const cameraSize = 25
 
 let threeData
 let activeScene = noActiveScene
-let audio = document.getElementById("background-music")
-let audioStarted = false
 //#endregion
 
 //#region SETUP
-
-const tryToPlayAudio = () => {
-    if (!audioStarted){
-        audio.volume = 0.4
-        audio.play()
-        audioStarted = true
-    }
-}
 const setup = () => {
-    document.addEventListener('click', tryToPlayAudio)
     const scene = new THREE.Scene()
 
     const camera = null
@@ -1046,6 +1081,7 @@ const animate = () => {
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
     }
+    updateVolume(0.02)
     render()
 }
 
