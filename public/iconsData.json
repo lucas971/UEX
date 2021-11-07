@@ -11,7 +11,7 @@
       "type": 1
     },
     {
-      "id" : "Cube.652",
+      "id" : "Cube652",
       "iconid" : "trigger3",
       "type": 1
     },
@@ -21,7 +21,7 @@
       "type": 1
     },
     {
-      "id" : "Cube.648",
+      "id" : "Cube648",
       "iconid" : "trigger5",
       "type": 1
     },
@@ -31,7 +31,7 @@
       "type": 1
     },
     {
-      "id" : "Route.003",
+      "id" : "Route003",
       "iconid" : "trigger7",
       "type": 1
     },
@@ -46,7 +46,7 @@
       "type": 1
     },
     {
-      "id" : "helicoptere.002",
+      "id" : "helicoptere002",
       "iconid" : "trigger10",
       "type": 1
     }
