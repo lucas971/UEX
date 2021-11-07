@@ -281,6 +281,19 @@ const OpenedHotspot = (triggerName) => {
     PopulateHotspot(hotspotInfos[triggerName])
 }
 
+String.prototype.convertToRGB = function(){
+    if(this.length !== 6){
+        throw "Only six-digit hex colors are allowed.";
+    }
+
+    var aRgbHex = this.match(/.{1,2}/g);
+    return [
+        parseInt(aRgbHex[0], 16),
+        parseInt(aRgbHex[1], 16),
+        parseInt(aRgbHex[2], 16)
+    ];
+}
+
 const PopulateHotspot = (hotspotInfo) => {
     if (hotspotInfo.type > 3) {
         return
@@ -311,6 +324,9 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
     div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
+    let rgb = newColor.slice(1).convertToRGB()
+    div.getElementsByClassName("hotspot-partner-div")[0].style.boxShadow = "1px 1px 50px 0 rgba(" +
+        rgb[0].toString() +", " +rgb[1].toString() + ", " +rgb[2].toString() + ", 0.47);"
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = "Information partenaire à placer ici"
     
@@ -1001,9 +1017,9 @@ document.getElementsByClassName('sound-ui-wrapper')[0].addEventListener('click',
 
 import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
-import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js'
+import {DRACOLoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js'
 import {KTX2Loader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/KTX2Loader.js'
-import { MeshoptDecoder } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/meshopt_decoder.module.js';
+import {MeshoptDecoder} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/meshopt_decoder.module.js';
 //#endregion
 
 //#region CONST
