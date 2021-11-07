@@ -326,7 +326,8 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
     let rgb = newColor.slice(1).convertToRGB()
     div.getElementsByClassName("hotspot-partner-div")[0].style.boxShadow = "1px 1px 50px 0 rgba(" +
-        rgb[0].toString() +", " +rgb[1].toString() + ", " +rgb[2].toString() + ", 0.47);"
+        rgb[0].toString() +", " +rgb[1].toString() + ", " +rgb[2].toString() + ", 0.47)"
+    console.log(div.getElementsByClassName("hotspot-partner-div")[0].style)
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = "Information partenaire à placer ici"
     
