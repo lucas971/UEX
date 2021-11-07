@@ -345,7 +345,7 @@ const UpdateView = () => {
         futurBar.style.MozTransform = 
             futurBar.style.msTransform = 
                 futurBar.style.OTransform = 
-                    futurBar.style.transform = 'translate(-' + 1 - (updateViewData["Usine du futur"] / total_Futur) + '%, 0px)'
+                    futurBar.style.transform = 'translate(-' + (1 - (updateViewData["Usine du futur"] / total_Futur)).toString() + '%, 0px)'
 
     console.log(futurBar.style)
     const inclusionBar = document.getElementsByClassName("inside-progres-ui inclusion")[0]
@@ -353,21 +353,21 @@ const UpdateView = () => {
         inclusionBar.style.MozTransform =
             inclusionBar.style.msTransform =
                 inclusionBar.style.OTransform =
-                    inclusionBar.style.transform = 'translate(-' + 1 - (updateViewData["Inclusion"] / total_Inclusion) + '%, 0px)'
+                    inclusionBar.style.transform = 'translate(-' + (1 - (updateViewData["Inclusion"] / total_Inclusion)).toString() + '%, 0px)'
 
     const ecoBar = document.getElementsByClassName("inside-progres-ui durable")[0]
     ecoBar.style.webkitTransform =
         ecoBar.style.MozTransform =
             ecoBar.style.msTransform =
                 ecoBar.style.OTransform =
-                    ecoBar.style.transform = 'translate(-' + 1 - (updateViewData["Développement durable"] / total_Ecologie) + '%, 0px)'
+                    ecoBar.style.transform = 'translate(-' + (1 - (updateViewData["Développement durable"] / total_Ecologie)).toString() + '%, 0px)'
     
     const inovBar = document.getElementsByClassName("inside-progres-ui innovation")[0]
     inovBar.style.webkitTransform =
         inovBar.style.MozTransform =
             inovBar.style.msTransform =
                 inovBar.style.OTransform =
-                    inovBar.style.transform = 'translate(-' + 1 - (updateViewData["Innovation"] / total_Innovation) + '%, 0px)'
+                    inovBar.style.transform = 'translate(-' + (1 - (updateViewData["Innovation"] / total_Innovation)).toString() + '%, 0px)'
 }
 //#endregion
 
