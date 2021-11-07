@@ -152,6 +152,42 @@ const easeOutQuad = (x) => {
 
 //#endregion
 
+//#region HOTSPOT HANDLER
+let hotspotDivs = []
+let hotspotInfos = []
+
+const InitializeHotspots = () => {
+    hotspotDivs[0] = document.getElementById('hotspot-content-video')
+    hotspotDivs[1] = document.getElementById('hotspot-content-embed')
+    hotspotDivs[2] = document.getElementById('hotspot-content-quizz')
+    hotspotDivs[3] = document.getElementById('hotspot-content-slideshow')
+    loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
+        (data) => {
+            hotspotInfos = data["hotspots"]
+        },
+        (error) => {
+            console.error(error)
+        })
+}
+
+const OpenedHotspot = (triggerName) => {
+    PopulateHotspot(hotspotInfos[triggerName])
+}
+const PopulateHotspot = (hotspotInfo) => {
+    const div = hotspotDivs[hotspotInfo.type]
+    div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
+    div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
+    div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
+    div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
+    div.getElementsByClassName("hotspot-partner-name")[0] = hotspotInfo.sponsor
+    div.getElementsByClassName("hotspot-partner-info")[0] = hotspotInfo.partnerInfo
+    
+    
+    
+}
+
+//#endregion
+
 //#region Icons Handler
 
 //Manages the 2D icons sizes and positions on the screen
@@ -215,7 +251,7 @@ const GenerateHtml = (d) => {
     
     for (let i = 0; i< icons.length; i++) {
         icons[i].image  = document.getElementById(icons[i].iconid)
-        icons[i].image.addEventListener("click", TryClickedLink)
+        icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid))
         iconDiv.appendChild(icons[i].image)
     }
 
@@ -229,7 +265,8 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 
-const TryClickedLink = () => {
+const TryClickedLink = (id) => {
+    PopulateHotspot(id)
     clickedLink = true
 }
 
@@ -807,7 +844,7 @@ const main = () => {
     LoadCityScene()
 
     InitializeIcons(threeData)
-
+    InitializeHotspots()
     InitializeCursor(threeData)
     animate()
 }

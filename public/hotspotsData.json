@@ -1,0 +1,36 @@
+{
+  "hotspotInfos": {
+    "trigger1": {
+      "type": 1,
+      "title": "title",
+      "sponsor": "sponsor",
+      "theme": "theme",
+      "paragraphText" : "paragraph text",
+      "partnerInfo" : "partner info"
+    },
+    "trigger2": {
+      "type": 1,
+      "title": "title",
+      "sponsor": "sponsor",
+      "theme": "theme",
+      "paragraphText" : "paragraph text",
+      "partnerInfo" : "partner info"
+    },
+    "trigger3": {
+      "type": 1,
+      "title": "title",
+      "sponsor": "sponsor",
+      "theme": "theme",
+      "paragraphText" : "paragraph text",
+      "partnerInfo" : "partner info"
+    },
+    "trigger4": {
+      "type": 1,
+      "title": "title",
+      "sponsor": "sponsor",
+      "theme": "theme",
+      "paragraphText" : "paragraph text",
+      "partnerInfo" : "partner info"
+    }
+  }
+}
