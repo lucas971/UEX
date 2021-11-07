@@ -977,8 +977,8 @@ let audio
 const setup = () => {
     let audio = document.createElement("audio")
     audio.src = "https://lucas971.github.io/UEX/public/audio/UEX_SonMap_Court.mp3"
+    audio.autoplay = true
     audio.loop = true
-    audio.play()
     const scene = new THREE.Scene()
 
     const camera = null
