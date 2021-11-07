@@ -931,6 +931,7 @@ const setupAnimMixer = (gltf, d) => {
 const UpdateCity = (d) => {
     let delta = d.clock.getDelta()
     delta = Math.min(delta, 0.05)
+    updateVolume(delta)
     if (ready) {
         mixer.update(delta)
         UpdateCamera(delta)
@@ -983,6 +984,7 @@ const updateVolume = (dt) => {
     }
     if (onHotspot) {
         audio.volume = Math.max(audio.volume - dt * fadeSpeed, 0)
+        console.log(audio.volume)
     } else {
         audio.volume = Math.min(audio.volume + dt * fadeSpeed, maxVolume)
     }
@@ -1082,7 +1084,6 @@ const animate = () => {
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
     }
-    updateVolume(0.02)
     render()
 }
 
