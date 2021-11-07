@@ -1,28 +1,28 @@
 {
   "icons": [
     {
-      "id" : "Quizz1Building",
+      "id" : "Building_PRINCIPAL",
       "iconid" : "trigger1",
       "width": 50,
       "height": 50,
       "type": 1
     },
     {
-      "id" : "Quizz2Building",
+      "id" : "EDF_002",
       "iconid" : "trigger2",
       "width": 50,
       "height": 50,
       "type": 1
     },
     {
-      "id" : "Enter1Building",
+      "id" : "Icosphere.001",
       "iconid" : "trigger3",
       "width": 50,
       "height": 50,
       "type": 1
     },
     {
-      "id" : "EDF_001",
+      "id" : "KSB",
       "iconid" : "trigger4",
       "width": 50,
       "height": 50,
