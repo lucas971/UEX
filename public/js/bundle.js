@@ -331,7 +331,8 @@ const UpdateView = () => {
     data["Développement durable"] = data["Inclusion"] = data["Usine du futur"] = data["Innovation"] = 0
     
     for (var i = 0; i < currentProgress; i++) {
-        data[GetHotspotData(currentProgress[i]).theme]++
+        data[GetHotspotData(currentProgress[i]).theme] = data[GetHotspotData(currentProgress[i]).theme]+1
+        console.log(data)
     }
     
     document.getElementsByClassName("counter-text inclus")[0].innerHTML = data["Inclusion"]
