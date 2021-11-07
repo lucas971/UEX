@@ -176,14 +176,12 @@ const OpenedHotspot = (triggerName) => {
 }
 const PopulateHotspot = (hotspotInfo) => {
     const div = hotspotDivs[hotspotInfo.type]
-    console.log(div)
     div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
     div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = "Information partenaire à placer ici"
-    console.log(div)
     
     
     
@@ -632,6 +630,7 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
+            console.log(d.scene)
         },
         (xhr) => {
             console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
