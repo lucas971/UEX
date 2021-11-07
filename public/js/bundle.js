@@ -176,6 +176,10 @@ const OpenedHotspot = (triggerName) => {
 }
 const PopulateHotspot = (hotspotInfo) => {
     const div = hotspotDivs[hotspotInfo.type]
+    let newColor = '#ff03bc'
+    div.style.color = newColor
+    div.getElementsByClassName("hotspot-back-button").style.color = newColor
+    div.getElementsByClassName("hotspot-partner-div").style.color = newColor
     div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
