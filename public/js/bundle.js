@@ -320,8 +320,7 @@ const PopulateHotspot = (hotspotInfo) => {
         themeScroll = scrollbarInnov
     }
     div.style.backgroundColor = newColor
-    div.getElementsByClassName("scrollbarcode w-embed")[0].setAttribute('style', themeScroll)
-    console.log('test')
+    div.getElementsByClassName("scrollbarcode w-embed")[0].innerHTML = ""
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
