@@ -307,8 +307,12 @@ const TryLeaveLink = () => {
 //#region Progress
 
 let currentProgress = []
-
+const total_Inclusion = 3
+const total_Futur = 2
+const total_Innovation = 3
+const total_Ecologie = 2
 const LoadProgress = () => {
+    document.getElementsByClassName("collect-button-wrapper")[0].addEventListener(UpdateView)
     if (localStorage.progress) {
         currentProgress = JSON.parse(localStorage.progress)
         console.log(currentProgress)
@@ -322,6 +326,19 @@ const AddToProgress = (id) => {
     localStorage.progress = JSON.stringify(currentProgress);
 }
 
+const UpdateView = () => {
+    let data = []
+    data["Développement durable"] = data["Inclusion"] = data["Usine du futur"] = data["Innovation"] = 0
+    
+    for (var i = 0; i < currentProgress; i++) {
+        data[GetHotspotData(currentProgress[i]).theme]++
+    }
+    
+    document.getElementsByClassName("counter-text inclus")[0].innerHTML = data["Inclusion"]
+    document.getElementsByClassName("counter-text usin")[0].innerHTML = data["Usine du futur"]
+    document.getElementsByClassName("counter-text develo")[0].innerHTML = data["Développement durable"]
+    document.getElementsByClassName("counter-text innov")[0].innerHTML = data["Innovation"]
+}
 //#endregion
 
 //#region City Camera 
