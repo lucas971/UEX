@@ -11,7 +11,18 @@
     "Airbus Helicopters" : "Airbus Helicopters - nouveau nom d'Eurocopter, est une division du groupe Airbus, leader mondial dans les domaines de l’aéronautique, de l’espace, de la défense et des services associés. ",
     "Naval Group" : "Maître d’œuvre industriel, concepteur et intégrateur d’ensemble des navires armés et des systèmes de combat, Naval Group est le leader européen du naval de défense et un acteur majeur dans le monde.",
     "AFPI" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur."
-    
+  },
+  "sponsorsHeaders": {
+    "EDF" : "https://www.edf.fr/sites/default/files/rich-content/devenons-v3/img/desktop/verte.jpg",
+    "UIMM" : "https://uimm.lafabriquedelavenir.fr/wp-content/uploads/2018/10/Espace-presse.jpg",
+    "France Chimie" : "https://www.francechimie.fr/media/ad0/jeunes-femmes-chimistes_md.jpg",
+    "Sartorius" : "https://www.sartorius.com/resource/image/7992/16x9/1050/590/8a19344806c8f6a375b9902bd018da15/652921E6DD4D18B2CD6A70B769AF81D0/sartorius-0342-pg12.jpg",
+    "ITER" : "https://www.iter.org/doc/www/content/com/Lists/Machine/Attachments/28/tokamak-full.jpg",
+    "OPCO2I" : "https://www.alternance-professionnelle.fr/wp-content/uploads/2021/02/opco2i-industrie-relance-formation-678x381.jpg",
+    "ELENGY" : "https://www.elengy.com/images/uniterevolution/slider-home/images/slidesHome/slide04.jpg",
+    "Airbus Helicopters" : "https://www.aerospace-technology.com/wp-content/uploads/sites/15/2021/06/Airbus.jpg",
+    "Naval Group" : "https://www.naval-group.com/sites/default/files/styles/heading_content/public/2020-09/cinemagraph_batiments-de-surface.jpg?itok=yXO3Qw-O",
+    "AFPI" : "https://www.afpi-acmformation.com/wp-content/uploads/2019/10/banni%C3%A8re-facebook-septembre-2019-1.jpg"
   },
   "hotspotInfos": {
     "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 / classroom 4 / room 5",
