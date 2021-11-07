@@ -156,6 +156,8 @@ const easeOutQuad = (x) => {
 let hotspotDivs = []
 let hotspotInfos = []
 
+const GetHotspotData = (id) => hotspotInfos[id]
+
 const InitializeHotspots = () => {
     hotspotDivs[0] = document.getElementById('hotspot-content-video')
     hotspotDivs[1] = document.getElementById('hotspot-content-embed')
@@ -269,6 +271,8 @@ const GenerateHtml = (d) => {
     for (let i = 0; i< icons.length; i++) {
         icons[i].image  = document.getElementById(icons[i].iconid)
         icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid))
+        let data = GetHotspotData(icons[i].iconid)
+        icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
         iconDiv.appendChild(icons[i].image)
     }
 
