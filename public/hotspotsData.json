@@ -8,7 +8,7 @@
       "sponsor": "EDF",
       "theme": "Usine du futur",
       "paragraphText" : "",
-      "video" : "https://vimeo.com/641377158/faa2f47f49"
+      "video" : "https://player.vimeo.com/video/641377158?h=faa2f47f49"
     },
     "trigger2": {
       "type": 0,
@@ -16,7 +16,7 @@
       "sponsor": "EDF",
       "theme": "Innovation",
       "paragraphText" : "",
-      "video" : "https://vimeo.com/643120272/7bcaa4aacee"
+      "video" : "https://player.vimeo.com/video/643120272?h=7bcaa4aace"
     },
     "trigger3": {
       "type": 1,
@@ -31,7 +31,7 @@
       "sponsor": "France Chimie",
       "theme": "Développement durable",
       "paragraphText" : "Votre premier pas au cœur de la matière ! Prenons une chaussure, portée par des champions du monde, dont le plastique (Pebax ®) est fabriqué par la société Arkema à partir d'une molécule issue de l'huile de ricin !",
-      "video": "https://vimeo.com/641384542/6299c29e31"
+      "video": "https://player.vimeo.com/video/641384542?h=6299c29e31"
     },
     "trigger5": {
       "type": 0,
@@ -39,7 +39,7 @@
       "sponsor": "Sartorius",
       "theme": "Développement durable",
       "paragraphText" : "Découvrez comment Sartorius améliore son empreinte environnementale au sein de ses sites de production et comment l’entreprise s’attache au quotidien à recycler ses déchets.",
-      "video" : "https://vimeo.com/643220841/252e4ef656"
+      "video" : "https://player.vimeo.com/video/643220841?h=252e4ef656"
     },
     "trigger6": {
       "type": 0,
@@ -47,7 +47,7 @@
       "sponsor": "ITER",
       "theme": "Innovation",
       "paragraphText" : "",
-      "video" : "https://vimeo.com/641337198/314cfc2e7d"
+      "video" : "https://player.vimeo.com/video/641337198?h=314cfc2e7d"
     },
     "trigger7": {
       "type": 1,
@@ -69,7 +69,7 @@
       "sponsor": "ELENGY",
       "theme": "Inclusion",
       "paragraphText" : "Découvrez le portrait d'une de nos agent de quart, Carole Chevaleau.",
-      "video" : "https://vimeo.com/641340133/0d00925d81"
+      "video" : "https://player.vimeo.com/video/641340133?h=0d00925d81"
     },
     "trigger10": {
       "type": 0,
@@ -77,7 +77,7 @@
       "sponsor": "Airbus Helicopters",
       "theme": "Inclusion",
       "paragraphText" : "",
-      "video" : "https://vimeo.com/641352998/467426f39f"
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
     "trigger52": {
       "type": 3,
