@@ -275,6 +275,7 @@ const scrollbarInclu = "<style>  \n" +
     " </style>"
 
 //#endregion
+
 //#region HOTSPOT HANDLER
 let hotspotDivs = []
 let hotspotInfos = []
@@ -319,7 +320,8 @@ const PopulateHotspot = (hotspotInfo) => {
         themeScroll = scrollbarInnov
     }
     div.style.backgroundColor = newColor
-    div.getElementsByClassName("scrollbarcode w-embed")[0].innerHTML = themeScroll
+    div.getElementsByClassName("scrollbarcode w-embed")[0].setAttribute('style', themeScroll)
+    console.log('test')
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
@@ -449,7 +451,6 @@ const LoadProgress = () => {
     document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
     if (localStorage.progress) {
         currentProgress = JSON.parse(localStorage.progress)
-        console.log(currentProgress)
     }
 }
 
@@ -480,7 +481,6 @@ const UpdateView = () => {
                 futurBar.style.OTransform = 
                     futurBar.style.transform = 'translate(-' + ((1 - (updateViewData["Usine du futur"] / total_Futur))*100).toString() + '%, 0px)'
 
-    console.log(futurBar.style)
     const inclusionBar = document.getElementsByClassName("inside-progres-ui inclusion")[0]
     inclusionBar.style.webkitTransform =
         inclusionBar.style.MozTransform =
@@ -854,13 +854,12 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
-            console.log(d.scene)
         },
         (xhr) => {
-            console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+            //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
         },
         (error) => {
-            console.log(error)
+            //console.log(error)
         })
 }
 
