@@ -307,10 +307,10 @@ const TryLeaveLink = () => {
 //#region Progress
 
 let currentProgress = []
-const total_Inclusion = 3
-const total_Futur = 2
-const total_Innovation = 3
-const total_Ecologie = 3
+const total_Inclusion = 3.0
+const total_Futur = 2.0
+const total_Innovation = 3.0
+const total_Ecologie = 3.0
 
 const LoadProgress = () => {
     document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
@@ -329,16 +329,44 @@ const AddToProgress = (id) => {
 
 const UpdateView = () => {
     let updateViewData = []
-    updateViewData["Développement durable"] = updateViewData["Inclusion"] = updateViewData["Usine du futur"] = updateViewData["Innovation"] = 0
+    updateViewData["Développement durable"] = updateViewData["Inclusion"] = updateViewData["Usine du futur"] = updateViewData["Innovation"] = 0.0
     
     for (var i = 0; i < currentProgress.length; i++) {
-        updateViewData[GetHotspotData(currentProgress[i]).theme]++
+        updateViewData[GetHotspotData(currentProgress[i]).theme]+=1.0
     }
     
     document.getElementsByClassName("counter-text inclus")[0].innerHTML = updateViewData["Inclusion"]
     document.getElementsByClassName("counter-text usin")[0].innerHTML = updateViewData["Usine du futur"]
     document.getElementsByClassName("counter-text develo")[0].innerHTML = updateViewData["Développement durable"]
     document.getElementsByClassName("counter-text innov")[0].innerHTML = updateViewData["Innovation"]
+    
+    const futurBar = document.getElementsByClassName("inside-progres-ui futur")[0]
+    futurBar.style.webkitTransform = 
+        futurBar.style.MozTransform = 
+            futurBar.style.msTransform = 
+                futurBar.style.OTransform = 
+                    futurBar.style.transform = 'translate(-' + 1 - (updateViewData["Usine du futur"] / total_Futur) + '%, 0px)'
+
+    const inclusionBar = document.getElementsByClassName("inside-progres-ui inclusion")[0]
+    inclusionBar.style.webkitTransform =
+        inclusionBar.style.MozTransform =
+            inclusionBar.style.msTransform =
+                inclusionBar.style.OTransform =
+                    inclusionBar.style.transform = 'translate(-' + 1 - (updateViewData["Inclusion"] / total_Inclusion) + '%, 0px)'
+
+    const ecoBar = document.getElementsByClassName("inside-progres-ui durable")[0]
+    ecoBar.style.webkitTransform =
+        ecoBar.style.MozTransform =
+            ecoBar.style.msTransform =
+                ecoBar.style.OTransform =
+                    ecoBar.style.transform = 'translate(-' + 1 - (updateViewData["Développement durable"] / total_Ecologie) + '%, 0px)'
+    
+    const inovBar = document.getElementsByClassName("inside-progres-ui innovation")[0]
+    inovBar.style.webkitTransform =
+        inovBar.style.MozTransform =
+            inovBar.style.msTransform =
+                inovBar.style.OTransform =
+                    inovBar.style.transform = 'translate(-' + 1 - (updateViewData["Innovation"] / total_Innovation) + '%, 0px)'
 }
 //#endregion
 
