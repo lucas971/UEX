@@ -166,7 +166,7 @@ const InitializeHotspots = () => {
     loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
         (data) => {
             hotspotInfos = data["hotspotInfos"]
-            console.log(hotspotInfos)
+            InitializeHotspots()
         },
         (error) => {
             console.error(error)
@@ -865,7 +865,6 @@ const main = () => {
     LoadCityScene()
     
     InitializeHotspots()
-    InitializeIcons(threeData)
     InitializeCursor(threeData)
     animate()
 }
