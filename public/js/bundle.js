@@ -301,6 +301,7 @@ const PopulateHotspot = (hotspotInfo) => {
     div.style.backgroundColor = newColor
     //iv.getElementsByClassName("scrollbarcode w-embed")[0].outerHTML = ""
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
+    div.getElementsByClassName("hotspot-back-button")[0].style.boxShadow = "1px 1px 16px 0 " +newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-title-h1")[0].style.color = newColor
