@@ -863,9 +863,9 @@ const main = () => {
     setup()
 
     LoadCityScene()
-
-    InitializeIcons(threeData)
+    
     InitializeHotspots()
+    InitializeIcons(threeData)
     InitializeCursor(threeData)
     animate()
 }
