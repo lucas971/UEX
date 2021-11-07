@@ -128,130 +128,6 @@ const easeOutQuad = (x) => {
 
 //#endregion
 
-//#region SCROLLBAR
-
-const scrollbarInnov = "<style>  \n" +
-    "\n" +
-    ".hotspot-body-section {\n" +
-    "  overflow-x: hidden; /* Hide horizontal scrollbar */\n" +
-    "}\n" +
-    "\n" +
-    " /*General Scrollbar Styling */\n" +
-    " ::-webkit-scrollbar {\n" +
-    "     width: 15px;\n" +
-    " }\n" +
-    "\n" +
-    "::-webkit-scrollbar-track {\n" +
-    "     background-color: #ff0049;\n" +
-    "     -webkit-border-radius: 20px;\n" +
-    "     border-radius: 0px;\n" +
-    " }\n" +
-    "\n" +
-    " ::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #06b7ff;\n" +
-    " }\n" +
-    " /*Yellow Scrollbar Styling */\n" +
-    " .yellow::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #ffd503;\n" +
-    " }\n" +
-    " </style>"
-
-const scrollbarFutur = "<style>  \n" +
-    "\n" +
-    ".hotspot-body-section {\n" +
-    "  overflow-x: hidden; /* Hide horizontal scrollbar */\n" +
-    "}\n" +
-    "\n" +
-    " /*General Scrollbar Styling */\n" +
-    " ::-webkit-scrollbar {\n" +
-    "     width: 15px;\n" +
-    " }\n" +
-    "\n" +
-    "::-webkit-scrollbar-track {\n" +
-    "     background-color: #ffd503;\n" +
-    "     -webkit-border-radius: 20px;\n" +
-    "     border-radius: 0px;\n" +
-    " }\n" +
-    "\n" +
-    " ::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #06b7ff;\n" +
-    " }\n" +
-    " /*Yellow Scrollbar Styling */\n" +
-    " .yellow::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #ffd503;\n" +
-    " }\n" +
-    " </style>"
-
-const scrollbarEco = "<style>  \n" +
-    "\n" +
-    ".hotspot-body-section {\n" +
-    "  overflow-x: hidden; /* Hide horizontal scrollbar */\n" +
-    "}\n" +
-    "\n" +
-    " /*General Scrollbar Styling */\n" +
-    " ::-webkit-scrollbar {\n" +
-    "     width: 15px;\n" +
-    " }\n" +
-    "\n" +
-    "::-webkit-scrollbar-track {\n" +
-    "     background-color: #06b7ff;\n" +
-    "     -webkit-border-radius: 20px;\n" +
-    "     border-radius: 0px;\n" +
-    " }\n" +
-    "\n" +
-    " ::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #ffd503;\n" +
-    " }\n" +
-    " /*Yellow Scrollbar Styling */\n" +
-    " .yellow::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #ffd503;\n" +
-    " }\n" +
-    " </style>"
-
-const scrollbarInclu = "<style>  \n" +
-    "\n" +
-    ".hotspot-body-section {\n" +
-    "  overflow-x: hidden; /* Hide horizontal scrollbar */\n" +
-    "}\n" +
-    "\n" +
-    " /*General Scrollbar Styling */\n" +
-    " ::-webkit-scrollbar {\n" +
-    "     width: 15px;\n" +
-    " }\n" +
-    "\n" +
-    "::-webkit-scrollbar-track {\n" +
-    "     background-color: #ff0049;\n" +
-    "     -webkit-border-radius: 20px;\n" +
-    "     border-radius: 0px;\n" +
-    " }\n" +
-    "\n" +
-    " ::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #ffd503;\n" +
-    " }\n" +
-    " /*Yellow Scrollbar Styling */\n" +
-    " .yellow::-webkit-scrollbar-thumb {\n" +
-    "     -webkit-border-radius: 0px;\n" +
-    "     border-radius: 0px;\n" +
-    "     background: #ffd503;\n" +
-    " }\n" +
-    " </style>"
-
-//#endregion
-
 //#region HOTSPOT HANDLER
 let hotspotDivs = []
 let hotspotInfos = []
@@ -300,19 +176,14 @@ const PopulateHotspot = (hotspotInfo) => {
     }
     const div = hotspotDivs[hotspotInfo.type]
     let newColor = blue
-    let themeScroll = scrollbarInclu
     if (hotspotInfo.theme === "Usine du futur") {
         newColor = red
-        themeScroll = scrollbarFutur
     } else if (hotspotInfo.theme === "Développement Durable") {
         newColor = green
-        themeScroll = scrollbarEco
     } else if (hotspotInfo.theme === "Innovation") {
         newColor = yellow
-        themeScroll = scrollbarInnov
     }
     div.style.backgroundColor = newColor
-    //iv.getElementsByClassName("scrollbarcode w-embed")[0].outerHTML = ""
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-back-button")[0].style.boxShadow = "1px 1px 16px 0 " +newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
@@ -981,6 +852,7 @@ const changeVolume = (value) => {
 
 const swapMute = () => {
     muted = !muted
+    console.log(muted)
     if (muted) {
         audio.volume = 0
         localStorage.muted = true
@@ -1000,6 +872,7 @@ const updateVolume = (dt) => {
         audio.volume = Math.min(audio.volume + dt * unFadeSpeed, maxVolume)
     }
 }
+
 if (localStorage.muted) {
     document.getElementsByClassName('sound-ui-wrapper')[0].click()
     swapMute()
