@@ -856,11 +856,10 @@ const changeVolume = (value) => {
 
 const swapMute = () => {
     muted = !muted
+    changeVolume(0)
     if (muted) {
-        changeVolume(0)
         localStorage.muted = 'true'
     } else {
-        changeVolume(onHotspot? hotspotVolume : maxVolume)
         localStorage.muted = 'false'
     }
 }
