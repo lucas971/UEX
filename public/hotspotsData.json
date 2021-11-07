@@ -1,7 +1,10 @@
 
 {
   "hotspotInfos": {
-    "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 ",
+    "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 / classroom 4",
+    "trigger-classroom" : {
+      "type": 4
+    },
     "trigger1": {
       "type": 0,
       "title": "Bienvenue en 2035",

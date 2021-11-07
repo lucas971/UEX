@@ -1,6 +1,10 @@
 {
   "icons": [
     {
+      "id" : "campus_roof_gardens_D",
+      "iconid" : "trigger-classroom"
+    },
+    {
       "id" : "EDF_001",
       "iconid" : "trigger1"
     },

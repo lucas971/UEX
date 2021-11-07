@@ -282,6 +282,9 @@ const OpenedHotspot = (triggerName) => {
 }
 
 const PopulateHotspot = (hotspotInfo) => {
+    if (hotspotInfo.type === 4) {
+        return
+    }
     const div = hotspotDivs[hotspotInfo.type]
     let newColor = blue
     let themeScroll = scrollbarInclu
