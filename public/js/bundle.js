@@ -616,7 +616,7 @@ const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
 
     d.scene.add(gltf.scene)
-
+    
     const light1  = new d.THREE.AmbientLight(0xffffff, 0.3)
     light1.name = 'ambient_light'
     d.scene.add( light1 )
@@ -684,6 +684,8 @@ const UpdateCity = (d) => {
 import * as THREE from 'https://cdn.skypack.dev/three@0.132.2'
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/DRACOLoader.js'
+import {KTX2Loader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/KTX2Loader.js'
+import { MeshoptDecoder } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/meshopt_decoder.module.js';
 //#endregion
 
 //#region CONST
@@ -722,11 +724,15 @@ const setup = () => {
     renderer.domElement.style.zIndex = '-1'
     window.addEventListener('resize', Resize)
 
-    const dracoLoader = new DRACOLoader()
-    dracoLoader.setDecoderPath( 'js/libs/draco/gltf/' )
-
-    const loader = new GLTFLoader()
-    loader.setDRACOLoader( dracoLoader )
+    const loadingManager = new THREE.LoadingManager()
+    const DRACO_LOADER = new DRACOLoader(loadingManager).setDecoderPath('https://cdn.skypack.dev/three@0.132.2/examples/js/libs/draco/gltf/')
+    const KTX2_LOADER = new KTX2Loader(loadingManager).setTranscoderPath('https://cdn.skypack.dev/three@0.132.2/examples/js/libs/basis/')
+        
+    const loader = new GLTFLoader( new THREE.LoadingManager() )
+        .setCrossOrigin('anonymous')
+        .setDRACOLoader( DRACO_LOADER )
+        .setKTX2Loader( KTX2_LOADER.detectSupport( renderer ) )
+        .setMeshoptDecoder( MeshoptDecoder );
 
     threeData = {THREE, loader, clock, scene, camera, renderer, canvas}
 }
