@@ -968,17 +968,20 @@ const cameraSize = 25
 
 let threeData
 let activeScene = noActiveScene
-let audio
-
+let audio = document.getElementById("background-music")
+let audioStarted = false
 //#endregion
 
 //#region SETUP
 
+const tryToPlayAudio = () => {
+    if (!audioStarted){
+        audio.play()
+        audioStarted = true
+    }
+}
 const setup = () => {
-    let audio = document.createElement("audio")
-    audio.src = "https://lucas971.github.io/UEX/public/audio/UEX_SonMap_Court.mp3"
-    audio.autoplay = true
-    audio.loop = true
+    document.addEventListener('click', tryToPlayAudio)
     const scene = new THREE.Scene()
 
     const camera = null
