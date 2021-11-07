@@ -28,14 +28,12 @@ const toScreenPosition = (obj, d) => {
 //#region Cursor
 const normal = 0
 const drag = 1
+const hotspot = 2
 
 let mode
 
 const InitializeCursor = (d) => {
     NormalMode()
-    window.addEventListener('mouseout', HideCursor)
-    window.addEventListener('mouseleave', HideCursor)
-    window.addEventListener('mouseover', ShowCursor)
 }
 
 const IsNormal = () => {
@@ -44,13 +42,6 @@ const IsNormal = () => {
 
 const IsDrag = () => {
     return mode === drag
-}
-
-const HideCursor = (e) => {
-}
-
-const ShowCursor = (e) => {
-
 }
 
 const NormalMode = () => {
@@ -74,13 +65,7 @@ const HotspotMode = () => {
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
     }
-}
-
-const ExitHotspotMode = () => {
-    let interactibles = document.getElementsByClassName('interactible')
-    for (let i = 0; i < interactibles.length; i++) {
-        interactibles[i].style.pointerEvents = "all"
-    }
+    mode = hotspot
 }
 
 
@@ -429,7 +414,7 @@ const TryClickedLink = (id) => {
 }
 
 const TryLeaveLink = () => {
-    ExitHotspotMode()
+    NormalMode()
     setAudioOnHotspot(false)
     document.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
