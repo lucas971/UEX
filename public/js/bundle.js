@@ -312,7 +312,7 @@ const total_Futur = 2
 const total_Innovation = 3
 const total_Ecologie = 2
 const LoadProgress = () => {
-    document.getElementsByClassName("collect-button-wrapper")[0].addEventListener(UpdateView)
+    document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
     if (localStorage.progress) {
         currentProgress = JSON.parse(localStorage.progress)
         console.log(currentProgress)
