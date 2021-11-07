@@ -948,7 +948,7 @@ const UpdateCity = (d) => {
 
 //#region Audio
 
-const fadeSpeed = 1
+const fadeSpeed = 0.3
 const maxVolume = 0.4
 let muted = false
 let audio = document.getElementById("background-music")
