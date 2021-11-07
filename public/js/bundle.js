@@ -159,8 +159,8 @@ let hotspotInfos = []
 const InitializeHotspots = () => {
     hotspotDivs[0] = document.getElementById('hotspot-content-video')
     hotspotDivs[1] = document.getElementById('hotspot-content-embed')
-    hotspotDivs[2] = document.getElementById('hotspot-content-quizz')
-    hotspotDivs[3] = document.getElementById('hotspot-content-slideshow')
+    hotspotDivs[2] = document.getElementById('hotspot-content-slideshow')
+    hotspotDivs[3] = document.getElementById('hotspot-content-quizz')
     loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
         (data) => {
             hotspotInfos = data["hotspotInfos"]

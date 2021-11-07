@@ -1,8 +1,8 @@
 {
   "hotspotInfos": {
     "trigger1": {
-      "type": 1,
-      "title": "title",
+      "type": 0,
+      "title": "title video",
       "sponsor": "sponsor",
       "theme": "theme",
       "paragraphText" : "paragraph text",
@@ -10,23 +10,23 @@
     },
     "trigger2": {
       "type": 1,
-      "title": "title",
+      "title": "title embed",
       "sponsor": "sponsor",
       "theme": "theme",
       "paragraphText" : "paragraph text",
       "partnerInfo" : "partner info"
     },
     "trigger3": {
-      "type": 1,
-      "title": "title",
+      "type": 2,
+      "title": "title slide",
       "sponsor": "sponsor",
       "theme": "theme",
       "paragraphText" : "paragraph text",
       "partnerInfo" : "partner info"
     },
     "trigger4": {
-      "type": 1,
-      "title": "title",
+      "type": 3,
+      "title": "title quizz",
       "sponsor": "sponsor",
       "theme": "theme",
       "paragraphText" : "paragraph text",
