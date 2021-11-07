@@ -627,7 +627,7 @@ const setupScene = (gltf, d) => {
     d.scene.add( light2 )
 
     traverseMaterials(d.scene, (material) => {
-        material.depthWrite = !node.material.transparent
+        material.depthWrite = !material.transparent
         if (material.map) material.map.encoding = d.THREE.sRGBEncoding
         if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
         if (material.map || material.emissiveMap) material.needsUpdate = true;
