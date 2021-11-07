@@ -71,6 +71,13 @@
       "sponsor": "Airbus Helicopters",
       "theme": "Inclusion",
       "paragraphText" : ""
+    },
+    "trigger28": {
+      "type": 3,
+      "title": "Découvrez ce qu’est la RSE",
+      "sponsor": "D3E",
+      "theme": "Développement durable",
+      "paragraphText" : "La RSE (Responsabilité Sociétale des Entreprises) est un domaine qui nous tient à cœur. Découvrez ce qu’est la RSE grâce à des exemples concrets répartis dans 8 questions. Les thèmes abordés seront les suivants : Insertion, alternance, inclusion, économie circulaire, développement durable, innovation et industrie du futur.  A vos clics !"
     }
   }
 }

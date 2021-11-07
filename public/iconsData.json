@@ -2,53 +2,47 @@
   "icons": [
     {
       "id" : "EDF_001",
-      "iconid" : "trigger1",
-      "type": 1
+      "iconid" : "trigger1"
     },
     {
       "id" : "EDF_002",
-      "iconid" : "trigger2",
-      "type": 1
+      "iconid" : "trigger2"
     },
     {
       "id" : "Cube652",
-      "iconid" : "trigger3",
-      "type": 1
+      "iconid" : "trigger3"
     },
     {
       "id" : "Usine",
-      "iconid" : "trigger4",
-      "type": 1
+      "iconid" : "trigger4"
     },
     {
       "id" : "Cube648",
-      "iconid" : "trigger5",
-      "type": 1
+      "iconid" : "trigger5"
     },
     {
       "id" : "Reacteur_plasma",
-      "iconid" : "trigger6",
-      "type": 1
+      "iconid" : "trigger6"
     },
     {
       "id" : "Route003",
-      "iconid" : "trigger7",
-      "type": 1
+      "iconid" : "trigger7"
     },
     {
       "id" : "esplanade",
-      "iconid" : "trigger8",
-      "type": 1
+      "iconid" : "trigger8"
     },
     {
       "id" : "Campus_001",
-      "iconid" : "trigger9",
-      "type": 1
+      "iconid" : "trigger9"
     },
     {
       "id" : "helicoptere002",
-      "iconid" : "trigger10",
-      "type": 1
+      "iconid" : "trigger10"
+    },
+    {
+      "id" : "Chantier_Naval002",
+      "iconid" : "trigger28"
     }
   ]
 }
