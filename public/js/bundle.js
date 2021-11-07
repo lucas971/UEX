@@ -320,7 +320,7 @@ const PopulateHotspot = (hotspotInfo) => {
         themeScroll = scrollbarInnov
     }
     div.style.backgroundColor = newColor
-    div.getElementsByClassName("scrollbarcode w-embed")[0].innerHTML = ""
+    div.getElementsByClassName("scrollbarcode w-embed")[0].outerHTML = ""
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
@@ -968,12 +968,17 @@ const cameraSize = 25
 
 let threeData
 let activeScene = noActiveScene
+let audio
 
 //#endregion
 
 //#region SETUP
 
 const setup = () => {
+    let audio = document.createElement("audio")
+    audio.src = "https://lucas971.github.io/UEX/public/audio/UEX_SonMap_Court.mp3"
+    audio.loop = true
+    audio.play()
     const scene = new THREE.Scene()
 
     const camera = null
