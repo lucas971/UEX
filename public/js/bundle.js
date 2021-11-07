@@ -310,7 +310,7 @@ let currentProgress = []
 const total_Inclusion = 3
 const total_Futur = 2
 const total_Innovation = 3
-const total_Ecologie = 2
+const total_Ecologie = 3
 
 const LoadProgress = () => {
     document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
