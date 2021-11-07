@@ -176,10 +176,18 @@ const OpenedHotspot = (triggerName) => {
 }
 const PopulateHotspot = (hotspotInfo) => {
     const div = hotspotDivs[hotspotInfo.type]
-    let newColor = '#ff03bc'
+    let newColor = '#06b7ff'
+    if (hotspotInfo.theme === "Usine du futur") {
+        newColor = '#fe004b'
+    } else if (hotspotInfo.theme === "Développement Durable") {
+        newColor = '#90d301'
+    } else if (hotspotInfo.theme === "Innovation") {
+        newColor = '#ffd503'
+    }
     div.style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
+    div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
