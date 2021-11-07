@@ -877,15 +877,17 @@ const updateVolume = (dt) => {
     }
 }
 
-if (localStorage.muted === 'true') {
-    document.getElementsByClassName('sound-ui-wrapper')[0].click()
-    swapMute()
-} else {
-    localStorage.muted = 'false'
-}
+const InitializeSound =() => {
+    if (localStorage.muted === 'true') {
+        document.getElementsByClassName('sound-ui-wrapper')[0].click()
+        swapMute()
+    } else {
+        localStorage.muted = 'false'
+    }
 
-document.addEventListener('click', tryToPlayAudio)
-document.getElementsByClassName('sound-ui-wrapper')[0].addEventListener('click', swapMute)
+    document.addEventListener('click', tryToPlayAudio)
+    document.getElementsByClassName('sound-ui-wrapper')[0].addEventListener('click', swapMute)
+}
 //#endregion
 
 //#region MAIN
@@ -1016,7 +1018,8 @@ const main = () => {
 
     LoadCityScene()
     LoadProgress()
-    
+
+    InitializeSound()
     InitializeHotspots(threeData)
     InitializeCursor(threeData)
     animate()
