@@ -316,7 +316,7 @@ const LoadProgress = () => {
 }
 
 const AddToProgress = (id) => {
-    if (!currentProgress.contains(id)) {
+    if (currentProgress.indexOf(id) < 0) {
         currentProgress.push(id)
     }
     localStorage.progress = JSON.stringify(currentProgress);
