@@ -158,7 +158,7 @@ let hotspotInfos = []
 
 const GetHotspotData = (id) => hotspotInfos[id]
 
-const InitializeHotspots = () => {
+const InitializeHotspots = (d) => {
     hotspotDivs[0] = document.getElementById('hotspot-content-video')
     hotspotDivs[1] = document.getElementById('hotspot-content-embed')
     hotspotDivs[2] = document.getElementById('hotspot-content-slideshow')
@@ -166,7 +166,7 @@ const InitializeHotspots = () => {
     loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
         (data) => {
             hotspotInfos = data["hotspotInfos"]
-            InitializeHotspots()
+            InitializeIcons(d)
         },
         (error) => {
             console.error(error)
@@ -236,6 +236,7 @@ const InitializeIcons = (d) => {
         (data) => {
             icons = data["icons"]
             GenerateHtml(d)
+            UpdateIconsPosition(d)
         },
         (error) => {
             console.error(error)
@@ -244,6 +245,10 @@ const InitializeIcons = (d) => {
 
 //Update the icons position on the screen using the 3D world space position of the building of interests.
 const UpdateIconsPosition = (d) => {
+    
+    if (!d.scene || !icons) {
+        return
+    }
     d.camera.updateMatrixWorld()
 
     for (let i = 0; i < icons.length; i++) {
@@ -864,7 +869,7 @@ const main = () => {
 
     LoadCityScene()
     
-    InitializeHotspots()
+    InitializeHotspots(threeData)
     InitializeCursor(threeData)
     animate()
 }
