@@ -992,13 +992,15 @@ const updateVolume = (dt) => {
         audio.volume = Math.min(audio.volume + dt * unFadeSpeed, maxVolume)
     }
 }
-document.addEventListener('click', tryToPlayAudio)
-document.getElementsByClassName('sound-ui-wrapper')[0].addEventListener('click', swapMute)
 if (localStorage.muted) {
     document.getElementsByClassName('sound-ui-wrapper')[0].click()
+    swapMute()
 } else {
     localStorage.muted = false
 }
+
+document.addEventListener('click', tryToPlayAudio)
+document.getElementsByClassName('sound-ui-wrapper')[0].addEventListener('click', swapMute)
 //#endregion
 
 
