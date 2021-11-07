@@ -1,9 +1,15 @@
 
 {
   "hotspotInfos": {
-    "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 / classroom 4",
+    "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 / classroom 4 / room 5",
     "trigger-classroom" : {
+      "title": "Classroom",
       "type": 4
+    },
+    "trigger-room" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
     },
     "trigger1": {
       "type": 0,

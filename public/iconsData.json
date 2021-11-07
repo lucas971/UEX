@@ -5,6 +5,10 @@
       "iconid" : "trigger-classroom"
     },
     {
+      "id" : "Building_V2_01038",
+      "iconid" : "trigger-room"
+    },
+    {
       "id" : "EDF_001",
       "iconid" : "trigger1"
     },

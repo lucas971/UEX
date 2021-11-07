@@ -282,7 +282,7 @@ const OpenedHotspot = (triggerName) => {
 }
 
 const PopulateHotspot = (hotspotInfo) => {
-    if (hotspotInfo.type === 4) {
+    if (hotspotInfo.type > 3) {
         return
     }
     const div = hotspotDivs[hotspotInfo.type]
@@ -392,9 +392,14 @@ const GenerateHtml = (d) => {
     
     for (let i = 0; i< icons.length; i++) {
         icons[i].image  = document.getElementById(icons[i].iconid)
-        icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid))
         let data = GetHotspotData(icons[i].iconid)
         icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+        if (data.type <= 4) {
+            icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid))
+        }
+        else {
+            icons[i].image.addEventListener("click", () => document.getElementById(data.room_link).click())
+        }
         iconDiv.appendChild(icons[i].image)
     }
 
@@ -453,6 +458,9 @@ const UpdateView = () => {
     updateViewData["Développement durable"] = updateViewData["Inclusion"] = updateViewData["Usine du futur"] = updateViewData["Innovation"] = 0.0
     
     for (var i = 0; i < currentProgress.length; i++) {
+        if (currentProgress[i].type > 3) {
+            continue
+        }
         updateViewData[GetHotspotData(currentProgress[i]).theme]+=1.0
     }
     
