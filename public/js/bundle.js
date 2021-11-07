@@ -437,6 +437,7 @@ const TryClickedLink = (id) => {
 }
 
 const TryLeaveLink = () => {
+    getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
 }
 //#endregion
