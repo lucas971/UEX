@@ -607,7 +607,7 @@ const InitializeCameraHandler = (threeData) => {
             spots = data["spots"]
             const_y = data["const_y"]
             cameraHolder = d.scene.getObjectByName("CAMERACONTAINER")
-
+            cameraHolder.visible = false
             cameraHolder.attach( d.camera)
             d.camera.position.set(-100, 100, 100)
             d.camera.zoom = spots[0].zoom
