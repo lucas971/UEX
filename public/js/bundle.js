@@ -949,7 +949,9 @@ const UpdateCity = (d) => {
 //#region Audio
 
 const fadeSpeed = 0.3
+const unFadeSpeed = 0.1
 const maxVolume = 0.4
+const hotspotVolume = 0.1
 let muted = false
 let audio = document.getElementById("background-music")
 let audioStarted = false
@@ -983,10 +985,9 @@ const updateVolume = (dt) => {
         return
     }
     if (onHotspot) {
-        audio.volume = Math.max(audio.volume - dt * fadeSpeed, 0)
-        console.log(audio.volume)
+        audio.volume = Math.max(audio.volume - dt * fadeSpeed, hotspotVolume)
     } else {
-        audio.volume = Math.min(audio.volume + dt * fadeSpeed, maxVolume)
+        audio.volume = Math.min(audio.volume + dt * unFadeSpeed, maxVolume)
     }
 }
 document.addEventListener('click', tryToPlayAudio)
