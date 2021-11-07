@@ -311,6 +311,7 @@ const total_Inclusion = 3
 const total_Futur = 2
 const total_Innovation = 3
 const total_Ecologie = 2
+
 const LoadProgress = () => {
     document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
     if (localStorage.progress) {
@@ -327,18 +328,17 @@ const AddToProgress = (id) => {
 }
 
 const UpdateView = () => {
-    let data = []
-    data["Développement durable"] = data["Inclusion"] = data["Usine du futur"] = data["Innovation"] = 0
+    let updateViewData = []
+    updateViewData["Développement durable"] = updateViewData["Inclusion"] = updateViewData["Usine du futur"] = updateViewData["Innovation"] = 0
     
-    for (var i = 0; i < currentProgress; i++) {
-        data[GetHotspotData(currentProgress[i]).theme] = data[GetHotspotData(currentProgress[i]).theme]+1
-        console.log(data)
+    for (var i = 0; i < currentProgress.length; i++) {
+        updateViewData[GetHotspotData(currentProgress[i]).theme]++
     }
     
-    document.getElementsByClassName("counter-text inclus")[0].innerHTML = data["Inclusion"]
-    document.getElementsByClassName("counter-text usin")[0].innerHTML = data["Usine du futur"]
-    document.getElementsByClassName("counter-text develo")[0].innerHTML = data["Développement durable"]
-    document.getElementsByClassName("counter-text innov")[0].innerHTML = data["Innovation"]
+    document.getElementsByClassName("counter-text inclus")[0].innerHTML = updateViewData["Inclusion"]
+    document.getElementsByClassName("counter-text usin")[0].innerHTML = updateViewData["Usine du futur"]
+    document.getElementsByClassName("counter-text develo")[0].innerHTML = updateViewData["Développement durable"]
+    document.getElementsByClassName("counter-text innov")[0].innerHTML = updateViewData["Innovation"]
 }
 //#endregion
 
