@@ -292,7 +292,7 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
         if (data.type <= 4) {
-            icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid))
+            icons[i].image.addEventListener("click", () => TryClickedLink(i))
         }
         else {
             icons[i].image.addEventListener("click", () => document.getElementById(data.room_link).click())
@@ -310,13 +310,14 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 
-const TryClickedLink = (id) => {
-    const obj = d.scene.getObjectByName(icons[id].id)
+const TryClickedLink = (i) => {
+    let iconId = icons[i]
+    const obj = d.scene.getObjectByName(icons[i].id)
     hotspotTransition(obj.position)
     setAudioOnHotspot(true)
     HotspotMode()
-    OpenedHotspot(id)
-    AddToProgress(id)
+    OpenedHotspot(iconId)
+    AddToProgress(iconId)
     clickedLink = true
 }
 
