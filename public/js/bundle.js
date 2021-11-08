@@ -436,7 +436,7 @@ let currentZoomSpeed = 0
 
 //#region HOTSPOT MOVE PARAMS
 const hotspotOffset = -10
-const animationSpeed = 0.35
+const animationSpeed = 0.5
 const animationZoom = 2
 let hotspotTransition
 let hotspotCamParam = {
@@ -600,8 +600,7 @@ const RequestHotspotTranslation = (hotspotPos) => {
 }
 const AnimateHotspotTranslation = (delta) => {
 
-    //const t = easeInOutCirc(hotspotCamParam.state)
-    const t = hotspotCamParam.state
+    const t = easeInOutCirc(hotspotCamParam.state)
     
     //translation
     const targetX = hotspotCamParam.initialPos.x * (1-t) + (hotspotCamParam.hotspotPos.x - hotspotOffset) * t
