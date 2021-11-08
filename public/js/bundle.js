@@ -202,13 +202,12 @@ const PopulateHotspot = (hotspotInfo) => {
     let rgb = newColor.slice(1).convertToRGB()
     div.getElementsByClassName("hotspot-partner-div")[0].style.boxShadow = "1px 1px 50px 0 rgba(" +
         rgb[0].toString() +", " +rgb[1].toString() + ", " +rgb[2].toString() + ", 0.47)"
-    console.log(div.getElementsByClassName("hotspot-partner-div")[0].style)
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = sponsorsTexts[hotspotInfo.sponsor]
     div.getElementsByClassName("hotspot-header-section")[0].style.backgroundImage = "url(" +sponsorHeaders[hotspotInfo.sponsor] + ")"
     
     if (hotspotInfo.video) {
-        div.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
+        div.getElementsByClassName("Video")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     
     
