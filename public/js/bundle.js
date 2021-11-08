@@ -701,7 +701,6 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
-            InitializePostProcessing(d)
         },
         (xhr) => {
             //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -727,10 +726,10 @@ const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
 
     d.scene.add(gltf.scene)
-    
+    /*
     const light1  = new d.THREE.AmbientLight(0xffba8b, 5)
     light1.name = 'ambient_light'
-    d.scene.add( light1 )
+    d.scene.add( light1 )*/
 /*
     const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
     light2.position.set(0.5, 0, 0.866) // ~60º
@@ -853,33 +852,6 @@ const InitializeSound =() => {
 }
 //#endregion
 
-//#region POST PROCESSING
-import {EffectComposer} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js'
-import {RenderPass} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/RenderPass.js'
-import {BloomPass} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/BloomPass.js'
-let composer
-
-const InitializePostProcessing = (d) => {
-    composer = new EffectComposer(d.renderer)
-    composer.addPass(new RenderPass(d.scene, d.camera))
-    composer.setSize(d.canvas.width, d.canvas.height);
-    const bloomPass = new BloomPass(
-        1,    // strength
-        25,   // kernel size
-        4,    // sigma ?
-        256,  // blur render target resolution
-    );
-    composer.addPass(bloomPass)
-}
-
-const RenderPostProcess = (deltaTime) => {
-    if (composer) {
-        console.log(deltaTime)
-        composer.render(deltaTime)
-    }
-}
-//#endregion
-
 //#region MAIN
 
 //#region IMPORTS
@@ -974,8 +946,7 @@ const animate = () => {
 }
 
 const render = () => {
-    RenderPostProcess(clock.getDelta())
-    //threeData.renderer.render( threeData.scene, threeData.camera )
+    threeData.renderer.render( threeData.scene, threeData.camera )
     
 }
 
