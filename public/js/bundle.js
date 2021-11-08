@@ -310,7 +310,7 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 const TryClickedRoom = (room_link, i) => {
-    const button = document.getElementById(data.room_link)
+    const button = document.getElementById(room_link)
     const obj = d.scene.getObjectByName(icons[i].id)
     RequestHotspotTranslation(obj.position, button)
 }
