@@ -1,5 +1,7 @@
 //#region Screen Projection
 //Auxiliary function allowing to project 3D objects into the 2D screen space.
+import {param} from "express/lib/router";
+
 const toScreenPosition = (obj, d) => {
     const vector = new d.THREE.Vector3()
 
@@ -678,6 +680,26 @@ const UpdateFade = (newValue) =>{
 
 //#endregion
 
+//#region DATGUI
+import { GUI } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module'
+const ShowDatGUI = true
+let gui
+let a_light
+
+const InitGUI = () => {
+    if (!ShowDatGUI) { return }
+    gui = new GUI()
+    let params = {
+        lightColor:"#ffffff",
+        lightIntensity:1
+    }
+    gui.add(params,'lightColor').onFinishChange((value) => a_light.color = value)
+    gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
+}
+
+
+//#endregion
+
 //#region City
 //File managing the main scene : the city view.
 
@@ -701,6 +723,7 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
+            InitGUI()
         },
         (xhr) => {
             //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -726,10 +749,10 @@ const setupScene = (gltf, d) => {
     setupAnimMixer(gltf, d)
 
     d.scene.add(gltf.scene)
-    /*
-    const light1  = new d.THREE.AmbientLight(0xffba8b, 5)
-    light1.name = 'ambient_light'
-    d.scene.add( light1 )*/
+    
+    a_light  = new d.THREE.AmbientLight(0xffffff, 1)
+    a_light.name = 'ambient_light'
+    d.scene.add( a_light )
 /*
     const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
     light2.position.set(0.5, 0, 0.866) // ~60º
