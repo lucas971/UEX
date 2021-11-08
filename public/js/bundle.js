@@ -535,8 +535,8 @@ const UpdateFreeform = (delta) => {
 
     cameraHolder.position.x = targetXPos
     cameraHolder.position.z = targetZPos
-
-    d.camera.updateProjectionMatrix()
+    cameraHolder.updateMatrixWorld(true)
+    
     //The use of ratio during deceleration allow to simulate a vector magnitude diminution without using an actual vector.
     let xRatio = 1, zRatio = 1
     if (Math.abs(zVelocity) < Math.abs(xVelocity)) {
