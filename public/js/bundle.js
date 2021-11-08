@@ -855,7 +855,7 @@ const InitializeSound =() => {
 //#endregion
 
 //#region POST PROCESSING
-import {POSTPROCESSING} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js'
+import * as POSTPROCESSING from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js'
 let composer
 const InitializePostProcessing = (d) => {
     composer = new POSTPROCESSING.EffectComposer(d.renderer)
