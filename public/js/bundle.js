@@ -295,7 +295,7 @@ const GenerateHtml = (d) => {
             icons[i].image.addEventListener("click", () => TryClickedLink(i))
         }
         else {
-            icons[i].image.addEventListener("click", () => document.getElementById(data.room_link).click())
+            icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
         }
         iconDiv.appendChild(icons[i].image)
     }
@@ -309,11 +309,15 @@ const GenerateHtml = (d) => {
 //#endregion
 
 //#region Hotspots
-
+const TryClickedRoom = (room_link, i) => {
+    const button = document.getElementById(data.room_link)
+    const obj = d.scene.getObjectByName(icons[i].id)
+    RequestHotspotTranslation(obj.position, button)
+}
 const TryClickedLink = (i) => {
     let iconId = icons[i].iconid
     const obj = d.scene.getObjectByName(icons[i].id)
-    RequestHotspotTranslation(obj.position)
+    RequestHotspotTranslation(obj.position, null)
     setAudioOnHotspot(true)
     HotspotMode()
     OpenedHotspot(iconId)
@@ -587,7 +591,7 @@ const UpdateZoom = (delta) => {
 
 //#region HOTSPOT TRANSLATION
 
-const RequestHotspotTranslation = (hotspotPos) => {
+const RequestHotspotTranslation = (hotspotPos, button) => {
     if (hotspotTransition) {
         return
     }
@@ -595,6 +599,7 @@ const RequestHotspotTranslation = (hotspotPos) => {
     hotspotCamParam.state = 0
     hotspotCamParam.initialZoom = d.camera.zoom
     hotspotCamParam.hotspotPos = hotspotPos
+    hotspotCamParam.button = button
     hotspotTransition = true
     
 }
@@ -613,10 +618,19 @@ const AnimateHotspotTranslation = (delta) => {
     d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * animationZoom
     d.camera.updateProjectionMatrix()
 
+    //fade
+    if (hotspotCamParam.button !== null) {
+        const fadeAmount = easeOutQuad(hotspotCamParam.state)
+        UpdateFade(fadeAmount)
+    }
+    
     hotspotCamParam.state += animationSpeed * delta
 
     if (hotspotCamParam.state >= 1) {
         hotspotTransition = false
+        if (hotspotCamParam.button !== null) {
+            hotspotCamParam.button.click()
+        }
     }
 
     requestIconRefresh = true
