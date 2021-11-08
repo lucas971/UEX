@@ -603,6 +603,7 @@ const AnimateHotspotTranslation = (delta) => {
     const targetZ = hotspotCamParam.initialPos.z * (1-t) + hotspotCamParam.hotspotPos.z * t
 
     cameraHolder.position.x = targetX
+    cameraHolder.position.y = 100
     cameraHolder.position.z = targetZ
     console.log(cameraHolder.position)
     //zoom
