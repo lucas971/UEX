@@ -680,7 +680,7 @@ const UpdateFade = (newValue) =>{
 
 //#region DATGUI
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
-const ShowDatGUI = true
+const ShowDatGUI = false
 let gui
 let a_light
 
@@ -757,7 +757,7 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
     
-    a_light  = new d.THREE.AmbientLight(0xffffff, 1)
+    a_light  = new d.THREE.AmbientLight(0x90c1fc, 1.4)
     a_light.name = 'ambient_light'
     d.scene.add( a_light )
 /*
