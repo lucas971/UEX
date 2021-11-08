@@ -693,6 +693,7 @@ const InitGUI = () => {
     }
     gui.add(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
+    document.getElementsByClassName("dg main a")[0].style.right = "300px"
 }
 
 //#endregion
