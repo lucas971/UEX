@@ -686,14 +686,17 @@ let a_light
 
 const InitGUI = () => {
     if (!ShowDatGUI) { return }
-    gui = new GUI()
+    gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
         lightIntensity:1
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
-    document.getElementsByClassName("dg main a")[0].style.right = "300px"
+
+    const guiWrap = document.getElementById('gui')
+    guiWrap.appendChild(gui.domElement);
+    gui.open();
 }
 
 
