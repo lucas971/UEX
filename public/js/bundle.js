@@ -439,6 +439,7 @@ let currentZoomSpeed = 0
 //#endregion
 
 //#region HOTSPOT MOVE PARAMS
+let fadeDiv
 const hotspotOffset = -10
 const animationSpeed = 0.5
 const animationZoom = 2
@@ -472,6 +473,7 @@ const RequestIconsRefresh = () => {
 
 const InitializeCameraHandler = (threeData) => {
     d = threeData
+    fadeDiv = document.getElementById("fade")
     cameraHolder = d.scene.getObjectByName("CAMERACONTAINER")
     cameraHolder.visible = false
     cameraHolder.attach( d.camera)
