@@ -588,6 +588,9 @@ const UpdateZoom = (delta) => {
 //#region HOTSPOT TRANSLATION
 
 const RequestHotspotTranslation = (hotspotPos) => {
+    if (hotspotTransition) {
+        return
+    }
     hotspotCamParam.initialPos = cameraHolder.position
     hotspotCamParam.state = 0
     hotspotCamParam.initialZoom = d.camera.zoom
