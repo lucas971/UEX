@@ -436,7 +436,7 @@ let currentZoomSpeed = 0
 
 //#region HOTSPOT MOVE PARAMS
 const hotspotOffset = -10
-const animationSpeed = 0.25
+const animationSpeed = 0.35
 const animationZoom = 2
 let hotspotTransition
 let hotspotCamParam = {
