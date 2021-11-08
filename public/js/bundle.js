@@ -276,12 +276,6 @@ const UpdateIconsPosition = (d) => {
         icons[i].image.style.top = `${toScreen.y - iconHeight/2}px`
     }
 }
-
-const UpdateIconsFade = (fade) => {
-    for (let i = 0; i < icons.length; i++) {
-        icons[i].image.style.opacity = 1-fade
-    }
-}
 //#endregion
 
 //#region HTML Generation
@@ -668,7 +662,6 @@ const UpdateCamera = (delta) => {
 //#region FADE
 
 const UpdateFade = (newValue) =>{
-    UpdateIconsFade(newValue)
     fadeDiv.style.opacity = newValue
 }
 
