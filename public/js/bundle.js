@@ -859,10 +859,11 @@ import {EffectComposer} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm
 import {RenderPass} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/RenderPass.js'
 import {BloomPass} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/BloomPass.js'
 let composer
+
 const InitializePostProcessing = (d) => {
     composer = new EffectComposer(d.renderer)
     composer.addPass(new RenderPass(d.scene, d.camera))
-    composer.setSize(window.innerWidth, window.innerHeight);
+    composer.setSize(d.canvas.width, d.canvas.height);
     const bloomPass = new BloomPass(
         1,    // strength
         25,   // kernel size
@@ -874,6 +875,7 @@ const InitializePostProcessing = (d) => {
 
 const RenderPostProcess = (deltaTime) => {
     if (composer) {
+        console.log(deltaTime)
         composer.render(deltaTime)
     }
 }
