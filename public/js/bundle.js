@@ -870,7 +870,9 @@ const InitializePostProcessing = (d) => {
 }
 
 const RenderPostProcess = () => {
-    composer.render()
+    if (composer) {
+        composer.render()
+    }
 }
 //#endregion
 
