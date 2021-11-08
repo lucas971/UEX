@@ -743,6 +743,9 @@ const setupScene = (gltf, d) => {
         if (material.map || material.emissiveMap) material.needsUpdate = true;
     });
     document.getElementById("loading-screen-stopper").click()
+
+    InitializePostProcessing(d)
+    
     ready = true
 }
 
@@ -851,6 +854,26 @@ const InitializeSound =() => {
 }
 //#endregion
 
+//#region POST PROCESSING
+import {POSTPROCESSING} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js'
+let composer
+const InitializePostProcessing = (d) => {
+    composer = new POSTPROCESSING.EffectComposer(d.renderer)
+    composer.addPass(new POSTPROCESSING.RenderPass(d.scene, d.camera))
+    
+    const effectPass = new POSTPROCESSING.EffectPass(
+        d.camera,
+        new POSTPROCESSING.BloomEffect()
+    )
+    effectPass.renderToScreen = true
+    composer.addPass(effectPass)
+}
+
+const RenderPostProcess = () => {
+    composer.render()
+}
+//#endregion
+
 //#region MAIN
 
 //#region IMPORTS
@@ -945,7 +968,9 @@ const animate = () => {
 }
 
 const render = () => {
-    threeData.renderer.render( threeData.scene, threeData.camera )
+    RenderPostProcess()
+    //threeData.renderer.render( threeData.scene, threeData.camera )
+    
 }
 
 //#endregion
@@ -983,6 +1008,7 @@ const main = () => {
     InitializeSound()
     InitializeHotspots(threeData)
     InitializeCursor(threeData)
+
     animate()
 }
 main()
