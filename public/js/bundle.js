@@ -45,7 +45,7 @@ const IsDrag = () => {
 }
 
 const NormalMode = () => {
-    document.body.style.cursor = "auto"
+    document.getElementById('canvas').style.cursor = "grab"
     let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "all"
@@ -54,7 +54,7 @@ const NormalMode = () => {
 }
 
 const DragMode = () => {
-    document.body.style.cursor = "grabbing"
+    document.getElementById('canvas').style.cursor = "grabbing"
     let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
@@ -63,7 +63,7 @@ const DragMode = () => {
 }
 
 const HotspotMode = () => {
-    document.body.style.cursor = "auto"
+    document.getElementById('canvas').style.cursor = "grab"
     let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
