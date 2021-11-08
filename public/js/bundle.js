@@ -279,7 +279,7 @@ const UpdateIconsPosition = (d) => {
 
 const UpdateIconsFade = (fade) => {
     for (let i = 0; i < icons.length; i++) {
-        icons[i].image.style.opacity = fade
+        icons[i].image.style.opacity = 1-fade
     }
 }
 //#endregion
