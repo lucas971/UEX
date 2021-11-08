@@ -318,7 +318,7 @@ const TryClickedLink = (id) => {
 const TryLeaveLink = () => {
     NormalMode()
     setAudioOnHotspot(false)
-    document.getElementsByClassName("video")[0].getElementsByTagName("iframe")[0].src = ""
+    document.getElementsByClassName("Video")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
 }
 //#endregion
