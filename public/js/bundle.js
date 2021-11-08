@@ -737,7 +737,6 @@ const setupScene = (gltf, d) => {
     d.scene.add( light2 )*/
 
     traverseMaterials(d.scene, (material) => {
-        console.log(material)
         material.depthWrite = !material.transparent
         if (material.map) material.map.encoding = d.THREE.sRGBEncoding
         if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
@@ -892,7 +891,7 @@ const setup = () => {
     renderer.setClearColor( 0xEDE89F )
     renderer.setPixelRatio( window.devicePixelRatio )
     renderer.setSize(window.innerWidth, window.innerHeight)
-    renderer.toneMappingExposure = 0.2
+    
     canvas.appendChild( renderer.domElement )
     renderer.domElement.style.position = 'fixed'
     renderer.domElement.style.zIndex = '-1'
@@ -902,7 +901,7 @@ const setup = () => {
     const DRACO_LOADER = new DRACOLoader(loadingManager).setDecoderPath('https://cdn.skypack.dev/three@0.132.2/examples/js/libs/draco/gltf/')
     const KTX2_LOADER = new KTX2Loader(loadingManager).setTranscoderPath('https://cdn.skypack.dev/three@0.132.2/examples/js/libs/basis/')
         
-    const loader = new GLTFLoader( new THREE.LoadingManager() )
+    const loader = new GLTFLoader( loadingManager )
         .setCrossOrigin('anonymous')
         .setDRACOLoader( DRACO_LOADER )
         .setKTX2Loader( KTX2_LOADER.detectSupport( renderer ) )
