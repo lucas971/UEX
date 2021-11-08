@@ -311,6 +311,8 @@ const GenerateHtml = (d) => {
 //#region Hotspots
 
 const TryClickedLink = (id) => {
+    const obj = d.scene.getObjectByName(icons[id].id)
+    hotspotTransition(obj.position)
     setAudioOnHotspot(true)
     HotspotMode()
     OpenedHotspot(id)
@@ -431,31 +433,14 @@ const zoomDeceleration = 0.2
 let currentZoomSpeed = 0
 //#endregion
 
-//#region TRANSLATION PARAMS
-let spots
-let const_y
-let requestedTranslation
-let currentSpot
-let translation = {
-    initialPos : null,
-    targetPos : null,
-    initialZoom : null,
-    targetZoom : null,
-    state : 0,
-}
-//#endregion
-
-//#region TRANSITION PARAMS
+//#region HOTSPOT MOVE PARAMS
 const animationSpeed = 0.5
-const animationZoom = 5
-
-let fadeDiv
-let requestedTransition
-let transition = {
+const animationZoom = 2
+let hotspotTransition
+let hotspotCamParam = {
     initialPos : null,
     initialZoom : null,
-    targetPos : null,
-    href: null,
+    hotspotPos : null,
     state : 0
 }
 //#endregion
@@ -465,17 +450,6 @@ let transition = {
 //ASK FOR INITIALIZATION
 const SetupCameraHandler = (threeData) => InitializeCameraHandler(threeData)
 
-//REQUEST A TRANSITION
-const RequestTransition = (pos, href) => {
-    if (requestedTransition || requestedTranslation) {
-        return
-    }
-    transition.targetPos = pos.clone()
-    transition.initialZoom = d.camera.zoom
-    transition.href = href
-    transition.state = 0
-    requestedTransition = true
-}
 
 //ASK IF ICON REFRESH
 const RequestIconsRefresh = () => {
@@ -492,33 +466,19 @@ const RequestIconsRefresh = () => {
 
 const InitializeCameraHandler = (threeData) => {
     d = threeData
-    fadeDiv = document.getElementById("fade")
-    loadJSON("https://lucas971.github.io/UEX/public/cameraData.json",
-        (data) => {
-            currentSpot = 0
-            spots = data["spots"]
-            const_y = data["const_y"]
-            cameraHolder = d.scene.getObjectByName("CAMERACONTAINER")
-            cameraHolder.visible = false
-            cameraHolder.attach( d.camera)
-            d.camera.position.set(-100, 100, 100)
-            d.camera.zoom = spots[0].zoom
-            d.camera.updateProjectionMatrix()
-            requestIconRefresh = true
+    cameraHolder = d.scene.getObjectByName("CAMERACONTAINER")
+    cameraHolder.visible = false
+    cameraHolder.attach( d.camera)
+    d.camera.position.set(-100, 100, 100)
+    d.camera.zoom = spots[0].zoom
+    d.camera.updateProjectionMatrix()
+    requestIconRefresh = true
 
-            for (let i = 0; i < spots.length; i++) {
-                //document.getElementById(spots[i].id).addEventListener('click', () => RequestTranslation(i))
-            }
-
-            document.body.addEventListener("mousemove", OnMouseMove)
-            document.body.addEventListener("mousedown", OnMouseClick)
-            document.body.addEventListener("mouseup", OnMouseRelease)
-            document.body.addEventListener("mouseout", OnMouseRelease)
-            document.body.addEventListener("wheel", OnWheel)
-        },
-        (error) => {
-            console.error(error)
-        })
+    document.body.addEventListener("mousemove", OnMouseMove)
+    document.body.addEventListener("mousedown", OnMouseClick)
+    document.body.addEventListener("mouseup", OnMouseRelease)
+    document.body.addEventListener("mouseout", OnMouseRelease)
+    document.body.addEventListener("wheel", OnWheel)
 }
 
 //#endregion
@@ -624,65 +584,33 @@ const UpdateZoom = (delta) => {
 
 //#endregion
 
-//#region TRANSLATION
+//#region HOTSPOT TRANSLATION
 
-const RequestTranslation = (id) => {
-    if (requestedTranslation || requestedTransition || id === currentSpot) {
-        return
-    }
-    translation.initialPos = d.camera.position.clone()
-    translation.targetPos = new d.THREE.Vector3(spots[id].x, const_y, spots[id].z)
-    translation.initialZoom = d.camera.zoom
-    translation.targetZoom = spots[id].zoom
-    translation.state = 0
-    requestedTranslation=true
-    currentSpot = id
+const RequestTranslation = (hotspotPos) => {
+    hotspotCamParam.initialPos = cameraHolder.position
+    hotspotCamParam.state = 0
+    hotspotCamParam.initialZoom = d.camera.position
+    hotspotCamParam.hotspotPos = hotspotPos
+    hotspotTransition = true
+    
 }
+const AnimateHotspotTranslation = (delta) => {
 
-const AnimateTranslation = (delta) => {
-    let t = easeInOutSine(translation.state)
-    if (translation.state >= 1) {
-        t=1
-    }
+    const t = easeInOutSine(hotspotCamParam.state)
 
+    //translation
+    const targetX = hotspotCamParam.initialPos.x * (1-t) + hotspotCamParam.hotspotPos.x * (1-t)
+    const targetZ = hotspotCamParam.initialPos.z * (1-t) + hotspotCamParam.hotspotPos.z * (1-t)
+    cameraHolder.position.set(targetX, cameraHolder.position.y, targetZ)
+    
     //zoom
-    d.camera.zoom = (1-t) * translation.initialZoom + t * translation.targetZoom
+    d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * animationZoom
     d.camera.updateProjectionMatrix()
 
-    //pos
-    d.camera.position.lerpVectors(translation.initialPos, translation.targetPos, t)
+    hotspotCamParam.state += animationSpeed * delta
 
-    if (t===1) {
-        requestedTranslation = false
-    }
-    else {
-        translation.state += animationSpeed * delta
-    }
-
-    requestIconRefresh = true
-}
-
-//#endregion
-
-//#region TRANSITION
-
-const AnimateTransition = (delta) => {
-
-    const t = easeInOutSine(transition.state)
-
-    //zoom
-    d.camera.zoom = (1-t) * transition.initialZoom + t * animationZoom
-    d.camera.updateProjectionMatrix()
-
-    //fade
-    const fadeAmount = easeOutQuad(transition.state)
-    UpdateFade(fadeAmount)
-
-    transition.state += animationSpeed * delta
-
-    if (transition.state >= 1) {
-        requestedTransition = false
-        window.location.href = transition.href
+    if (hotspotCamParam.state >= 1) {
+        hotspotTransition = false
     }
 
     requestIconRefresh = true
@@ -697,11 +625,8 @@ const UpdateCamera = (delta) => {
         currentZoomSpeed = offsetZ =offsetX = xVelocity = zVelocity = 0
         return
     }
-    if (requestedTransition) {
-        AnimateTransition(delta)
-    }
-    else if (requestedTranslation) {
-        AnimateTranslation(delta)
+    if (hotspotTransition) {
+        AnimateHotspotTranslation(delta)
     }
     else {
         UpdateFreeform(delta)
