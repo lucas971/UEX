@@ -597,8 +597,9 @@ const RequestHotspotTranslation = (hotspotPos) => {
 }
 const AnimateHotspotTranslation = (delta) => {
 
-    const t = easeInOutCirc(hotspotCamParam.state)
-
+    //const t = easeInOutCirc(hotspotCamParam.state)
+    const t = hotspotCamParam.state
+    
     //translation
     const targetX = hotspotCamParam.initialPos.x * (1-t) + (hotspotCamParam.hotspotPos.x - hotspotOffset) * t
     const targetZ = hotspotCamParam.initialPos.z * (1-t) + (hotspotCamParam.hotspotPos.z - hotspotOffset)* t
