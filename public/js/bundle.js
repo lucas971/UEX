@@ -225,8 +225,8 @@ const PopulateHotspot = (hotspotInfo) => {
 
 //#region VARIABLES
 
-const iconWidth = 50
-const iconHeight = 50
+const iconWidth = 75
+const iconHeight = 75
 //Array of icons struct. See ../iconsData.json for more information on the structure.
 let icons
 
