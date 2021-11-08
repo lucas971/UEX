@@ -313,7 +313,7 @@ const GenerateHtml = (d) => {
 const TryClickedLink = (i) => {
     let iconId = icons[i]
     const obj = d.scene.getObjectByName(icons[i].id)
-    hotspotTransition(obj.position)
+    RequestHotspotTranslation(obj.position)
     setAudioOnHotspot(true)
     HotspotMode()
     OpenedHotspot(iconId)
@@ -586,7 +586,7 @@ const UpdateZoom = (delta) => {
 
 //#region HOTSPOT TRANSLATION
 
-const RequestTranslation = (hotspotPos) => {
+const RequestHotspotTranslation = (hotspotPos) => {
     hotspotCamParam.initialPos = cameraHolder.position
     hotspotCamParam.state = 0
     hotspotCamParam.initialZoom = d.camera.position
