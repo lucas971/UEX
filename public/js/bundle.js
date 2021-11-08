@@ -680,7 +680,7 @@ const UpdateFade = (newValue) =>{
 
 //#region DATGUI
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
-const ShowDatGUI = false
+const ShowDatGUI = true
 let gui
 let a_light
 
