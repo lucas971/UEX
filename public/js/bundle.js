@@ -591,7 +591,7 @@ const RequestHotspotTranslation = (hotspotPos) => {
     if (hotspotTransition) {
         return
     }
-    hotspotCamParam.initialPos = cameraHolder.position
+    hotspotCamParam.initialPos = cameraHolder.position.clone()
     hotspotCamParam.state = 0
     hotspotCamParam.initialZoom = d.camera.zoom
     hotspotCamParam.hotspotPos = hotspotPos
