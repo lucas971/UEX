@@ -600,7 +600,7 @@ const RequestHotspotTranslation = (hotspotPos) => {
 }
 const AnimateHotspotTranslation = (delta) => {
 
-    const t = easeInOutCirc(hotspotCamParam.state)
+    const t = easeInOutSine(hotspotCamParam.state)
     
     //translation
     const targetX = hotspotCamParam.initialPos.x * (1-t) + (hotspotCamParam.hotspotPos.x - hotspotOffset) * t
@@ -609,8 +609,6 @@ const AnimateHotspotTranslation = (delta) => {
     cameraHolder.position.x = targetX
     cameraHolder.position.z = targetZ
     
-    console.log(targetX)
-    console.log(cameraHolder.position)
     //zoom
     d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * animationZoom
     d.camera.updateProjectionMatrix()
