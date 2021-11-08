@@ -207,7 +207,7 @@ const PopulateHotspot = (hotspotInfo) => {
     div.getElementsByClassName("hotspot-header-section")[0].style.backgroundImage = "url(" +sponsorHeaders[hotspotInfo.sponsor] + ")"
     
     if (hotspotInfo.video) {
-        div.getElementsByClassName("Video")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
+        div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     
     
@@ -318,7 +318,7 @@ const TryClickedLink = (id) => {
 const TryLeaveLink = () => {
     NormalMode()
     setAudioOnHotspot(false)
-    document.getElementsByClassName("Video")[0].getElementsByTagName("iframe")[0].src = ""
+    document.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
 }
 //#endregion
