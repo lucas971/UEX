@@ -589,7 +589,7 @@ const UpdateZoom = (delta) => {
 const RequestHotspotTranslation = (hotspotPos) => {
     hotspotCamParam.initialPos = cameraHolder.position
     hotspotCamParam.state = 0
-    hotspotCamParam.initialZoom = cameraHolder.position
+    hotspotCamParam.initialZoom = d.camera.zoom
     hotspotCamParam.hotspotPos = hotspotPos
     hotspotTransition = true
     
@@ -604,6 +604,7 @@ const AnimateHotspotTranslation = (delta) => {
 
     cameraHolder.position.x = targetX
     cameraHolder.position.z = targetZ
+    console.log(cameraHolder.position)
     //zoom
     d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * animationZoom
     d.camera.updateProjectionMatrix()
