@@ -688,10 +688,10 @@ const InitGUI = () => {
     if (!ShowDatGUI) { return }
     gui = new GUI()
     let params = {
-        lightColor:"#ffffff",
+        lightColor:0xFFFFFF,
         lightIntensity:1
     }
-    gui.add(params,'lightColor').onFinishChange((value) => a_light.color = value)
+    gui.add(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
 }
 
