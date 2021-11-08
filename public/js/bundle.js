@@ -680,12 +680,13 @@ const UpdateFade = (newValue) =>{
 
 //#endregion
 
+
 //#region DATGUI
-import {GUI} from 'https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js'
+//import {GUI} from 'https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js'
 const ShowDatGUI = true
 let gui
 let a_light
-
+/*
 const InitGUI = () => {
     if (!ShowDatGUI) { return }
     gui = new GUI()
@@ -697,8 +698,8 @@ const InitGUI = () => {
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
 }
 
-
 //#endregion
+*/
 
 //#region City
 //File managing the main scene : the city view.
@@ -723,7 +724,7 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
-            InitGUI()
+            //InitGUI()
         },
         (xhr) => {
             //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
