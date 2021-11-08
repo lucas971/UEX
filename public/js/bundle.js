@@ -701,6 +701,7 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
+            InitializePostProcessing(d)
         },
         (xhr) => {
             //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -743,8 +744,6 @@ const setupScene = (gltf, d) => {
         if (material.map || material.emissiveMap) material.needsUpdate = true;
     });
     document.getElementById("loading-screen-stopper").click()
-
-    InitializePostProcessing(d)
     
     ready = true
 }
