@@ -862,7 +862,7 @@ let composer
 const InitializePostProcessing = (d) => {
     composer = new EffectComposer(d.renderer)
     composer.addPass(new RenderPass(d.scene, d.camera))
-
+    composer.setSize(window.innerWidth, window.innerHeight);
     const bloomPass = new BloomPass(
         1,    // strength
         25,   // kernel size
@@ -872,9 +872,9 @@ const InitializePostProcessing = (d) => {
     composer.addPass(bloomPass)
 }
 
-const RenderPostProcess = () => {
+const RenderPostProcess = (deltaTime) => {
     if (composer) {
-        composer.render()
+        composer.render(deltaTime)
     }
 }
 //#endregion
@@ -973,7 +973,7 @@ const animate = () => {
 }
 
 const render = () => {
-    RenderPostProcess()
+    RenderPostProcess(clock.getDelta())
     //threeData.renderer.render( threeData.scene, threeData.camera )
     
 }
