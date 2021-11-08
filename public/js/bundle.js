@@ -313,7 +313,7 @@ const GenerateHtml = (d) => {
 const TryClickedLink = (i) => {
     let iconId = icons[i].iconid
     const obj = d.scene.getObjectByName(icons[i].id)
-    //RequestHotspotTranslation(obj.position)
+    RequestHotspotTranslation(obj.position)
     setAudioOnHotspot(true)
     HotspotMode()
     OpenedHotspot(iconId)
@@ -599,10 +599,12 @@ const AnimateHotspotTranslation = (delta) => {
     const t = easeInOutSine(hotspotCamParam.state)
 
     //translation
-    const targetX = hotspotCamParam.initialPos.x * (1-t) + hotspotCamParam.hotspotPos.x * (1-t)
-    const targetZ = hotspotCamParam.initialPos.z * (1-t) + hotspotCamParam.hotspotPos.z * (1-t)
-    cameraHolder.position.set(targetX, cameraHolder.position.y, targetZ)
-    
+    const targetX = hotspotCamParam.initialPos.x * (1-t) + hotspotCamParam.hotspotPos.x * t
+    const targetZ = hotspotCamParam.initialPos.z * (1-t) + hotspotCamParam.hotspotPos.z * t
+
+    cameraHolder.position.x = targetX
+    cameraHolder.position.z = targetZ
+    console.log(cameraHolder.position)
     //zoom
     d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * animationZoom
     d.camera.updateProjectionMatrix()
@@ -621,17 +623,19 @@ const AnimateHotspotTranslation = (delta) => {
 //#region UPDATE
 
 const UpdateCamera = (delta) => {
+    if (hotspotTransition) {
+        AnimateHotspotTranslation(delta)
+        return
+    }
+    
     if (IsLinkActive()) {
         currentZoomSpeed = offsetZ =offsetX = xVelocity = zVelocity = 0
         return
     }
-    if (hotspotTransition) {
-        AnimateHotspotTranslation(delta)
-    }
-    else {
-        UpdateFreeform(delta)
-        UpdateZoom(delta)
-    }
+    
+    UpdateFreeform(delta)
+    UpdateZoom(delta)
+    
 }
 
 //#endregion
