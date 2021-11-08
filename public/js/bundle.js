@@ -681,7 +681,7 @@ const UpdateFade = (newValue) =>{
 //#endregion
 
 //#region DATGUI
-import { GUI } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/lil-gui.module.min.js'
+import {GUI} from 'https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js'
 const ShowDatGUI = true
 let gui
 let a_light
