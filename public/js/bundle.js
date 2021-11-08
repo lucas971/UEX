@@ -630,11 +630,18 @@ const AnimateHotspotTranslation = (delta) => {
     if (hotspotCamParam.state >= 1) {
         hotspotTransition = false
         if (hotspotCamParam.button !== null) {
+            localStorage.currentX = cameraHolder.position.x.toString()
+            localStorage.currentZ = cameraHolder.position.z.toString()
+            localStorage.comeBack = 'true'
             hotspotCamParam.button.click()
         }
     }
 
     requestIconRefresh = true
+}
+
+const AnimateRoomExit = () => {
+    
 }
 
 //#endregion
@@ -666,7 +673,6 @@ const UpdateFade = (newValue) =>{
 }
 
 //#endregion
-
 
 
 //#endregion
@@ -735,6 +741,7 @@ const setupScene = (gltf, d) => {
         if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
         if (material.map || material.emissiveMap) material.needsUpdate = true;
     });
+    document.getElementById("loading-screen-stopper").click()
     ready = true
 }
 
@@ -977,7 +984,6 @@ const main = () => {
     InitializeCursor(threeData)
     animate()
 }
-
 main()
 
 //#endregion
