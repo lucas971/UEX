@@ -311,7 +311,7 @@ const GenerateHtml = (d) => {
 //#region Hotspots
 
 const TryClickedLink = (i) => {
-    let iconId = icons[i]
+    let iconId = icons[i].iconid
     const obj = d.scene.getObjectByName(icons[i].id)
     RequestHotspotTranslation(obj.position)
     setAudioOnHotspot(true)
