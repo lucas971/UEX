@@ -1,7 +1,5 @@
 //#region Screen Projection
 //Auxiliary function allowing to project 3D objects into the 2D screen space.
-import {param} from "express/lib/router";
-
 const toScreenPosition = (obj, d) => {
     const vector = new d.THREE.Vector3()
 
@@ -680,13 +678,12 @@ const UpdateFade = (newValue) =>{
 
 //#endregion
 
-
 //#region DATGUI
-//import {GUI} from 'https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js'
+import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
 const ShowDatGUI = true
 let gui
 let a_light
-/*
+
 const InitGUI = () => {
     if (!ShowDatGUI) { return }
     gui = new GUI()
@@ -699,7 +696,7 @@ const InitGUI = () => {
 }
 
 //#endregion
-*/
+
 
 //#region City
 //File managing the main scene : the city view.
@@ -724,7 +721,7 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
-            //InitGUI()
+            InitGUI()
         },
         (xhr) => {
             //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
