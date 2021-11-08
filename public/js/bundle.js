@@ -727,14 +727,14 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
     
-    const light1  = new d.THREE.AmbientLight(0xffffff, 2.5)
+    const light1  = new d.THREE.AmbientLight(0xffba8b, 5)
     light1.name = 'ambient_light'
     d.scene.add( light1 )
-
+/*
     const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
     light2.position.set(0.5, 0, 0.866) // ~60º
     light2.name = 'main_light'
-    d.scene.add( light2 )
+    d.scene.add( light2 )*/
 
     traverseMaterials(d.scene, (material) => {
         console.log(material)
