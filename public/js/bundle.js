@@ -855,18 +855,21 @@ const InitializeSound =() => {
 //#endregion
 
 //#region POST PROCESSING
-import * as POSTPROCESSING from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js'
+import {EffectComposer} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js'
+import {RenderPass} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/RenderPass.js'
+import {BloomPass} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/BloomPass.js'
 let composer
 const InitializePostProcessing = (d) => {
-    composer = new POSTPROCESSING.EffectComposer(d.renderer)
-    composer.addPass(new POSTPROCESSING.RenderPass(d.scene, d.camera))
-    
-    const effectPass = new POSTPROCESSING.EffectPass(
-        d.camera,
-        new POSTPROCESSING.BloomEffect()
-    )
-    effectPass.renderToScreen = true
-    composer.addPass(effectPass)
+    composer = new EffectComposer(d.renderer)
+    composer.addPass(new RenderPass(d.scene, d.camera))
+
+    const bloomPass = new BloomPass(
+        1,    // strength
+        25,   // kernel size
+        4,    // sigma ?
+        256,  // blur render target resolution
+    );
+    composer.addPass(bloomPass)
 }
 
 const RenderPostProcess = () => {
