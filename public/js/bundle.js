@@ -680,12 +680,17 @@ const UpdateFade = (newValue) =>{
 
 //#region DATGUI
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
-const ShowDatGUI = true
+const ShowDatGUI = false
 let gui
 let a_light
 
 const InitGUI = () => {
-    if (!ShowDatGUI) { return }
+    const guiWrap = document.getElementById('gui')
+    
+    if (!ShowDatGUI) { 
+        guiWrap.style.pointerEvents = 'none'
+        return 
+    }
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
@@ -694,7 +699,6 @@ const InitGUI = () => {
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
 
-    const guiWrap = document.getElementById('gui')
     guiWrap.appendChild(gui.domElement);
     gui.open();
 }
