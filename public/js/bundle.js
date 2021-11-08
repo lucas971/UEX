@@ -470,7 +470,6 @@ const InitializeCameraHandler = (threeData) => {
     cameraHolder.visible = false
     cameraHolder.attach( d.camera)
     d.camera.position.set(-100, 100, 100)
-    d.camera.zoom = spots[0].zoom
     d.camera.updateProjectionMatrix()
     requestIconRefresh = true
 
