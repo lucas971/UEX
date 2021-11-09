@@ -717,10 +717,10 @@ const InitGUI = (d) => {
         lightIntensity:1,
         xOcean:1,
         yOcean:1,
-        foam_color:0xFFFFFF,
-        water_color:0xFFFFFF,
-        water2_color:0XFFFFFF,
-        wave_speed:0.5
+        foam_color:0xb8ebf7,
+        water_color:0x4488cc,
+        water2_color:0x347aa5,
+        wave_speed:0.2
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
@@ -731,18 +731,24 @@ const InitGUI = (d) => {
             uniforms.foamCol.value.set(color.r, color.g, color.b)
         }
     )
+    let color = new d.THREE.Color(params.foam_color)
+    uniforms.foamCol.value.set(color.r, color.g,color.b)
     gui.addColor(params,'water_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
             uniforms.waterCol.value.set(color.r, color.g, color.b)
         }
     )
+    color = new d.THREE.Color(params.water_color)
+    uniforms.waterCol.value.set(color.r, color.g,color.b)
     gui.addColor(params,'water2_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
             uniforms.water2Col.value.set(color.r, color.g, color.b)
         }
     )
+    color = new d.THREE.Color(params.water2_color)
+    uniforms.water2Col.value.set(color.r, color.g,color.b)
     gui.add(params, 'wave_speed').onFinishChange((value) => uniforms.speed.value = value)
     
     gui.add(params,'xOcean').onFinishChange((value) => uniforms.iResolution.value.x = value)
@@ -947,7 +953,7 @@ const uniforms = {
     },
     speed:{
         type: "f",
-        value: 0.5
+        value: 0.2
     },
     iResolution: {
         type: "v2",
