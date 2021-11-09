@@ -722,19 +722,19 @@ const InitGUI = (d) => {
         water2_color:0XFFFFFF,
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
-    gui.addColor(param,'foam_color').onFinishChange(
+    gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
             uniforms.FOAM_COL.value = color.toString().convertToRGBClamped()
         }
     )
-    gui.addColor(param,'water_color').onFinishChange(
+    gui.addColor(params,'water_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
             uniforms.WATER_COL.value = color.toString().convertToRGBClamped()
         }
     )
-    gui.addColor(param,'water2_color').onFinishChange(
+    gui.addColor(params,'water2_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
             uniforms.WATER2_COL.value = color.toString().convertToRGBClamped()
