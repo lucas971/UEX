@@ -741,6 +741,7 @@ const generateCity = (d) => {
             InitializeSound()
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
+            d.scene.getObjectByName('Plane019').material = ocean_mat
             animate()
         },
         (xhr) => {
