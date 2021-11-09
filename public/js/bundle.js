@@ -1210,7 +1210,7 @@ const StopAimAtObject = () => {
 
 //#endregion
 const InitializeShaders = (d) => {
-    mouse = d.THREE.Vector2()
+    mouse = new d.THREE.Vector2()
     ocean_mat = new THREE.ShaderMaterial({
         uniforms: ocean_uniforms,
         vertexShader: ocean_vert,
