@@ -1184,6 +1184,8 @@ let mouse
 const RaycastOutline = (clientX, clientY) => {
     mouse.x = (clientX / window.innerWidth) * 2 - 1
     mouse.y = -(clientY/window.innerHeight) * 2 + 1
+    
+    console.log(mouse)
     d.raycaster.setFromCamera(mouse,d.camera)
     
     const intersects = d.raycaster.intersectObjects(d.scene.children)
