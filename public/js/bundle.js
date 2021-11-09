@@ -883,6 +883,68 @@ const InitializeSound =() => {
 }
 //#endregion
 
+//#region SHADERS
+
+//#region OUTLINE SHADER 
+let outline_material_white
+let outline_material_black
+
+const outline_shader_white = {
+    uniforms: {
+        "linewidth":  { type: "f", value: 0.3 },
+    },
+    vertex_shader: [
+        "uniform float linewidth;",
+        "void main() {",
+        "vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );",
+        "vec4 displacement = vec4( normalize( normalMatrix * normal ) * linewidth, 0.0 ) + mvPosition;",
+        "gl_Position = projectionMatrix * displacement;",
+        "}"
+    ].join("\n"),
+    fragment_shader: [
+        "void main() {",
+        "gl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );",
+        "}"
+    ].join("\n")
+};
+
+const outline_shader_black = {
+    uniforms: {
+        "linewidth":  { type: "f", value: 0.3 },
+    },
+    vertex_shader: [
+        "uniform float linewidth;",
+        "void main() {",
+        "vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );",
+        "vec4 displacement = vec4( normalize( normalMatrix * normal ) * linewidth, 0.0 ) + mvPosition;",
+        "gl_Position = projectionMatrix * displacement;",
+        "}"
+    ].join("\n"),
+    fragment_shader: [
+        "void main() {",
+        "gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 );",
+        "}"
+    ].join("\n")
+};
+
+const InitializeShaders = () => {
+    outline_material_white = new d.THREE.ShaderMaterial({
+        uniforms: d.THREE.UniformsUtils.clone(outline_shader_white.uniforms),
+        vertexShader: outline_shader_white.vertex_shader,
+        fragmentShader: outline_shader_white.fragment_shader
+    })
+
+    outline_material_black = new d.THREE.ShaderMaterial({
+        uniforms: d.THREE.UniformsUtils.clone(outline_shader_black.uniforms),
+        vertexShader: outline_shader_black.vertex_shader,
+        fragmentShader: outline_shader_black.fragment_shader
+    })
+}
+
+//#endregion
+
+//#endregion
+
 //#region MAIN
 
 //#region IMPORTS
@@ -1021,63 +1083,5 @@ const main = () => {
     animate()
 }
 main()
-
-//#endregion
-
-//#region OUTLINE SHADER 
-let outline_material_white
-let outline_material_black
-
-const outline_shader_white = {
-    uniforms: {
-        "linewidth":  { type: "f", value: 0.3 },
-    },
-    vertex_shader: [
-        "uniform float linewidth;",
-        "void main() {",
-        "vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );",
-        "vec4 displacement = vec4( normalize( normalMatrix * normal ) * linewidth, 0.0 ) + mvPosition;",
-        "gl_Position = projectionMatrix * displacement;",
-        "}"
-    ].join("\n"),
-    fragment_shader: [
-        "void main() {",
-        "gl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );",
-        "}"
-    ].join("\n")
-};
-
-const outline_shader_black = {
-    uniforms: {
-        "linewidth":  { type: "f", value: 0.3 },
-    },
-    vertex_shader: [
-        "uniform float linewidth;",
-        "void main() {",
-        "vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );",
-        "vec4 displacement = vec4( normalize( normalMatrix * normal ) * linewidth, 0.0 ) + mvPosition;",
-        "gl_Position = projectionMatrix * displacement;",
-        "}"
-    ].join("\n"),
-    fragment_shader: [
-        "void main() {",
-        "gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 );",
-        "}"
-    ].join("\n")
-};
-
-const InitializeShaders = () => {
-    outline_material_white = new d.THREE.ShaderMaterial({
-        uniforms: d.THREE.UniformsUtils.clone(outline_shader_white.uniforms),
-        vertexShader: outline_shader_white.vertex_shader,
-        fragmentShader: outline_shader_white.fragment_shader
-    })
-
-    outline_material_black = new d.THREE.ShaderMaterial({
-        uniforms: d.THREE.UniformsUtils.clone(outline_shader_black.uniforms),
-        vertexShader: outline_shader_black.vertex_shader,
-        fragmentShader: outline_shader_black.fragment_shader
-    })
-}
 
 //#endregion
