@@ -927,7 +927,7 @@ const outline_shader_black = {
     ].join("\n")
 };
 
-const InitializeShaders = () => {
+const InitializeShaders = (d) => {
     outline_material_white = new d.THREE.ShaderMaterial({
         uniforms: d.THREE.UniformsUtils.clone(outline_shader_white.uniforms),
         vertexShader: outline_shader_white.vertex_shader,
@@ -1072,7 +1072,7 @@ const Resize = () => {
 const main = () => {
     setup()
 
-    InitializeShaders()
+    InitializeShaders(threeData)
     LoadCityScene()
     LoadProgress()
 
