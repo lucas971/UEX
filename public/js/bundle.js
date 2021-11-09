@@ -933,8 +933,8 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "\n" +
     "\n" +
     "#define WATER_COL vec3(0.0, 0.4453, 0.7305)\n" +
-    "#define WATER2_COL vec3(0.0, 0.4180, 0.6758)\n" +
-    "#define FOAM_COL vec3(0.0, 0.0, 0.0)\n" +
+    "#define WATER2_COL vec3(0.0, 0.3180, 0.5758)\n" +
+    "#define FOAM_COL vec3(0.85, 0.96, 0.96)\n" +
     "\n" +
     "#define M_2PI 6.283185307\n" +
     "#define M_6PI 18.84955592\n" +
