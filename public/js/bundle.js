@@ -1188,7 +1188,7 @@ const RaycastOutline = (clientX, clientY) => {
     console.log(mouse)
     d.raycaster.setFromCamera(mouse,d.camera)
     
-    const intersects = d.raycaster.intersectObjects(d.scene.children)
+    const intersects = d.raycaster.intersectObjects(d.scene.children, true)
     
     for (let i = 0; i < intersects.length; i++) {
         console.log(intersects[i].name)
