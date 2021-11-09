@@ -673,7 +673,7 @@ const AnimateHotspotTranslation = (delta) => {
             localStorage.currentX = cameraHolder.position.x.toString()
             localStorage.currentZ = cameraHolder.position.z.toString()
             localStorage.comeBack = 'true'
-            hotspotCamParam.button.click()
+            //hotspotCamParam.button.click()
         }
     }
 
