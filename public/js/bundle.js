@@ -310,6 +310,7 @@ const GenerateHtml = (d) => {
         else {
             icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
             const obj = d.scene.getObjectByName(icons[i].id)
+            console.log(obj)
             var shaderMesh = new d.THREE.Mesh(obj.geometry, outline_mat)
             obj.parent.add(shaderMesh)
             shaderMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
