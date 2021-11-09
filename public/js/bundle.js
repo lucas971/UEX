@@ -1294,7 +1294,7 @@ const InitializeShaders = (d) => {
     d.composer.addPass( outlinePass );
 
     outlinePassHighlight = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
-    d.composer.addPass( outlinePass );
+    d.composer.addPass( outlinePassHighlight );
     
     const textureLoader = new THREE.TextureLoader();
     textureLoader.load( 'https://lucas971.github.io/UEX/public/images/tri_pattern.jpg', function ( texture ) {
