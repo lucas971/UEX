@@ -535,6 +535,8 @@ const OnMouseMove = (e) => {
     offsetZ = e.clientY - currentMouseY
     currentMouseX = e.clientX
     currentMouseY = e.clientY
+
+    RaycastOutline(currentMouseX, currentMouseY)
 }
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
@@ -952,8 +954,6 @@ const InitializeSound =() => {
 
 //#region SHADERS
 
-let selectedObject
-
 import { EffectComposer } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/RenderPass.js";
 import { ShaderPass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/ShaderPass.js";
@@ -1180,15 +1180,37 @@ const ocean_frag =
 
 let selectedObjects = []
 let outlinePass
+let mouse
 
+const RaycastOutline = (clientX, clientY) => {
+    mouse.x = (clientX / window.innerWidth) * 2 - 1
+    mouse.y = -(clientY/window.innerHeight) * 2 + 1
+    d.raycaster.setFromCamera(mouse,d.camera)
+    
+    const intersects = raycaster.intersectObjects(scene.children)
+    
+    for (let i = 0; i < intersects.length; i++) {
+        if (selectedObjects.indexOf(intersects[i]) >= 0) {
+            console.log(intersects[i].name)
+        }
+    }
+}
 const AddToSelectedObjects = (obj) => {
     selectedObjects.push(obj)
     outlinePass.selectedObjects = selectedObjects
-    
+}
+
+const AimAtObject = (obj) => {
+    outlinePass.selectedObjects = [obj]
+}
+
+const StopAimAtObject = () => {
+    outlinePass.selectedObjects = selectedObjects
 }
 
 //#endregion
 const InitializeShaders = (d) => {
+    mouse = d.THREE.Vector2()
     ocean_mat = new THREE.ShaderMaterial({
         uniforms: ocean_uniforms,
         vertexShader: ocean_vert,
@@ -1282,7 +1304,9 @@ const setup = () => {
         .setKTX2Loader( KTX2_LOADER.detectSupport( renderer ) )
         .setMeshoptDecoder( MeshoptDecoder );
 
-    threeData = {THREE, loader, clock, scene, camera, renderer, canvas}
+    const raycaster = new THREE.Raycaster();
+    
+    threeData = {THREE, loader, clock, scene, camera, renderer, canvas, raycaster}
 }
 
 //#endregion
