@@ -1108,12 +1108,17 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    \t}\n" +
     "    }\n" +
     "}\n"
+
 const InitializeShaders = (d) => {
     ocean_mat = new THREE.ShaderMaterial({
         uniforms: uniforms,
         vertexShader: ocean_vert,
         fragmentShader: ocean_frag
     });
+}
+
+const UpdateUniforms = (time) => {
+    uniforms.iTime.value = time
 }
 
 
@@ -1248,6 +1253,7 @@ const main = () => {
 
     InitializeShaders(threeData)
     LoadCityScene()
+    UpdateUniforms(clock.getElapsedTime())
 }
 main()
 
