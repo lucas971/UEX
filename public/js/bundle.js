@@ -906,8 +906,8 @@ const uniforms = {
         value: new THREE.Vector2()
     },
 };
-uniforms.iResolution.value.x = 1; // window.innerWidth;
-uniforms.iResolution.value.y = 1; // window.innerHeight;
+uniforms.iResolution.value.x = 100; // window.innerWidth;
+uniforms.iResolution.value.y = 100; // window.innerHeight;
 
 const ocean_vert = 
     "attribute vec3 in_Position;\n" +
