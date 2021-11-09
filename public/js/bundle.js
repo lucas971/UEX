@@ -178,6 +178,19 @@ String.prototype.convertToRGB = function(){
     ];
 }
 
+String.prototype.convertToRGBClamped = function(){
+    if(this.length !== 6){
+        throw "Only six-digit hex colors are allowed.";
+    }
+
+    var aRgbHex = this.match(/.{1,2}/g);
+    return [
+        parseInt(aRgbHex[0], 16) / 255.0,
+        parseInt(aRgbHex[1], 16) / 255.0,
+        parseInt(aRgbHex[2], 16) / 255.0
+    ];
+}
+
 const PopulateHotspot = (hotspotInfo) => {
     if (hotspotInfo.type > 3) {
         return
@@ -691,7 +704,7 @@ const ShowDatGUI = true
 let gui
 let a_light
 
-const InitGUI = () => {
+const InitGUI = (d) => {
     const guiWrap = document.getElementById('gui')
     
     if (!ShowDatGUI) { 
@@ -703,9 +716,31 @@ const InitGUI = () => {
         lightColor:0xFFFFFF,
         lightIntensity:1,
         xOcean:1,
-        yOcean:1
+        yOcean:1,
+        foam_color:0xFFFFFF,
+        water_color:0xFFFFFF,
+        water2_color:0XFFFFFF,
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
+    gui.addColor(param,'foam_color').onFinishChange(
+        (value) => {
+            let color = new d.THREE.Color(value)
+            uniforms.FOAM_COL.value = color.toString().convertToRGBClamped()
+        }
+    )
+    gui.addColor(param,'water_color').onFinishChange(
+        (value) => {
+            let color = new d.THREE.Color(value)
+            uniforms.WATER_COL.value = color.toString().convertToRGBClamped()
+        }
+    )
+    gui.addColor(param,'water2_color').onFinishChange(
+        (value) => {
+            let color = new d.THREE.Color(value)
+            uniforms.WATER2_COL.value = color.toString().convertToRGBClamped()
+        }
+    )
+    
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
     gui.add(params,'xOcean').onFinishChange((value) => uniforms.iResolution.value.x = value)
     gui.add(params, 'yOcean').onFinishChange((value) => uniforms.iResolution.value.y = value)
@@ -740,7 +775,7 @@ const generateCity = (d) => {
             setupScene(gltf, d)
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
-            InitGUI()
+            InitGUI(d)
             LoadProgress()
             InitializeSound()
             InitializeHotspots(threeData)
@@ -908,8 +943,20 @@ const uniforms = {
     },
     iResolution: {
         type: "v2",
-        value: new THREE.Vector2()
+        value: null
     },
+    WATER_COL: {
+        type: "v3",
+        value: null
+    },
+    WATER2_COL: {
+        type: "v3",
+        value: null
+    },
+    FOAM_COL: {
+        type: "v3",
+        value: null
+    }
 };
 uniforms.iResolution.value.x = 1; // window.innerWidth;
 uniforms.iResolution.value.y = 1; // window.innerHeight;
@@ -941,6 +988,9 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "\n" +
     "    uniform float iTime;\n" +
     "    uniform vec2 iResolution;\n" +
+    "    uniform vec3 WATER_COL;\n" +
+    "    uniform vec3 WATER2_COL;\n" +
+    "    uniform vec3 FOAM_COL;\n" +
     "    varying vec2 fragCoord;\n" +
     "    varying vec2 vUv;\n" +
     "float circ(vec2 pos, vec2 c, float s)\n" +
