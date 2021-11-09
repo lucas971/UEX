@@ -797,7 +797,6 @@ const generateCity = (d) => {
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
             d.scene.getObjectByName('Eau').material = ocean_mat
-            console.log(d.scene.getObjectByName('Eau'))
             animate()
         },
         (xhr) => {
@@ -1187,7 +1186,7 @@ const RaycastOutline = (clientX, clientY) => {
     
     d.raycaster.setFromCamera(mouse,d.camera)
     
-    const intersects = d.raycaster.intersectObjects(d.scene.children, true)
+    const intersects = d.raycaster.intersectObjects(selectedObjects, true)
     
     for (let i = 0; i < intersects.length; i++) {
         console.log(intersects[i])
