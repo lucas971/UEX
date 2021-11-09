@@ -1193,6 +1193,7 @@ const InitializeShaders = (d) => {
     d.composer.addPass( renderPass );
 
     outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
+    outlinePass.edgeThickness = 3.0
     d.composer.addPass( outlinePass );
 
     const textureLoader = new THREE.TextureLoader();
