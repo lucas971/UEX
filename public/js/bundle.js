@@ -630,6 +630,7 @@ const RequestHotspotTranslation = (hotspotPos, button) => {
     if (hotspotTransition) {
         return
     }
+    
     hotspotCamParam.initialPos = cameraHolder.position.clone()
     hotspotCamParam.state = 0
     hotspotCamParam.initialZoom = d.camera.zoom
@@ -1226,8 +1227,13 @@ const AimAtObject = (obj) => {
     currentObject = obj
     const target = []
     target.push(obj)
-    console.log(obj)
     outlinePass.selectedObjects = target
+    outlinePass.edgeThickness = 2
+    outlinePass.edgeGlow = 2
+    outlinePass.edgeStrength = 5
+    outlinePass.pulsePeriod = 2
+    outlinePass.visibleEdgeColor.setHex(0xffa705)
+    outlinePass.hiddenEdgeColor.setHex(0x939329)
     aiming = true
 }
 
@@ -1237,6 +1243,13 @@ const StopAimAtObject = () => {
     }
     NormalMode()
     outlinePass.selectedObjects = selectedObjects
+    outlinePass.selectedObjects = target
+    outlinePass.edgeThickness = 1
+    outlinePass.edgeGlow = 0
+    outlinePass.edgeStrength = 3
+    outlinePass.pulsePeriod = 0
+    outlinePass.visibleEdgeColor.setHex(0xffffff)
+    outlinePass.hiddenEdgeColor.setHex(0x3c3c01)
     aiming = false
 }
 
