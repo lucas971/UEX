@@ -703,8 +703,8 @@ const InitGUI = () => {
     let params = {
         lightColor:0xFFFFFF,
         lightIntensity:1,
-        xOcean:100,
-        yOcean:100
+        xOcean:1,
+        yOcean:1
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
@@ -911,7 +911,7 @@ const uniforms = {
         value: new THREE.Vector2()
     },
 };
-uniforms.iResolution.value.x = 100; // window.innerWidth;
+uniforms.iResolution.value.x = 1; // window.innerWidth;
 uniforms.iResolution.value.y = 1; // window.innerHeight;
 
 const ocean_vert = 
@@ -1123,6 +1123,7 @@ const InitializeShaders = (d) => {
 }
 
 const UpdateUniforms = (time) => {
+    console.log(time)
     uniforms.iTime.value = time
 }
 
