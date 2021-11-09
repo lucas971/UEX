@@ -945,7 +945,7 @@ import { EffectComposer } from "https://cdn.skypack.dev/three@0.132.2/examples/j
 import { RenderPass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/RenderPass.js";
 import { ShaderPass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/ShaderPass.js";
 import { FXAAShader } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/shaders/FXAAShader.js";
-import { Pass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/Pass.js";
+import { Pass, FullScreenQuad } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/Pass.js";
 
 //#region OCEAN
 let ocean_mat
@@ -1186,7 +1186,7 @@ class CustomOutlinePass extends Pass {
         this.renderCamera = camera;
         this.resolution = new THREE.Vector2(resolution.x, resolution.y);
 
-        this.fsQuad = new Pass.FullScreenQuad(null);
+        this.fsQuad = new FullScreenQuad(null);
         this.fsQuad.material = this.createOutlinePostProcessMaterial();
 
         // Create a buffer to store the normals of the scene onto
