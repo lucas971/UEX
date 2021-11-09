@@ -1186,7 +1186,7 @@ const InitializeShaders = (d) => {
 
     d.composer = new EffectComposer( d.renderer );
 
-    const renderPass = new RenderPass( scene, camera );
+    const renderPass = new RenderPass( d.scene, d.camera );
     d.composer.addPass( renderPass );
 
     const outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), scene, camera );
