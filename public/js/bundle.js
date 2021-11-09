@@ -819,6 +819,7 @@ const setupAnimMixer = (gltf, d) => {
 //Update the city animation and check camera movements
 const UpdateCity = (d) => {
     let delta = d.clock.getDelta()
+    console.log(delta)
     delta = Math.min(delta, 0.03)
     updateVolume(delta)
     if (ready) {
