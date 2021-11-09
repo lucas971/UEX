@@ -295,6 +295,9 @@ const UpdateIconsPosition = (d) => {
     d.camera.updateMatrixWorld()
 
     for (let i = 0; i < icons.length; i++) {
+        if (icons[i].image === null) {
+            continue
+        }
         const obj = d.scene.getObjectByName(icons[i].id)
         if (!obj) {
             continue
@@ -316,18 +319,19 @@ const GenerateHtml = (d) => {
     const iconDiv = document.getElementById('icons')
     
     for (let i = 0; i< icons.length; i++) {
-        icons[i].image  = document.getElementById(icons[i].iconid)
         let data = GetHotspotData(icons[i].iconid)
-        icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
         if (data.type <= 4) {
+            icons[i].image = document.getElementById(icons[i].iconid)
+            icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(i))
+            iconDiv.appendChild(icons[i].image)
         }
         else {
+            icons[i].image = null
             const obj = d.scene.getObjectByName(icons[i].id)
             AddToSelectedObjects(obj)
             roomMapping[obj] = document.getElementById(data.room_link)
         }
-        iconDiv.appendChild(icons[i].image)
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
