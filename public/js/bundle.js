@@ -822,6 +822,7 @@ const UpdateCity = (d) => {
     console.log(delta)
     delta = Math.min(delta, 0.03)
     updateVolume(delta)
+    UpdateUniforms(delta)
     if (ready) {
         mixer.update(delta)
         UpdateCamera(delta)
@@ -1122,8 +1123,8 @@ const InitializeShaders = (d) => {
     });
 }
 
-const UpdateUniforms = (time) => {
-    uniforms.iTime.value = time
+const UpdateUniforms = (delta) => {
+    uniforms.iTime.value = uniforms.iTime.value + delta
 }
 
 
@@ -1217,7 +1218,6 @@ const LoadCityScene = () => {
 
 const animate = () => {
 
-    UpdateUniforms(clock.getElapsedTime())
     requestAnimationFrame( animate )
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
