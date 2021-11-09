@@ -314,6 +314,7 @@ const GenerateHtml = (d) => {
             var shaderMesh = new d.THREE.Mesh(obj.geometry, outline_mat)
             obj.parent.add(shaderMesh)
             shaderMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
+            shaderMesh.scale.set(obj.scale.x, obj.scale.y, obj.scale.z)
         }
         iconDiv.appendChild(icons[i].image)
     }
