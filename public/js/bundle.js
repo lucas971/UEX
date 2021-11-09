@@ -30,6 +30,7 @@ const toScreenPosition = (obj, d) => {
 const normal = 0
 const drag = 1
 const hotspot = 2
+const room = 3
 
 let mode
 
@@ -70,6 +71,15 @@ const HotspotMode = () => {
         interactibles[i].style.pointerEvents = "none"
     }
     mode = hotspot
+}
+
+const RoomMode = () => {
+    document.getElementById('canvas').style.cursor = "alias"
+    let interactibles = document.getElementsByClassName('spot-on-map')
+    for (let i = 0; i < interactibles.length; i++) {
+        interactibles[i].style.pointerEvents = "none"
+    }
+    mode = room
 }
 
 
@@ -800,10 +810,8 @@ const generateCity = (d) => {
             animate()
         },
         (xhr) => {
-            //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
         },
         (error) => {
-            //console.log(error)
         })
 }
 
@@ -1179,8 +1187,12 @@ const ocean_frag =
 let selectedObjects = []
 let outlinePass
 let mouse
+let aiming = false
 
 const RaycastOutline = (clientX, clientY) => {
+    if (!IsNormal()) {
+        return
+    }
     mouse.x = (clientX / window.innerWidth) * 2 - 1
     mouse.y = -(clientY/window.innerHeight) * 2 + 1
     
@@ -1188,8 +1200,10 @@ const RaycastOutline = (clientX, clientY) => {
     
     const intersects = d.raycaster.intersectObjects(selectedObjects, true)
     
-    for (let i = 0; i < intersects.length; i++) {
-        console.log(intersects[i])
+    if (intersects.length > 0) {
+        AimAtObject(intersects[0])
+    } else {
+        StopAimAtObject()
     }
 }
 const AddToSelectedObjects = (obj) => {
@@ -1198,11 +1212,21 @@ const AddToSelectedObjects = (obj) => {
 }
 
 const AimAtObject = (obj) => {
+    if (aiming) {
+        return
+    }
+    RoomMode()
     outlinePass.selectedObjects = [obj]
+    aiming = true
 }
 
 const StopAimAtObject = () => {
+    if (!aiming) {
+        return
+    }
+    NormalMode()
     outlinePass.selectedObjects = selectedObjects
+    aiming = false
 }
 
 //#endregion
