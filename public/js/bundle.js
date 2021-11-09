@@ -298,7 +298,7 @@ const GenerateHtml = (d) => {
             const obj = d.scene.getObjectByName(icons[i].id)
             const outlineMaterial = new d.THREE.MeshBasicMaterial ({color : 0xff0000, side :d.THREE.BackSide})
             const outlineMesh = new d.THREE.Mesh(obj.geometry, outlineMaterial)
-            outlineMesh.position = obj.position
+            outlineMesh.position.set(obj.position)
             outlineMesh.scale.multiplyScalar(1.05)
             d.scene.add(outlineMesh)
             console.log(obj)
