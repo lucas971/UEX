@@ -1,6 +1,5 @@
 //#region Screen Projection
 //Auxiliary function allowing to project 3D objects into the 2D screen space.
-import {param} from "express/lib/router";
 
 const toScreenPosition = (obj, d) => {
     const vector = new d.THREE.Vector3()
