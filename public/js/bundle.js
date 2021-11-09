@@ -943,23 +943,21 @@ const uniforms = {
     },
     iResolution: {
         type: "v2",
-        value: null
+        value: new THREE.Vector2(1,1)
     },
     WATER_COL: {
         type: "v3",
-        value: null
+        value: new THREE.Vector3(0,0.4,0.7)
     },
     WATER2_COL: {
         type: "v3",
-        value: null
+        value: new THREE.Vector3(0,0.1,0.5)
     },
     FOAM_COL: {
         type: "v3",
-        value: null
+        value: new THREE.Vector3(0.8,0.95,0.95)
     }
 };
-uniforms.iResolution.value.x = 1; // window.innerWidth;
-uniforms.iResolution.value.y = 1; // window.innerHeight;
 
 const ocean_vert = 
     "attribute vec3 in_Position;\n" +
