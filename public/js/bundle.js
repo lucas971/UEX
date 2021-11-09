@@ -1360,6 +1360,9 @@ const setup = () => {
     const raycaster = new THREE.Raycaster();
     
     threeData = {THREE, loader, clock, scene, camera, renderer, canvas, raycaster}
+    
+    document.getElementsByClassName("menu-uex-div")[0].style.pointerEvents = 'none'
+    document.getElementsByClassName("hamburger-div")[0].style.pointerEvents = 'all'
 }
 
 //#endregion
