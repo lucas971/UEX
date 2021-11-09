@@ -980,7 +980,7 @@ const outline_uniforms = {
 }
 
 const outline_vert = 
-    "uniform float offset\n"+
+    "uniform float offset;\n"+
     "void main() {\n"+
     "   vec4 pos = modelViewMatrix * vec4( position + normal * offset, 1.0 );\n"+
     "   gl_Position = projectionMatrix * pos;\n"+
@@ -988,7 +988,7 @@ const outline_vert =
 
 const outline_frag =
     "void main() {\n"+
-    "    gl_FragColor = vec4(1.0,0.0,0.0,1.0)\n"+
+    "    gl_FragColor = vec4(1.0,0.0,0.0,1.0);\n"+
     "}"
 
 const ocean_vert = 
