@@ -1173,7 +1173,7 @@ let selectedObjects = []
 let outlinePass
 
 const AddToSelectedObjects = (obj) => {
-    selectedObject.push(obj)
+    selectedObjects.push(obj)
     outlinePass.selectedObjects = selectedObjects
     
 }
