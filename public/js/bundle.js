@@ -1158,6 +1158,7 @@ let activeScene = noActiveScene
 
 //#region SETUP
 const setup = () => {
+    clock.start()
     const scene = new THREE.Scene()
 
     const camera = null
