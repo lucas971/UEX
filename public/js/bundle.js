@@ -344,13 +344,16 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 const TryClickedRoom = (obj) => {
-    console.log(obj)
-    RequestHotspotTranslation(obj.position, roomMapping[obj])
+    let worldPos = new d.THREE.Vector3()
+    obj.getWorldPosition(worldPos)
+    RequestHotspotTranslation(worldPos, roomMapping[obj])
 }
 const TryClickedLink = (i) => {
     let iconId = icons[i].iconid
     const obj = d.scene.getObjectByName(icons[i].id)
-    RequestHotspotTranslation(obj.position, null)
+    let worldPos = new d.THREE.Vector3()
+    obj.getWorldPosition(worldPos)
+    RequestHotspotTranslation(worldPos, null)
     setAudioOnHotspot(true)
     HotspotMode()
     OpenedHotspot(iconId)
