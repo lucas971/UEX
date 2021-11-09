@@ -297,6 +297,7 @@ const GenerateHtml = (d) => {
             icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
             const obj = d.scene.getObjectByName(icons[i].id)
             obj.material = outline_material_white
+            console.log(obj)
         }
         iconDiv.appendChild(icons[i].image)
     }
