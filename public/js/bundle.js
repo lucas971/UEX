@@ -720,8 +720,11 @@ const InitGUI = (d) => {
         foam_color:0xFFFFFF,
         water_color:0xFFFFFF,
         water2_color:0XFFFFFF,
+        wave_speed:0.5
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
+    gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
+    
     gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
@@ -740,8 +743,8 @@ const InitGUI = (d) => {
             uniforms.water2Col.value.set(color.r, color.g, color.b)
         }
     )
+    gui.add(params, 'wave_speed').onFinishChange((value) => uniforms.speed = value)
     
-    gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
     gui.add(params,'xOcean').onFinishChange((value) => uniforms.iResolution.value.x = value)
     gui.add(params, 'yOcean').onFinishChange((value) => uniforms.iResolution.value.y = value)
 
@@ -942,6 +945,10 @@ const uniforms = {
         type: "f",
         value: 1.0
     },
+    speed:{
+        type: "f",
+        value: 0.5
+    },
     iResolution: {
         type: "v2",
         value: new THREE.Vector2(1,1)
@@ -982,6 +989,7 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "#define M_6PI 18.84955592\n" +
     "\n" +
     "    uniform float iTime;\n" +
+    "    uniform float speed;\n" +
     "    uniform vec2 iResolution;\n" +
     "    uniform vec3 waterCol;\n" +
     "    uniform vec3 water2Col;\n" +
@@ -1087,9 +1095,9 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    // Parallax height distortion with two directional waves at\n" +
     "    // slightly different angles.\n" +
     "    vec2 a = 0.025 * cdir.xz / cdir.y; // Parallax offset\n" +
-    "    float h = sin(uv.x + iTime); // Height at UV\n" +
+    "    float h = sin(uv.x + iTime*speed); // Height at UV\n" +
     "    uv += a * h;\n" +
-    "    h = sin(0.841471 * uv.x - 0.540302 * uv.y + iTime);\n" +
+    "    h = sin(0.841471 * uv.x - 0.540302 * uv.y + iTime*speed);\n" +
     "    uv += a * h;\n" +
     "\n" +
     "    \n" +
@@ -1097,8 +1105,8 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    // Texture distortion\n" +
     "    float d1 = mod(uv.x + uv.y, M_2PI);\n" +
     "    float d2 = mod((uv.x + uv.y + 0.25) * 1.3, M_6PI);\n" +
-    "    d1 = iTime * 0.07 + d1;\n" +
-    "    d2 = iTime * 0.5 + d2;\n" +
+    "    d1 = iTime * speed * 0.07 + d1;\n" +
+    "    d2 = iTime * speed * 0.5 + d2;\n" +
     "    vec2 dist = vec2(\n" +
     "    \tsin(d1) * 0.15 + sin(d2) * 0.05,\n" +
     "    \tcos(d1) * 0.15 + cos(d2) * 0.05\n" +
