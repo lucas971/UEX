@@ -990,13 +990,7 @@ const ocean_vert =
     "        gl_Position = projectionMatrix * mvPosition;\n" +
     "        fragCoord = position.xz;\n" +
     "    }"
-const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
-    "// License: Creative Commons Attribution 4.0 International\n" +
-    "\n" +
-    "// Source code for the texture generator is available at:\n" +
-    "// https://github.com/lmurray/circleator\n" +
-    "\n" +
-    "\n" +
+const ocean_frag = 
     "#define M_2PI 6.283185307\n" +
     "#define M_6PI 18.84955592\n" +
     "\n" +
@@ -1189,15 +1183,15 @@ const InitializeShaders = (d) => {
     const renderPass = new RenderPass( d.scene, d.camera );
     d.composer.addPass( renderPass );
 
-    const outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), scene, camera );
+    const outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
     d.composer.addPass( outlinePass );
 
     const textureLoader = new THREE.TextureLoader();
     textureLoader.load( 'https://github.com/mrdoob/three.js/blob/dev/examples/textures/tri_pattern.jpg', function ( texture ) {
 
         outlinePass.patternTexture = texture;
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
+        texture.wrapS = d.THREE.RepeatWrapping;
+        texture.wrapT = d.THREE.RepeatWrapping;
 
     } );
 
