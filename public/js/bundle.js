@@ -1388,6 +1388,7 @@ const setup = () => {
     
     document.getElementsByClassName("menu-uex-div")[0].style.pointerEvents = 'none'
     document.getElementsByClassName("hamburger-div")[0].style.pointerEvents = 'all'
+    document.getElementsByClassName("color-div-wrapper")[0].style.pointerEvents = 'all'
 }
 
 //#endregion
