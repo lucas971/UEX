@@ -1214,12 +1214,18 @@ const RaycastOutline = (clientX, clientY) => {
     
     d.raycaster.setFromCamera(mouse,d.camera)
     
-    const intersects = d.raycaster.intersectObjects(selectedObjects, true)
-    
-    if (intersects.length > 0) {
-        AimAtObject(intersects[0].object)
-    } else {
-        StopAimAtObject()
+    if (!aiming) {
+        const intersects = d.raycaster.intersectObjects(selectedObjects, true)
+
+        if (intersects.length > 0) {
+            AimAtObject(intersects[0].object)
+        }
+    }
+    else {
+        const intersects = d.raycaster.intersectObject(currentObject, true)
+        if (intersects.length === 0) {
+            StopAimAtObject()
+        }
     }
 }
 const AddToSelectedObjects = (obj) => {
