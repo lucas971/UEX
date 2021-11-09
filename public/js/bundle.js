@@ -302,7 +302,6 @@ const GenerateHtml = (d) => {
             obj.parent.add(outlineMesh)
             outlineMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
             outlineMesh.scale.multiplyScalar(1.05)
-            console.log(outlineMesh)
         }
         iconDiv.appendChild(icons[i].image)
     }
@@ -1123,7 +1122,6 @@ const InitializeShaders = (d) => {
 }
 
 const UpdateUniforms = (time) => {
-    console.log(time)
     uniforms.iTime.value = time
 }
 
