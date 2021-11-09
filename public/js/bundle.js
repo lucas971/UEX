@@ -742,7 +742,7 @@ const generateCity = (d) => {
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
             //d.scene.getObjectByName('Plane019').material = ocean_mat
-            console.log(d.scene.getObjectByName('Plane019'))
+            console.log(d.scene.getObjectByName('Eau'))
             animate()
         },
         (xhr) => {
