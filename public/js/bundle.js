@@ -78,7 +78,7 @@ const HotspotMode = () => {
 }
 
 const RoomMode = () => {
-    document.getElementById('canvas').style.cursor = "alias"
+    document.getElementById('canvas').style.cursor = "pointer"
     let interactibles = document.getElementsByClassName('spot-on-map')
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "none"
