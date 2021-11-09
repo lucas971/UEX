@@ -909,7 +909,10 @@ const uniforms = {
 uniforms.iResolution.value.x = 1; // window.innerWidth;
 uniforms.iResolution.value.y = 1; // window.innerHeight;
 
-const ocean_vert = "attribute vec3 in_Position;\n" +
+const ocean_vert = 
+    "attribute vec3 in_Position;\n" +
+    "    uniform float iTime;\n" +
+    "    uniform vec2 iResolution;\n" +
     "    varying vec2 fragCoord;\n" +
     "    varying vec2 vUv; \n" +
     "    void main()\n" +
