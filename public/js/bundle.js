@@ -733,6 +733,11 @@ const generateCity = (d) => {
             SetupCameraHandler(d)
             UpdateIconsPosition(d)
             InitGUI()
+            LoadProgress()
+            InitializeSound()
+            InitializeHotspots(threeData)
+            InitializeCursor(threeData)
+            animate()
         },
         (xhr) => {
             //console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -1075,13 +1080,6 @@ const main = () => {
 
     InitializeShaders(threeData)
     LoadCityScene()
-    LoadProgress()
-
-    InitializeSound()
-    InitializeHotspots(threeData)
-    InitializeCursor(threeData)
-
-    animate()
 }
 main()
 
