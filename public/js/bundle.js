@@ -310,11 +310,9 @@ const GenerateHtml = (d) => {
         else {
             icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
             const obj = d.scene.getObjectByName(icons[i].id)
-            const outlineMaterial = new d.THREE.MeshBasicMaterial ({color : 0xff0000, side :d.THREE.BackSide})
-            const outlineMesh = new d.THREE.Mesh(obj.geometry, outlineMaterial)
-            obj.parent.add(outlineMesh)
-            outlineMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
-            outlineMesh.scale.multiplyScalar(1.05)
+            var shaderMesh = new d.THREE.Mesh(obj.geometry, outline_mat)
+            obj.parent.add(shaderMesh)
+            shaderMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
         }
         iconDiv.appendChild(icons[i].image)
     }
@@ -728,31 +726,31 @@ const InitGUI = (d) => {
     gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.foamCol.value.set(color.r, color.g, color.b)
+            ocean_uniforms.foamCol.value.set(color.r, color.g, color.b)
         }
     )
     let color = new d.THREE.Color(params.foam_color)
-    uniforms.foamCol.value.set(color.r, color.g,color.b)
+    ocean_uniforms.foamCol.value.set(color.r, color.g,color.b)
     gui.addColor(params,'water_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.waterCol.value.set(color.r, color.g, color.b)
+            ocean_uniforms.waterCol.value.set(color.r, color.g, color.b)
         }
     )
     color = new d.THREE.Color(params.water_color)
-    uniforms.waterCol.value.set(color.r, color.g,color.b)
+    ocean_uniforms.waterCol.value.set(color.r, color.g,color.b)
     gui.addColor(params,'water2_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.water2Col.value.set(color.r, color.g, color.b)
+            ocean_uniforms.water2Col.value.set(color.r, color.g, color.b)
         }
     )
     color = new d.THREE.Color(params.water2_color)
-    uniforms.water2Col.value.set(color.r, color.g,color.b)
-    gui.add(params, 'wave_speed').onFinishChange((value) => uniforms.speed.value = value)
+    ocean_uniforms.water2Col.value.set(color.r, color.g,color.b)
+    gui.add(params, 'wave_speed').onFinishChange((value) => ocean_uniforms.speed.value = value)
     
-    gui.add(params,'xOcean').onFinishChange((value) => uniforms.iResolution.value.x = value)
-    gui.add(params, 'yOcean').onFinishChange((value) => uniforms.iResolution.value.y = value)
+    gui.add(params,'xOcean').onFinishChange((value) => ocean_uniforms.iResolution.value.x = value)
+    gui.add(params, 'yOcean').onFinishChange((value) => ocean_uniforms.iResolution.value.y = value)
 
     guiWrap.appendChild(gui.domElement);
     gui.open();
@@ -945,8 +943,9 @@ const InitializeSound =() => {
 //#endregion
 
 //#region SHADERS
+let outline_mat
 let ocean_mat
-const uniforms = {
+const ocean_uniforms = {
     iTime: {
         type: "f",
         value: 1.0
@@ -972,6 +971,25 @@ const uniforms = {
         value: new THREE.Vector3(0.8,0.95,0.95)
     }
 };
+
+const outline_uniforms = {
+    offset: {
+        type: "f",
+        value: 2
+    }
+}
+
+const outline_vert = 
+    "uniform float offset\n"+
+    "void main() {\n"+
+    "   vec4 pos = modelViewMatrix * vec4( position + normal * offset, 1.0 );\n"+
+    "   gl_Position = projectionMatrix * pos;\n"+
+    "}"
+
+const outline_frag =
+    "void main() {\n"+
+    "    gl_FragColor = vec4(1.0,0.0,0.0,1.0)\n"+
+    "}"
 
 const ocean_vert = 
     "attribute vec3 in_Position;\n" +
@@ -1171,14 +1189,20 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
 
 const InitializeShaders = (d) => {
     ocean_mat = new THREE.ShaderMaterial({
-        uniforms: uniforms,
+        uniforms: ocean_uniforms,
         vertexShader: ocean_vert,
         fragmentShader: ocean_frag
-    });
+    })
+    
+    outline_mat = new THREE.ShaderMaterial({
+        uniforms: outline_uniforms,
+        vertexShader: outline_vert,
+        fragmentShader: outline_frag
+    })
 }
 
 const UpdateUniforms = (delta) => {
-    uniforms.iTime.value = uniforms.iTime.value + delta
+    ocean_uniforms.iTime.value = ocean_uniforms.iTime.value + delta
 }
 
 
