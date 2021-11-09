@@ -1161,6 +1161,7 @@ const InitializeShaders = (d) => {
         vertexShader: ocean_vert,
         fragmentShader: ocean_frag
     });
+    ocean_mat.depthWrite = false
 }
 
 const UpdateUniforms = (delta) => {
