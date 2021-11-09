@@ -1188,7 +1188,7 @@ const InitializeShaders = (d) => {
     d.composer.addPass( outlinePass );
 
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load( 'https://github.com/mrdoob/three.js/blob/dev/examples/textures/tri_pattern.jpg', function ( texture ) {
+    textureLoader.load( 'https://lucas971.github.io/UEX/public/images/tri_pattern.jpg', function ( texture ) {
 
         outlinePass.patternTexture = texture;
         texture.wrapS = d.THREE.RepeatWrapping;
