@@ -923,7 +923,7 @@ const ocean_vert =
     "        vUv = uv;\n" +
     "        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );\n" +
     "        gl_Position = projectionMatrix * mvPosition;\n" +
-    "        fragCoord = position.xy;\n" +
+    "        fragCoord = position.xz;\n" +
     "    }"
 const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "// License: Creative Commons Attribution 4.0 International\n" +
