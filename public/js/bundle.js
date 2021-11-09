@@ -1201,7 +1201,7 @@ const RaycastOutline = (clientX, clientY) => {
     const intersects = d.raycaster.intersectObjects(selectedObjects, true)
     
     if (intersects.length > 0) {
-        AimAtObject(intersects[0])
+        AimAtObject(intersects[0].object)
     } else {
         StopAimAtObject()
     }
