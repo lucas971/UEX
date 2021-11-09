@@ -1217,6 +1217,8 @@ const LoadCityScene = () => {
 //#region UPDATE
 
 const animate = () => {
+
+    UpdateUniforms(clock.getElapsedTime())
     requestAnimationFrame( animate )
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
@@ -1260,7 +1262,6 @@ const main = () => {
 
     InitializeShaders(threeData)
     LoadCityScene()
-    UpdateUniforms(clock.getElapsedTime())
 }
 main()
 
