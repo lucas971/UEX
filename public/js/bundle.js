@@ -1,6 +1,8 @@
 //#region Screen Projection
 //Auxiliary function allowing to project 3D objects into the 2D screen space.
 
+import {text} from "express";
+
 const toScreenPosition = (obj, d) => {
     const vector = new d.THREE.Vector3()
 
@@ -1200,6 +1202,7 @@ const ocean_frag =
 
 let selectedObjects = []
 let outlinePass
+let outlinePassHighlight
 let mouse
 let aiming = false
 let currentObject
@@ -1232,15 +1235,25 @@ const AimAtObject = (obj) => {
     }
     RoomMode()
     currentObject = obj
+    
+    for( let i = 0; i < selectedObjects.length; i++){
+
+        if ( selectedObjects[i] === currentObject) {
+
+            selectedObjects.splice(i, 1);
+        }
+    }
+    outlinePass.selectedObjects = selectedObjects
+    
     const target = []
     target.push(obj)
-    outlinePass.selectedObjects = target
-    outlinePass.edgeThickness = 2
-    outlinePass.edgeGlow = 2
-    outlinePass.edgeStrength = 5
-    outlinePass.pulsePeriod = 2
-    outlinePass.visibleEdgeColor.setHex(0xffa705)
-    outlinePass.hiddenEdgeColor.setHex(0x939329)
+    outlinePassHighlight.selectedObjects = target
+    outlinePassHighlight.edgeThickness = 2
+    outlinePassHighlight.edgeGlow = 2
+    outlinePassHighlight.edgeStrength = 5
+    outlinePassHighlight.pulsePeriod = 2
+    outlinePassHighlight.visibleEdgeColor.setHex(0xffa705)
+    outlinePassHighlight.hiddenEdgeColor.setHex(0x939329)
     aiming = true
 }
 
@@ -1249,6 +1262,10 @@ const StopAimAtObject = () => {
         return
     }
     NormalMode()
+
+    outlinePassHighlight.selectedObjects = []
+    
+    selectedObjects.push(currentObject)
     outlinePass.selectedObjects = selectedObjects
     outlinePass.edgeThickness = 1
     outlinePass.edgeGlow = 0
@@ -1278,10 +1295,14 @@ const InitializeShaders = (d) => {
     outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
     d.composer.addPass( outlinePass );
 
+    outlinePassHighlight = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
+    d.composer.addPass( outlinePass );
+    
     const textureLoader = new THREE.TextureLoader();
     textureLoader.load( 'https://lucas971.github.io/UEX/public/images/tri_pattern.jpg', function ( texture ) {
 
         outlinePass.patternTexture = texture;
+        outlinePassHighlight.patternTexture = texture
         texture.wrapS = d.THREE.RepeatWrapping;
         texture.wrapT = d.THREE.RepeatWrapping;
 
