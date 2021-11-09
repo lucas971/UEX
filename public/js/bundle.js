@@ -711,14 +711,26 @@ const InitGUI = (d) => {
     let params = {
         lightColor:0xFFFFFF,
         lightIntensity:1,
-        xOcean:1,
-        yOcean:1,
         foam_color:0xb8ebf7,
         water_color:0x4488cc,
         water2_color:0x347aa5,
-        wave_speed:0.2
+        wave_speed:0.2,
+        outline_color:0xFFFFFF,
+        outline_color2:0x3C3C01,
+        edge_glow:0.0,
+        edgeThickness:1.0,
+        edgeStrength:3.0,
+        pulsePeriod:0
+        
     }
-    gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
+    gui.addColor(params, 'outline_color').onFinishChange((value) => outlinePass.visibleEdgeColor = value)
+    gui.addColor(params, 'outline_color2').onFinishChange((value) => outlinePass.hiddenEdgeColor = value)
+    gui.add(params, 'edge_glow').onFinishChange((value) => outlinePass.edgeGlow = value)
+    gui.add(params, 'edgeThickness').onFinishChange((value) => outlinePass.edgeThickness = value)
+    gui.add(params, 'edgeStrength').onFinishChange((value) => outlinePass.edgeStrength  = value)
+    gui.add(params, 'pulsePeriod').onFinishChange((value) => outlinePass.pulsePeriod = value)
+    
+    gui.addColor(params,'edgeStrength').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
     
     gui.addColor(params,'foam_color').onFinishChange(
@@ -746,9 +758,6 @@ const InitGUI = (d) => {
     color = new d.THREE.Color(params.water2_color)
     ocean_uniforms.water2Col.value.set(color.r, color.g,color.b)
     gui.add(params, 'wave_speed').onFinishChange((value) => ocean_uniforms.speed.value = value)
-    
-    gui.add(params,'xOcean').onFinishChange((value) => ocean_uniforms.iResolution.value.x = value)
-    gui.add(params, 'yOcean').onFinishChange((value) => ocean_uniforms.iResolution.value.y = value)
 
     guiWrap.appendChild(gui.domElement);
     gui.open();
