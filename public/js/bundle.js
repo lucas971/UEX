@@ -310,11 +310,6 @@ const GenerateHtml = (d) => {
         else {
             icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
             const obj = d.scene.getObjectByName(icons[i].id)
-            console.log(obj)
-            var shaderMesh = new d.THREE.Mesh(obj.geometry, outline_mat)
-            obj.parent.add(shaderMesh)
-            shaderMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
-            shaderMesh.scale.set(obj.scale.x, obj.scale.y, obj.scale.z)
         }
         iconDiv.appendChild(icons[i].image)
     }
@@ -945,7 +940,6 @@ const InitializeSound =() => {
 //#endregion
 
 //#region SHADERS
-let outline_mat
 let ocean_mat
 const ocean_uniforms = {
     iTime: {
@@ -974,24 +968,6 @@ const ocean_uniforms = {
     }
 };
 
-const outline_uniforms = {
-    offset: {
-        type: "f",
-        value: 2
-    }
-}
-
-const outline_vert = 
-    "uniform float offset;\n"+
-    "void main() {\n"+
-    "   vec4 pos = modelViewMatrix * vec4( position + normal * offset, 1.0 );\n"+
-    "   gl_Position = projectionMatrix * pos;\n"+
-    "}"
-
-const outline_frag =
-    "void main() {\n"+
-    "    gl_FragColor = vec4(1.0,0.0,0.0,1.0);\n"+
-    "}"
 
 const ocean_vert = 
     "attribute vec3 in_Position;\n" +
@@ -1194,12 +1170,6 @@ const InitializeShaders = (d) => {
         uniforms: ocean_uniforms,
         vertexShader: ocean_vert,
         fragmentShader: ocean_frag
-    })
-    
-    outline_mat = new THREE.ShaderMaterial({
-        uniforms: outline_uniforms,
-        vertexShader: outline_vert,
-        fragmentShader: outline_frag
     })
 }
 
