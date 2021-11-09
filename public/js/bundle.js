@@ -743,7 +743,7 @@ const InitGUI = (d) => {
             uniforms.water2Col.value.set(color.r, color.g, color.b)
         }
     )
-    gui.add(params, 'wave_speed').onFinishChange((value) => uniforms.speed = value)
+    gui.add(params, 'wave_speed').onFinishChange((value) => uniforms.speed.value = value)
     
     gui.add(params,'xOcean').onFinishChange((value) => uniforms.iResolution.value.x = value)
     gui.add(params, 'yOcean').onFinishChange((value) => uniforms.iResolution.value.y = value)
