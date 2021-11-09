@@ -1216,7 +1216,9 @@ const AimAtObject = (obj) => {
         return
     }
     RoomMode()
-    outlinePass.selectedObjects = [obj]
+    const target = []
+    target.push(obj)
+    outlinePass.selectedObjects = target
     aiming = true
 }
 
