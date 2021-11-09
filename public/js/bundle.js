@@ -1243,7 +1243,6 @@ const StopAimAtObject = () => {
     }
     NormalMode()
     outlinePass.selectedObjects = selectedObjects
-    outlinePass.selectedObjects = target
     outlinePass.edgeThickness = 1
     outlinePass.edgeGlow = 0
     outlinePass.edgeStrength = 3
