@@ -344,7 +344,7 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 const TryClickedRoom = (obj) => {
-    console.log(obj.position)
+    console.log(obj)
     RequestHotspotTranslation(obj.position, roomMapping[obj])
 }
 const TryClickedLink = (i) => {
