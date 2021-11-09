@@ -725,19 +725,19 @@ const InitGUI = (d) => {
     gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.foamCol.value = color.slice(2).toString().convertToRGBClamped()
+            uniforms.foamCol.value = color.toString().slice(2).convertToRGBClamped()
         }
     )
     gui.addColor(params,'water_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.waterCol.value = color.slice(2).toString().convertToRGBClamped()
+            uniforms.waterCol.value = color.toString().slice(2).convertToRGBClamped()
         }
     )
     gui.addColor(params,'water2_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.water2Col.value = color.slice(2).toString().convertToRGBClamped()
+            uniforms.water2Col.value = color.toString().slice(2).convertToRGBClamped()
         }
     )
     
