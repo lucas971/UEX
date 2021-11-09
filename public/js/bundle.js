@@ -1,8 +1,6 @@
 //#region Screen Projection
 //Auxiliary function allowing to project 3D objects into the 2D screen space.
 
-import {text} from "express";
-
 const toScreenPosition = (obj, d) => {
     const vector = new d.THREE.Vector3()
 
