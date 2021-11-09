@@ -1187,12 +1187,10 @@ const RaycastOutline = (clientX, clientY) => {
     mouse.y = -(clientY/window.innerHeight) * 2 + 1
     d.raycaster.setFromCamera(mouse,d.camera)
     
-    const intersects = d.raycaster.intersectObjects(selectedObjects)
+    const intersects = d.raycaster.intersectObjects(d.scene.children)
     
     for (let i = 0; i < intersects.length; i++) {
-        if (selectedObjects.indexOf(intersects[i]) >= 0) {
-            console.log(intersects[i].name)
-        }
+        console.log(intersects[i].name)
     }
 }
 const AddToSelectedObjects = (obj) => {
