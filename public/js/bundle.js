@@ -895,7 +895,7 @@ const InitializeSound =() => {
 let outline_material_white
 let outline_material_black
 
-const outline_shader_white = {
+const outline_shader_black = {
     uniforms: {
         "linewidth":  { type: "f", value: 0.3 },
     },
@@ -914,7 +914,7 @@ const outline_shader_white = {
     ].join("\n")
 };
 
-const outline_shader_black = {
+const outline_shader_white = {
     uniforms: {
         "linewidth":  { type: "f", value: 0.3 },
     },
