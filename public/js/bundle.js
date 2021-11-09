@@ -784,6 +784,7 @@ const generateCity = (d) => {
             InitializeSound()
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
+            InitializeShaders(threeData)
             d.scene.getObjectByName('Eau').material = ocean_mat
             console.log(d.scene.getObjectByName('Eau'))
             animate()
@@ -1335,8 +1336,7 @@ const Resize = () => {
 
 const main = () => {
     setup()
-
-    InitializeShaders(threeData)
+    
     LoadCityScene()
 }
 main()
