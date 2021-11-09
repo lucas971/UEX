@@ -1283,9 +1283,10 @@ const InitializeShaders = (d) => {
 
     } );
 
+    /*
     const effectFXAA = new ShaderPass( FXAAShader );
     effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
-    d.composer.addPass( effectFXAA );
+    d.composer.addPass( effectFXAA );*/
 }
 
 const UpdateUniforms = (delta) => {
