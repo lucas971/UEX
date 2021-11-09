@@ -301,7 +301,6 @@ const GenerateHtml = (d) => {
             obj.parent.add(outlineMesh)
             outlineMesh.position.set(obj.position)
             outlineMesh.scale.multiplyScalar(1.05)
-            console.log(obj)
         }
         iconDiv.appendChild(icons[i].image)
     }
