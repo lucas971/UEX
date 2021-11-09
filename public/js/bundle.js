@@ -723,14 +723,14 @@ const InitGUI = (d) => {
         pulsePeriod:0
         
     }
-    gui.addColor(params, 'outline_color').onFinishChange((value) => outlinePass.visibleEdgeColor = value)
-    gui.addColor(params, 'outline_color2').onFinishChange((value) => outlinePass.hiddenEdgeColor = value)
+    gui.addColor(params, 'outline_color').onFinishChange((value) => outlinePass.visibleEdgeColor.setHex(value))
+    gui.addColor(params, 'outline_color2').onFinishChange((value) => outlinePass.hiddenEdgeColor.setHex(value))
     gui.add(params, 'edge_glow').onFinishChange((value) => outlinePass.edgeGlow = value)
     gui.add(params, 'edgeThickness').onFinishChange((value) => outlinePass.edgeThickness = value)
     gui.add(params, 'edgeStrength').onFinishChange((value) => outlinePass.edgeStrength  = value)
     gui.add(params, 'pulsePeriod').onFinishChange((value) => outlinePass.pulsePeriod = value)
     
-    gui.addColor(params,'edgeStrength').onFinishChange((value) => a_light.color.setHex(value))
+    gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
     
     gui.addColor(params,'foam_color').onFinishChange(
