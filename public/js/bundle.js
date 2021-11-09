@@ -257,6 +257,7 @@ const iconWidth = 75
 const iconHeight = 75
 //Array of icons struct. See ../iconsData.json for more information on the structure.
 let icons
+let roomMapping = []
 
 //The general content div from which enabling/disabling the pointer events.
 let content
@@ -322,9 +323,9 @@ const GenerateHtml = (d) => {
             icons[i].image.addEventListener("click", () => TryClickedLink(i))
         }
         else {
-            icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
             const obj = d.scene.getObjectByName(icons[i].id)
             AddToSelectedObjects(obj)
+            roomMapping[obj] = document.getElementById(data.room_link)
         }
         iconDiv.appendChild(icons[i].image)
     }
@@ -338,10 +339,8 @@ const GenerateHtml = (d) => {
 //#endregion
 
 //#region Hotspots
-const TryClickedRoom = (room_link, i) => {
-    const button = document.getElementById(room_link)
-    const obj = d.scene.getObjectByName(icons[i].id)
-    RequestHotspotTranslation(obj.position, button)
+const TryClickedRoom = (obj) => {
+    RequestHotspotTranslation(obj.position, roomMapping[obj])
 }
 const TryClickedLink = (i) => {
     let iconId = icons[i].iconid
@@ -528,6 +527,9 @@ const OnMouseRelease = () => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
+    if (IsRoom()) {
+        TryClickedRoom(currentObject)
+    }
     if (!IsNormal() || e.target.id!== 'canvas') {
         return
     }
@@ -1192,6 +1194,7 @@ let selectedObjects = []
 let outlinePass
 let mouse
 let aiming = false
+let currentObject
 
 const RaycastOutline = (clientX, clientY) => {
     if (!IsNormal() && !IsRoom()) {
@@ -1220,6 +1223,7 @@ const AimAtObject = (obj) => {
         return
     }
     RoomMode()
+    currentObject = obj
     const target = []
     target.push(obj)
     console.log(obj)
