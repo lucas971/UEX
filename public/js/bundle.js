@@ -911,8 +911,6 @@ uniforms.iResolution.value.y = 1; // window.innerHeight;
 
 const ocean_vert = 
     "attribute vec3 in_Position;\n" +
-    "    uniform float iTime;\n" +
-    "    uniform vec2 iResolution;\n" +
     "    varying vec2 fragCoord;\n" +
     "    varying vec2 vUv; \n" +
     "    void main()\n" +
@@ -938,6 +936,8 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "#define M_2PI 6.283185307\n" +
     "#define M_6PI 18.84955592\n" +
     "\n" +
+    "    uniform float iTime;\n" +
+    "    uniform vec2 iResolution;\n" +
     "float circ(vec2 pos, vec2 c, float s)\n" +
     "{\n" +
     "    c = abs(pos - c);\n" +
