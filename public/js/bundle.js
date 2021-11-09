@@ -819,7 +819,6 @@ const setupAnimMixer = (gltf, d) => {
 //Update the city animation and check camera movements
 const UpdateCity = (d) => {
     let delta = d.clock.getDelta()
-    console.log(delta)
     delta = Math.min(delta, 0.03)
     updateVolume(delta)
     UpdateUniforms(delta)
@@ -935,9 +934,7 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "\n" +
     "#define WATER_COL vec3(0.0, 0.4453, 0.7305)\n" +
     "#define WATER2_COL vec3(0.0, 0.4180, 0.6758)\n" +
-    "#define FOAM_COL vec3(0.8125, 0.9609, 0.9648)\n" +
-    "#define FOG_COL vec3(0.6406, 0.9453, 0.9336)\n" +
-    "#define SKY_COL vec3(0.0, 0.8203, 1.0)\n" +
+    "#define FOAM_COL vec3(0.0, 0.0, 0.0)\n" +
     "\n" +
     "#define M_2PI 6.283185307\n" +
     "#define M_6PI 18.84955592\n" +
@@ -1088,9 +1085,9 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    return v + uv + uuv;\n" +
     "}\n" +
     "\n" +
-    "void main()\n" +
+    "void mainImage( out vec4 fragColor, in vec2 fragCoord )\n" +
     "{\n" +
-    "    gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
+    "    fragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
     "    for(int y = 0; y < 2; y++) {\n" +
     "        for(int x = 0; x < 2; x++) {\n" +
     "        \tvec2 offset = vec2(0.5) * vec2(x, y) - vec2(0.25);\n" +
@@ -1107,10 +1104,8 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "            float dist = -dot(cpos, ocean) / dot(cdir, ocean);\n" +
     "            vec3 pos = cpos + dist * cdir;\n" +
     "\n" +
-    "            vec3 pix;\n" +
     "            vec3 wat = water(pos.xz, cdir);\n" +
-    "                pix = mix(wat, FOG_COL, min(dist * 0.01, 1.0));\n" +
-    "        \tgl_FragColor.rgb += pix * vec3(0.25);\n" +
+    "            fragColor.rgb += wat * vec3(0.25);\n" +
     "    \t}\n" +
     "    }\n" +
     "}\n"
