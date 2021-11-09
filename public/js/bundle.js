@@ -299,7 +299,7 @@ const GenerateHtml = (d) => {
             const outlineMaterial = new d.THREE.MeshBasicMaterial ({color : 0xff0000, side :d.THREE.BackSide})
             const outlineMesh = new d.THREE.Mesh(obj.geometry, outlineMaterial)
             obj.parent.add(outlineMesh)
-            outlineMesh.position.set(obj.position)
+            outlineMesh.position.set(obj.position.x, obj.position.y, obj.position.z)
             outlineMesh.scale.multiplyScalar(1.05)
             console.log(outlineMesh)
         }
@@ -1055,7 +1055,7 @@ const ocean_shader = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "\n" +
     "void main()\n" +
     "{\n" +
-    "    fragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
+    "    gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
     "    for(int y = 0; y < 2; y++) {\n" +
     "        for(int x = 0; x < 2; x++) {\n" +
     "        \tvec2 offset = vec2(0.5) * vec2(x, y) - vec2(0.25);\n" +
@@ -1075,7 +1075,7 @@ const ocean_shader = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "            vec3 pix;\n" +
     "            vec3 wat = water(pos.xz, cdir);\n" +
     "                pix = mix(wat, FOG_COL, min(dist * 0.01, 1.0));\n" +
-    "        \tfragColor.rgb += pix * vec3(0.25);\n" +
+    "        \tgl_FragColor.rgb += pix * vec3(0.25);\n" +
     "    \t}\n" +
     "    }\n" +
     "}\n"
