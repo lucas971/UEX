@@ -1148,26 +1148,21 @@ const ocean_frag =
     "void main()\n" +
     "{\n" +
     "    gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
-    "    for(int y = 0; y < 1; y++) {\n" +
-    "        for(int x = 0; x < 1; x++) {\n" +
-    "        \tvec2 offset = vec2(0.5) * vec2(x, y) - vec2(0.25);\n" +
     "\n" +
-    "            // Camera stuff\n" +
-    "            vec2 uv = (fragCoord.xy + offset) / iResolution.xy;\n" +
-    "            vec3 cpos = vec3(0.0, 20.0, 0.0); // Camera position\n" +
-    "            vec3 cdir = pixtoray(uv);\n" +
-    "            cdir = quatmul( // Tilt down slightly\n" +
-    "                vec4(-0.6, 0.0, 0.0, 1), cdir);\n" +
+    "        // Camera stuff\n" +
+    "        vec2 uv = (fragCoord.xy) / iResolution.xy;\n" +
+    "        vec3 cpos = vec3(0.0, 20.0, 0.0); // Camera position\n" +
+    "        vec3 cdir = pixtoray(uv);\n" +
+    "        cdir = quatmul( // Tilt down slightly\n" +
+    "            vec4(-0.6, 0.0, 0.0, 1), cdir);\n" +
     "\n" +
-    "            // Ray-plane intersection\n" +
-    "            const vec3 ocean = vec3(0.0, 1.0, 0.0);\n" +
-    "            float dist = -dot(cpos, ocean) / dot(cdir, ocean);\n" +
-    "            vec3 pos = cpos + dist * cdir;\n" +
+    "        // Ray-plane intersection\n" +
+    "        const vec3 ocean = vec3(0.0, 1.0, 0.0);\n" +
+    "        float dist = -dot(cpos, ocean) / dot(cdir, ocean);\n" +
+    "        vec3 pos = cpos + dist * cdir;\n" +
     "\n" +
-    "            vec3 wat = water(pos.xz, cdir);\n" +
-    "            gl_FragColor.rgb += wat * vec3(1);\n" +
-    "    \t}\n" +
-    "    }\n" +
+    "        vec3 wat = water(pos.xz, cdir);\n" +
+    "        gl_FragColor.rgb += wat * vec3(1);\n" +
     "}\n"
 //#endregion
 
