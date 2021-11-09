@@ -644,6 +644,7 @@ const RequestHotspotTranslation = (hotspotPos, button) => {
     hotspotCamParam.initialZoom = d.camera.zoom
     hotspotCamParam.hotspotPos = hotspotPos
     hotspotCamParam.button = button
+    hotspotCamParam.offset = button === null ? hotspotOffset : 0
     hotspotTransition = true
     
 }
@@ -652,8 +653,8 @@ const AnimateHotspotTranslation = (delta) => {
     const t = easeInOutSine(hotspotCamParam.state)
     
     //translation
-    const targetX = hotspotCamParam.initialPos.x * (1-t) + (hotspotCamParam.hotspotPos.x - hotspotOffset) * t
-    const targetZ = hotspotCamParam.initialPos.z * (1-t) + (hotspotCamParam.hotspotPos.z - hotspotOffset) * t
+    const targetX = hotspotCamParam.initialPos.x * (1-t) + (hotspotCamParam.hotspotPos.x - hotspotCamParam.offset) * t
+    const targetZ = hotspotCamParam.initialPos.z * (1-t) + (hotspotCamParam.hotspotPos.z - hotspotCamParam.offset) * t
 
     cameraHolder.position.x = targetX
     cameraHolder.position.z = targetZ
@@ -676,7 +677,7 @@ const AnimateHotspotTranslation = (delta) => {
             localStorage.currentX = cameraHolder.position.x.toString()
             localStorage.currentZ = cameraHolder.position.z.toString()
             localStorage.comeBack = 'true'
-            //hotspotCamParam.button.click()
+            hotspotCamParam.button.click()
         }
     }
 
