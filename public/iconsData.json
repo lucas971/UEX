@@ -9,6 +9,10 @@
       "iconid" : "trigger-room"
     },
     {
+      "id" : "Barage",
+      "iconid" : "trigger-room"
+    },
+    {
       "id" : "EDF_001",
       "iconid" : "trigger1"
     },
