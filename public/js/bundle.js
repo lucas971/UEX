@@ -938,6 +938,8 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "\n" +
     "    uniform float iTime;\n" +
     "    uniform vec2 iResolution;\n" +
+    "    varying vec2 fragCoord;\n" +
+    "    varying vec2 vUv;\n" +
     "float circ(vec2 pos, vec2 c, float s)\n" +
     "{\n" +
     "    c = abs(pos - c);\n" +
