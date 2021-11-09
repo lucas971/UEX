@@ -524,6 +524,7 @@ const OnMouseClick = (e) => {
     initialPosY = currentMouseY
 }
 const OnMouseMove = (e) => {
+    RaycastOutline(e.clientX, e.clientY)
     if (currentMouseX === null) {
         return
     }
@@ -535,8 +536,6 @@ const OnMouseMove = (e) => {
     offsetZ = e.clientY - currentMouseY
     currentMouseX = e.clientX
     currentMouseY = e.clientY
-
-    RaycastOutline(currentMouseX, currentMouseY)
 }
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
