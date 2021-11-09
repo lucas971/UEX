@@ -1085,9 +1085,9 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    return v + uv + uuv;\n" +
     "}\n" +
     "\n" +
-    "void mainImage( out vec4 fragColor, in vec2 fragCoord )\n" +
+    "void main()\n" +
     "{\n" +
-    "    fragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
+    "    gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n" +
     "    for(int y = 0; y < 2; y++) {\n" +
     "        for(int x = 0; x < 2; x++) {\n" +
     "        \tvec2 offset = vec2(0.5) * vec2(x, y) - vec2(0.25);\n" +
@@ -1105,7 +1105,7 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "            vec3 pos = cpos + dist * cdir;\n" +
     "\n" +
     "            vec3 wat = water(pos.xz, cdir);\n" +
-    "            fragColor.rgb += wat * vec3(0.25);\n" +
+    "            gl_FragColor.rgb += wat * vec3(0.25);\n" +
     "    \t}\n" +
     "    }\n" +
     "}\n"
