@@ -894,8 +894,31 @@ const InitializeSound =() => {
 //#endregion
 
 //#region SHADERS
+let ocean_mat
+const uniforms = {
+    iTime: {
+        type: "f",
+        value: 1.0
+    },
+    iResolution: {
+        type: "v2",
+        value: new THREE.Vector2()
+    },
+};
+uniforms.iResolution.value.x = 1; // window.innerWidth;
+uniforms.iResolution.value.y = 1; // window.innerHeight;
 
-const ocean_shader = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
+const ocean_vert = "attribute vec3 in_Position;\n" +
+    "    varying vec2 fragCoord;\n" +
+    "    varying vec2 vUv; \n" +
+    "    void main()\n" +
+    "    {\n" +
+    "        vUv = uv;\n" +
+    "        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );\n" +
+    "        gl_Position = projectionMatrix * mvPosition;\n" +
+    "        fragCoord = position.xy;\n" +
+    "    }"
+const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "// License: Creative Commons Attribution 4.0 International\n" +
     "\n" +
     "// Source code for the texture generator is available at:\n" +
@@ -1080,6 +1103,11 @@ const ocean_shader = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    }\n" +
     "}\n"
 const InitializeShaders = (d) => {
+    ocean_mat = new THREE.ShaderMaterial({
+        uniforms: uniforms,
+        vertexShader: ocean_vert,
+        fragmentShader: ocean_frag
+    });
 }
 
 
