@@ -725,19 +725,19 @@ const InitGUI = (d) => {
     gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.FOAM_COL.value = color.toString().convertToRGBClamped()
+            uniforms.foamCol.value = color.toString().convertToRGBClamped()
         }
     )
     gui.addColor(params,'water_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.WATER_COL.value = color.toString().convertToRGBClamped()
+            uniforms.waterCol.value = color.toString().convertToRGBClamped()
         }
     )
     gui.addColor(params,'water2_color').onFinishChange(
         (value) => {
             let color = new d.THREE.Color(value)
-            uniforms.WATER2_COL.value = color.toString().convertToRGBClamped()
+            uniforms.water2Col.value = color.toString().convertToRGBClamped()
         }
     )
     
@@ -945,15 +945,15 @@ const uniforms = {
         type: "v2",
         value: new THREE.Vector2(1,1)
     },
-    WATER_COL: {
+    waterCol: {
         type: "v3",
         value: new THREE.Vector3(0,0.4,0.7)
     },
-    WATER2_COL: {
+    water2Col: {
         type: "v3",
         value: new THREE.Vector3(0,0.1,0.5)
     },
-    FOAM_COL: {
+    foamCol: {
         type: "v3",
         value: new THREE.Vector3(0.8,0.95,0.95)
     }
@@ -977,18 +977,14 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "// https://github.com/lmurray/circleator\n" +
     "\n" +
     "\n" +
-    "#define WATER_COL vec3(0.0, 0.4453, 0.7305)\n" +
-    "#define WATER2_COL vec3(0.0, 0.3180, 0.5758)\n" +
-    "#define FOAM_COL vec3(0.85, 0.96, 0.96)\n" +
-    "\n" +
     "#define M_2PI 6.283185307\n" +
     "#define M_6PI 18.84955592\n" +
     "\n" +
     "    uniform float iTime;\n" +
     "    uniform vec2 iResolution;\n" +
-    "    uniform vec3 WATER_COL;\n" +
-    "    uniform vec3 WATER2_COL;\n" +
-    "    uniform vec3 FOAM_COL;\n" +
+    "    uniform vec3 waterCol;\n" +
+    "    uniform vec3 water2Col;\n" +
+    "    uniform vec3 foamCol;\n" +
     "    varying vec2 fragCoord;\n" +
     "    varying vec2 vUv;\n" +
     "float circ(vec2 pos, vec2 c, float s)\n" +
@@ -1107,8 +1103,8 @@ const ocean_frag = "// \"Wind Waker Ocean\" by @Polyflare (29/1/15)\n" +
     "    \tcos(d1) * 0.15 + cos(d2) * 0.05\n" +
     "    );\n" +
     "    \n" +
-    "    vec3 ret = mix(WATER_COL, WATER2_COL, waterlayer(uv + dist.xy));\n" +
-    "    ret = mix(ret, FOAM_COL, waterlayer(vec2(1.0) - uv - dist.yx));\n" +
+    "    vec3 ret = mix(waterCol, water2Col, waterlayer(uv + dist.xy));\n" +
+    "    ret = mix(ret, foamCol, waterlayer(vec2(1.0) - uv - dist.yx));\n" +
     "    return ret;\n" +
     "}\n" +
     "\n" +
