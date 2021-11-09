@@ -344,6 +344,7 @@ const GenerateHtml = (d) => {
 
 //#region Hotspots
 const TryClickedRoom = (obj) => {
+    console.log(obj.position)
     RequestHotspotTranslation(obj.position, roomMapping[obj])
 }
 const TryClickedLink = (i) => {
@@ -973,9 +974,7 @@ const InitializeSound =() => {
 
 import { EffectComposer } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/RenderPass.js";
-import { ShaderPass } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/ShaderPass.js";
 import { OutlinePass } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/postprocessing/OutlinePass.js';
-import { FXAAShader } from "https://cdn.skypack.dev/three@0.132.2/examples/jsm/shaders/FXAAShader.js";
 
 //#region OCEAN
 let ocean_mat
@@ -1257,6 +1256,7 @@ const StopAimAtObject = () => {
 }
 
 //#endregion
+
 const InitializeShaders = (d) => {
     mouse = new d.THREE.Vector2()
     ocean_mat = new THREE.ShaderMaterial({
