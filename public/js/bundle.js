@@ -310,6 +310,7 @@ const GenerateHtml = (d) => {
         else {
             icons[i].image.addEventListener("click", () => TryClickedRoom(data.room_link, i))
             const obj = d.scene.getObjectByName(icons[i].id)
+            AddToSelectedObjects(obj)
         }
         iconDiv.appendChild(icons[i].image)
     }
@@ -782,9 +783,9 @@ const generateCity = (d) => {
             InitGUI(d)
             LoadProgress()
             InitializeSound()
+            InitializeShaders(threeData)
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
-            InitializeShaders(threeData)
             d.scene.getObjectByName('Eau').material = ocean_mat
             console.log(d.scene.getObjectByName('Eau'))
             animate()
@@ -1166,6 +1167,18 @@ const ocean_frag =
     "}\n"
 //#endregion
 
+//#region OUTLINE
+
+let selectedObjects = []
+let outlinePass
+
+const AddToSelectedObjects = (obj) => {
+    selectedObject.push(obj)
+    outlinePass.selectedObjects = selectedObjects
+    
+}
+
+//#endregion
 const InitializeShaders = (d) => {
     ocean_mat = new THREE.ShaderMaterial({
         uniforms: ocean_uniforms,
@@ -1179,7 +1192,7 @@ const InitializeShaders = (d) => {
     const renderPass = new RenderPass( d.scene, d.camera );
     d.composer.addPass( renderPass );
 
-    const outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
+    outlinePass = new OutlinePass( new d.THREE.Vector2( window.innerWidth, window.innerHeight ), d.scene, d.camera );
     d.composer.addPass( outlinePass );
 
     const textureLoader = new THREE.TextureLoader();
