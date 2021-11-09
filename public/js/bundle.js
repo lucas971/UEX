@@ -1,5 +1,7 @@
 //#region Screen Projection
 //Auxiliary function allowing to project 3D objects into the 2D screen space.
+import {param} from "express/lib/router";
+
 const toScreenPosition = (obj, d) => {
     const vector = new d.THREE.Vector3()
 
@@ -687,7 +689,7 @@ const UpdateFade = (newValue) =>{
 
 //#region DATGUI
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
-const ShowDatGUI = false
+const ShowDatGUI = true
 let gui
 let a_light
 
@@ -701,10 +703,14 @@ const InitGUI = () => {
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
-        lightIntensity:1
+        lightIntensity:1,
+        xOcean:100,
+        yOcean:100
     }
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
+    gui.add(params,'xOcean').onFinishChange((value) => uniforms.iResolution.value.x = value)
+    gui.add(params, 'yOcean').onFinishChange((value) => uniforms.iResolution.value.y = value)
 
     guiWrap.appendChild(gui.domElement);
     gui.open();
@@ -907,7 +913,7 @@ const uniforms = {
     },
 };
 uniforms.iResolution.value.x = 100; // window.innerWidth;
-uniforms.iResolution.value.y = 100; // window.innerHeight;
+uniforms.iResolution.value.y = 1; // window.innerHeight;
 
 const ocean_vert = 
     "attribute vec3 in_Position;\n" +
