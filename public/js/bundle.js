@@ -42,6 +42,10 @@ const IsNormal = () => {
     return mode === normal
 }
 
+const IsRoom = () => {
+    return mode === room
+}
+
 const IsDrag = () => {
     return mode === drag
 }
@@ -1190,7 +1194,7 @@ let mouse
 let aiming = false
 
 const RaycastOutline = (clientX, clientY) => {
-    if (!IsNormal()) {
+    if (!IsNormal() && !IsRoom()) {
         return
     }
     mouse.x = (clientX / window.innerWidth) * 2 - 1
