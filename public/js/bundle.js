@@ -1456,8 +1456,7 @@ const animate = () => {
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
     }
-    //threeData.composer.render()
-    render()
+    threeData.composer.render()
 }
 
 const render = () => {
