@@ -319,18 +319,22 @@ const UpdateIconsPosition = (d) => {
     if (!d.scene || !icons) {
         return
     }
+    
+    if (d.camera.zoom !== zoomRef) {
+        InitializeIconsPosition(d)
+        return
+    }
     d.camera.updateMatrixWorld()
     const toScreen = toScreenPosition(positionRef, d)
     const offsetX = toScreen.x - positionMapping[0].x
     const offsetY = toScreen.y - positionMapping[0].y
 
-    const zoomRatio = d.camera.zoom / zoomRef
     for (let i = 0; i < icons.length; i++) {
         if (icons[i].image === null) {
             continue
         }
-        icons[i].image.style.left = `${positionMapping[i].x + offsetX*zoomRatio - iconWidth/2}px`
-        icons[i].image.style.top = `${positionMapping[i].y + offsetY*zoomRatio - iconHeight/2}px`
+        icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
+        icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
     }
 }
 //#endregion
