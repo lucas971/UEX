@@ -372,12 +372,12 @@ const GenerateHtml = (d) => {
         if (!toIterate[i].isMesh) {
             continue
         }
-        if (toIterate.name === "CAMERACONTAINER" || toIterate.name === "Eau") {
+        if (toIterate[i].name === "CAMERACONTAINER" || toIterate[i].name === "Eau") {
             continue
         }
         let shouldContinue = false
         for (let j = 0; j < icons.length; j++) {
-            if (icons[j].id === toIterate.name) {
+            if (icons[j].id === toIterate[i].name) {
                 shouldContinue = true
                 break
             }
