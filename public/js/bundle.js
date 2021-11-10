@@ -764,6 +764,7 @@ const InitGUI = (d) => {
     
     stats = new Stats()
     guiWrap.appendChild(stats.dom)
+    stats.dom.style.left = '75%'
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
