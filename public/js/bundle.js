@@ -289,10 +289,10 @@ const InitializeIcons = (d) => {
 }
 
 function checkIconVisible(x,y) {
-    if (x + iconWidth/2 < 0 || x - iconWidth/2 > d.canvas.width) {
+    if (x + iconWidth/2 < 0 || x - iconWidth/2 > window.innerWidth) {
         return false
     }
-    if (y + iconHeight/2 < 0 || y - iconHeight/2 > d.canvas.height) {
+    if (y + iconHeight/2 < 0 || y - iconHeight/2 > window.innerHeight) {
         return false
     }
     return true
