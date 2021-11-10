@@ -1454,9 +1454,10 @@ const animate = () => {
     }
     requestAnimationFrame( animate )
     if (activeScene === cityActiveScene) {
-        //UpdateCity(threeData)
+        UpdateCity(threeData)
     }
-    threeData.composer.render()
+    //threeData.composer.render()
+    render()
 }
 
 const render = () => {
