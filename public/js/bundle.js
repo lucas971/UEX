@@ -322,6 +322,9 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         if (data.type <= 4) {
             icons[i].image = document.getElementById(icons[i].iconid)
+            if (icons[i].image === null) {
+                console.log(icons[i].iconid)
+            }
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(i))
             iconDiv.appendChild(icons[i].image)
