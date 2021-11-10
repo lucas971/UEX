@@ -385,7 +385,7 @@ const GenerateHtml = (d) => {
             continue
         }
         console.log(toIterate[i].name)
-        d.scene.remove(toIterate[i])
+        d.scene.children[0].remove(toIterate[i])
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
