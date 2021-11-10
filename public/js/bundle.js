@@ -318,7 +318,7 @@ const UpdateIconsPosition = (d) => {
         return
     }
     d.camera.updateMatrixWorld()
-    const toScreen = toScreenPosition(ref, d)
+    const toScreen = toScreenPosition(positionRef, d)
     const offsetX = toScreen.x - positionMapping[0].x
     const offsetY = toScreen.y - positionMapping[0].y
 
