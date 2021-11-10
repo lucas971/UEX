@@ -367,6 +367,26 @@ const GenerateHtml = (d) => {
     }
     
     console.log(d.scene)
+    const toIterate = d.scene.children[0].children
+    for (let i = 0; i < toIterate.length; i++) {
+        if (!toIterate[i].isMesh) {
+            continue
+        }
+        if (toIterate.name === "CAMERACONTAINER" || toIterate.name === "Eau") {
+            continue
+        }
+        let shouldContinue = false
+        for (let j = 0; j < icons.length; j++) {
+            if (icons[i].id === toIterate.name) {
+                shouldContinue = true
+                break
+            }
+        }
+        if (shouldContinue) {
+            continue
+        }
+        d.scene.remove(toIterate[i])
+    }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
     for (let i = 0; i < backButtons.length; i++) {
