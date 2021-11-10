@@ -260,6 +260,7 @@ let icons
 let roomMapping = []
 let positionMapping = []
 let positionRef = null
+let zoomRef
 //The general content div from which enabling/disabling the pointer events.
 let content
 
@@ -308,6 +309,7 @@ const InitializeIconsPosition = (d) => {
         positionMapping[i] = toScreen
         if (i===0){
             positionRef = obj
+            zoomRef = d.camera.zoom
         }
     }
 }
@@ -322,12 +324,13 @@ const UpdateIconsPosition = (d) => {
     const offsetX = toScreen.x - positionMapping[0].x
     const offsetY = toScreen.y - positionMapping[0].y
 
+    const zoomRatio = d.camera.zoom / zoomRef
     for (let i = 0; i < icons.length; i++) {
         if (icons[i].image === null) {
             continue
         }
-        icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
-        icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
+        icons[i].image.style.left = `${positionMapping[i].x + offsetX*zoomRef - iconWidth/2}px`
+        icons[i].image.style.top = `${positionMapping[i].y + offsetY*zoomRef - iconHeight/2}px`
     }
 }
 //#endregion
