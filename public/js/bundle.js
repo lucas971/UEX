@@ -314,10 +314,6 @@ const InitializeIconsPosition = (d) => {
         }
         const toScreen = toScreenPosition(obj, d)
         
-        if (!checkIconVisible(toScreen.x, toScreen.y)) {
-            icons[i].image.style.display = 'none'
-            return
-        }
         icons[i].image.style.display = 'flex'
         icons[i].image.style.left = `${toScreen.x - iconWidth/2}px`
         icons[i].image.style.top = `${toScreen.y - iconHeight/2}px`
@@ -325,6 +321,9 @@ const InitializeIconsPosition = (d) => {
         if (i===0){
             positionRef = obj
             zoomRef = d.camera.zoom
+        }
+        if (!checkIconVisible(toScreen.x, toScreen.y)) {
+            icons[i].image.style.display = 'none'
         }
     }
 }
