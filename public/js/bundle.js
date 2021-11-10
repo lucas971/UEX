@@ -365,28 +365,6 @@ const GenerateHtml = (d) => {
             roomMapping[obj] = document.getElementById(data.room_link)
         }
     }
-    
-    console.log(d.scene)
-    const toIterate = d.scene.children[0].children
-    for (let i = 0; i < toIterate.length; i++) {
-        if (!toIterate[i].isMesh) {
-            continue
-        }
-        if (toIterate[i].name === "CAMERACONTAINER" || toIterate[i].name === "Eau") {
-            continue
-        }
-        let shouldContinue = false
-        for (let j = 0; j < icons.length; j++) {
-            if (icons[j].id === toIterate[i].name) {
-                shouldContinue = true
-            }
-        }
-        if (shouldContinue) {
-            continue
-        }
-        console.log(toIterate[i].name)
-        d.scene.children[0].remove(toIterate[i])
-    }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
     for (let i = 0; i < backButtons.length; i++) {
