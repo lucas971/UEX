@@ -347,13 +347,12 @@ const UpdateIconsPosition = (d) => {
         if (icons[i].image === null) {
             continue
         }
-        if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
-            icons[i].image.style.display = 'none'
-            return
-        }
         icons[i].image.style.display = 'flex'
         icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
         icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
+        if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
+            icons[i].image.style.display = 'none'
+        }
     }
 }
 //#endregion
