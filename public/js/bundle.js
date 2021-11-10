@@ -329,8 +329,8 @@ const UpdateIconsPosition = (d) => {
         if (icons[i].image === null) {
             continue
         }
-        icons[i].image.style.left = `${positionMapping[i].x + offsetX*zoomRef - iconWidth/2}px`
-        icons[i].image.style.top = `${positionMapping[i].y + offsetY*zoomRef - iconHeight/2}px`
+        icons[i].image.style.left = `${positionMapping[i].x + offsetX/zoomRef - iconWidth/2}px`
+        icons[i].image.style.top = `${positionMapping[i].y + offsetY/zoomRef - iconHeight/2}px`
     }
 }
 //#endregion
