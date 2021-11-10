@@ -321,9 +321,6 @@ const InitializeIconsPosition = (d) => {
         if (i===0){
             positionRef = obj
             zoomRef = d.camera.zoom
-            console.log(toScreen)
-            console.log(d.canvas.width)
-            console.log(d.canvas.height)
         }
         if (!checkIconVisible(toScreen.x, toScreen.y)) {
             icons[i].image.style.display = 'none'
@@ -346,7 +343,6 @@ const UpdateIconsPosition = (d) => {
     const offsetX = toScreen.x - positionMapping[0].x
     const offsetY = toScreen.y - positionMapping[0].y
 
-    let count = 0
     for (let i = 0; i < icons.length; i++) {
         if (icons[i].image === null) {
             continue
@@ -356,11 +352,8 @@ const UpdateIconsPosition = (d) => {
         icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
         if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
             icons[i].image.style.display = 'none'
-        } else {
-            count += 1
         }
     }
-    console.log(count)
 }
 //#endregion
 
