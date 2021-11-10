@@ -377,7 +377,7 @@ const GenerateHtml = (d) => {
         }
         let shouldContinue = false
         for (let j = 0; j < icons.length; j++) {
-            if (icons[i].id === toIterate.name) {
+            if (icons[j].id === toIterate.name) {
                 shouldContinue = true
                 break
             }
