@@ -1460,6 +1460,7 @@ const animate = () => {
         stats.update()
     }
     requestAnimationFrame( animate )
+    return
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
     }
@@ -1502,6 +1503,7 @@ const main = () => {
     InitGUI(threeData)
 
     document.getElementById("loading-screen-stopper").click()
+    animate()
     return
     LoadCityScene()
 }
