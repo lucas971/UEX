@@ -365,6 +365,8 @@ const GenerateHtml = (d) => {
             roomMapping[obj] = document.getElementById(data.room_link)
         }
     }
+    
+    console.log(d.scene)
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
     for (let i = 0; i < backButtons.length; i++) {
