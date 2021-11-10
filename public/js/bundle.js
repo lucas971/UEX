@@ -288,6 +288,16 @@ const InitializeIcons = (d) => {
         })
 }
 
+function checkIconVisible(x,y) {
+    if (x + iconWidth/2 < 0 || x - iconWidth/2 > d.canvas.width) {
+        return false
+    }
+    if (y + iconHeight/2 < 0 || y - iconHeight/2 > d.canvas.height) {
+        return false
+    }
+    return true
+}
+
 const InitializeIconsPosition = (d) => {
     if (!d.scene || !icons) {
         return
@@ -303,7 +313,12 @@ const InitializeIconsPosition = (d) => {
             continue
         }
         const toScreen = toScreenPosition(obj, d)
-
+        
+        if (!checkIconVisible(toScreen.x, toScreen.y)) {
+            icons[i].image.style.display = 'none'
+            return
+        }
+        icons[i].image.style.display = 'flex'
         icons[i].image.style.left = `${toScreen.x - iconWidth/2}px`
         icons[i].image.style.top = `${toScreen.y - iconHeight/2}px`
         positionMapping[i] = toScreen
@@ -333,6 +348,11 @@ const UpdateIconsPosition = (d) => {
         if (icons[i].image === null) {
             continue
         }
+        if (!checkIconVisible(toScreen.x, toScreen.y)) {
+            icons[i].image.style.display = 'none'
+            return
+        }
+        icons[i].image.style.display = 'flex'
         icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
         icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
     }
