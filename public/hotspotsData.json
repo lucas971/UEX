@@ -1,16 +1,68 @@
 
 {
+  "sponsorsLinks": {
+    "EDF" : "https://www.edf.fr/",
+    "UIMM" : "https://uimm.lafabriquedelavenir.fr/industrie/",
+    "France Chimie" : "https://www.francechimie.fr/",
+    "Sartorius" : "https://www.sartorius.com/en/company-fr",
+    "ITER" : "https://www.iter.org/fr/proj/inafewlines",
+    "AFPI" : "https://www.formation-industries-paca.fr/",
+    "OPCO2I" : "https://www.opco2i.fr/",
+    "ELENGY" : "https://www.elengy.com/fr/",
+    "Airbus Helicopters" :"https://www.airbus.com/helicopters.html",
+    "KSB" : "",
+    "CCI": "",
+    "SNEF" : "https://www.snef.fr/",
+    "Ponticelli" : "https://www.ponticelli.com/",
+    "Enedis" :"https://www.enedis.fr/",
+    "D3E" : "https://www.d3e.fr/",
+    "STMICROELECTRONICS": "https://www.st.com/content/st_com/en.html",
+    "POLYVIA": "https://www.polyvia.fr/fr",
+    "Port de Marseille Fos": "https://www.marseille-port.fr/index",
+    "ArcelorMittal": "https://france.arcelormittal.com/",
+    "CEA": "https://www.cea.fr/",
+    "Lyondellbasell": "https://www.lyondellbasell.com/",
+    "Naval Group" : "https://www.naval-group.com/fr",
+    "Ardatem": "https://www.ardatem.fr/",
+    "Total Energies": "https://totalenergies.com/fr",
+    "Team Henri Fabre": "https://team-henri-fabre.com/",
+    "Solamat Merex": "https://www.sarpi.veolia.com/fr",
+    "ONET" : "https://www.groupeonet.com/",
+    "UMF": "https://umf.asso.fr/fr",
+    "Eaux de Marseille": "https://www.eauxdemarseille.fr/",
+    "ADF": "https://www.groupeadf.com/fr"
+  },
   "sponsorsTexts": {
     "EDF" : "Construire un avenir énergétique neutre en CO2, conciliant préservation de la planète, bien-être et développement, grâce à l'électricité et à des solutions et services innovants.",
     "UIMM" : "L’UIMM La Fabrique de l’Avenir travaille à l’avenir de l’industrie, des Français et de la France. L’UIMM La Fabrique de l’Avenir aide les entreprises industrielles à conjuguer compétitivité, emploi et développement de leurs salariés, par la voie du dialogue social et en phase avec les nouvelles attentes de la société.",
     "France Chimie" : "France Chimie est l’organisation professionnelle qui représente les entreprises de la Chimie en France. Elle est le porte-parole du secteur auprès des pouvoirs publics nationaux, européens et des instances internationales.",
     "Sartorius" : "Le groupe Sartorius est un partenaire international de premier plan de l’industrie biopharmaceutique et du secteur de la recherche. Nous aidons scientifiques et ingénieurs en biotechnologies du monde entier à développer et fabriquer des médicaments de la première idée à la production. Pour que des médicaments bon marché soient accessibles au plus grand nombre.",
     "ITER" : "ITER est l'un des projets les plus ambitieux au monde dans le domaine de l'énergie. Celui ci démontrer que la fusion — l'énergie du Soleil et des étoiles — peut être utilisée comme source d'énergie à grande échelle, non émettrice de CO2, pour produire de l'électricité.",
+    "AFPI" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur.",
     "OPCO2I" : "OPCO 2i accompagne 32 branches professionnelles dans leur stratégie de développement des compétences. Il représente plus de 60 000 entreprises et plus de 2 600 000 salariés.",
     "ELENGY" : "Elengy est un opérateur français de terminaux méthaniers. Filiale de ENGIE, est au service de tous les opérateurs qui souhaitent importer du gaz naturel liquéfié pour approvisionner les marchés français et européens. ",
     "Airbus Helicopters" : "Airbus Helicopters - nouveau nom d'Eurocopter, est une division du groupe Airbus, leader mondial dans les domaines de l’aéronautique, de l’espace, de la défense et des services associés. ",
+    "KSB" : "",
+    "CCI": "",
+    "SNEF" : "Nous sommes ingénieurs/concepteurs, intégrateurs, mainteneurs et opérateurs de solutions multitechniques dans les domaines de l’énergie, de la mécanique et du numérique. Nous ne cessons de nous réinventer, promoteurs de la révolution numérique, des Objets Connectés, du Big Data, de la cybersécurité, de l’industrie 4.0, de l’Intelligence Artificielle et de la Réalité mixte.",
+    "Ponticelli" : "Ponticelli fournit des services aux grands acteurs de l’énergie, de l’industrie et des infrastructures et les accompagne partout dans le monde dans la conception, la réalisation et la maintenance de leurs installations afin d’en garantir durablement la sécurité et la performance.",
+    "Enedis" : "Enedis est une filiale indépendante du groupe EDF depuis 2008. Nous gérons équitablement le réseau de distribution d’électricité public sur 95 % du territoire français et réalisons toutes les interventions techniques (raccordement au réseau électrique, dépannage, relevé de compteur…), quel que soit le fournisseur d’électricité du client.",
+    "D3E" : "Située près de Troyes, et créée en 1986, D3E Electronique fait partie du groupe JLB GLOBAL TECHNOLOGY tout comme la sociétéi3map.Laa première activité de l’entreprise a été la distribution de composants électroniques et d’automatismes industriels.",
+    "STMICROELECTRONICS": "STMicroelectronics est une multinationale franco -italienne, dont le siège opérationnel et exécutif est situé à Plan-les-Ouates, près de Genève en Suisse, qui conçoit, fabrique et commercialise des puces électroniques.",
+    "POLYVIA": "Polyvia est l’Union des transformateurs de polymères. Née de la volonté des syndicats interrégionaux de la plasturgie, Allizé-Plasturgie, Gipco, Plasti Ouest, de la Fédération de la plasturgie et des composites et du GPIC (Groupement de la plasturgie industrielle et des composites), Polyvia représentera les industriels de la plasturgie et des composites sur l’ensemble du territoire national à partir du 31 décembre 2020.",
+    "Port de Marseille Fos": "Le port de Marseille Fos place l’excellence environnementale au cœur de sa stratégie. Il mise sur une croissance économique durable par un aménagement industriel responsable et innovant favorisant l’économie circulaire.",
+    "ArcelorMittal": "ArcelorMittal est un groupe sidérurgique mondial. Son siège social est installé à Luxembourg. Il est le plus important producteur d'acier au monde, avec 96,42 millions de tonnes produites en 2018. Il est classé 156ᵉ dans le classement 2016 Fortune Global 500 des plus grandes sociétés du monde.",
+    "CEA": "Le Commissariat à l’énergie atomique et aux énergies alternatives (CEA) est un organisme public de recherche à caractère scientifique, technique et industriel (EPIC). Acteur majeur de la recherche, du développement et de l'innovation, le CEA intervient dans quatre domaines : la défense et la sécurité, les énergies bas carbone (nucléaire et renouvelables), la recherche technologique pour l'industrie et la recherche fondamentale (sciences de la matière et sciences de la vie).",
+    "Lyondellbasell": "Nous fabriquons des produits et développons des technologies qui améliorent la qualité de vie des gens. Nos produits sont des éléments de base à la fabrication de nombreux biens et produits de la vie quotidienne tels les produits d'hygiène, les emballages pour produits frais, les matériaux de construction, les pièces automobiles, les biocarburants, certains textiles, des applications médicales et bien d'autres choses encore. Grâce à LyondellBasell, des milliers de produits sont aujourd'hui plus sains, plus résistants, plus abordables et plus fiables.",
     "Naval Group" : "Maître d’œuvre industriel, concepteur et intégrateur d’ensemble des navires armés et des systèmes de combat, Naval Group est le leader européen du naval de défense et un acteur majeur dans le monde.",
-    "AFPI" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur."
+    "Ardatem": "ARDATEM étudie, installe, met en service et assure la maintenance des équipements électriques, d’instrumentation, d’automatisme et des autres équipements techniques dans les secteurs de l’énergie et du nucléaire.",
+    "Total Energies": "TotalEnergies est une compagnie multi-énergies mondiale de production et de fourniture d’énergies : pétrole et biocarburants, gaz naturel et gaz verts, renouvelables et électricité. Nos 105 000 collaborateurs s'engagent pour une énergie toujours plus abordable, plus propre, plus fiable et accessible au plus grand nombre. Présents dans plus de 130 pays, nous inscrivons le développement durable dans toutes ses dimensions au cœur de nos projets et opérations pour contribuer au bien-être des populations.",
+    "Team Henri Fabre": "Construire un nouveau modèle de développement industriel : plus collectif, plus collaboratif, tiré par l’innovation et les opportunités technologiques, du numérique en particulier.",
+    "Solamat Merex": "Maîtriser durablement le risque déchet pour pérenniser l’activité industrielle.",
+    "ONET" : "Notre mission est d’accompagner nos clients dans des environnements toujours plus sains, sûrs et fiables. Au travers de nos métiers, nous intervenons dans tous les écosystèmes clés de nos sociétés : espaces de travail, production, énergie, transport, soins, loisirs, éducation.",
+    "UMF": "Les professionnels de l'UMF connectent l'Europe par la route, le fleuve, le fer et le pipeline.",
+    "Eaux de Marseille": "Le Groupe des Eaux de Marseille dispose de savoir-faire éprouvés et reconnus dans l’exploitation des services publics d’eau potable et d’assainissement. Au-delà de ces compétences, le groupe s'attache à relever tous les défis des villes de demain : l’efficacité énergétique des exploitations, la sobriété dans la consommation des ressources en eau et en énergie pour accompagner un développement durable du territoire.",
+    "ADF": "ADF intervient dans les secteurs de l’Aéronautique, Spatial & Défense – Énergie – Industrie – Oil & Gas."
   },
   "sponsorsHeaders": {
     "EDF" : "https://www.edf.fr/sites/default/files/rich-content/devenons-v3/img/desktop/verte.jpg",
@@ -18,11 +70,31 @@
     "France Chimie" : "https://www.francechimie.fr/media/ad0/jeunes-femmes-chimistes_md.jpg",
     "Sartorius" : "https://www.sartorius.com/resource/image/7992/16x9/1050/590/8a19344806c8f6a375b9902bd018da15/652921E6DD4D18B2CD6A70B769AF81D0/sartorius-0342-pg12.jpg",
     "ITER" : "https://www.iter.org/doc/www/content/com/Lists/Machine/Attachments/28/tokamak-full.jpg",
+    "AFPI" : "https://www.afpi-acmformation.com/wp-content/uploads/2019/10/banni%C3%A8re-facebook-septembre-2019-1.jpg",
     "OPCO2I" : "https://www.alternance-professionnelle.fr/wp-content/uploads/2021/02/opco2i-industrie-relance-formation-678x381.jpg",
     "ELENGY" : "https://www.elengy.com/images/uniterevolution/slider-home/images/slidesHome/slide04.jpg",
     "Airbus Helicopters" : "https://www.aerospace-technology.com/wp-content/uploads/sites/15/2021/06/Airbus.jpg",
+    "KSB" : "",
+    "CCI": "",
+    "SNEF" : "https://www.snef.fr/images/home/groupesnef_bg_home_header_desk.jpg",
+    "Ponticelli" : "https://www.ponticelli.com/wp-content/uploads/2018/03/ban03.jpg",
+    "Enedis" :"https://www.enedis.fr/sites/default/files/styles/image_full/public/images/2020-07/PH719_214.jpg?itok=OjxV49_U",
+    "D3E" : "https://www.d3e.fr/images/d3e_electronique.jpg",
+    "STMICROELECTRONICS": "https://gomet.net/wp-content/uploads/2020/07/photo_usine_stmicro.png",
+    "POLYVIA": "https://www.polyvia.fr/sites/default/files/2021-10/3000-800-pole-marche_v2.jpg",
+    "Port de Marseille Fos": "https://www.environnement-magazine.fr/e-docs/00/02/07/DE/port-marseille-fos-adopte-projet-strategique-faveur-transition-energetique_620x350.jpg",
+    "ArcelorMittal": "https://france.arcelormittal.com/~/media/Images/A/Arcelormittal-In-France-V2/banners/contact.jpg",
+    "CEA": "https://www.cea.fr/PublishingImages/highlites/decryptage-ecarburants.jpg",
+    "Lyondellbasell": "https://www.lyondellbasell.com/globalassets/home-page/sliders/earnings_call_2.jpg",
     "Naval Group" : "https://www.naval-group.com/sites/default/files/styles/heading_content/public/2020-09/cinemagraph_batiments-de-surface.jpg?itok=yXO3Qw-O",
-    "AFPI" : "https://www.afpi-acmformation.com/wp-content/uploads/2019/10/banni%C3%A8re-facebook-septembre-2019-1.jpg"
+    "Ardatem": "https://www.ardatem.fr/wp-content/uploads/slider_energies.jpg",
+    "Total Energies": "https://totalenergies.com/sites/g/files/nytnzq121/files/styles/1524x433/public/images/2021-05/Bandeau_Industries_0.jpg",
+    "Team Henri Fabre": "https://www.investinprovence.com/sites/default/files/technocentrehenrifabre850x280px_0.jpg",
+    "Solamat Merex": "https://www.sarpi.veolia.com/sites/g/files/dvc2626/files/styles/crop_freeform/public/image/2018/01/SARPI_nos-fondamentaux_0.jpg",
+    "ONET" : "https://www.groupeonet.com/wp-content/uploads/2020/12/siege-vf.jpg",
+    "UMF": "https://static.latribune.fr/full_width/1285416/port-de-marseille.jpg",
+    "Eaux de Marseille": "https://www.eauxdemarseille.fr/var/sem/storage/images/eaux-de-marseille/le-groupe/2664-35-fre-FR/Le-Groupe_header.jpg",
+    "ADF": "https://media-exp1.licdn.com/dms/image/C4D1BAQHvNoku43jpww/company-background_10000/0/1519798657442?e=1636398000&v=beta&t=4rLhPaRKXDVcu-F1nvFEsBcvldihZTtqCtfvs3d4PyE"
   },
   "hotspotInfos": {
     "_comment": "video 0 / visite 1 / slideshow 2 / quizz 3 / classroom 4 / room 5",
@@ -112,12 +184,171 @@
       "paragraphText" : "",
       "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
+    "trigger11": {
+      "type": 0,
+      "title": "Présentation de KSB",
+      "sponsor": "KSB",
+      "theme": "Innovation",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger12": {
+      "type": 0,
+      "title": "BESOIN DE TITRE",
+      "sponsor": "CCI",
+      "theme": "Innovation",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger13": {
+      "type": 0,
+      "title": "Entrez par la grande porte",
+      "sponsor": "SNEF",
+      "theme": "Inclusion",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger17": {
+      "type": 0,
+      "title": "L'évolution du métier de la mécanique",
+      "sponsor": "Ponticelli",
+      "theme": "Usine du futur",
+      "paragraphText" : "L'évolution du métier de la mécanique. Un métier moderne.",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger21": {
+      "type": 0,
+      "title": "Rejoignez les 38 000 collaborateurs d'Enedis partout en France",
+      "sponsor": "Enedis",
+      "theme": "Usine du futur",
+      "paragraphText" : "Enedis est le gestionnaire du réseau public de distribution d’électricité sur 95 % du territoire français continental. Ses 38 859 collaborateurs assurent chaque jour l’exploitation, l’entretien et le développement de près de 1,3 million de kilomètres de réseau",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger25": {
+      "type": 0,
+      "title": "D3E s’engage pour l’emploi de jeunes ",
+      "sponsor": "D3E",
+      "theme": "Inclusion",
+      "paragraphText" : "Voici un reportage tourné dans nos locaux, sur le thème « Les entreprises s’engagent pour l’emploi des jeunes ». Découvrez notre politique d’alternance partagée par Jean-Pierre JOUBERT notre gérant ainsi que les témoignages de Pascale et Alex, deux de nos collaborateurs qui vous partagent leur parcours ainsi que leur vie d’apprenti au sein de D3E !",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger29": {
+      "type": 0,
+      "title": "Bienvenue dans l’usine extraordinaire de STMicroelectronics Rousset ",
+      "sponsor": "STMICROELECTRONICS",
+      "theme": "Inclusion",
+      "paragraphText" : "C’est ici que sont fabriquées les puces électroniques qui font partie de notre quotidien et qui contribuent de façon positive à notre vie. Vous ne les voyez pas et pourtant elles sont partout, dans nos smartphones, ordinateurs, consoles de jeux, objets connectés, robots, voitures…\nLes puces électroniques, imaginées et conçues sur le site ST de Rousset, sont fabriquées à partir de plaquettes de silicium sur lesquelles sont gravés les circuits intégrés au travers de nombreuses étapes de production. Chaque année, ce sont ainsi des milliards de puces qui sont produites dans l’usine de Rousset. Elles sont ensuite testées et envoyées dans nos unités d’assemblage avant d’être expédiées chez nos clients. \nPoussez les portes virtuelles de notre univers de haute technologie et laissez-vous guider dans cette visite immersive qui vous fera découvrir notre salle de fabrication également appelée « salle blanche », ainsi que ses coulisses ! ",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger33": {
+      "type": 0,
+      "title": "Témoignages d’apprentis ingénieurs Plasturgie et matériaux composites.",
+      "sponsor": "POLYVIA",
+      "theme": "Usine du futur",
+      "paragraphText" : "La formation professionnelle en apprentissage ; ce qu'en pensent les apprentis ingénieurs Plasturgie et matériaux composites Polyvia Formation-IMT Lille Douai",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger37": {
+      "type": 0,
+      "title": "Un port vert pour une économie bleue ",
+      "sponsor": "Port de Marseille Fos",
+      "theme": "Innovation",
+      "paragraphText" : "Premier port de France, le port de Marseille Fos est un acteur majeur du commerce international. Situé au croisement des routes maritimes mondiales, il se positionne comme la porte d’entrée naturelle du Sud de l’Europe. Il dispose d’espaces et d’infrastructures pour accueillir des activités maritimes, logistiques, industrielles, numériques et des entreprises internationales qui approvisionnent les marchés français et européens. \nLe port de Marseille Fos est un acteur clé de l’emploi métropolitain, véritable moteur de l’économie régionale avec près de 41 500 emplois directs et indirects générés sur le territoire. \nLeader de la transition énergétique sur son territoire, le port de Marseille Fos s’inscrit plus que jamais comme un port vert au service de l’économie bleue.",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger41": {
+      "type": 0,
+      "title": "Diversités",
+      "sponsor": "ArcelorMittal",
+      "theme": "Inclusion",
+      "paragraphText" : "Tous les talents ont leur place chez nous !",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger45": {
+      "type": 0,
+      "title": "La fusion sur terre",
+      "sponsor": "CEA",
+      "theme": "Innovation",
+      "paragraphText" : "Tous les talents ont leur place chez nous !",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger49": {
+      "type": 0,
+      "title": "BESOIN DE TITRE",
+      "sponsor": "Lyondellbasell",
+      "theme": "Innovation",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
     "trigger52": {
       "type": 3,
       "title": "Cap ou pas cap de tout savoir sur le Naval de Défense ?",
       "sponsor": "Naval Group",
       "theme": "Innovation",
       "paragraphText" : ""
+    },
+    "trigger56": {
+      "type": 0,
+      "title": "3 Interviews",
+      "sponsor": "Ardatem",
+      "theme": "Inclusion",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger58": {
+      "type": 0,
+      "title": "BESOIN DE TITRE",
+      "sponsor": "Total Energies",
+      "theme": "Innovation",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger59": {
+      "type": 0,
+      "title": "BESOIN DE TITRE",
+      "sponsor": "Team Henri Fabre",
+      "theme": "Innovation",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger60": {
+      "type": 0,
+      "title": "Valorisation et traitement des déchets dangereux",
+      "sponsor": "Solamat Merex",
+      "theme": "Développement durable",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger61": {
+      "type": 2,
+      "title": "Les innovations ONET",
+      "sponsor": "ONET",
+      "theme": "Innovation",
+      "paragraphText" : "Onet Technologies conçoit des innovations pour intervenir dans des environnement nucléaires à distance (télé-opérations) et grâce à l'aide de lasers"
+    },
+    "trigger62": {
+      "type": 0,
+      "title": "Les métiers de l’UMF",
+      "sponsor": "UMF",
+      "theme": "Inclusion",
+      "paragraphText" : "L’Union Maritime et Fluviale de Marseille-Fos (UMF) est l’association professionnelle représentant toute la communauté portuaire de Marseille-Fos. Elle regroupe l’ensemble des entreprises qui constituent la filière maritime et industrialo-portuaire, soit 24 professions et 25.000 emplois directs",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger63": {
+      "type": 0,
+      "title": "Eaux de Marseille - Notre territoire est si précieux",
+      "sponsor": "Eaux de Marseille",
+      "theme": "Développement durable",
+      "paragraphText" : "Le Groupe des Eaux de Marseille porte l’ambition forte d’œuvrer collectivement et concrètement pour préserver la richesse du territoire.\nÊtre le partenaire naturel pour l’amélioration de la qualité de vie et du bien-être de tous fait partie de la raison d’être du Groupe des Eaux de Marseille. Aujourd’hui, plus que jamais, sa mission est d’accompagner toutes les parties prenantes sur les enjeux environnementaux.",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+    },
+    "trigger64": {
+      "type": 0,
+      "title": "Témoignage métier",
+      "sponsor": "ADF",
+      "theme": "Inclusion",
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     }
   }
 }

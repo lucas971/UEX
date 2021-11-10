@@ -53,8 +53,88 @@
       "iconid" : "trigger10"
     },
     {
+      "id" : "Cube921",
+      "iconid" : "trigger11"
+    },
+    {
+      "id" : "Cylinder066",
+      "iconid" : "trigger12"
+    },
+    {
+      "id" : "immeuble_H012",
+      "iconid" : "trigger13"
+    },
+    {
+      "id" : "immeuble_H001",
+      "iconid" : "trigger17"
+    },
+    {
+      "id" : "immeuble_H015",
+      "iconid" : "trigger21"
+    },
+    {
+      "id" : "immeuble_H002",
+      "iconid" : "trigger25"
+    },
+    {
+      "id" : "immeuble_E001",
+      "iconid" : "trigger29"
+    },
+    {
+      "id" : "Cube056",
+      "iconid" : "trigger33"
+    },
+    {
+      "id" : "Conteneur127",
+      "iconid" : "trigger37"
+    },
+    {
+      "id" : "immeuble_E",
+      "iconid" : "trigger41"
+    },
+    {
+      "id" : "Cylinder043",
+      "iconid" : "trigger45"
+    },
+    {
+      "id" : "Cube040",
+      "iconid" : "trigger49"
+    },
+    {
       "id" : "Chantier_Naval002",
       "iconid" : "trigger52"
+    },
+    {
+      "id" : "Cube050",
+      "iconid" : "trigger56"
+    },
+    {
+      "id" : "Cylinder035",
+      "iconid" : "trigger58"
+    },
+    {
+      "id" : "Cube068",
+      "iconid" : "trigger59"
+    },
+    {
+      "id" : "Cube069",
+      "iconid" : "trigger60"
+    },
+    {
+      "id" : "Cube087",
+      "iconid" : "trigger61"
+    },
+    {
+      "id" : "Cylinder052",
+      "iconid" : "trigger62"
+    },
+    {
+      "id" : "Cube073",
+      "iconid" : "trigger63"
+    },
+    {
+      "id" : "Cylinder033",
+      "iconid" : "trigger64"
     }
   ]
 }
