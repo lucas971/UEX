@@ -747,9 +747,11 @@ const UpdateFade = (newValue) =>{
 //#endregion
 
 //#region DATGUI
+import {Stats} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/stats.module.js'
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
 const ShowDatGUI = true
 let gui
+let stats = null
 let a_light
 
 const InitGUI = (d) => {
@@ -759,6 +761,9 @@ const InitGUI = (d) => {
         guiWrap.style.pointerEvents = 'none'
         return 
     }
+    
+    stats = new Stats()
+    guiWrap.appendChild(stats.dom)
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
@@ -1443,7 +1448,9 @@ const LoadCityScene = () => {
 //#region UPDATE
 
 const animate = () => {
-
+    if (stats !== null) {
+        stats.update()
+    }
     requestAnimationFrame( animate )
     if (activeScene === cityActiveScene) {
         UpdateCity(threeData)
