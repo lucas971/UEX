@@ -1500,7 +1500,8 @@ const Resize = () => {
 const main = () => {
     setup()
     InitGUI(threeData)
-    
+
+    document.getElementById("loading-screen-stopper").click()
     return
     LoadCityScene()
 }
