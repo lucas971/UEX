@@ -348,7 +348,7 @@ const UpdateIconsPosition = (d) => {
         if (icons[i].image === null) {
             continue
         }
-        if (!checkIconVisible(toScreen.x, toScreen.y)) {
+        if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
             icons[i].image.style.display = 'none'
             return
         }
