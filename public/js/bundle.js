@@ -258,7 +258,8 @@ const iconHeight = 75
 //Array of icons struct. See ../iconsData.json for more information on the structure.
 let icons
 let roomMapping = []
-
+let positionMapping = []
+let positionRef = null
 //The general content div from which enabling/disabling the pointer events.
 let content
 
@@ -279,16 +280,14 @@ const InitializeIcons = (d) => {
         (data) => {
             icons = data["icons"]
             GenerateHtml(d)
-            UpdateIconsPosition(d)
+            InitializeIconsPosition(d)
         },
         (error) => {
             console.error(error)
         })
 }
 
-//Update the icons position on the screen using the 3D world space position of the building of interests.
-const UpdateIconsPosition = (d) => {
-    
+const InitializeIconsPosition = (d) => {
     if (!d.scene || !icons) {
         return
     }
@@ -306,6 +305,29 @@ const UpdateIconsPosition = (d) => {
 
         icons[i].image.style.left = `${toScreen.x - iconWidth/2}px`
         icons[i].image.style.top = `${toScreen.y - iconHeight/2}px`
+        positionMapping[i] = toScreen
+        if (i===0){
+            positionRef = obj
+        }
+    }
+}
+//Update the icons position on the screen using the 3D world space position of the building of interests.
+const UpdateIconsPosition = (d) => {
+    
+    if (!d.scene || !icons) {
+        return
+    }
+    d.camera.updateMatrixWorld()
+    const toScreen = toScreenPosition(ref, d)
+    const offsetX = toScreen.x - positionMapping[0].x
+    const offsetY = toScreen.y - positionMapping[0].y
+
+    for (let i = 0; i < icons.length; i++) {
+        if (icons[i].image === null) {
+            continue
+        }
+        icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
+        icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
     }
 }
 //#endregion
