@@ -379,12 +379,12 @@ const GenerateHtml = (d) => {
         for (let j = 0; j < icons.length; j++) {
             if (icons[j].id === toIterate[i].name) {
                 shouldContinue = true
-                break
             }
         }
         if (shouldContinue) {
             continue
         }
+        console.log(toIterate[i].name)
         d.scene.remove(toIterate[i])
     }
 
