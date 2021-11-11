@@ -370,7 +370,7 @@ const GenerateHtml = (d) => {
         if (data.type <= 4) {
             icons[i].image = document.getElementById(icons[i].iconid)
             if (icons[i].image === null) {
-                console.log(icons[i].iconid)
+                console.log(icons[i].iconid + ' not found !!!')
             }
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(i))
@@ -918,7 +918,6 @@ const setupScene = (gltf, d) => {
         if (material.map) material.map.encoding = d.THREE.sRGBEncoding
         if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
         if (material.map || material.emissiveMap) material.needsUpdate = true;
-        console.log(material)
     });
     document.getElementById("loading-screen-stopper").click()
     
@@ -1421,7 +1420,7 @@ const setup = () => {
     renderer.physicallyCorrectLights = true
     renderer.outputEncoding = THREE.sRGBEncoding
     renderer.setClearColor( 0xEDE89F )
-    renderer.setPixelRatio( window.devicePixelRatio )
+    renderer.setPixelRatio( window.devicePixelRatio * 0.5)
     renderer.setSize(window.innerWidth, window.innerHeight)
     
     canvas.appendChild( renderer.domElement )
