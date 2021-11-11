@@ -1420,7 +1420,7 @@ const setup = () => {
     renderer.physicallyCorrectLights = true
     renderer.outputEncoding = THREE.sRGBEncoding
     renderer.setClearColor( 0xEDE89F )
-    renderer.setPixelRatio( window.devicePixelRatio * 0.5)
+    renderer.setPixelRatio( window.devicePixelRatio)
     renderer.setSize(window.innerWidth, window.innerHeight)
     
     canvas.appendChild( renderer.domElement )
