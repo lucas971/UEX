@@ -918,6 +918,7 @@ const setupScene = (gltf, d) => {
         if (material.map) material.map.encoding = d.THREE.sRGBEncoding
         if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
         if (material.map || material.emissiveMap) material.needsUpdate = true;
+        console.log(material)
     });
     document.getElementById("loading-screen-stopper").click()
     
