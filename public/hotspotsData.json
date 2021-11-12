@@ -287,7 +287,7 @@
       "sponsor": "Naval Group",
       "theme": "Innovation",
       "paragraphText" : "",
-      "quiz" : "test"
+      "quiz" : "<div id=\"tripetto\"></div>\n  <script src=\"https://cdn.jsdelivr.net/npm/tripetto-runner-foundation\"></script>\n  <script src=\"https://cdn.jsdelivr.net/npm/tripetto-runner-autoscroll\"></script>\n  <script src=\"https://cdn.jsdelivr.net/npm/tripetto-services\"></script>\n  <script>\n  var tripetto = TripettoServices.init({ token: \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiOUdwNENBZ2htYzNKcFgxd3FJNzN2ak9IN3NyZk0zRnZDb0pZRi9pNXJxVT0iLCJ0eXBlIjoiY29sbGVjdCJ9.HtS0bPJp7lL8YvUPfIws3SqGH39DoSaZJPOQ57bSM8o\" });\n\n  TripettoAutoscroll.run({\n      element: document.getElementById(\"tripetto\"),\n      definition: tripetto.definition,\n      styles: tripetto.styles,\n      l10n: tripetto.l10n,\n      locale: tripetto.locale,\n      translations: tripetto.translations,\n      attachments: tripetto.attachments,\n      onSubmit: tripetto.onSubmit\n  });\n  </script>"
     },
     "trigger56": {
       "type": 0,
