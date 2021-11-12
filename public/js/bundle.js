@@ -211,6 +211,7 @@ const PopulateHotspot = (hotspotInfo) => {
         return
     }
     const div = hotspotDivs[hotspotInfo.type]
+    div.getElementsByClassName("hotspot-descrip-div")[0].style.display = 'flex'
     let newColor = blue
     if (hotspotInfo.theme === "Usine du futur") {
         newColor = red
@@ -220,6 +221,7 @@ const PopulateHotspot = (hotspotInfo) => {
         newColor = yellow
     } else if (hotspotInfo.theme === "") {
         newColor = white
+        div.getElementsByClassName("hotspot-descrip-div")[0].style.display = 'none'
     }
     div.style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
