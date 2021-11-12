@@ -264,6 +264,7 @@ const PopulateHotspot = (hotspotInfo) => {
     
     if (hotspotInfo.quiz) {
         div.getElementsByClassName("form-embed w-embed w-script")[0].empty()
+        div.getElementsByClassName("form-embed w-embed w-script")[0].innerHTML = hotspotInfo.quiz
     }
     
     
