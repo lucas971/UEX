@@ -213,7 +213,7 @@ const PopulateHotspot = (hotspotInfo) => {
         return
     }
     const div = hotspotDivs[hotspotInfo.type]
-    div.getElementsByClassName("hotspot-descrip-div")[0].style.display = 'flex'
+    div.getElementsByClassName("theme-tag-div")[0].style.display = 'flex'
     let newColor = blue
     if (hotspotInfo.theme === "Usine du futur") {
         newColor = red
@@ -223,7 +223,7 @@ const PopulateHotspot = (hotspotInfo) => {
         newColor = yellow
     } else if (hotspotInfo.theme === "") {
         newColor = white
-        div.getElementsByClassName("hotspot-descrip-div")[0].style.display = 'none'
+        div.getElementsByClassName("theme-tag-div")[0].style.display = 'none'
     }
 
     div.getElementsByClassName("hotspot-header-section")[0].style.backgroundImage = "url(" +sponsorHeaders[hotspotInfo.sponsor] + ")"
