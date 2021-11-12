@@ -396,9 +396,9 @@ const GenerateHtml = (d) => {
         //MULTI ICONS
         if (icons[i].inside) {
             for (let j = 0; j < icons[i].inside.length; j++) {
-                const insideDiv = document.getElementById(icons[i].inside[i])
-                let data = GetHotspotData(icons[i].inside[i])
-                insideDiv.addEventListener("click", () => TryClickedLink(i))
+                const insideDiv = document.getElementById(icons[i].inside[j])
+                let data = GetHotspotData(icons[i].inside[j])
+                insideDiv.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 insideDiv.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
                 iconDiv.appendChild(icons[i].image)
             }
@@ -409,7 +409,7 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         if (data.type <= 4) {
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
-            icons[i].image.addEventListener("click", () => TryClickedLink(i))
+            icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
             iconDiv.appendChild(icons[i].image)
             continue;
         }
@@ -436,9 +436,8 @@ const TryClickedRoom = (obj) => {
     obj.getWorldPosition(worldPos)
     RequestHotspotTranslation(worldPos, roomMapping[obj])
 }
-const TryClickedLink = (i) => {
-    let iconId = icons[i].iconid
-    const obj = d.scene.getObjectByName(icons[i].id)
+const TryClickedLink = (iconId, objectName) => {
+    const obj = d.scene.getObjectByName(objectName)
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
     RequestHotspotTranslation(worldPos, null)
