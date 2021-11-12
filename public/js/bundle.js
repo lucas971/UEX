@@ -400,6 +400,11 @@ const GenerateHtml = (d) => {
                 let data = GetHotspotData(icons[i].inside[j])
                 insideDiv.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 insideDiv.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+                insideDiv.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none"
+                insideDiv.addEventListener("mouseenter", () => 
+                    insideDiv.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "all", false)
+                insideDiv.addEventListener("mouseleave", () =>
+                    insideDiv.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none", false)
                 iconDiv.appendChild(icons[i].image)
             }
             continue;
@@ -410,6 +415,11 @@ const GenerateHtml = (d) => {
         if (data.type <= 4) {
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
+            icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none"
+            icons[i].image.addEventListener("mouseenter", () =>
+                icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "all", false)
+            icons[i].image.addEventListener("mouseleave", () =>
+                icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none", false)
             iconDiv.appendChild(icons[i].image)
             continue;
         }
