@@ -400,11 +400,6 @@ const GenerateHtml = (d) => {
                 let data = GetHotspotData(icons[i].inside[j])
                 insideDiv.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 insideDiv.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
-                insideDiv.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none"
-                insideDiv.addEventListener("mouseenter", () => 
-                    insideDiv.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "all", false)
-                insideDiv.addEventListener("mouseleave", () =>
-                    insideDiv.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none", false)
                 iconDiv.appendChild(icons[i].image)
             }
             continue;
