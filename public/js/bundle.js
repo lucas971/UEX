@@ -157,6 +157,8 @@ const red = '#fe004b'
 const yellow = '#ffd503'
 const green = '#90d301'
 const white = '#ffffff'
+const black = '#000000'
+
 const GetHotspotData = (id) => hotspotInfos[id]
 
 const InitializeHotspots = (d) => {
@@ -223,24 +225,34 @@ const PopulateHotspot = (hotspotInfo) => {
         newColor = white
         div.getElementsByClassName("hotspot-descrip-div")[0].style.display = 'none'
     }
+
+    div.getElementsByClassName("hotspot-header-section")[0].style.backgroundImage = "url(" +sponsorHeaders[hotspotInfo.sponsor] + ")"
+    
     div.style.backgroundColor = newColor
+    
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-back-button")[0].style.boxShadow = "1px 1px 16px 0 " +newColor
-    div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
+    
     div.getElementsByClassName("theme-tag-div")[0].style.backgroundColor = newColor
+    
     div.getElementsByClassName("hotspot-title-h1")[0].style.color = newColor
+    if (newColor === white) {
+        div.getElementsByClassName("hotspot-title-h1")[0].style.color = black
+    }
     div.getElementsByClassName("title-header-div")[0].style.shadowColor = newColor
     div.getElementsByClassName("title-header-div")[0].style.boxShadow = "1px 9px 20px -5px rgba(0, 0, 0, 0.17), 10px -10px 0 3px " + newColor
     div.getElementsByClassName("hotspot-title-h1")[0].innerHTML = hotspotInfo.title
+    
     div.getElementsByClassName("sponsor-name-text")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("theme-text")[0].innerHTML = hotspotInfo.theme
     div.getElementsByClassName("paragraph-text")[0].innerHTML = hotspotInfo.paragraphText
+    
     let rgb = newColor.slice(1).convertToRGB()
     div.getElementsByClassName("hotspot-partner-div")[0].style.boxShadow = "1px 1px 50px 0 rgba(" +
         rgb[0].toString() +", " +rgb[1].toString() + ", " +rgb[2].toString() + ", 0.47)"
+    div.getElementsByClassName("hotspot-partner-div")[0].style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-partner-name")[0].innerHTML = hotspotInfo.sponsor
     div.getElementsByClassName("hotspot-partner-info")[0].innerHTML = sponsorsTexts[hotspotInfo.sponsor]
-    div.getElementsByClassName("hotspot-header-section")[0].style.backgroundImage = "url(" +sponsorHeaders[hotspotInfo.sponsor] + ")"
     
     if (hotspotInfo.video) {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
