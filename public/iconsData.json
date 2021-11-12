@@ -62,35 +62,43 @@
     },
     {
       "id" : "immeuble_H012",
-      "iconid" : "trigger13"
+      "iconid" : "multispot13",
+      "inside" : ["trigger13", "trigger14", "trigger15", "trigger16"]
     },
     {
       "id" : "immeuble_H001",
-      "iconid" : "trigger17"
+      "iconid" : "multispot17",
+      "inside" : ["trigger17", "trigger18", "trigger19", "trigger20"]
     },
     {
       "id" : "immeuble_H015",
-      "iconid" : "trigger21"
+      "iconid" : "multispot21",
+      "inside" : ["trigger21", "trigger22", "trigger23", "trigger24"]
     },
     {
       "id" : "immeuble_H002",
-      "iconid" : "trigger25"
+      "iconid" : "multispot25",
+      "inside" : ["trigger25", "trigger26", "trigger27", "trigger28"]
     },
     {
       "id" : "immeuble_E001",
-      "iconid" : "trigger29"
+      "iconid" : "multispot29",
+      "inside" : ["trigger29", "trigger30", "trigger31", "trigger32"]
     },
     {
       "id" : "Cube056",
-      "iconid" : "trigger33"
+      "iconid" : "multispot33",
+      "inside" : ["trigger33", "trigger34", "trigger35", "trigger36"]
     },
     {
       "id" : "Pack_conteneur_03",
-      "iconid" : "trigger37"
+      "iconid" : "multispot37",
+      "inside" : ["trigger37", "trigger38", "trigger39", "trigger40"]
     },
     {
       "id" : "Campus_002001",
-      "iconid" : "trigger41"
+      "iconid" : "multispot41",
+      "inside" : ["trigger41", "trigger42", "trigger43", "trigger44"]
     },
     {
       "id" : "Building_V2_06040",
@@ -99,19 +107,23 @@
     },
     {
       "id" : "Cube040",
-      "iconid" : "trigger49"
+      "iconid" : "multispot49",
+      "inside" : ["trigger49", "trigger50", "trigger51"]
     },
     {
       "id" : "Chantier_Naval002",
-      "iconid" : "trigger52"
+      "iconid" : "multispot52",
+      "inside" : ["trigger52", "trigger53", "trigger54", "trigger55"]
     },
     {
       "id" : "Cube050",
-      "iconid" : "trigger56"
+      "iconid" : "multispot56",
+      "inside" : ["trigger56", "trigger57"]
     },
     {
       "id" : "Building_V2_06032",
-      "iconid" : "trigger58"
+      "iconid" : "trigger58",
+      "inside" : ["trigger58", "trigger58b", "trigger58c", "trigger58d"]
     },
     {
       "id" : "Building_V2_01026",
