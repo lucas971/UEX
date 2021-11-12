@@ -94,7 +94,8 @@
     },
     {
       "id" : "Cylinder043",
-      "iconid" : "trigger45"
+      "iconid" : "multispot1",
+      "inside" : ["trigger45","trigger46","trigger47","trigger48","trigger48b","trigger48c"]
     },
     {
       "id" : "Cube040",

@@ -369,11 +369,10 @@ const UpdateIconsPosition = (d) => {
     const offsetY = toScreen.y - positionMapping[0].y
 
     for (let i = 0; i < icons.length; i++) {
-        if (icons[i].image === null || positionMapping[i] === null) {
+        if (icons[i].image === null) {
             continue
         }
         icons[i].image.style.display = 'flex'
-        console.log(icons[i])
         icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
         icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
         if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
@@ -395,11 +394,16 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         if (data.type <= 4) {
             icons[i].image = document.getElementById(icons[i].iconid)
-            if (icons[i].image === null) {
-                console.log(icons[i].iconid + ' not found !!!')
+            if (icons[i].inside) {
+                for (let j = 0; j < icons[i].inside.length; j++) {
+                    document.getElementById(icons[i].inside[i]).addEventListener("click", () => TryClickedLink(i))
+                    document.getElementById(icons[i].inside[i]).getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+                }
             }
-            icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
-            icons[i].image.addEventListener("click", () => TryClickedLink(i))
+            else {
+                icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+                icons[i].image.addEventListener("click", () => TryClickedLink(i))
+            }
             iconDiv.appendChild(icons[i].image)
         }
         else {
