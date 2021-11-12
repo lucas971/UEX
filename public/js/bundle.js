@@ -156,6 +156,7 @@ const blue = '#06b7ff'
 const red = '#fe004b'
 const yellow = '#ffd503'
 const green = '#90d301'
+const white = '#ffffff'
 const GetHotspotData = (id) => hotspotInfos[id]
 
 const InitializeHotspots = (d) => {
@@ -217,6 +218,8 @@ const PopulateHotspot = (hotspotInfo) => {
         newColor = green
     } else if (hotspotInfo.theme === "Innovation") {
         newColor = yellow
+    } else if (hotspotInfo.theme === "") {
+        newColor = white
     }
     div.style.backgroundColor = newColor
     div.getElementsByClassName("hotspot-back-button")[0].style.backgroundColor = newColor
