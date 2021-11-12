@@ -391,27 +391,35 @@ const GenerateHtml = (d) => {
     const iconDiv = document.getElementById('icons')
     
     for (let i = 0; i< icons.length; i++) {
+        icons[i].image = document.getElementById(icons[i].iconid)
+        
+        //MULTI ICONS
+        if (icons[i].inside) {
+            for (let j = 0; j < icons[i].inside.length; j++) {
+                const insideDiv = document.getElementById(icons[i].inside[i])
+                let data = GetHotspotData(icons[i].inside[i])
+                insideDiv.addEventListener("click", () => TryClickedLink(i))
+                insideDiv.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+                iconDiv.appendChild(icons[i].image)
+            }
+            continue;
+        }
+        
+        //GRAND MECENES
         let data = GetHotspotData(icons[i].iconid)
         if (data.type <= 4) {
-            icons[i].image = document.getElementById(icons[i].iconid)
-            if (icons[i].inside) {
-                for (let j = 0; j < icons[i].inside.length; j++) {
-                    document.getElementById(icons[i].inside[i]).addEventListener("click", () => TryClickedLink(i))
-                    document.getElementById(icons[i].inside[i]).getElementsByClassName('hotspot-name')[0].innerHTML = data.title
-                }
-            }
-            else {
-                icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
-                icons[i].image.addEventListener("click", () => TryClickedLink(i))
-            }
+            icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+            icons[i].image.addEventListener("click", () => TryClickedLink(i))
             iconDiv.appendChild(icons[i].image)
+            continue;
         }
-        else {
-            icons[i].image = null
-            const obj = d.scene.getObjectByName(icons[i].id)
-            AddToSelectedObjects(obj)
-            roomMapping[obj] = document.getElementById(data.room_link)
-        }
+        
+        //ROOMS
+        icons[i].image = null
+        const obj = d.scene.getObjectByName(icons[i].id)
+        AddToSelectedObjects(obj)
+        roomMapping[obj] = document.getElementById(data.room_link)
+        
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
