@@ -369,7 +369,7 @@ const UpdateIconsPosition = (d) => {
     const offsetY = toScreen.y - positionMapping[0].y
 
     for (let i = 0; i < icons.length; i++) {
-        if (icons[i].image === null) {
+        if (icons[i].image === null || positionMapping[i] === null) {
             continue
         }
         icons[i].image.style.display = 'flex'
