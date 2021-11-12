@@ -262,7 +262,7 @@ const PopulateHotspot = (hotspotInfo) => {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     
-    if (hotspotInfo.quizz) {
+    if (hotspotInfo.quiz) {
         div.getElementsByClassName("form-embed w-embed w-script")[0].empty()
     }
     
