@@ -112,7 +112,7 @@
       "title": "Bienvenue en 2035",
       "sponsor": "EDF",
       "theme": "Usine du futur",
-      "paragraphText" : "",
+      "paragraphText" : "Bienvenue en 2035, dans un monde où l’énergie se partage, se préserve et se réinvente. Adam nous fait découvrir son quotidien et celui de son quartier. Tour à tour, il nous présente ses modes de transport ainsi que les possibilités pour se charger, il nous fait pénétrer dans son foyer où ses usages domestiques et ses outils de travail sont ultra connectés. Pour clore la visite, Adam nous montre la manière dont l’énergie est partagée entre les panneaux solaires de sa maison et l’usine installée en face de chez lui.\nEn fait, Adam nous présente son quotidien tel qu’il sera en 2035.",
       "video" : "https://player.vimeo.com/video/641377158?h=faa2f47f49"
     },
     "trigger2": {
@@ -148,10 +148,10 @@
     },
     "trigger6": {
       "type": 0,
-      "title": "Astana",
+      "title": "Le principe est simple",
       "sponsor": "ITER",
       "theme": "Innovation",
-      "paragraphText" : "",
+      "paragraphText" : "ITER est un programme de recherche qui a pour objectif de reproduire sur Terre les réactions qui sont à l’oeuvre dans le coeur du Soleil et des étoiles. Cette vidéo vous permettra de mieux comprendre les enjeux de cette collaboration internationale unique au monde dans le domaine de l’énergie.",
       "video" : "https://player.vimeo.com/video/641337198?h=314cfc2e7d"
     },
     "trigger7": {
@@ -162,11 +162,12 @@
       "paragraphText" : "Visitez virtuellement notre centre basé à Istres, ses ateliers et plateaux techniques, espaces co-working, hub, espaces détente et cafétéria. Pour profiter pleinement de la vision à 360°, faites pivoter l’image vers la gauche ou la droite."
     },
     "trigger8": {
-      "type": 2,
-      "title": "Portrait",
+      "type": 0,
+      "title": "Présentation OPCO2i",
       "sponsor": "OPCO2I",
       "theme": "Inclusion",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "video" : "https://player.vimeo.com/video/645035909?h=5ed2b0f68f"
     },
     "trigger9": {
       "type": 0,
@@ -190,7 +191,7 @@
       "sponsor": "KSB",
       "theme": "Innovation",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/645012228?h=ce4ecda200"
     },
     "trigger12": {
       "type": 0,
@@ -206,7 +207,7 @@
       "sponsor": "SNEF",
       "theme": "Inclusion",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/641354706?h=17ca253908"
     },
     "trigger17": {
       "type": 0,
@@ -214,7 +215,7 @@
       "sponsor": "Ponticelli",
       "theme": "Usine du futur",
       "paragraphText" : "L'évolution du métier de la mécanique. Un métier moderne.",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/641345487?h=9e281469ba"
     },
     "trigger21": {
       "type": 0,
@@ -222,7 +223,7 @@
       "sponsor": "Enedis",
       "theme": "Usine du futur",
       "paragraphText" : "Enedis est le gestionnaire du réseau public de distribution d’électricité sur 95 % du territoire français continental. Ses 38 859 collaborateurs assurent chaque jour l’exploitation, l’entretien et le développement de près de 1,3 million de kilomètres de réseau",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/641356944?h=fd89e966f8"
     },
     "trigger25": {
       "type": 0,
@@ -230,7 +231,7 @@
       "sponsor": "D3E",
       "theme": "Inclusion",
       "paragraphText" : "Voici un reportage tourné dans nos locaux, sur le thème « Les entreprises s’engagent pour l’emploi des jeunes ». Découvrez notre politique d’alternance partagée par Jean-Pierre JOUBERT notre gérant ainsi que les témoignages de Pascale et Alex, deux de nos collaborateurs qui vous partagent leur parcours ainsi que leur vie d’apprenti au sein de D3E !",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/643121773?h=6ef338f31c"
     },
     "trigger29": {
       "type": 0,
@@ -246,7 +247,7 @@
       "sponsor": "POLYVIA",
       "theme": "Usine du futur",
       "paragraphText" : "La formation professionnelle en apprentissage ; ce qu'en pensent les apprentis ingénieurs Plasturgie et matériaux composites Polyvia Formation-IMT Lille Douai",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/643121802?h=d8ad712190"
     },
     "trigger37": {
       "type": 0,
@@ -254,7 +255,7 @@
       "sponsor": "Port de Marseille Fos",
       "theme": "Innovation",
       "paragraphText" : "Premier port de France, le port de Marseille Fos est un acteur majeur du commerce international. Situé au croisement des routes maritimes mondiales, il se positionne comme la porte d’entrée naturelle du Sud de l’Europe. Il dispose d’espaces et d’infrastructures pour accueillir des activités maritimes, logistiques, industrielles, numériques et des entreprises internationales qui approvisionnent les marchés français et européens. \nLe port de Marseille Fos est un acteur clé de l’emploi métropolitain, véritable moteur de l’économie régionale avec près de 41 500 emplois directs et indirects générés sur le territoire. \nLeader de la transition énergétique sur son territoire, le port de Marseille Fos s’inscrit plus que jamais comme un port vert au service de l’économie bleue.",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/645021712?h=51078db539"
     },
     "trigger41": {
       "type": 0,
@@ -262,7 +263,7 @@
       "sponsor": "ArcelorMittal",
       "theme": "Inclusion",
       "paragraphText" : "Tous les talents ont leur place chez nous !",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/643121550?h=53f0a729ee"
     },
     "trigger45": {
       "type": 0,
@@ -270,7 +271,7 @@
       "sponsor": "CEA",
       "theme": "Innovation",
       "paragraphText" : "Tous les talents ont leur place chez nous !",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/643121587?h=2ab74ba133"
     },
     "trigger49": {
       "type": 0,
@@ -289,7 +290,7 @@
     },
     "trigger56": {
       "type": 0,
-      "title": "3 Interviews",
+      "title": "Stories métiers",
       "sponsor": "Ardatem",
       "theme": "Inclusion",
       "paragraphText" : "",
@@ -301,7 +302,7 @@
       "sponsor": "Total Energies",
       "theme": "Innovation",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/645032880?h=7b5e317714"
     },
     "trigger59": {
       "type": 0,
@@ -317,7 +318,7 @@
       "sponsor": "Solamat Merex",
       "theme": "Développement durable",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/641360960?h=9f9341b36f"
     },
     "trigger61": {
       "type": 2,
@@ -332,7 +333,7 @@
       "sponsor": "UMF",
       "theme": "Inclusion",
       "paragraphText" : "L’Union Maritime et Fluviale de Marseille-Fos (UMF) est l’association professionnelle représentant toute la communauté portuaire de Marseille-Fos. Elle regroupe l’ensemble des entreprises qui constituent la filière maritime et industrialo-portuaire, soit 24 professions et 25.000 emplois directs",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/643121849?h=66d2496cab"
     },
     "trigger63": {
       "type": 0,
@@ -340,7 +341,7 @@
       "sponsor": "Eaux de Marseille",
       "theme": "Développement durable",
       "paragraphText" : "Le Groupe des Eaux de Marseille porte l’ambition forte d’œuvrer collectivement et concrètement pour préserver la richesse du territoire.\nÊtre le partenaire naturel pour l’amélioration de la qualité de vie et du bien-être de tous fait partie de la raison d’être du Groupe des Eaux de Marseille. Aujourd’hui, plus que jamais, sa mission est d’accompagner toutes les parties prenantes sur les enjeux environnementaux.",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/643121848?h=229f5dd7e0"
     },
     "trigger64": {
       "type": 0,
@@ -348,7 +349,7 @@
       "sponsor": "ADF",
       "theme": "Inclusion",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/645034368?h=6fdeebed5a"
     }
   }
 }
