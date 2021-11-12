@@ -286,7 +286,8 @@
       "title": "Cap ou pas cap de tout savoir sur le Naval de Défense ?",
       "sponsor": "Naval Group",
       "theme": "Innovation",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "quizz" : ""
     },
     "trigger56": {
       "type": 0,
