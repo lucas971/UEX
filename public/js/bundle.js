@@ -263,7 +263,7 @@ const PopulateHotspot = (hotspotInfo) => {
     }
     
     if (hotspotInfo.quiz) {
-        div.getElementById("QuizzEmbed").innerHTML = hotspotInfo.quiz
+        document.getElementById("QuizzEmbed").innerHTML = hotspotInfo.quiz
     }
     
     
