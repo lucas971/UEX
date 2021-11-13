@@ -438,12 +438,14 @@ const GenerateHtml = (d) => {
 const TryClickedRoom = (obj) => {
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
+    document.getElementById('open-room-sound').play()
     RequestHotspotTranslation(worldPos, roomMapping[obj])
 }
 const TryClickedLink = (iconId, objectName) => {
     const obj = d.scene.getObjectByName(objectName)
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
+    document.getElementById('open-hotspot-sound').play()
     RequestHotspotTranslation(worldPos, null)
     setAudioOnHotspot(true)
     HotspotMode()
