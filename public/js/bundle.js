@@ -467,10 +467,10 @@ const TryLeaveLink = () => {
 //#region Progress
 
 let currentProgress = []
-const total_Inclusion = 3.0
-const total_Futur = 2.0
-const total_Innovation = 3.0
-const total_Ecologie = 3.0
+const total_Inclusion = 18.0
+const total_Futur = 19.0
+const total_Innovation = 18.0
+const total_Ecologie = 10.0
 let link_x_icon
 let link_v_icon
 
