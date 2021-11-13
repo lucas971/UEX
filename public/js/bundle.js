@@ -471,12 +471,16 @@ const total_Inclusion = 3.0
 const total_Futur = 2.0
 const total_Innovation = 3.0
 const total_Ecologie = 3.0
+let link_x_icon
+let link_v_icon
 
 const LoadProgress = () => {
     document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
     if (localStorage.progress) {
         currentProgress = JSON.parse(localStorage.progress)
     }
+    link_x_icon = document.getElementsByClassName("option_icon is--x")[0].src
+    link_v_icon = document.getElementsByClassName("option_icon is--check")[0].src
 }
 
 const AddToProgress = (id) => {
@@ -490,10 +494,7 @@ const UpdateView = () => {
     let updateViewData = []
     updateViewData["Développement durable"] = updateViewData["Inclusion"] = updateViewData["Usine du futur"] = updateViewData["Innovation"] = 0.0
     
-    for (var i = 0; i < currentProgress.length; i++) {
-        if (currentProgress[i].type > 3) {
-            continue
-        }
+    for (let i = 0; i < currentProgress.length; i++) {
         updateViewData[GetHotspotData(currentProgress[i]).theme]+=1.0
     }
     
@@ -529,6 +530,21 @@ const UpdateView = () => {
             inovBar.style.msTransform =
                 inovBar.style.OTransform =
                     inovBar.style.transform = 'translate(-' + ((1 - (updateViewData["Innovation"] / total_Innovation))*100).toString() + '%, 0px)'
+
+    const futurList = document.getElementsByClassName("collectible-list-div futur")[0].getElementsByClassName("option_icon")
+    const incluList = document.getElementsByClassName("collectible-list-div inclusion")[0].getElementsByClassName("option_icon")
+    const ecoList = document.getElementsByClassName("collectible-list-div devdur")[0].getElementsByClassName("option_icon")
+    const inoList = document.getElementsByClassName("collectible-list-div innovation")[0].getElementsByClassName("option_icon")
+    
+    const totalList = futurList.concat(incluList).concat(ecoList).concat(inoList)
+    
+    for (let i = 0; i < totalList.length; i++) {
+        if (currentProgress.indexOf(totalList[i].id) >= 0) {
+            totalList.src = link_v_icon
+        } else {
+            totalList.src = link_x_icon
+        }
+    }
 }
 //#endregion
 
