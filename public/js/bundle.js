@@ -531,10 +531,10 @@ const UpdateView = () => {
                 inovBar.style.OTransform =
                     inovBar.style.transform = 'translate(-' + ((1 - (updateViewData["Innovation"] / total_Innovation))*100).toString() + '%, 0px)'
 
-    const futurList = document.getElementsByClassName("collectible-list-div futur")[0].getElementsByClassName("option_icon")
-    const incluList = document.getElementsByClassName("collectible-list-div inclusion")[0].getElementsByClassName("option_icon")
-    const ecoList = document.getElementsByClassName("collectible-list-div durable")[0].getElementsByClassName("option_icon")
-    const inoList = document.getElementsByClassName("collectible-list-div innovation")[0].getElementsByClassName("option_icon")
+    const futurList = Array.from(document.getElementsByClassName("collectible-list-div futur")[0].getElementsByClassName("option_icon"))
+    const incluList = Array.from(document.getElementsByClassName("collectible-list-div inclusion")[0].getElementsByClassName("option_icon"))
+    const ecoList = Array.from(document.getElementsByClassName("collectible-list-div durable")[0].getElementsByClassName("option_icon"))
+    const inoList = Array.from(document.getElementsByClassName("collectible-list-div innovation")[0].getElementsByClassName("option_icon"))
     
     const totalList = futurList.concat(incluList).concat(ecoList).concat(inoList)
     
