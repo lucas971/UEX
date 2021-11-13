@@ -533,7 +533,7 @@ const UpdateView = () => {
 
     const futurList = document.getElementsByClassName("collectible-list-div futur")[0].getElementsByClassName("option_icon")
     const incluList = document.getElementsByClassName("collectible-list-div inclusion")[0].getElementsByClassName("option_icon")
-    const ecoList = document.getElementsByClassName("collectible-list-div devdur")[0].getElementsByClassName("option_icon")
+    const ecoList = document.getElementsByClassName("collectible-list-div durable")[0].getElementsByClassName("option_icon")
     const inoList = document.getElementsByClassName("collectible-list-div innovation")[0].getElementsByClassName("option_icon")
     
     const totalList = futurList.concat(incluList).concat(ecoList).concat(inoList)
