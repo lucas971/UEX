@@ -122,7 +122,7 @@
     },
     {
       "id" : "Building_V2_06032",
-      "iconid" : "trigger58",
+      "iconid" : "multispot58",
       "inside" : ["trigger58", "trigger58b", "trigger58c", "trigger58d"]
     },
     {
