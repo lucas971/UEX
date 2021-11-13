@@ -539,7 +539,8 @@ const UpdateView = () => {
     const totalList = futurList.concat(incluList).concat(ecoList).concat(inoList)
     
     for (let i = 0; i < totalList.length; i++) {
-        if (currentProgress.indexOf(totalList[i].id) >= 0) {
+        console.log(totalList[i])
+        if (currentProgress.indexOf(totalList[i]) >= 0) {
             totalList.src = link_v_icon
         } else {
             totalList.src = link_x_icon
