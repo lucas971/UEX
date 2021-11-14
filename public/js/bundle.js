@@ -541,7 +541,7 @@ const UpdateView = () => {
     for (let i = 0; i < totalList.length; i++) {
         let idToTest = ''
         if (totalList[i].id && totalList[i].id.includes('collectible-')) {
-            idToTest = totalList[id].replace('collectible-', '')
+            idToTest = totalList[i].id.replace('collectible-', '')
         }
         if (currentProgress.indexOf(idToTest) >= 0) {
             totalList[i].src = link_v_icon
