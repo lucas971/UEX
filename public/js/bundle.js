@@ -286,6 +286,7 @@ let roomMapping = []
 let positionMapping = []
 let positionRef = null
 let zoomRef
+let collectible_wrapper = document.getElementsByClassName("collectibles-wrapper w-clearfix")[0]
 //The general content div from which enabling/disabling the pointer events.
 let content
 
@@ -297,7 +298,7 @@ let clickedLink = false
 //#region API
 
 const IsLinkActive = () => {
-    return clickedLink
+    return clickedLink || collectible_wrapper.style.display !== 'none'
 }
 //Creates the icons array from the json file and add the html images inside the Icons div.
 const InitializeIcons = (d) => {
@@ -795,10 +796,6 @@ const AnimateHotspotTranslation = (delta) => {
     }
 
     requestIconRefresh = true
-}
-
-const AnimateRoomExit = () => {
-    
 }
 
 //#endregion
