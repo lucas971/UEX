@@ -966,7 +966,7 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
     
-    a_light  = new d.THREE.AmbientLight(0xffffff, 3)
+    a_light  = new d.THREE.AmbientLight(0xffffff, 0.3)
     a_light.name = 'ambient_light'
     d.scene.add( a_light )
 
