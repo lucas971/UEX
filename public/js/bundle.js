@@ -423,9 +423,6 @@ const GenerateHtml = (d) => {
         //ROOMS
         icons[i].image = null
         const obj = d.scene.getObjectByName(icons[i].id)
-        if (!obj) {
-            console.log(icons[i].id)
-        }
         AddToSelectedObjects(obj)
         roomMapping[obj] = document.getElementById(data.room_link)
         
