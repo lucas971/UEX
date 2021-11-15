@@ -971,9 +971,9 @@ const setupScene = (gltf, d) => {
     d.scene.add( a_light )
 
     const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
-    light2.position.set(0.5, 0, 0.866) // ~60º
+    light2.position.set(0.5, 0.866, 0) // ~60º
     light2.name = 'main_light'
-    d.camera.add(light2)
+    d.scene.add(light2)
 
     traverseMaterials(d.scene, (material) => {
         material.depthWrite = !material.transparent
