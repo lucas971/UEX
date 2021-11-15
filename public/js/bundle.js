@@ -435,6 +435,8 @@ const GenerateHtml = (d) => {
     for (let i = 0; i < backButtons.length; i++) {
         backButtons[i].addEventListener("click", TryLeaveLink)
     }
+    
+    console.log(d.scene)
 }
 
 //#endregion
