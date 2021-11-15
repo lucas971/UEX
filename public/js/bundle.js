@@ -1469,7 +1469,7 @@ const getCubeMapTexture = ( path ) => {
             .setDataType( d.THREE.UnsignedByteType )
             .load( path, ( texture ) => {
 
-                const envMap = this.pmremGenerator.fromEquirectangular( texture ).texture;
+                const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
                 pmremGenerator.dispose();
 
                 resolve( { envMap } );
