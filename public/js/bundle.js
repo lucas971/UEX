@@ -853,7 +853,10 @@ const InitGUI = (d) => {
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
-        lightIntensity:1,
+        lightIntensity:2.5,
+        lightX : 0,
+        lightY : 0,
+        lightZ : 0,
         foam_color:0xb8ebf7,
         water_color:0x4488cc,
         water2_color:0x347aa5,
@@ -875,6 +878,9 @@ const InitGUI = (d) => {
     
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
+    gui.add(params,'lightX').min(0).max(10).onFinishChange((value) => a_light.x = value)
+    gui.add(params,'lightY').min(0).max(10).onFinishChange((value) => a_light.y = value)
+    gui.add(params,'lightZ').min(0).max(10).onFinishChange((value) => a_light.z = value)
     
     gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
@@ -966,11 +972,11 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
     
-    a_light  = new d.THREE.AmbientLight(0xffffff, 0.3)
-    a_light.name = 'ambient_light'
-    d.scene.add( a_light )
+    const b_light  = new d.THREE.AmbientLight(0xffffff, 0.3)
+    b_light.name = 'ambient_light'
+    d.scene.add( b_light )
 
-    const light2  = new d.THREE.DirectionalLight(0xffffff, 2.5)
+    a_light  = new d.THREE.DirectionalLight(0xffffff, 2.5)
     light2.position.set(0.5, 0.866, 0) // ~60º
     light2.name = 'main_light'
     d.scene.add(light2)
