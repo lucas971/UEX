@@ -1364,6 +1364,7 @@ const AimAtObject = (obj) => {
     RoomMode()
     currentObject = obj
     
+    console.log('aimed for object')
     console.log(selectedObjects)
     console.log(obj)
     selectedObjects = selectedObjects.filter((value) => value !== obj)
@@ -1382,9 +1383,12 @@ const StopAimAtObject = () => {
     }
     NormalMode()
 
+    console.log('stopped aim for object')
     outlinePassHighlight.selectedObjects = []
-    
+    console.log(selectedObjects)
+    console.log(currentObject)
     selectedObjects.push(currentObject)
+    console.log(selectedObjects)
     outlinePass.selectedObjects = selectedObjects
     
     aiming = false
