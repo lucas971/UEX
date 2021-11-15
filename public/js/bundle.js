@@ -1627,6 +1627,7 @@ const Resize = () => {
 const main = () => {
     setup()
     LoadCityScene()
+    document.addEventListener('keydown', () => console.log(d.camera.position))
 }
 main()
 
