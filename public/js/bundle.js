@@ -878,9 +878,9 @@ const InitGUI = (d) => {
     
     gui.addColor(params,'lightColor').onFinishChange((value) => a_light.color.setHex(value))
     gui.add(params,'lightIntensity').min(0).max(10).onFinishChange((value) => a_light.intensity = value)
-    gui.add(params,'lightX').min(0).max(10).onFinishChange((value) => a_light.x = value)
-    gui.add(params,'lightY').min(0).max(10).onFinishChange((value) => a_light.y = value)
-    gui.add(params,'lightZ').min(0).max(10).onFinishChange((value) => a_light.z = value)
+    gui.add(a_light.position, "x", -100, 100, 0.01)
+    gui.add(a_light.position, "y", -100, 100, 0.01)
+    gui.add(a_light.position, "z", -100, 100, 0.01)
     
     gui.addColor(params,'foam_color').onFinishChange(
         (value) => {
