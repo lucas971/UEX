@@ -1364,6 +1364,7 @@ const AimAtObject = (obj) => {
     RoomMode()
     currentObject = obj
     
+    console.log(selectedObjects)
     for( let i = 0; i < selectedObjects.length; i++){
 
         if ( selectedObjects[i] === currentObject) {
@@ -1371,17 +1372,12 @@ const AimAtObject = (obj) => {
             selectedObjects.splice(i, 1);
         }
     }
+    console.log(selectedObjects)
     outlinePass.selectedObjects = selectedObjects
     
     const target = []
     target.push(obj)
     outlinePassHighlight.selectedObjects = target
-    outlinePassHighlight.edgeThickness = 2
-    outlinePassHighlight.edgeGlow = 2
-    outlinePassHighlight.edgeStrength = 5
-    outlinePassHighlight.pulsePeriod = 2
-    outlinePassHighlight.visibleEdgeColor.setHex(0xffa705)
-    outlinePassHighlight.hiddenEdgeColor.setHex(0x939329)
     aiming = true
 }
 
@@ -1395,12 +1391,7 @@ const StopAimAtObject = () => {
     
     selectedObjects.push(currentObject)
     outlinePass.selectedObjects = selectedObjects
-    outlinePass.edgeThickness = 1
-    outlinePass.edgeGlow = 0
-    outlinePass.edgeStrength = 3
-    outlinePass.pulsePeriod = 0
-    outlinePass.visibleEdgeColor.setHex(0xffffff)
-    outlinePass.hiddenEdgeColor.setHex(0x3c3c01)
+    
     aiming = false
 }
 
@@ -1436,6 +1427,20 @@ const InitializeShaders = (d) => {
 
     } );
 
+    outlinePass.edgeThickness = 1
+    outlinePass.edgeGlow = 0
+    outlinePass.edgeStrength = 3
+    outlinePass.pulsePeriod = 0
+    outlinePass.visibleEdgeColor.setHex(0xffffff)
+    outlinePass.hiddenEdgeColor.setHex(0x3c3c01)
+
+    outlinePassHighlight.edgeThickness = 2
+    outlinePassHighlight.edgeGlow = 2
+    outlinePassHighlight.edgeStrength = 5
+    outlinePassHighlight.pulsePeriod = 2
+    outlinePassHighlight.visibleEdgeColor.setHex(0xffa705)
+    outlinePassHighlight.hiddenEdgeColor.setHex(0x939329)
+    
     /*
     const effectFXAA = new ShaderPass( FXAAShader );
     effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
