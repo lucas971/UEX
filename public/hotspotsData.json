@@ -102,7 +102,67 @@
       "title": "Classroom",
       "type": 4
     },
-    "trigger-room" : {
+    "trigger-room1" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room2" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room3" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room4" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room5" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room6" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room7" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room8" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room9" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room10" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room11" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room12" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
+    "trigger-room13" : {
       "title": "Interior room",
       "room_link": "link-360-1",
       "type" : 5

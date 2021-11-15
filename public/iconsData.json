@@ -5,12 +5,20 @@
       "iconid" : "trigger-classroom"
     },
     {
-      "id" : "France_chimie_A",
-      "iconid" : "trigger-room"
+      "id" : "EDF_Building1",
+      "iconid" : "trigger-room1"
     },
     {
-      "id" : "Barage",
-      "iconid" : "trigger-room"
+      "id" : "EDF_Building2",
+      "iconid" : "trigger-room2"
+    },
+    {
+      "id" : "France_chimie_A",
+      "iconid" : "trigger-room3"
+    },
+    {
+      "id" : "France_chimie_A",
+      "iconid" : "trigger-room4"
     },
     {
       "id" : "EDF_001",
