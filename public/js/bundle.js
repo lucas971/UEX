@@ -660,7 +660,7 @@ const OnMouseRelease = () => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
-    if (!IsNormal() || e.target.id!== 'canvas') {
+    if ((!IsNormal() && !IsRoom()) || e.target.id!== 'canvas') {
         return
     }
     DragMode()
