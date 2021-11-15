@@ -336,7 +336,6 @@ const InitializeIconsPosition = (d) => {
         }
         const obj = d.scene.getObjectByName(icons[i].id)
         if (!obj) {
-            console.log(icons[i].id)
             continue
         }
         const toScreen = toScreenPosition(obj, d)
