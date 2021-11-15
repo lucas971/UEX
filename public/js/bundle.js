@@ -571,10 +571,10 @@ let cameraHolder
 const acceleration = 0.25
 const deceleration = 0.75
 const maxVelocity = 0.5
-const maxX = 150
-const minX= -70
-const maxZ = 120
-const minZ= -120
+const maxX = 125
+const minX= 0
+const maxZ = 60
+const minZ= -80
 let initialPosX = 0
 let initialPosY = 0
 let offsetX = 0
@@ -643,7 +643,7 @@ const InitializeCameraHandler = (threeData) => {
     document.body.addEventListener("mouseout", OnMouseRelease)
     document.body.addEventListener("wheel", OnWheel)
 
-    document.addEventListener('keydown', () => console.log(cameraHolder.position))
+    document.addEventListener('keydown', () => console.log(d.camera.zoom))
 }
 
 //#endregion
