@@ -854,8 +854,8 @@ const InitGUI = (d) => {
     let params = {
         lightColor:0xFFFFFF,
         lightIntensity:1.3,
-        lightX : 25,
-        lightY : 30,
+        lightX : -100,
+        lightY : 50,
         lightZ : -8,
         foam_color:0xb8ebf7,
         water_color:0x4488cc,
@@ -977,7 +977,7 @@ const setupScene = (gltf, d) => {
     d.scene.add( b_light )
 
     a_light  = new d.THREE.DirectionalLight(0xffffff, 1.3)
-    a_light.position.set(25, 30, -8) // ~60º
+    a_light.position.set(-100, 50, -8) // ~60º
     a_light.name = 'main_light'
     d.scene.add(a_light)
 
