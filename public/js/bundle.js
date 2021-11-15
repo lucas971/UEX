@@ -834,7 +834,7 @@ const UpdateFade = (newValue) =>{
 //#region DATGUI
 import Stats from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/stats.module.js'
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
-const ShowDatGUI = true
+const ShowDatGUI = false
 let gui
 let stats = null
 let a_light
@@ -938,8 +938,7 @@ const generateCity = (d) => {
             InitializeShaders(threeData)
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
-            console.log(d.scene.getObjectByName('Eau'))
-            d.scene.getObjectByName('Eau').material = ocean_mat
+            //d.scene.getObjectByName('Eau').material = ocean_mat
             animate()
         },
         (xhr) => {
@@ -966,7 +965,7 @@ const setupScene = (gltf, d) => {
 
     d.scene.add(gltf.scene)
     
-    a_light  = new d.THREE.AmbientLight(0xffffff, 0.3)
+    a_light  = new d.THREE.AmbientLight(0xffffff, 3)
     a_light.name = 'ambient_light'
     d.scene.add( a_light )
 
