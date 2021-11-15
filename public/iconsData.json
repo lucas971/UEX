@@ -13,8 +13,36 @@
       "iconid" : "trigger-room2"
     },
     {
-      "id" : "France_chimie_A",
+      "id" : "Immeuble_Staubli_1",
       "iconid" : "trigger-room3"
+    },
+    {
+      "id" : "France_chimie_A",
+      "iconid" : "trigger-room4"
+    },
+    {
+      "id" : "Building_Total_1",
+      "iconid" : "trigger-room5"
+    },
+    {
+      "id" : "Building_Iter",
+      "iconid" : "trigger-room6"
+    },
+    {
+      "id" : "Building_Elengy",
+      "iconid" : "trigger-room9"
+    },
+    {
+      "id" : "Building_Airbus",
+      "iconid" : "trigger-room10"
+    },
+    {
+      "id" : "Building_KSB",
+      "iconid" : "trigger-room11"
+    },
+    {
+      "id" : "Building_CCI",
+      "iconid" : "trigger-room12"
     },
     {
       "id" : "EDF_ENTRANCE",
@@ -33,7 +61,7 @@
       "iconid" : "trigger4"
     },
     {
-      "id" : "Total",
+      "id" : "Pilone_electrique015",
       "iconid" : "trigger5"
     },
     {
@@ -49,7 +77,7 @@
       "iconid" : "trigger8"
     },
     {
-      "id" : "Elengy",
+      "id" : "Elengy001",
       "iconid" : "trigger9"
     },
     {
@@ -57,7 +85,7 @@
       "iconid" : "trigger10"
     },
     {
-      "id" : "Cube921",
+      "id" : "KSB_Fontaine",
       "iconid" : "trigger11"
     },
     {
