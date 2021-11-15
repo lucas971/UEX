@@ -13,7 +13,7 @@
       "iconid" : "trigger-room2"
     },
     {
-      "id" : "Immeuble_Staubli_1",
+      "id" : "campus roof gardens_C",
       "iconid" : "trigger-room3"
     },
     {
@@ -27,6 +27,14 @@
     {
       "id" : "Building_Iter",
       "iconid" : "trigger-room6"
+    },
+    {
+      "id" : "Cube102",
+      "iconid" : "trigger-room7"
+    },
+    {
+      "id" : "Cube100",
+      "iconid" : "trigger-room8"
     },
     {
       "id" : "Building_Airbus",
