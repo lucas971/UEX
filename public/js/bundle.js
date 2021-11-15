@@ -945,6 +945,7 @@ const generateCity = (d) => {
         (xhr) => {
         },
         (error) => {
+            console.log('error : ' + error)
         })
 }
 
