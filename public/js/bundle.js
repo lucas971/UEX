@@ -693,7 +693,7 @@ const UpdateFreeform = (delta) => {
         return
     }
 
-    let targetXPos = cameraHolder.position.x + xVelocity + zVelocity
+    /*let targetXPos = cameraHolder.position.x + xVelocity + zVelocity
     let targetZPos = cameraHolder.position.z - zVelocity + xVelocity
     
 
@@ -704,10 +704,10 @@ const UpdateFreeform = (delta) => {
         targetZPos = cameraHolder.position.x + xVelocity + zVelocity
         NormalMode()
         currentMouseX = null
-    }
+    }*/
 
-    //let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
-    //let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
+    let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
+    let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
 
     cameraHolder.position.x = targetXPos
     cameraHolder.position.z = targetZPos
