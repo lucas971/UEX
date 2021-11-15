@@ -571,10 +571,10 @@ let cameraHolder
 const acceleration = 0.25
 const deceleration = 0.75
 const maxVelocity = 0.5
-const maxX = 125
-const minX= 0
-const maxZ = 60
-const minZ= -80
+const maxX = 145
+const minX= -20
+const maxZ = 80
+const minZ= -100
 let initialPosX = 0
 let initialPosY = 0
 let offsetX = 0
@@ -587,8 +587,8 @@ let currentMouseY = null
 //#endregion
 
 //#region ZOOM PARAMS
-const maxZoomLevel = 3
-const minZoomLevel = 0.5
+const maxZoomLevel = 1.2
+const minZoomLevel = 0.6
 const zoomSpeed = 0.2
 const zoomDeceleration = 0.2
 let currentZoomSpeed = 0
