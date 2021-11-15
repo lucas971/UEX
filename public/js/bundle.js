@@ -651,15 +651,15 @@ const InitializeCameraHandler = (threeData) => {
 //#region FREEFORM
 const OnMouseRelease = () => {
     if (!IsDrag()) {
+        if (IsRoom()) {
+            TryClickedRoom(currentObject)
+        }
         return
     }
     NormalMode()
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
-    if (IsRoom()) {
-        TryClickedRoom(currentObject)
-    }
     if (!IsNormal() || e.target.id!== 'canvas') {
         return
     }
