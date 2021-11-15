@@ -853,10 +853,10 @@ const InitGUI = (d) => {
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
         lightColor:0xFFFFFF,
-        lightIntensity:2.5,
-        lightX : 0,
-        lightY : 0,
-        lightZ : 0,
+        lightIntensity:1.3,
+        lightX : 25,
+        lightY : 30,
+        lightZ : -8,
         foam_color:0xb8ebf7,
         water_color:0x4488cc,
         water2_color:0x347aa5,
@@ -976,8 +976,8 @@ const setupScene = (gltf, d) => {
     b_light.name = 'ambient_light'
     d.scene.add( b_light )
 
-    a_light  = new d.THREE.DirectionalLight(0xffffff, 2.5)
-    a_light.position.set(0.5, 0.866, 0) // ~60º
+    a_light  = new d.THREE.DirectionalLight(0xffffff, 1.3)
+    a_light.position.set(25, 30, -8) // ~60º
     a_light.name = 'main_light'
     d.scene.add(a_light)
 
