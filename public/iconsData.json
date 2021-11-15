@@ -37,6 +37,10 @@
       "iconid" : "trigger-room8"
     },
     {
+      "id" : "Building_Elengy",
+      "iconid" : "trigger-room9"
+    },
+    {
       "id" : "Building_Airbus",
       "iconid" : "trigger-room10"
     },
