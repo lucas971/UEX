@@ -642,6 +642,8 @@ const InitializeCameraHandler = (threeData) => {
     document.body.addEventListener("mouseup", OnMouseRelease)
     document.body.addEventListener("mouseout", OnMouseRelease)
     document.body.addEventListener("wheel", OnWheel)
+
+    document.addEventListener('keydown', () => console.log(cameraHolder.position))
 }
 
 //#endregion
@@ -1627,7 +1629,6 @@ const Resize = () => {
 const main = () => {
     setup()
     LoadCityScene()
-    document.addEventListener('keydown', () => console.log(d.camera.position))
 }
 main()
 
