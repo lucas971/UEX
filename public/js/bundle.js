@@ -1366,13 +1366,7 @@ const AimAtObject = (obj) => {
     
     console.log(selectedObjects)
     console.log(obj)
-    for( let i = 0; i < selectedObjects.length; i++){
-
-        if ( selectedObjects[i] === currentObject) {
-
-            selectedObjects.splice(i, 1);
-        }
-    }
+    selectedObjects = selectedObjects.filter((value) => value !== obj)
     console.log(selectedObjects)
     outlinePass.selectedObjects = selectedObjects
     
