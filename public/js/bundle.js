@@ -938,6 +938,7 @@ const generateCity = (d) => {
             InitializeShaders(threeData)
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
+            setupEnvironment()
             //d.scene.getObjectByName('Eau').material = ocean_mat
             animate()
         },
@@ -1439,6 +1440,45 @@ const UpdateUniforms = (delta) => {
     ocean_uniforms.iTime.value = ocean_uniforms.iTime.value + delta
 }
 
+
+//#endregion
+
+//#region ENVIRONMENT
+import {RGBELoader} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/RGBELoader.js'
+const setupEnvironment = () => {
+    
+    getCubeMapTexture( 'https://lucas971.github.io/UEX/public/environment/venice_sunset_1k.hdr' ).then(( { envMap } ) => {
+
+        d.scene.environment = envMap;
+        d.scene.background = envMap;
+
+    });
+
+}
+
+const getCubeMapTexture = ( path ) => {
+
+    // no envmap
+    if ( ! path ) return Promise.resolve( { envMap: null } );
+
+    const pmremGenerator = new d.THREE.PMREMGenerator(d.renderer)
+    pmremGenerator.compileEquirectangularShader()
+    return new Promise( ( resolve, reject ) => {
+
+        new RGBELoader()
+            .setDataType( d.THREE.UnsignedByteType )
+            .load( path, ( texture ) => {
+
+                const envMap = this.pmremGenerator.fromEquirectangular( texture ).texture;
+                pmremGenerator.dispose();
+
+                resolve( { envMap } );
+
+            }, undefined, reject );
+
+    });
+
+}
 
 //#endregion
 
