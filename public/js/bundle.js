@@ -1365,6 +1365,7 @@ const AimAtObject = (obj) => {
     currentObject = obj
     
     console.log(selectedObjects)
+    console.log(obj)
     for( let i = 0; i < selectedObjects.length; i++){
 
         if ( selectedObjects[i] === currentObject) {
