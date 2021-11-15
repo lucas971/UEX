@@ -696,13 +696,11 @@ const UpdateFreeform = (delta) => {
     let targetXPos = cameraHolder.position.x + xVelocity + zVelocity
     let targetZPos = cameraHolder.position.z - zVelocity + xVelocity
     
-    if (targetXPos < minX || targetXPos > maxX) {
+
+    if (targetZPos < minZ || targetZPos > maxZ || targetXPos < minX || targetXPos > maxX) {
+        zVelocity *= -0.5
         xVelocity *= -0.5
         targetXPos = cameraHolder.position.x + xVelocity + zVelocity
-    }
-
-    if (targetZPos < minZ || targetZPos > maxZ) {
-        zVelocity *= -0.5
         targetZPos = cameraHolder.position.x + xVelocity + zVelocity
     }
 
