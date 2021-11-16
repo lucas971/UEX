@@ -109,67 +109,62 @@
     },
     "trigger-room2" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-2",
       "type" : 5
     },
     "trigger-room3" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-3",
       "type" : 5
     },
     "trigger-room4" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-4",
       "type" : 5
     },
     "trigger-room5" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-5",
       "type" : 5
     },
     "trigger-room6" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-6",
       "type" : 5
     },
     "trigger-room7" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-7",
       "type" : 5
     },
     "trigger-room8" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-8",
       "type" : 5
     },
     "trigger-room9" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-9",
       "type" : 5
     },
     "trigger-room10" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-10",
       "type" : 5
     },
     "trigger-room11" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-11",
       "type" : 5
     },
     "trigger-room12" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
-      "type" : 5
-    },
-    "trigger-room13" : {
-      "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-12",
       "type" : 5
     },
     "trigger-agora" : {
       "title": "Interior room",
-      "room_link": "link-360-1",
+      "room_link": "link-360-agora",
       "type" : 5
     },
     "trigger1": {
