@@ -282,7 +282,7 @@ const iconWidth = 75
 const iconHeight = 75
 //Array of icons struct. See ../iconsData.json for more information on the structure.
 let icons
-let roomMapping = []
+let roomMapping = {}
 let positionMapping = []
 let positionRef = null
 let zoomRef
@@ -430,7 +430,7 @@ const GenerateHtml = (d) => {
             console.log(icons[i].id)
         }
         AddToSelectedObjects(obj)
-        roomMapping[obj] = document.getElementById(data.room_link)
+        roomMapping[obj.name] = document.getElementById(data.room_link)
         console.log(roomMapping[obj])
     }
 
@@ -449,7 +449,7 @@ const TryClickedRoom = (obj) => {
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
     document.getElementById('open-room-sound').play()
-    RequestHotspotTranslation(worldPos, roomMapping[obj])
+    RequestHotspotTranslation(worldPos, roomMapping[obj.name])
 }
 const TryClickedLink = (iconId, objectName) => {
     const obj = d.scene.getObjectByName(objectName)
