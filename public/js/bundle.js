@@ -608,6 +608,7 @@ let hotspotCamParam = {
     hotspotPos : null,
     state : 0
 }
+let positionTracker
 //#endregion
 
 //#region API
@@ -675,6 +676,7 @@ const OnMouseClick = (e) => {
     currentMouseY = e.clientY
     initialPosX = currentMouseX
     initialPosY = currentMouseY
+    positionTracker = cameraHolder.position.clone()
 }
 const OnMouseMove = (e) => {
     RaycastOutline(e.clientX, e.clientY)
@@ -694,13 +696,10 @@ const OnMouseMove = (e) => {
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const UpdateFreeform = (delta) => {
-    const wasMoving = (xVelocity !== 0 || zVelocity !== 0)
+    
     xVelocity += offsetX * delta * acceleration
     zVelocity += offsetZ * delta * acceleration *2
     if (xVelocity === zVelocity && zVelocity === 0) {
-        if (wasMoving && InTutorial && tutoIndex === 1) {
-            MoveTutorial(true)
-        }
         return
     }
 
@@ -741,6 +740,9 @@ const UpdateFreeform = (delta) => {
     zVelocity = zVelocity > maxVelocity ? maxVelocity : zVelocity
     zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
     
+    if (xVelocity === 0 && zVelocity === 0 && InTutorial && tutoIndex === 1 && positionTracker.distanceTo(cameraHolder.position) > 3) {
+        MoveTutorial(true)
+    }
     offsetX = 0
     offsetZ = 0
 
