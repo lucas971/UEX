@@ -1398,7 +1398,7 @@ const DebugRaycast = (clientX, clientY) => {
     mouse.y = -(clientY/window.innerHeight) * 2 + 1
 
     d.raycaster.setFromCamera(mouse,d.camera)
-    const intersects = d.raycaster.intersectObjects(d.scene, true)
+    const intersects = d.raycaster.intersectObjects(d.scene[0].children, true)
     console.log(intersects)
 }
 
