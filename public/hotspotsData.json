@@ -167,6 +167,11 @@
       "room_link": "link-360-1",
       "type" : 5
     },
+    "trigger-agora" : {
+      "title": "Interior room",
+      "room_link": "link-360-1",
+      "type" : 5
+    },
     "trigger1": {
       "type": 0,
       "title": "Bienvenue en 2035",

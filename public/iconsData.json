@@ -53,6 +53,10 @@
       "iconid" : "trigger-room12"
     },
     {
+      "id" : "Building_Agora",
+      "iconid" : "trigger_agora"
+    },
+    {
       "id" : "EDF_ENTRANCE",
       "iconid" : "trigger1"
     },
