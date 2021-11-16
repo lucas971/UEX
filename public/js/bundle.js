@@ -671,6 +671,7 @@ const OnMouseRelease = (out) => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
+    e.preventDefault()
     if (InTutorial && tutoIndex !== 1) {
         return;
     }
@@ -683,9 +684,9 @@ const OnMouseClick = (e) => {
     initialPosX = currentMouseX
     initialPosY = currentMouseY
     positionTracker = cameraHolder.position.clone()
-    e.preventDefault()
 }
 const OnMouseMove = (e) => {
+    e.preventDefault()
     RaycastOutline(e.clientX, e.clientY)
     if (currentMouseX === null) {
         return
@@ -698,7 +699,6 @@ const OnMouseMove = (e) => {
     offsetZ = e.clientY - currentMouseY
     currentMouseX = e.clientX
     currentMouseY = e.clientY
-    e.preventDefault()
 }
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
