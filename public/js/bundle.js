@@ -1590,6 +1590,8 @@ const tutorialPos = [
     [38,1.1,8,0.6],
 ]
 
+let tutorialTimeout = null
+
 let tutoIndex;
 let InTutorial = false
 const InitializeTutorial = () => {
@@ -1605,9 +1607,7 @@ const InitializeTutorial = () => {
     tutorialLeft.style.pointerEvents = 'none'
 }
 const MoveTutorial = (right) => {
-    if (right && tutoIndex === 1) { //Move camera tutorial
-        return
-    }
+    tutorialTimeout = null
     
     if (right) {
         tutoIndex++
@@ -1625,16 +1625,20 @@ const MoveTutorial = (right) => {
         tutorialRight.style.pointerEvents = 'none'
         RequestTranslation(tutorialPos[tutoIndex][0], tutorialPos[tutoIndex][1], tutorialPos[tutoIndex][2], tutorialPos[tutoIndex][3])
     }
+    
 }
 
 const UpdateTutorialView = () => {
     tutorialNumber.innerHTML = (tutoIndex + 1).toString()
     tutorialText.innerHTML = tutorialTexts[tutoIndex]
     
+    tutorialRight.style.pointerEvents = 'all'
+    tutorialLeft.style.pointerEvents = 'all'
     if (tutoIndex === 0) {
         tutorialLeft.style.pointerEvents = 'none'
-    } else {
-        tutorialLeft.style.pointerEvents = 'all'
+    } 
+    if (tutoIndex === 1) {
+        tutorialRight.style.pointerEvents = 'none'
     }
     
 }
