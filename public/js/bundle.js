@@ -431,7 +431,6 @@ const GenerateHtml = (d) => {
         }
         AddToSelectedObjects(obj)
         roomMapping[obj.name] = document.getElementById(data.room_link)
-        console.log(roomMapping[obj])
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
@@ -854,8 +853,7 @@ const AnimateHotspotTranslation = (delta) => {
             localStorage.currentX = cameraHolder.position.x.toString()
             localStorage.currentZ = cameraHolder.position.z.toString()
             localStorage.comeBack = 'true'
-            //hotspotCamParam.button.click()
-            console.log(hotspotCamParam.button)
+            hotspotCamParam.button.click()
         }
         if (hotspotCamParam.tutorial) {
             TutorialResume()
