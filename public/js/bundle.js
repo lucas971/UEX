@@ -1506,6 +1506,33 @@ const getCubeMapTexture = ( path ) => {
 
 //#endregion
 
+//#region TIMER
+
+let hours, mins, msLeft, time;
+const element = document.getElementById( 'countdown' );
+const endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+
+const twoDigits = ( n ) =>
+{
+    return (n <= 9 ? "0" + n : n);
+}
+
+const updateTimer = ( ) =>
+{
+    msLeft = endTime - (+new Date);
+    if ( msLeft < 1000 ) {
+        element.innerHTML = "FIN!";
+    } else {
+        time = new Date( msLeft );
+        hours = time.getUTCHours();
+        mins = time.getUTCMinutes();
+        element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+    }
+}
+
+
+//#endregion
 //#region MAIN
 
 //#region IMPORTS
@@ -1641,6 +1668,7 @@ const Resize = () => {
 //#endregion
 
 const main = () => {
+    updateTimer()
     setup()
     LoadCityScene()
 }
