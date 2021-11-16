@@ -782,6 +782,7 @@ const RequestTranslation = (x, y, z, zoom) => {
     hotspotCamParam.state = 0
     hotspotCamParam.initialZoom = d.camera.zoom
     hotspotCamParam.hotspotPos = new d.THREE.Vector3(x,y,z)
+    console.log(hotspotCamParam.hotspotPos)
     hotspotCamParam.button = null
     hotspotCamParam.offset = 0
     hotspotCamParam.zoom = zoom
