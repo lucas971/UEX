@@ -457,6 +457,9 @@ const TryClickedLink = (iconId, objectName) => {
     document.getElementById('open-hotspot-sound').play()
     RequestHotspotTranslation(worldPos, null)
     setAudioOnHotspot(true)
+    if (InTutorial && tutoIndex === 2) {
+        MoveTutorial(true)
+    }
     HotspotMode()
     OpenedHotspot(iconId)
     AddToProgress(iconId)
@@ -466,6 +469,9 @@ const TryClickedLink = (iconId, objectName) => {
 const TryLeaveLink = () => {
     NormalMode()
     setAudioOnHotspot(false)
+    if (InTutorial && tutoIndex === 3) {
+        MoveTutorial(true)
+    }
     document.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = ""
     clickedLink = false
 }
@@ -1636,7 +1642,7 @@ const UpdateTutorialView = () => {
     if (tutoIndex === 0) {
         tutorialLeft.style.pointerEvents = 'none'
     } 
-    if (tutoIndex === 1) {
+    if (tutoIndex === 1 || tutoIndex === 2 || tutoIndex === 3) {
         tutorialRight.style.pointerEvents = 'none'
     }
     
