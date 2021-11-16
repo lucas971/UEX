@@ -308,6 +308,8 @@ const InitializeIcons = (d) => {
             icons = data["icons"]
             GenerateHtml(d)
             InitializeIconsPosition(d)
+            InitializeTutorial()
+            document.getElementById("loading-screen-stopper").click()
         },
         (error) => {
             console.error(error)
@@ -1009,7 +1011,6 @@ const setupScene = (gltf, d) => {
         if (material.emissiveMap) material.emissiveMap.encoding = d.THREE.sRGBEncoding
         if (material.map || material.emissiveMap) material.needsUpdate = true;
     });
-    document.getElementById("loading-screen-stopper").click()
     
     ready = true
 }
@@ -1533,6 +1534,23 @@ const updateTimer = ( ) =>
 
 
 //#endregion
+
+//region TUTORIAL
+const tutorialDiv = document.getElementById('tutorial-wrapper')
+const tutorialLeft = document.getElementById('tutorial-left')
+const tutorialRight = document.getElementById('tutorial-right')
+const tutorialNumber = document.getElementById('tutorial-number')
+const tutorialText = document.getElementById('tutorial-text')
+
+const InitializeTutorial = () => {
+    if (localStorage.tutorialDone) {
+        return
+    }
+    tutorialDiv.style.display = 'flex'
+}
+
+//#endregion
+
 //#region MAIN
 
 //#region IMPORTS
