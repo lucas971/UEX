@@ -410,6 +410,7 @@ const GenerateHtml = (d) => {
         
         //GRAND MECENES
         let data = GetHotspotData(icons[i].iconid)
+        
         if (data.type <= 4) {
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
@@ -424,6 +425,8 @@ const GenerateHtml = (d) => {
         
         //ROOMS
         icons[i].image = null
+        console.log(icons[i].id)
+        console.log(data.room_link)
         const obj = d.scene.getObjectByName(icons[i].id)
         if (!obj){
             console.log(icons[i].id)
