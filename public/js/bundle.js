@@ -713,7 +713,7 @@ const UpdateFreeform = (delta) => {
         currentMouseX = null
     }*/
     if (InTutorial && tutoIndex === 1) {
-        MoveTutorial(true)
+        setTimeout(() =>MoveTutorial(true), 500)
     }
     let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
     let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
@@ -1605,6 +1605,10 @@ const InitializeTutorial = () => {
     tutorialLeft.style.pointerEvents = 'none'
 }
 const MoveTutorial = (right) => {
+    if (right && tutoIndex === 1) { //Move camera tutorial
+        return
+    }
+    
     if (right) {
         tutoIndex++
     } else {
