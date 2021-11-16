@@ -1504,10 +1504,6 @@ const InitializeShaders = (d) => {
     outlinePassHighlight.pulsePeriod = 2
     outlinePassHighlight.visibleEdgeColor.setHex(0xffa705)
     outlinePassHighlight.hiddenEdgeColor.setHex(0x939329)
-    
-    const effectFXAA = new ShaderPass( FXAAShader );
-    effectFXAA.uniforms[ 'resolution' ].value.set( 1 / window.innerWidth, 1 / window.innerHeight );
-    d.composer.addPass( effectFXAA );
 }
 
 const UpdateUniforms = (delta) => {
