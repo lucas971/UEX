@@ -451,6 +451,9 @@ const TryClickedRoom = (obj) => {
     RequestHotspotTranslation(worldPos, roomMapping[obj])
 }
 const TryClickedLink = (iconId, objectName) => {
+    if (InTutorial && tutoIndex !== 2) {
+        return
+    }
     const obj = d.scene.getObjectByName(objectName)
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
@@ -854,7 +857,7 @@ const AnimateHotspotTranslation = (delta) => {
             hotspotCamParam.button.click()
         }
         if (hotspotCamParam.tutorial) {
-            TutorialStopCooldown()
+            TutorialResume()
         }
     }
 
@@ -1622,6 +1625,7 @@ const MoveTutorial = (right) => {
     
     if (tutoIndex > tutorialTexts.length) {
         tutorialDiv.style.display = 'none'
+        InTutorial = false
         return
     }
     UpdateTutorialView()
@@ -1645,9 +1649,8 @@ const UpdateTutorialView = () => {
     if (tutoIndex === 1 || tutoIndex === 2 || tutoIndex === 3) {
         tutorialRight.style.pointerEvents = 'none'
     }
-    
 }
-const TutorialStopCooldown = () =>{
+const TutorialResume = () =>{
     tutorialLeft.style.pointerEvents = 'all'
     tutorialRight.style.pointerEvents = 'all'
     UpdateTutorialView()
