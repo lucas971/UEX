@@ -1510,7 +1510,7 @@ const getCubeMapTexture = ( path ) => {
 
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
-const endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+const endTime = (+new Date) + 1000 * (60*55 + 0) + 500;
 
 const twoDigits = ( n ) =>
 {
