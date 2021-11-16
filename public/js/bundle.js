@@ -694,9 +694,13 @@ const OnMouseMove = (e) => {
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
 const UpdateFreeform = (delta) => {
+    let WasMoving = xVelocity !== 0 || zVelocity !== 0
     xVelocity += offsetX * delta * acceleration
     zVelocity += offsetZ * delta * acceleration *2
     if (xVelocity === zVelocity && zVelocity === 0) {
+        if (WasMoving && InTutorial && tutoIndex === 1) {
+            MoveTutorial(true)
+        }
         return
     }
 
@@ -712,9 +716,6 @@ const UpdateFreeform = (delta) => {
         NormalMode()
         currentMouseX = null
     }*/
-    if (InTutorial && tutoIndex === 1) {
-        setTimeout(() =>MoveTutorial(true), 500)
-    }
     let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
     let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
 
@@ -1590,8 +1591,6 @@ const tutorialPos = [
     [38,1.1,8,0.6],
 ]
 
-let tutorialTimeout = null
-
 let tutoIndex;
 let InTutorial = false
 const InitializeTutorial = () => {
@@ -1607,8 +1606,6 @@ const InitializeTutorial = () => {
     tutorialLeft.style.pointerEvents = 'none'
 }
 const MoveTutorial = (right) => {
-    tutorialTimeout = null
-    
     if (right) {
         tutoIndex++
     } else {
