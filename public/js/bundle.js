@@ -1616,7 +1616,7 @@ const MoveTutorial = (right) => {
 
 const UpdateTutorialView = () => {
     tutorialNumber.innerHTML = (tutoIndex + 1).toString()
-    tutorialText.innerHTML = tutorialText[tutoIndex]
+    tutorialText.innerHTML = tutorialTexts[tutoIndex]
     
     if (tutoIndex === 0) {
         tutorialLeft.style.pointerEvents = 'none'
