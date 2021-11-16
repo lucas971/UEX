@@ -642,8 +642,8 @@ const InitializeCameraHandler = (threeData) => {
     document.body.addEventListener("mouseup", () => OnMouseRelease(false))
     document.body.addEventListener("mouseout", () => OnMouseRelease(true))
     document.body.addEventListener("wheel", OnWheel)
-    document.getElementById("zoom-plus").addEventListener("click",( () => OnWheel({deltaY:1})))
-    document.getElementById("zoom-minus").addEventListener("click",( () => OnWheel({deltaY:-1})))
+    document.getElementById("zoom-plus").addEventListener("click",( () => OnWheel({deltaY:-1})))
+    document.getElementById("zoom-minus").addEventListener("click",( () => OnWheel({deltaY:1})))
     document.addEventListener('keydown', () => console.log(d.camera.zoom))
 }
 
