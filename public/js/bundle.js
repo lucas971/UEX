@@ -639,8 +639,8 @@ const InitializeCameraHandler = (threeData) => {
 
     document.body.addEventListener("mousemove", OnMouseMove)
     document.body.addEventListener("mousedown", OnMouseClick)
-    document.body.addEventListener("mouseup", OnMouseRelease)
-    document.body.addEventListener("mouseout", OnMouseRelease)
+    document.body.addEventListener("mouseup", () => OnMouseRelease(false))
+    document.body.addEventListener("mouseout", () => OnMouseRelease(true))
     document.body.addEventListener("wheel", OnWheel)
     document.getElementById("zoom-plus").addEventListener("click",( () => OnWheel({deltaY:1})))
     document.getElementById("zoom-minus").addEventListener("click",( () => OnWheel({deltaY:-1})))
@@ -650,8 +650,8 @@ const InitializeCameraHandler = (threeData) => {
 //#endregion
 
 //#region FREEFORM
-const OnMouseRelease = () => {
-    if (!IsDrag()) {
+const OnMouseRelease = (out) => {
+    if (!IsDrag() && !out){
         if (IsRoom()) {
             TryClickedRoom(currentObject)
         }
