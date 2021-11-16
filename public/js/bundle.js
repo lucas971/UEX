@@ -727,6 +727,7 @@ const UpdateFreeform = (delta) => {
         xRatio =  Math.abs(xVelocity / zVelocity)
     }
 
+    const wasMoving = (xVelocity !== 0 || zVelocity !== 0)
     const newXVelocity = xVelocity + (xVelocity > 0 ? -1 : 1) * delta * deceleration * xRatio
     xVelocity = newXVelocity * xVelocity > 0 ? newXVelocity : 0
     xVelocity = xVelocity > maxVelocity ? maxVelocity : xVelocity
@@ -737,7 +738,7 @@ const UpdateFreeform = (delta) => {
     zVelocity = zVelocity > maxVelocity ? maxVelocity : zVelocity
     zVelocity = zVelocity < -maxVelocity ? -maxVelocity : zVelocity
 
-    if (zVelocity === 0 && xVelocity === 0 && InTutorial && tutoIndex === 1) {
+    if (wasMoving && zVelocity === 0 && xVelocity === 0 && InTutorial && tutoIndex === 1) {
         MoveTutorial(true)
     }
     offsetX = 0
