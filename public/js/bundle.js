@@ -451,9 +451,6 @@ const TryClickedRoom = (obj) => {
     RequestHotspotTranslation(worldPos, roomMapping[obj])
 }
 const TryClickedLink = (iconId, objectName) => {
-    if (InTutorial && tutoIndex !== 2) {
-        return
-    }
     const obj = d.scene.getObjectByName(objectName)
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
@@ -686,6 +683,7 @@ const OnMouseClick = (e) => {
     initialPosX = currentMouseX
     initialPosY = currentMouseY
     positionTracker = cameraHolder.position.clone()
+    e.preventDefault()
 }
 const OnMouseMove = (e) => {
     RaycastOutline(e.clientX, e.clientY)
@@ -700,6 +698,7 @@ const OnMouseMove = (e) => {
     offsetZ = e.clientY - currentMouseY
     currentMouseX = e.clientX
     currentMouseY = e.clientY
+    e.preventDefault()
 }
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
