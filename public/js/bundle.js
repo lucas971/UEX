@@ -425,15 +425,13 @@ const GenerateHtml = (d) => {
         
         //ROOMS
         icons[i].image = null
-        console.log(icons[i].id)
-        console.log(data.room_link)
         const obj = d.scene.getObjectByName(icons[i].id)
         if (!obj){
             console.log(icons[i].id)
         }
         AddToSelectedObjects(obj)
         roomMapping[obj] = document.getElementById(data.room_link)
-        
+        console.log(roomMapping[obj])
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
