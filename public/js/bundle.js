@@ -1603,7 +1603,7 @@ const MoveTutorial = (right) => {
     }
     UpdateTutorialView()
     if (tutorialPos[tutoIndex]) {
-        RequestTranslation(tutorialPos[0], tutorialPos[1], tutorialPos[2], tutorialPos[3])
+        RequestTranslation(tutorialPos[tutoIndex][0], tutorialPos[tutoIndex][1], tutorialPos[tutoIndex][2], tutorialPos[tutoIndex][3])
     }
 }
 
