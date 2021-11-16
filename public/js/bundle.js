@@ -308,7 +308,7 @@ const InitializeIcons = (d) => {
             icons = data["icons"]
             GenerateHtml(d)
             InitializeIconsPosition(d)
-            InitializeTutorial()
+            //InitializeTutorial()
             document.getElementById("loading-screen-stopper").click()
         },
         (error) => {
