@@ -786,6 +786,7 @@ const RequestTranslation = (x, y, z, zoom) => {
     hotspotCamParam.button = null
     hotspotCamParam.offset = 0
     hotspotCamParam.zoom = zoom
+    hotspotCamParam.tutorial = true
     hotspotTransition = true
 }
 const RequestHotspotTranslation = (hotspotPos, button) => {
@@ -800,6 +801,7 @@ const RequestHotspotTranslation = (hotspotPos, button) => {
     hotspotCamParam.button = button
     hotspotCamParam.offset = button === null ? hotspotOffset : 0
     hotspotCamParam.zoom = animationZoom
+    hotspotCamParam.tutorial = false
     hotspotTransition = true
     
 }
@@ -833,6 +835,9 @@ const AnimateHotspotTranslation = (delta) => {
             localStorage.currentZ = cameraHolder.position.z.toString()
             localStorage.comeBack = 'true'
             hotspotCamParam.button.click()
+        }
+        if (hotspotCamParam.tutorial) {
+            TutorialStopCooldown()
         }
     }
 
@@ -1603,6 +1608,10 @@ const MoveTutorial = (right) => {
     }
     UpdateTutorialView()
     if (tutorialPos[tutoIndex]) {
+        tutorialLeft.style.pointerEvents = 'none'
+        tutorialRight.style.pointerEvents = 'none'
+        tutorialLeft.style.cursor = 'wait'
+        tutorialRight.style.cursor = 'wait'
         RequestTranslation(tutorialPos[tutoIndex][0], tutorialPos[tutoIndex][1], tutorialPos[tutoIndex][2], tutorialPos[tutoIndex][3])
     }
 }
@@ -1617,6 +1626,13 @@ const UpdateTutorialView = () => {
         tutorialLeft.style.pointerEvents = 'all'
     }
     
+}
+const TutorialStopCooldown = () =>{
+    tutorialLeft.style.pointerEvents = 'all'
+    tutorialRight.style.pointerEvents = 'all'
+    tutorialLeft.style.cursor = 'select'
+    tutorialRight.style.cursor = 'select'
+    UpdateTutorialView()
 }
 //#endregion
 
