@@ -654,7 +654,7 @@ const InitializeCameraHandler = (threeData) => {
 
 //#region FREEFORM
 const OnMouseRelease = (out) => {
-    if (!IsDrag() && !out){
+    if (!IsDrag() && !out && !InTutorial){
         if (IsRoom()) {
             TryClickedRoom(currentObject)
         }
@@ -664,6 +664,9 @@ const OnMouseRelease = (out) => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
+    if (InTutorial && tutoIndex !== 1) {
+        return;
+    }
     if (!IsNormal() || e.target.id!== 'canvas') {
         return
     }
@@ -709,7 +712,9 @@ const UpdateFreeform = (delta) => {
         NormalMode()
         currentMouseX = null
     }*/
-
+    if (InTutorial && tutoIndex === 1) {
+        MoveTutorial(true)
+    }
     let targetXPos = clamp(cameraHolder.position.x + xVelocity + zVelocity, minX, maxX)
     let targetZPos = clamp(cameraHolder.position.z - zVelocity + xVelocity, minZ, maxZ)
 
@@ -747,6 +752,9 @@ const UpdateFreeform = (delta) => {
 //#region ZOOM
 
 const OnWheel = (e) => {
+    if (InTutorial) {
+        return
+    }
     if (e.deltaY > 0) {
         currentZoomSpeed = zoomSpeed
     } else {
@@ -1583,11 +1591,12 @@ const tutorialPos = [
 ]
 
 let tutoIndex;
-
+let InTutorial = false
 const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
     }
+    InTutorial = true
     tutoIndex = 0
     tutorialDiv.style.display = 'flex'
     
