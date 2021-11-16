@@ -646,7 +646,7 @@ const InitializeCameraHandler = (threeData) => {
     document.body.addEventListener("wheel", OnWheel)
     document.getElementById("zoom-plus").addEventListener("click",( () => OnWheel({deltaY:-1})))
     document.getElementById("zoom-minus").addEventListener("click",( () => OnWheel({deltaY:1})))
-    document.addEventListener('keydown', () => console.log(d.camera.zoom))
+    document.addEventListener('keydown', () => console.log(d.camera.zoom + '  ' + cameraHolder.position))
 }
 
 //#endregion
@@ -1541,7 +1541,18 @@ const tutorialLeft = document.getElementById('tutorial-left')
 const tutorialRight = document.getElementById('tutorial-right')
 const tutorialNumber = document.getElementById('tutorial-number')
 const tutorialText = document.getElementById('tutorial-text')
-
+const tutorialTexts = [
+    'Bienvenue dans l\'Usine Extraordinaire ! La ville vient d\'ouvrir ses portes aux visiteurs.',
+    'Pour vous déplacer, cliquez et tirez avec la souris. Essayez !',
+    'Pour ouvrir des contenus, cliquez sur les icones sur la carte.',
+    'Quand vous trouvez un contenu, votre progression est sauvegardée dans le cube, en haut à droite !',
+    'Ici, c\'est l\'Agora, un lieu de présentation en direct !',
+    'Certains bâtiments sont visitables !',
+    'Bonne exploration à vous !'
+]
+const tutorialPos = [
+    []
+]
 const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
