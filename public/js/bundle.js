@@ -1610,8 +1610,6 @@ const MoveTutorial = (right) => {
     if (tutorialPos[tutoIndex]) {
         tutorialLeft.style.pointerEvents = 'none'
         tutorialRight.style.pointerEvents = 'none'
-        tutorialLeft.style.cursor = 'wait'
-        tutorialRight.style.cursor = 'wait'
         RequestTranslation(tutorialPos[tutoIndex][0], tutorialPos[tutoIndex][1], tutorialPos[tutoIndex][2], tutorialPos[tutoIndex][3])
     }
 }
@@ -1630,8 +1628,6 @@ const UpdateTutorialView = () => {
 const TutorialStopCooldown = () =>{
     tutorialLeft.style.pointerEvents = 'all'
     tutorialRight.style.pointerEvents = 'all'
-    tutorialLeft.style.cursor = 'select'
-    tutorialRight.style.cursor = 'select'
     UpdateTutorialView()
 }
 //#endregion
