@@ -773,6 +773,20 @@ const UpdateZoom = (delta) => {
 
 //#region HOTSPOT TRANSLATION
 
+const RequestTranslation = (x, y, z, zoom) => {
+    if (hotspotTransition) {
+        return
+    }
+
+    hotspotCamParam.initialPos = cameraHolder.position.clone()
+    hotspotCamParam.state = 0
+    hotspotCamParam.initialZoom = d.camera.zoom
+    hotspotCamParam.hotspotPos = new d.THREE.Vector3(x,y,z)
+    hotspotCamParam.button = null
+    hotspotCamParam.offset = 0
+    hotspotCamParam.zoom = zoom
+    hotspotTransition = true
+}
 const RequestHotspotTranslation = (hotspotPos, button) => {
     if (hotspotTransition) {
         return
@@ -784,6 +798,7 @@ const RequestHotspotTranslation = (hotspotPos, button) => {
     hotspotCamParam.hotspotPos = hotspotPos
     hotspotCamParam.button = button
     hotspotCamParam.offset = button === null ? hotspotOffset : 0
+    hotspotCamParam.zoom = animationZoom
     hotspotTransition = true
     
 }
@@ -799,7 +814,7 @@ const AnimateHotspotTranslation = (delta) => {
     cameraHolder.position.z = targetZ
     
     //zoom
-    d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * animationZoom
+    d.camera.zoom = (1-t) * hotspotCamParam.initialZoom + t * hotspotCamParam.zoom
     d.camera.updateProjectionMatrix()
 
     //fade
@@ -1552,15 +1567,56 @@ const tutorialTexts = [
     'Bonne exploration à vous !'
 ]
 const tutorialPos = [
-    []
+    false,
+    false,
+    [-5,1.1,-2.5,1.2],
+    false,
+    [24,1.1,-1.4,23],
+    [54,1.1,-40,0.8],
+    [38,1.1,8,0.6],
 ]
+
+let tutoIndex;
+
 const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
     }
+    tutoIndex = 0
     tutorialDiv.style.display = 'flex'
+    
+    tutorialLeft.addEventListener('click', () => MoveTutorial(false))
+    tutorialRight.addEventListener('click', () => MoveTutorial(true))
+    tutorialLeft.style.pointerEvents = 'none'
+}
+const MoveTutorial = (right) => {
+    if (right) {
+        tutoIndex++
+    } else {
+        tutoIndex--
+    }
+    
+    if (tutoIndex > tutorialTexts.length) {
+        tutorialDiv.style.display = 'none'
+        return
+    }
+    UpdateTutorialView()
+    if (tutorialPos[tutoIndex]) {
+        RequestTranslation(tutorialPos[0], tutorialPos[1], tutorialPos[2], tutorialPos[3])
+    }
 }
 
+const UpdateTutorialView = () => {
+    tutorialNumber.innerHTML = (tutoIndex + 1).toString()
+    tutorialText.innerHTML = tutorialText[tutoIndex]
+    
+    if (tutoIndex === 0) {
+        tutorialLeft.style.pointerEvents = 'none'
+    } else {
+        tutorialLeft.style.pointerEvents = 'all'
+    }
+    
+}
 //#endregion
 
 //#region MAIN
