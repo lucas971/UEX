@@ -647,6 +647,7 @@ const InitializeCameraHandler = (threeData) => {
     document.getElementById("zoom-plus").addEventListener("click",( () => OnWheel({deltaY:-1})))
     document.getElementById("zoom-minus").addEventListener("click",( () => OnWheel({deltaY:1})))
     document.addEventListener('keydown', () => console.log(d.camera.zoom + '  ' + cameraHolder.position))
+    document.addEventListener('keydown', () => console.log(cameraHolder.position))
 }
 
 //#endregion
