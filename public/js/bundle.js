@@ -671,6 +671,7 @@ const OnMouseRelease = (out) => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
+    DebugRaycast(e.clientX, e.clientY)
     e.preventDefault()
     if (InTutorial && tutoIndex !== 1) {
         return;
@@ -1391,6 +1392,15 @@ let outlinePassHighlight
 let mouse
 let aiming = false
 let currentObject
+
+const DebugRaycast = (clientX, clientY) => {
+    mouse.x = (clientX / window.innerWidth) * 2 - 1
+    mouse.y = -(clientY/window.innerHeight) * 2 + 1
+
+    d.raycaster.setFromCamera(mouse,d.camera)
+    const intersects = d.raycaster.intersectObjects(d.scene, true)
+    console.log(intersects)
+}
 
 const RaycastOutline = (clientX, clientY) => {
     if (!IsNormal() && !IsRoom()) {
