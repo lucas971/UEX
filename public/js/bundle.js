@@ -273,6 +273,17 @@ const PopulateHotspot = (hotspotInfo) => {
             tripettos[i].style.display = i === hotspotInfo.token ? 'inherit' : 'none'
         }
     }
+    
+    if (hotspotInfo.link) {
+        div.getElementsByClassName("hotspot-link-content stm w-inline-block")[0].href = hotspotInfo.link
+    }
+    
+    if (hotspotInfo.background) {
+        div.getElementsByClassName("hotspot-link-content stm w-inline-block")[0].style.backgroundImage = 
+            'linear-gradient(131deg, rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0), ' +
+            'rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0.72) 50%,' + newColor + '), ' +
+            'url('+ hotspotInfo.background +');'
+    }
 }
 
 //#endregion
