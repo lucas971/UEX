@@ -1056,6 +1056,8 @@ const generateCity = (d) => {
             InitializeCursor(threeData)
             setupEnvironment()
             d.scene.getObjectByName('Eau').material = ocean_mat
+            d.scene.getObjectByName('Eau001').material.color = ocean_uniforms.waterCol
+            d.scene.getObjectByName('Eau002').material.color = ocean_uniforms.waterCol
             console.log(d.scene.getObjectByName('Eau'))
             animate()
         },
