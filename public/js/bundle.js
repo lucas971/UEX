@@ -1674,7 +1674,7 @@ let InitQuizzes = () => {
     tripettos[3] = document.getElementById("tripetto4")
     tripettos[4] = document.getElementById("tripetto5")
     
-    var tripetto1 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+    var tripetto1 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZGRodGI3bHZSQUsyUzEvKzZ2ZmwvWkYvbTNXYUVUL29Jb01UeG5CYW8wWT0iLCJ0eXBlIjoiY29sbGVjdCJ9.sChCPsyGKl09exdXUNJ2q1WgeVimLVie4-nWc0K2EJM"})
 
     TripettoAutoscroll.run({
         element: tripettos[0],
@@ -1687,7 +1687,7 @@ let InitQuizzes = () => {
         onSubmit: tripetto1.onSubmit
     })
 
-    var tripetto2 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+    var tripetto2 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZm5pOGxlc2RmRGRYMmZ0Q0c4Qjhuc2EzRHRCaStWaTZNY0xyd2V5NE9JRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.IO231ZkcY7bpd0pbFoyiQ1sW4hjW1UjmPtOFC6X9sOg"})
 
     TripettoAutoscroll.run({
         element: tripettos[1],
@@ -1700,7 +1700,7 @@ let InitQuizzes = () => {
         onSubmit: tripetto2.onSubmit
     })
 
-    var tripetto3 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+    var tripetto3 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVGpzR0F4enNQTG5ZT25iSHkxTkVBc1h0aWFUN2JaeTBEaWVwaE5FWWUyZz0iLCJ0eXBlIjoiY29sbGVjdCJ9.8pI9N08xuFVLk1To5h3Qz4ryxLw5CQA0dFWwVFGup3o"})
 
     TripettoAutoscroll.run({
         element: tripettos[2],
@@ -1726,7 +1726,7 @@ let InitQuizzes = () => {
         onSubmit: tripetto4.onSubmit
     })
 
-    var tripetto5 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+    var tripetto5 = TripettoServices.init({token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiclpUSWJiSXJIeEV2YVJkTFI3K0JOZ3Q1TG5aekNwYUJUVUpDSFprTThScz0iLCJ0eXBlIjoiY29sbGVjdCJ9.O4zAq8Y7CxOcdaNvoEy7ihHcIVmc4hUqGyIt_o8i-9o"})
 
     TripettoAutoscroll.run({
         element: tripettos[4],
