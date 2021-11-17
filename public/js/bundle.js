@@ -267,20 +267,6 @@ const PopulateHotspot = (hotspotInfo) => {
     if (hotspotInfo.video) {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
-    if (hotspotInfo.type === 3) {
-        var tripetto = TripettoServices.init({ token: hotspotInfo.token});
-
-        TripettoAutoscroll.run({
-            element: document.getElementById("tripetto"),
-            definition: tripetto.definition,
-            styles: tripetto.styles,
-            l10n: tripetto.l10n,
-            locale: tripetto.locale,
-            translations: tripetto.translations,
-            attachments: tripetto.attachments,
-            onSubmit: tripetto.onSubmit
-        });
-    }
 }
 
 //#endregion
