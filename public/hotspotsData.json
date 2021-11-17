@@ -407,7 +407,8 @@
       "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
     "trigger31": {
-      "type": 0,
+      "type": 2,
+      "slide": 31,
       "title": "ST: Portraits de collaborateurs et de leurs métiers",
       "sponsor": "STMICROELECTRONICS",
       "theme": "Innovation",
@@ -471,7 +472,8 @@
       "video" : "https://player.vimeo.com/video/643121793?h=5cc406ffb4"
     },
     "trigger39": {
-      "type": 0,
+      "type": 2,
+      "slide": 39,
       "title": "Le port de Marseille Fos forme aux métiers de la supply chain",
       "sponsor": "Port de Marseille Fos",
       "theme": "Innovation",
@@ -479,7 +481,8 @@
       "video" : "https://player.vimeo.com/video/645021712?h=51078db539"
     },
     "trigger40": {
-      "type": 0,
+      "type": 2,
+      "slide": 40,
       "title": "L’économie circulaire au coeur des projets du port de Marseille Fos",
       "sponsor": "Port de Marseille Fos",
       "theme": "Développement durable",
@@ -543,7 +546,8 @@
       "video" : "https://player.vimeo.com/video/643121589?h=be3ba96475"
     },
     "trigger48": {
-      "type": 0,
+      "type": 2,
+      "slide": 48,
       "title": "Images de recherche",
       "sponsor": "CEA",
       "theme": "Innovation",
@@ -623,7 +627,8 @@
       "video" : "https://player.vimeo.com/video/645030374?h=526118bfbb"
     },
     "trigger56": {
-      "type": 0,
+      "type": 2,
+      "slide": 56,
       "title": "Stories métiers",
       "sponsor": "Ardatem",
       "theme": "Inclusion",
@@ -688,6 +693,7 @@
     },
     "trigger61": {
       "type": 2,
+      "slide": 31,
       "title": "Les innovations ONET",
       "sponsor": "ONET",
       "theme": "Innovation",
