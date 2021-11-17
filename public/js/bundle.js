@@ -1052,7 +1052,7 @@ const generateCity = (d) => {
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
             setupEnvironment()
-            //d.scene.getObjectByName('Eau').material = ocean_mat
+            d.scene.getObjectByName('Eau').material = ocean_mat
             animate()
         },
         (xhr) => {
