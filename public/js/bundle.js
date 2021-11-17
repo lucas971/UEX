@@ -279,6 +279,7 @@ const PopulateHotspot = (hotspotInfo) => {
     }
     
     if (hotspotInfo.background) {
+        div.getElementsByClassName("content-wrapper")[0].style.backgroundColor = newColor
         div.getElementsByClassName("hotspot-link-content stm w-inline-block")[0].style.backgroundImage = 
             'linear-gradient(131deg, rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0), ' +
             'rgba('+rgb[0].toString() +', ' + rgb[1].toString() + ', '+ rgb[2].toString() +', 0.72) 50%,' + newColor.toString() + '), ' +
