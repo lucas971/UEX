@@ -268,7 +268,6 @@ const PopulateHotspot = (hotspotInfo) => {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     if (hotspotInfo.type === 3) {
-        document.getElementById("tripetto").innerHTML =""
         var tripetto = TripettoServices.init({ token: hotspotInfo.token});
 
         TripettoAutoscroll.run({
@@ -481,6 +480,7 @@ const TryClickedLink = (iconId, objectName) => {
 }
 
 const TryLeaveLink = () => {
+    document.getElementById("tripetto").innerHTML =""
     NormalMode()
     setAudioOnHotspot(false)
     if (InTutorial && tutoIndex === 3) {
