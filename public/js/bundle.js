@@ -1674,6 +1674,21 @@ let InitQuizzes = () => {
         attachments: tripetto1.attachments,
         onSubmit: tripetto1.onSubmit
     })
+    
+    document.getElementById("tripetto1").style.display = 'none'
+
+    var tripetto2 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+
+    TripettoAutoscroll.run({
+        element: document.getElementById("tripetto2"),
+        definition: tripetto2.definition,
+        styles: tripetto2.styles,
+        l10n: tripetto2.l10n,
+        locale: tripetto2.locale,
+        translations: tripetto2.translations,
+        attachments: tripetto2.attachments,
+        onSubmit: tripetto2.onSubmit
+    })
 }
 
 //#endregion
