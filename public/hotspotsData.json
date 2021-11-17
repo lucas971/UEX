@@ -383,12 +383,12 @@
       "video" : "https://player.vimeo.com/video/643121773?h=6ef338f31c"
     },
     "trigger28": {
-      "type": 0,
+      "type": 3,
       "title": "Découvrez ce qu’est la RSE ",
       "sponsor": "D3E",
       "theme": "Développement durable",
       "paragraphText" : "La RSE (Responsabilité Sociétale des Entreprises) est un domaine qui nous tient à cœur. Découvrez ce qu’est la RSE grâce à des exemples concrets répartis dans 8 questions. Les thèmes abordés seront les suivants : Insertion, alternance, inclusion, économie circulaire, développement durable, innovation et industrie du futur.  A vos clics !",
-      "video" : "https://player.vimeo.com/video/643121773?h=6ef338f31c"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZGRodGI3bHZSQUsyUzEvKzZ2ZmwvWkYvbTNXYUVUL29Jb01UeG5CYW8wWT0iLCJ0eXBlIjoiY29sbGVjdCJ9.sChCPsyGKl09exdXUNJ2q1WgeVimLVie4-nWc0K2EJM"
     },
     "trigger29": {
       "type": 0,
@@ -399,12 +399,12 @@
       "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
     "trigger30": {
-      "type": 0,
+      "type": 3,
       "title": "Le quizz ST : que savez-vous du monde de l'infiniment petit?",
       "sponsor": "STMICROELECTRONICS",
       "theme": "Usine du futur",
       "paragraphText" : "STMICROELECTRONICS vous propose de vous tester sur l'infiniment petit !",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZm5pOGxlc2RmRGRYMmZ0Q0c4Qjhuc2EzRHRCaStWaTZNY0xyd2V5NE9JRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.IO231ZkcY7bpd0pbFoyiQ1sW4hjW1UjmPtOFC6X9sOg"
     },
     "trigger31": {
       "type": 2,
@@ -413,7 +413,6 @@
       "sponsor": "STMICROELECTRONICS",
       "theme": "Innovation",
       "paragraphText" : "Tour d’horizon d’un univers professionnel aux multiples visages !\nL’industrie offre de nombreuses perspectives et propose un large choix de métiers divers et variés. Le plus souvent synonyme d’innovation, les femmes et les hommes qui la composent ont des parcours captivants. Nos collaborateurs œuvrent chaque jour pour façonner le monde de demain et créer des technologies utiles, positives et innovantes. Ce sont leurs connaissances, leurs compétences et leur savoir-faire qui permettent de fournir des produits et des solutions de haute technologie pour un monde plus intelligent, plus sûr, plus vert et plus connecté.\nConception, R&D, production, analyse des data, qualité...venez découvrir les métiers de la microélectronique à travers ces portraits de collaborateurs ! ",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
     "trigger32": {
       "type": 0,
@@ -448,12 +447,12 @@
       "video" : "https://player.vimeo.com/video/643121813?h=d94815e42c"
     },
     "trigger36": {
-      "type": 0,
+      "type": 3,
       "title": "Quizz - Découverte de la plasturgie",
       "sponsor": "POLYVIA",
       "theme": "Usine du futur",
       "paragraphText" : "Testez vos connaissances sur la filière et découvrez les perspectives.",
-      "video" : "https://player.vimeo.com/video/643121802?h=d8ad712190"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVGpzR0F4enNQTG5ZT25iSHkxTkVBc1h0aWFUN2JaeTBEaWVwaE5FWWUyZz0iLCJ0eXBlIjoiY29sbGVjdCJ9.8pI9N08xuFVLk1To5h3Qz4ryxLw5CQA0dFWwVFGup3o"
     },
     "trigger37": {
       "type": 0,
@@ -478,7 +477,6 @@
       "sponsor": "Port de Marseille Fos",
       "theme": "Innovation",
       "paragraphText" : "Aujourd’hui les Supply Chains sont devenues très complexes en raison de l'internationalisation, de l'augmentation des types de flux et de l'évolution des modes de consommation au niveau mondial. \nL’Institut du port de Marseille Fos propose des formations continues et initiales du bac + 2 au bac + 5, dispensées par des professionnels. Il prépare aux métiers du transport international grâce à ses trois cursus, tous reconnus par l’Education Nationale.",
-      "video" : "https://player.vimeo.com/video/645021712?h=51078db539"
     },
     "trigger40": {
       "type": 2,
@@ -487,7 +485,6 @@
       "sponsor": "Port de Marseille Fos",
       "theme": "Développement durable",
       "paragraphText" : "Le port de Marseille Fos est le moteur économique d’un territoire en pleine action qui s’engage pour le climat et l’amélioration de la qualité de l’air. \nL’excellence environnementale est une ambition forte que le port de Marseille Fos revendique. Développer l’économie bleue sur un mode durable, œuvrer pour la transition énergétique, développer l’économie circulaire par des programmes de recherche et préserver ses espaces naturels tels sont les objectifs que le port de Marseille Fos s’est fixé pour les années futures.",
-      "video" : "https://player.vimeo.com/video/645021712?h=51078db539"
     },
     "trigger41": {
       "type": 0,
@@ -552,7 +549,6 @@
       "sponsor": "CEA",
       "theme": "Innovation",
       "paragraphText" : "Le centre CEA-Cadarache est au cœur de la transition énergétique avec ses instituts de recherche et plateformes expérimentales dans le domaine des énergies bas-carbone : énergie nucléaire (fission, fusion), bioénergies et énergies solaires.",
-      "video" : "https://player.vimeo.com/video/643121587?h=2ab74ba133"
     },
     "trigger48b": {
       "type": 0,
@@ -599,7 +595,8 @@
       "title": "Cap ou pas cap de tout savoir sur le Naval de Défense ?",
       "sponsor": "Naval Group",
       "theme": "Innovation",
-      "paragraphText" : ""
+      "paragraphText" : "",
+      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"
     },
     "trigger53": {
       "type": 0,
@@ -632,15 +629,14 @@
       "sponsor": "Ardatem",
       "theme": "Inclusion",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
     "trigger57": {
-      "type": 0,
+      "type": 3,
       "title": "Testez vos connaissances !",
       "sponsor": "Ardatem",
       "theme": "Inclusion",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiclpUSWJiSXJIeEV2YVJkTFI3K0JOZ3Q1TG5aekNwYUJUVUpDSFprTThScz0iLCJ0eXBlIjoiY29sbGVjdCJ9.O4zAq8Y7CxOcdaNvoEy7ihHcIVmc4hUqGyIt_o8i-9o"
     },
     "trigger58": {
       "type": 0,

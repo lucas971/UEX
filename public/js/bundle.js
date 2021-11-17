@@ -268,7 +268,7 @@ const PopulateHotspot = (hotspotInfo) => {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     if (hotspotInfo.type === 3) {
-        var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZGRodGI3bHZSQUsyUzEvKzZ2ZmwvWkYvbTNXYUVUL29Jb01UeG5CYW8wWT0iLCJ0eXBlIjoiY29sbGVjdCJ9.sChCPsyGKl09exdXUNJ2q1WgeVimLVie4-nWc0K2EJM" });
+        var tripetto = TripettoServices.init({ token: hotspotInfo.token});
 
         TripettoAutoscroll.run({
             element: document.getElementById("tripetto"),
