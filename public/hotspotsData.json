@@ -6,7 +6,7 @@
     "France Chimie" : "https://www.francechimie.fr/",
     "Sartorius" : "https://www.sartorius.com/en/company-fr",
     "ITER" : "https://www.iter.org/fr/proj/inafewlines",
-    "AFPI" : "https://www.formation-industries-paca.fr/",
+    "Pôle Formation UIMM Sud" : "https://www.formation-industries-paca.fr/",
     "OPCO2I" : "https://www.opco2i.fr/",
     "ELENGY" : "https://www.elengy.com/fr/",
     "Airbus Helicopters" :"https://www.airbus.com/helicopters.html",
@@ -38,7 +38,7 @@
     "France Chimie" : "France Chimie est l’organisation professionnelle qui représente les entreprises de la Chimie en France. Elle est le porte-parole du secteur auprès des pouvoirs publics nationaux, européens et des instances internationales.",
     "Sartorius" : "Le groupe Sartorius est un partenaire international de premier plan de l’industrie biopharmaceutique et du secteur de la recherche. Nous aidons scientifiques et ingénieurs en biotechnologies du monde entier à développer et fabriquer des médicaments de la première idée à la production. Pour que des médicaments bon marché soient accessibles au plus grand nombre.",
     "ITER" : "ITER est l'un des projets les plus ambitieux au monde dans le domaine de l'énergie. Celui ci démontrer que la fusion — l'énergie du Soleil et des étoiles — peut être utilisée comme source d'énergie à grande échelle, non émettrice de CO2, pour produire de l'électricité.",
-    "AFPI" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur.",
+    "Pôle Formation UIMM Sud" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur.",
     "OPCO2I" : "OPCO 2i accompagne 32 branches professionnelles dans leur stratégie de développement des compétences. Il représente plus de 60 000 entreprises et plus de 2 600 000 salariés.",
     "ELENGY" : "Elengy est un opérateur français de terminaux méthaniers. Filiale de ENGIE, est au service de tous les opérateurs qui souhaitent importer du gaz naturel liquéfié pour approvisionner les marchés français et européens. ",
     "Airbus Helicopters" : "Airbus Helicopters - nouveau nom d'Eurocopter, est une division du groupe Airbus, leader mondial dans les domaines de l’aéronautique, de l’espace, de la défense et des services associés. ",
@@ -70,7 +70,7 @@
     "France Chimie" : "https://www.francechimie.fr/media/ad0/jeunes-femmes-chimistes_md.jpg",
     "Sartorius" : "https://www.sartorius.com/resource/image/7992/16x9/1050/590/8a19344806c8f6a375b9902bd018da15/652921E6DD4D18B2CD6A70B769AF81D0/sartorius-0342-pg12.jpg",
     "ITER" : "https://www.iter.org/doc/www/content/com/Lists/Machine/Attachments/28/tokamak-full.jpg",
-    "AFPI" : "https://www.afpi-acmformation.com/wp-content/uploads/2019/10/banni%C3%A8re-facebook-septembre-2019-1.jpg",
+    "Pôle Formation UIMM Sud" : "https://www.afpi-acmformation.com/wp-content/uploads/2019/10/banni%C3%A8re-facebook-septembre-2019-1.jpg",
     "OPCO2I" : "https://www.alternance-professionnelle.fr/wp-content/uploads/2021/02/opco2i-industrie-relance-formation-678x381.jpg",
     "ELENGY" : "https://www.elengy.com/images/uniterevolution/slider-home/images/slidesHome/slide04.jpg",
     "Airbus Helicopters" : "https://www.aerospace-technology.com/wp-content/uploads/sites/15/2021/06/Airbus.jpg",
@@ -184,11 +184,12 @@
       "video" : "https://player.vimeo.com/video/643120272?h=7bcaa4aace"
     },
     "trigger3": {
-      "type": 0,
+      "type": 1,
       "title": "Visite virtuelle de l’entreprise Stäubli",
       "sponsor": "UIMM",
       "theme": "Innovation",
-      "paragraphText" : "https://player.vimeo.com/video/643120272?h=7bcaa4aace"
+      "paragraphText" : "https://player.vimeo.com/video/643120272?h=7bcaa4aace",
+      "link": "https://ressources.hyperfiction.fr/uimm360/staubli/"
     },
     "trigger4": {
       "type": 0,
@@ -215,12 +216,12 @@
       "video" : "https://player.vimeo.com/video/641337198?h=314cfc2e7d"
     },
     "trigger7": {
-      "type": 0,
+      "type": 1,
       "title": "Découverte de nos plateaux techniques orientés Industrie du Futur",
-      "sponsor": "AFPI",
+      "sponsor": "Pôle Formation UIMM Sud",
       "theme": "Usine du futur",
       "paragraphText" : "Visitez virtuellement notre centre basé à Istres, ses ateliers et plateaux techniques, espaces co-working, hub, espaces détente et cafétéria. Pour profiter pleinement de la vision à 360°, faites pivoter l’image vers la gauche ou la droite.",
-      "video": "https://player.vimeo.com/video/641384542?h=6299c29e31"
+      "link" : "https://www.formation-industries-paca.fr/visite/"
     },
     "trigger8": {
       "type": 0,
@@ -375,12 +376,13 @@
       "video" : "https://player.vimeo.com/video/643121773?h=6ef338f31c"
     },
     "trigger27": {
-      "type": 0,
+      "type": 1,
       "title": "Visite d'un atelier de production",
       "sponsor": "D3E",
       "theme": "Innovation",
       "paragraphText" : "Voici la visite virtuelle 360° de notre atelier de fabrication d’armoires électriques basé à Saint-Paul Lez-Durance (13). Découvrez nos différents métiers au travers de cette visite. Plusieurs univers sont exposés : Automatisme, câblage, outillage, fibre optique, etc. Des explications vous sont fournies pour en savoir plus sur chaque univers., Type: Visite virtuelle",
-      "video" : "https://player.vimeo.com/video/643121773?h=6ef338f31c"
+      "link": "https://storage.net-fs.com/hosting/7337651/0/",
+      "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/619506b1ebb07c0557453a08_D3E_LINK_BG_IMAGE.JPG"
     },
     "trigger28": {
       "type": 3,
@@ -572,7 +574,7 @@
       "sponsor": "Lyondellbasell",
       "theme": "",
       "paragraphText" : "Découvrez un escape game produit par Lyondellbasell !",
-      "lien" : "https://play.ldb.emeraude.games/"
+      "link" : "https://play.ldb.emeraude.games/"
     },
     "trigger50": {
       "type": 1,
@@ -580,7 +582,7 @@
       "sponsor": "Lyondellbasell",
       "theme": "https://lyondellbasell-usine-extraordinaire.com/",
       "paragraphText" : "Découvrez une carte interactive produite par Lyondellbasell !",
-      "lien" : "https://play.ldb.emeraude.games/"
+      "link" : "https://play.ldb.emeraude.games/"
     },
     "trigger51": {
       "type": 0,
