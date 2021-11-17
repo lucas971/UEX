@@ -65,7 +65,7 @@
       "iconid" : "trigger2"
     },
     {
-      "id" : "Car013",
+      "id" : "Cube076",
       "iconid" : "trigger3"
     },
     {
@@ -140,7 +140,7 @@
       "inside" : ["trigger37", "trigger38", "trigger39", "trigger40"]
     },
     {
-      "id" : "Campus_002001",
+      "id" : "immeuble_H003",
       "iconid" : "multispot41",
       "inside" : ["trigger41", "trigger42", "trigger43", "trigger44"]
     },
