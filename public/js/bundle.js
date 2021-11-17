@@ -480,7 +480,6 @@ const TryClickedLink = (iconId, objectName) => {
 }
 
 const TryLeaveLink = () => {
-    document.getElementById("tripetto").innerHTML =""
     NormalMode()
     setAudioOnHotspot(false)
     if (InTutorial && tutoIndex === 3) {
