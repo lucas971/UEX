@@ -1659,6 +1659,24 @@ const TutorialResume = () =>{
 }
 //#endregion
 
+//#region Quizz
+
+let InitQuizzes = () => {
+    var tripetto1 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+
+    TripettoAutoscroll.run({
+        element: document.getElementById("tripetto1"),
+        definition: tripetto1.definition,
+        styles: tripetto1.styles,
+        l10n: tripetto1.l10n,
+        locale: tripetto1.locale,
+        translations: tripetto1.translations,
+        attachments: tripetto1.attachments,
+        onSubmit: tripetto1.onSubmit
+    })
+}
+
+//#endregion
 //#region MAIN
 
 //#region IMPORTS
