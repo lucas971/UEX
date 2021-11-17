@@ -942,7 +942,7 @@ const UpdateFade = (newValue) =>{
 //#region DATGUI
 import Stats from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/stats.module.js'
 import {GUI} from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/libs/dat.gui.module.js'
-const ShowDatGUI = false
+const ShowDatGUI = true
 let gui
 let stats = null
 let a_light
@@ -969,6 +969,8 @@ const InitGUI = (d) => {
         water_color:0x4488cc,
         water2_color:0x347aa5,
         wave_speed:0.2,
+        wave_x:1,
+        wave_y:1,
         outline_color:0xFFFFFF,
         outline_color2:0x3C3C01,
         edge_glow:0.0,
@@ -1015,7 +1017,8 @@ const InitGUI = (d) => {
     color = new d.THREE.Color(params.water2_color)
     ocean_uniforms.water2Col.value.set(color.r, color.g,color.b)
     gui.add(params, 'wave_speed').onFinishChange((value) => ocean_uniforms.speed.value = value)
-
+    gui.add(params, 'wave_x').onFinishChange((value) => ocean_uniforms.iResolution.x = value)
+    gui.add(params, 'wave_y').onFinishChange((value) => ocean_uniforms.iResolution.y = value)
     guiWrap.appendChild(gui.domElement);
     gui.open();
 }
