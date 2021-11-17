@@ -315,6 +315,7 @@ const InitializeIcons = (d) => {
             InitializeIconsPosition(d)
             //InitializeTutorial()
             document.getElementById("loading-screen-stopper").click()
+            InitializeSound()
         },
         (error) => {
             console.error(error)
@@ -1032,7 +1033,6 @@ const generateCity = (d) => {
             UpdateIconsPosition(d)
             InitGUI(d)
             LoadProgress()
-            InitializeSound()
             InitializeShaders(threeData)
             InitializeHotspots(threeData)
             InitializeCursor(threeData)
