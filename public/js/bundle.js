@@ -424,6 +424,7 @@ const GenerateHtml = (d) => {
                 icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "all", false)
             icons[i].image.addEventListener("mouseleave", () =>
                 icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none", false)
+            icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('svg')[0].style.fill = white
             iconDiv.appendChild(icons[i].image)
             continue;
         }
