@@ -409,6 +409,17 @@ const GenerateHtml = (d) => {
                 let data = GetHotspotData(icons[i].inside[j])
                 insideDiv.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 insideDiv.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+                let newColor = blue
+                if (data.theme === "Usine du futur") {
+                    newColor = red
+                } else if (data.theme === "Développement Durable") {
+                    newColor = green
+                } else if (data.theme === "Innovation") {
+                    newColor = yellow
+                } else if (data.theme === "") {
+                    newColor = black
+                }
+                insideDiv.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path')[0].style.fill = newColor
             }
             continue;
         }
@@ -424,7 +435,17 @@ const GenerateHtml = (d) => {
                 icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "all", false)
             icons[i].image.addEventListener("mouseleave", () =>
                 icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none", false)
-            icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path')[0].style.fill = white
+            let newColor = blue
+            if (data.theme === "Usine du futur") {
+                newColor = red
+            } else if (data.theme === "Développement Durable") {
+                newColor = green
+            } else if (data.theme === "Innovation") {
+                newColor = yellow
+            } else if (data.theme === "") {
+                newColor = black
+            }
+            icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path')[0].style.fill = newColor
             iconDiv.appendChild(icons[i].image)
             continue;
         }
