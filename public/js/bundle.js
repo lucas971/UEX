@@ -283,7 +283,9 @@ const PopulateHotspot = (hotspotInfo) => {
             'linear-gradient(131deg, rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0), ' +
             'rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0.72) 50%,' + newColor + '), ' +
             'url('+ hotspotInfo.background +');'
-        console.log(div.getElementsByClassName("hotspot-link-content stm w-inline-block")[0])
+        console.log('linear-gradient(131deg, rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0), ' +
+            'rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0.72) 50%,' + newColor + '), ' +
+            'url('+ hotspotInfo.background +');')
     }
 }
 
