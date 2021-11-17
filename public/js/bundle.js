@@ -1815,6 +1815,7 @@ const main = () => {
     updateTimer()
     setup()
     LoadCityScene()
+    InitQuizzes()
 }
 main()
 
