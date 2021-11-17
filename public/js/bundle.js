@@ -267,6 +267,12 @@ const PopulateHotspot = (hotspotInfo) => {
     if (hotspotInfo.video) {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
+    
+    if (hotspotInfo.token) {
+        for (let i = 0; i < tripettos.length; i++) {
+            tripettos[i].style.display = i === hotspotInfo.token ? 'inherit' : 'none'
+        }
+    }
 }
 
 //#endregion
@@ -1660,12 +1666,18 @@ const TutorialResume = () =>{
 //#endregion
 
 //#region Quizz
-
+const tripettos = []
 let InitQuizzes = () => {
+    tripettos[0] = document.getElementById("tripetto1")
+    tripettos[1] = document.getElementById("tripetto2")
+    tripettos[2] = document.getElementById("tripetto3")
+    tripettos[3] = document.getElementById("tripetto4")
+    tripettos[4] = document.getElementById("tripetto5")
+    
     var tripetto1 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
 
     TripettoAutoscroll.run({
-        element: document.getElementById("tripetto1"),
+        element: tripettos[0],
         definition: tripetto1.definition,
         styles: tripetto1.styles,
         l10n: tripetto1.l10n,
@@ -1674,13 +1686,11 @@ let InitQuizzes = () => {
         attachments: tripetto1.attachments,
         onSubmit: tripetto1.onSubmit
     })
-    
-    document.getElementById("tripetto1").style.display = 'none'
 
     var tripetto2 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
 
     TripettoAutoscroll.run({
-        element: document.getElementById("tripetto2"),
+        element: tripettos[1],
         definition: tripetto2.definition,
         styles: tripetto2.styles,
         l10n: tripetto2.l10n,
@@ -1689,9 +1699,49 @@ let InitQuizzes = () => {
         attachments: tripetto2.attachments,
         onSubmit: tripetto2.onSubmit
     })
+
+    var tripetto3 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+
+    TripettoAutoscroll.run({
+        element: tripettos[2],
+        definition: tripetto3.definition,
+        styles: tripetto3.styles,
+        l10n: tripetto3.l10n,
+        locale: tripetto3.locale,
+        translations: tripetto3.translations,
+        attachments: tripetto3.attachments,
+        onSubmit: tripetto3.onSubmit
+    })
+
+    var tripetto4 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+
+    TripettoAutoscroll.run({
+        element: tripettos[3],
+        definition: tripetto4.definition,
+        styles: tripetto4.styles,
+        l10n: tripetto4.l10n,
+        locale: tripetto4.locale,
+        translations: tripetto4.translations,
+        attachments: tripetto4.attachments,
+        onSubmit: tripetto4.onSubmit
+    })
+
+    var tripetto5 = TripettoServices.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"})
+
+    TripettoAutoscroll.run({
+        element: tripettos[4],
+        definition: tripetto5.definition,
+        styles: tripetto5.styles,
+        l10n: tripetto5.l10n,
+        locale: tripetto5.locale,
+        translations: tripetto5.translations,
+        attachments: tripetto5.attachments,
+        onSubmit: tripetto5.onSubmit
+    })
 }
 
 //#endregion
+
 //#region MAIN
 
 //#region IMPORTS

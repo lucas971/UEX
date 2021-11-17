@@ -388,7 +388,7 @@
       "sponsor": "D3E",
       "theme": "Développement durable",
       "paragraphText" : "La RSE (Responsabilité Sociétale des Entreprises) est un domaine qui nous tient à cœur. Découvrez ce qu’est la RSE grâce à des exemples concrets répartis dans 8 questions. Les thèmes abordés seront les suivants : Insertion, alternance, inclusion, économie circulaire, développement durable, innovation et industrie du futur.  A vos clics !",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZGRodGI3bHZSQUsyUzEvKzZ2ZmwvWkYvbTNXYUVUL29Jb01UeG5CYW8wWT0iLCJ0eXBlIjoiY29sbGVjdCJ9.sChCPsyGKl09exdXUNJ2q1WgeVimLVie4-nWc0K2EJM"
+      "token": 0
     },
     "trigger29": {
       "type": 0,
@@ -404,7 +404,7 @@
       "sponsor": "STMICROELECTRONICS",
       "theme": "Usine du futur",
       "paragraphText" : "STMICROELECTRONICS vous propose de vous tester sur l'infiniment petit !",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiZm5pOGxlc2RmRGRYMmZ0Q0c4Qjhuc2EzRHRCaStWaTZNY0xyd2V5NE9JRT0iLCJ0eXBlIjoiY29sbGVjdCJ9.IO231ZkcY7bpd0pbFoyiQ1sW4hjW1UjmPtOFC6X9sOg"
+      "token": 1
     },
     "trigger31": {
       "type": 2,
@@ -452,7 +452,7 @@
       "sponsor": "POLYVIA",
       "theme": "Usine du futur",
       "paragraphText" : "Testez vos connaissances sur la filière et découvrez les perspectives.",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVGpzR0F4enNQTG5ZT25iSHkxTkVBc1h0aWFUN2JaeTBEaWVwaE5FWWUyZz0iLCJ0eXBlIjoiY29sbGVjdCJ9.8pI9N08xuFVLk1To5h3Qz4ryxLw5CQA0dFWwVFGup3o"
+      "token": 2
     },
     "trigger37": {
       "type": 0,
@@ -596,7 +596,7 @@
       "sponsor": "Naval Group",
       "theme": "Innovation",
       "paragraphText" : "",
-      "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiVW1HRlRyTzFxdFFtKy84dW9UZWZwUTRKZmN1aFZBSXo4enZnOVV0dFdPND0iLCJ0eXBlIjoiY29sbGVjdCJ9.e23-UQz0LL3t8cptvBiyKMX2CfpAq0550aOR5Okvgfo"
+      "token" : 3
     },
     "trigger53": {
       "type": 0,
@@ -636,7 +636,7 @@
       "sponsor": "Ardatem",
       "theme": "Inclusion",
       "paragraphText" : "",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMXo1cE02VDFBWWF2NVVRN1p3dEYzbDEydms5cjNDRU90U1NML0lnMnM2bz0iLCJkZWZpbml0aW9uIjoiclpUSWJiSXJIeEV2YVJkTFI3K0JOZ3Q1TG5aekNwYUJUVUpDSFprTThScz0iLCJ0eXBlIjoiY29sbGVjdCJ9.O4zAq8Y7CxOcdaNvoEy7ihHcIVmc4hUqGyIt_o8i-9o"
+      "token": 4
     },
     "trigger58": {
       "type": 0,
