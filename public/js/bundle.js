@@ -1017,7 +1017,6 @@ const InitGUI = (d) => {
     color = new d.THREE.Color(params.water2_color)
     ocean_uniforms.water2Col.value.set(color.r, color.g,color.b)
     gui.add(params, 'wave_speed').onFinishChange((value) => ocean_uniforms.speed.value = value)
-    gui.add(params, 'wave_y').onFinishChange((value) => ocean_uniforms.iResolution.set(ocean_uniforms.iResolution.x, value))
     guiWrap.appendChild(gui.domElement);
     gui.open();
 }
