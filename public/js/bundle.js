@@ -268,6 +268,7 @@ const PopulateHotspot = (hotspotInfo) => {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     if (hotspotInfo.type === 3) {
+        document.getElementById("tripetto").innerHTML =""
         var tripetto = TripettoServices.init({ token: hotspotInfo.token});
 
         TripettoAutoscroll.run({
@@ -280,8 +281,6 @@ const PopulateHotspot = (hotspotInfo) => {
             attachments: tripetto.attachments,
             onSubmit: tripetto.onSubmit
         });
-
-        window.scrollTo(0, 0);
     }
 }
 
