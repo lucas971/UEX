@@ -214,13 +214,11 @@ String.prototype.convertToRGBClamped = function(){
 }
 
 const PopulateHotspot = (hotspotInfo) => {
-    if (hotspotInfo.type > 1) {
+    if (hotspotInfo.type > 3 || hotspotInfo.type === 2) {
         return
     }
-    let div
-    if (hotspotInfo.type !== 2) {
-        div = hotspotDivs[hotspotInfo.type]
-    }
+    const div = hotspotDivs[hotspotInfo.type]
+    
     div.getElementsByClassName("theme-tag-div")[0].style.display = 'flex'
     div.getElementsByClassName("hotspot-descrip-div")[0].style.display='flex'
     let newColor = blue
