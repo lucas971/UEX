@@ -280,6 +280,8 @@ const PopulateHotspot = (hotspotInfo) => {
             attachments: tripetto.attachments,
             onSubmit: tripetto.onSubmit
         });
+
+        window.scrollTo(0, 0);
     }
 }
 
