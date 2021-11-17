@@ -1053,6 +1053,7 @@ const generateCity = (d) => {
             InitializeCursor(threeData)
             setupEnvironment()
             d.scene.getObjectByName('Eau').material = ocean_mat
+            console.log(d.scene.getObjectByName('Eau'))
             animate()
         },
         (xhr) => {
