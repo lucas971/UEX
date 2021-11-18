@@ -59,6 +59,16 @@ const NormalMode = () => {
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "all"
     }
+    if (mode === drag && inMultiSpot) {
+        for (let j = 0; j < icons.length; j++) {
+            if (j===currentMulti) {
+                continue
+            }
+            if (icons[j].image) {
+                icons[j].image.style.pointerEvents = 'none'
+            }
+        }
+    }
     mode = normal
 }
 
@@ -582,7 +592,7 @@ const TryLeaveLink = () => {
 }
 
 let inMultiSpot = false
-
+let currentMulti = 0
 const SwitchMultispot = (i) => {
     if (inMultiSpot) {
         TryLeaveMultispot()
@@ -593,6 +603,7 @@ const SwitchMultispot = (i) => {
 }
 
 const TryClickedMultispot = (i) => {
+    currentMulti = i
     for (let j = 0; j < icons.length; j++) {
         if (j===i) {
             continue
@@ -816,7 +827,7 @@ const OnMouseClick = (e) => {
     if (InTutorial && tutoIndex !== 1) {
         return;
     }
-    if (!IsNormal() || e.target.id!== 'canvas' || inMultiSpot) {
+    if (!IsNormal() || e.target.id!== 'canvas') {
         return
     }
     DragMode()
