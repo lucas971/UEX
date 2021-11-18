@@ -816,7 +816,7 @@ const OnMouseClick = (e) => {
     if (InTutorial && tutoIndex !== 1) {
         return;
     }
-    if (!IsNormal() || e.target.id!== 'canvas') {
+    if (!IsNormal() || e.target.id!== 'canvas' || inMultiSpot) {
         return
     }
     DragMode()
