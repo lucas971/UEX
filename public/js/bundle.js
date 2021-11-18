@@ -969,8 +969,6 @@ const InitGUI = (d) => {
         water_color:0x4488cc,
         water2_color:0x347aa5,
         wave_speed:0.2,
-        wave_x:1,
-        wave_y:1,
         outline_color:0xFFFFFF,
         outline_color2:0x3C3C01,
         edge_glow:0.0,
