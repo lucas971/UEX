@@ -435,7 +435,10 @@ const GenerateHtml = (d) => {
                 } else if (data.theme === "") {
                     newColor = black
                 }
-                insideDiv.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path')[0].style.fill = newColor
+                const paths = Array.from(insideDiv.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path'))
+                for (let j = 0; j < paths.length; j++) {
+                    paths[j].style.fill = newColor
+                }
             }
             continue;
         }
@@ -461,7 +464,10 @@ const GenerateHtml = (d) => {
             } else if (data.theme === "") {
                 newColor = black
             }
-            icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path')[0].style.fill = newColor
+            const paths = Array.from(icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path'))
+            for (let j = 0; j < paths.length; j++) {
+                paths[j].style.fill = newColor
+            }
             iconDiv.appendChild(icons[i].image)
             continue;
         }
