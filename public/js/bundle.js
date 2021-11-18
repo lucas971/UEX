@@ -167,6 +167,11 @@ const InitializeTrophees = () => {
     } if (localStorage.gotUsine) {
         gotUsine = true
     }
+    document.getElementById("trophee-wrapper").style.pointerEvents = 'none'
+    inclusionTrophee.style.pointerEvents = 'all'
+    devTrophee.style.pointerEvents = 'all'
+    innovationTrophee.style.pointerEvents = 'all'
+    usineTrophee.style.pointerEvents = 'all'
 }
 
 const CheckTrophees = (inclusionCount, devCount, innovationCount, usineCount) => {
