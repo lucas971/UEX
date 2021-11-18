@@ -53,7 +53,7 @@
     "Port de Marseille Fos": "Le port de Marseille Fos place l’excellence environnementale au cœur de sa stratégie. Il mise sur une croissance économique durable par un aménagement industriel responsable et innovant favorisant l’économie circulaire.",
     "ArcelorMittal": "ArcelorMittal est un groupe sidérurgique mondial. Son siège social est installé à Luxembourg. Il est le plus important producteur d'acier au monde, avec 96,42 millions de tonnes produites en 2018. Il est classé 156ᵉ dans le classement 2016 Fortune Global 500 des plus grandes sociétés du monde.",
     "CEA": "Le Commissariat à l’énergie atomique et aux énergies alternatives (CEA) est un organisme public de recherche à caractère scientifique, technique et industriel (EPIC). Acteur majeur de la recherche, du développement et de l'innovation, le CEA intervient dans quatre domaines : la défense et la sécurité, les énergies bas carbone (nucléaire et renouvelables), la recherche technologique pour l'industrie et la recherche fondamentale (sciences de la matière et sciences de la vie).",
-    "Lyondellbasell": "Notre monde est fait d’innovations. Jouez avec Hugo, collaborateur de LyondellBasell, pour tout savoir d’une journée au sein d’une usine extraordinaire, spécialisée dans la chimie. Au programme de cette immersion ludique, découverte des produits, des solutions durables mais aussi la diversité des métiers de l’univers de la chimie.",
+    "Lyondellbasell": "Nous fabriquons des produits et développons des technologies qui améliorent la qualité de vie des gens. Nos produits sont des éléments de base à la fabrication de nombreux biens et produits de la vie quotidienne tels les produits d'hygiène, les emballages pour produits frais, les matériaux de construction, les pièces automobiles, les biocarburants, certains textiles, des applications médicales et bien d'autres choses encore. Grâce à LyondellBasell, des milliers de produits sont aujourd'hui plus sains, plus résistants, plus abordables et plus fiables.",
     "Naval Group" : "Maître d’œuvre industriel, concepteur et intégrateur d’ensemble des navires armés et des systèmes de combat, Naval Group est le leader européen du naval de défense et un acteur majeur dans le monde.",
     "Ardatem": "ARDATEM étudie, installe, met en service et assure la maintenance des équipements électriques, d’instrumentation, d’automatisme et des autres équipements techniques dans les secteurs de l’énergie et du nucléaire.",
     "Total Energies": "TotalEnergies est une compagnie multi-énergies mondiale de production et de fourniture d’énergies : pétrole et biocarburants, gaz naturel et gaz verts, renouvelables et électricité. Nos 105 000 collaborateurs s'engagent pour une énergie toujours plus abordable, plus propre, plus fiable et accessible au plus grand nombre. Présents dans plus de 130 pays, nous inscrivons le développement durable dans toutes ses dimensions au cœur de nos projets et opérations pour contribuer au bien-être des populations.",
@@ -255,7 +255,7 @@
       "sponsor": "KSB",
       "theme": "Innovation",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/645012228?h=ce4ecda200"
+      "video" : "https://player.vimeo.com/video/646880381?h=f11df8be8f"
     },
     "trigger12": {
       "type": 0,
@@ -263,7 +263,7 @@
       "sponsor": "CCI",
       "theme": "",
       "paragraphText" : "",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "video" : "https://player.vimeo.com/video/645012228?h=ce4ecda200"
     },
     "trigger13": {
       "type": 0,
@@ -576,7 +576,7 @@
       "title": "Factory game x LyondellBasell",
       "sponsor": "Lyondellbasell",
       "theme": "Usine du futur",
-      "paragraphText" : "Découvrez un escape game produit par Lyondellbasell !",
+      "paragraphText" : "Notre monde est fait d’innovations. Jouez avec Hugo, collaborateur de LyondellBasell, pour tout savoir d’une journée au sein d’une usine extraordinaire, spécialisée dans la chimie. Au programme de cette immersion ludique, découverte des produits, des solutions durables mais aussi la diversité des métiers de l’univers de la chimie.",
       "link" : "https://play.ldb.emeraude.games/",
       "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/618dc14d7d9b8a49defa1e52_escape-preview.jpg"
     },
@@ -585,7 +585,7 @@
       "title": "Les solutions durables issues de la Chimie",
       "sponsor": "Lyondellbasell",
       "theme": "Développement Durable",
-      "paragraphText" : "Découvrez une carte interactive produite par Lyondellbasell !",
+      "paragraphText" : "Notre monde est fait d’innovations. Parcourez cette carte interactive et découvrez les solutions durables rendues possibles grâce à la chimie. Beaucoup d’applications de notre quotidien abritent des produits développés et fabriqués dans nos usines extraordinaires.",
       "link" : "https://play.ldb.emeraude.games/",
       "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/618dc14df00ba04a9bdc79a9_map-preview.jpg"
     },
@@ -594,7 +594,7 @@
       "title": "Les équipes de la chimie rendent possible un meilleur futur",
       "sponsor": "Lyondellbasell",
       "theme": "Inclusion",
-      "paragraphText" : "Présentation de Lyondellbasell",
+      "paragraphText" : "Notre monde est fait d’innovations. Arrêtez-vous un instant pour découvrir les visages des femmes et des hommes qui se cachent derrière nos usines extraordinaires. Nos équipes travaillent chaque jour pour développer et fabriquer les solutions durables d’aujourd’hui et de demain. Ces produits sont rendus possibles grâce à la richesse des métiers de la chimie.",
       "lien" : "https://player.vimeo.com/video/645030374?h=526118bfbb"
     },
     "trigger52": {
@@ -722,7 +722,7 @@
       "title": "Témoignage métier",
       "sponsor": "ADF",
       "theme": "Inclusion",
-      "paragraphText" : "",
+      "paragraphText" : "Vers l’Industrie, et au-delà",
       "video" : "https://player.vimeo.com/video/645034368?h=6fdeebed5a"
     }
   }
