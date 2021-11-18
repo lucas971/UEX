@@ -420,13 +420,12 @@
       "paragraphText" : "Tour d’horizon d’un univers professionnel aux multiples visages !\nL’industrie offre de nombreuses perspectives et propose un large choix de métiers divers et variés. Le plus souvent synonyme d’innovation, les femmes et les hommes qui la composent ont des parcours captivants. Nos collaborateurs œuvrent chaque jour pour façonner le monde de demain et créer des technologies utiles, positives et innovantes. Ce sont leurs connaissances, leurs compétences et leur savoir-faire qui permettent de fournir des produits et des solutions de haute technologie pour un monde plus intelligent, plus sûr, plus vert et plus connecté.\nConception, R&D, production, analyse des data, qualité...venez découvrir les métiers de la microélectronique à travers ces portraits de collaborateurs ! "
     },
     "trigger32": {
-      "type": 1,
+      "type": 0,
       "title": "Plongez au coeur de la microélectronique",
       "sponsor": "STMICROELECTRONICS",
       "theme": "Usine du futur",
       "paragraphText" : "Comment l’industrie de la microélectronique créé le monde de demain ?",
-      "link": "https://www.pladetta.com/uex-content/stm",
-      "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/619506b1ebb07c0557453a08_D3E_LINK_BG_IMAGE.JPG"
+      "video" : "https://player.vimeo.com/video/643121843?h=2c6d66c394"
     },
     "trigger33": {
       "type": 0,
