@@ -1120,6 +1120,7 @@ const generateCity = (d) => {
             InitializeCursor(threeData)
             setupEnvironment()
             d.scene.getObjectByName('Eau').material = ocean_mat
+            console.log(ocean_uniforms.waterCol)
             d.scene.getObjectByName('Eau001').material.color.setRGB(ocean_uniforms.waterCol.x, ocean_uniforms.waterCol.y, ocean_uniforms.waterCol.z)
             d.scene.getObjectByName('Eau002').material.color.setRGB(ocean_uniforms.waterCol.x, ocean_uniforms.waterCol.y, ocean_uniforms.waterCol.z)
             console.log(d.scene.getObjectByName('Eau'))
