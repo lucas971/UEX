@@ -1684,6 +1684,7 @@ const twoDigits = ( n ) =>
 const updateTimer = ( ) =>
 {
     if (!isInitialized) {
+        time = new Date( msLeft );
         setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         return
     }
