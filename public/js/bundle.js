@@ -471,9 +471,10 @@ const GenerateHtml = (d) => {
     
     for (let i = 0; i< icons.length; i++) {
         icons[i].image = document.getElementById(icons[i].iconid)
+        
         //MULTI ICONS
         if (icons[i].inside) {
-            //icons[i].image.addEventListener('click', () => SwitchMultispot(i))
+            icons[i].image.addEventListener('click', () => SwitchMultispot(i))
             for (let j = 0; j < icons[i].inside.length; j++) {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
@@ -595,13 +596,13 @@ const TryClickedMultispot = (i) => {
         if (j===i) {
             continue
         }
-        icons[i].image.style.pointerEvents = 'none'
+        icons[j].image.style.pointerEvents = 'none'
     }
 }
 
 const TryLeaveMultispot = () => {
     for (let j = 0; j < icons.length; j++) {
-        icons[i].image.style.pointerEvents = 'all'
+        icons[j].image.style.pointerEvents = 'all'
     }
 }
 //#endregion
