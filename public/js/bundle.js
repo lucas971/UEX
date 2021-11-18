@@ -1121,8 +1121,8 @@ const generateCity = (d) => {
             setupEnvironment()
             d.scene.getObjectByName('Eau').material = ocean_mat
             console.log(ocean_uniforms.waterCol)
-            d.scene.getObjectByName('Eau001').material.color.setRGB(0,0.4,0.7)
-            d.scene.getObjectByName('Eau002').material.color.setRGB(0,0.4,0.7)
+            d.scene.getObjectByName('Eau001').material.color.setRGB(0.26,0.53,0.8)
+            d.scene.getObjectByName('Eau002').material.color.setRGB(0.26,0.53,0.8)
             console.log(d.scene.getObjectByName('Eau'))
             animate()
         },
