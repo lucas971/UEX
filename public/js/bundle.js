@@ -276,7 +276,7 @@ const PopulateHotspot = (hotspotInfo) => {
     let newColor = blue
     if (hotspotInfo.theme === "Usine du futur") {
         newColor = red
-    } else if (hotspotInfo.theme === "Développement Durable") {
+    } else if (hotspotInfo.theme === "Développement durable") {
         newColor = green
     } else if (hotspotInfo.theme === "Innovation") {
         newColor = yellow
@@ -481,7 +481,7 @@ const GenerateHtml = (d) => {
                 let newColor = blue
                 if (data.theme === "Usine du futur") {
                     newColor = red
-                } else if (data.theme === "Développement Durable") {
+                } else if (data.theme === "Développement durable") {
                     newColor = green
                 } else if (data.theme === "Innovation") {
                     newColor = yellow
@@ -510,7 +510,7 @@ const GenerateHtml = (d) => {
             let newColor = blue
             if (data.theme === "Usine du futur") {
                 newColor = red
-            } else if (data.theme === "Développement Durable") {
+            } else if (data.theme === "Développement durable") {
                 newColor = green
             } else if (data.theme === "Innovation") {
                 newColor = yellow

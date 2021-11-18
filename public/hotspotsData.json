@@ -574,7 +574,7 @@
       "type": 1,
       "title": "Escape Game",
       "sponsor": "Lyondellbasell",
-      "theme": "",
+      "theme": "Usine du futur",
       "paragraphText" : "Découvrez un escape game produit par Lyondellbasell !",
       "link" : "https://play.ldb.emeraude.games/",
       "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/618dc14d7d9b8a49defa1e52_escape-preview.jpg"
@@ -583,7 +583,7 @@
       "type": 1,
       "title": "Carte interactive",
       "sponsor": "Lyondellbasell",
-      "theme": "https://lyondellbasell-usine-extraordinaire.com/",
+      "theme": "Développement Durable",
       "paragraphText" : "Découvrez une carte interactive produite par Lyondellbasell !",
       "link" : "https://play.ldb.emeraude.games/",
       "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/618dc14df00ba04a9bdc79a9_map-preview.jpg"
@@ -592,7 +592,7 @@
       "type": 0,
       "title": "We Make A Better Tomorrow Possible",
       "sponsor": "Lyondellbasell",
-      "theme": "",
+      "theme": "Inclusion",
       "paragraphText" : "Présentation de Lyondellbasell",
       "lien" : "https://player.vimeo.com/video/645030374?h=526118bfbb"
     },
