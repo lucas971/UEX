@@ -1665,6 +1665,7 @@ const endTime = (+new Date) + 1000 * (60*1 + 0) + 500;
 let isInitialized = false
 
 const Initialized = () => {
+    document.getElementById('timer-wrapper').style.display = 'flex'
     isInitialized = true
     ClosePopUp()
 }
