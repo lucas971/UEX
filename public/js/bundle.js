@@ -1673,8 +1673,8 @@ const ClosePopUp = () => {
     document.getElementById('pop-up-wrapper').style.display = 'none'
 }
 
-document.getElementById('yes-button').addEventListener(Initialized)
-document.getElementById('no-button').addEventListener(ClosePopUp)
+document.getElementById('yes-button').addEventListener('click', Initialized)
+document.getElementById('no-button').addEventListener('click', ClosePopUp)
 
 const twoDigits = ( n ) =>
 {
