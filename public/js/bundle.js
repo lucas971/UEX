@@ -591,18 +591,23 @@ const SwitchMultispot = (i) => {
     }
     inMultiSpot = !inMultiSpot
 }
+
 const TryClickedMultispot = (i) => {
     for (let j = 0; j < icons.length; j++) {
         if (j===i) {
             continue
         }
-        icons[j].image.style.pointerEvents = 'none'
+        if (icons[j].image) {
+            icons[j].image.style.pointerEvents = 'none'
+        }
     }
 }
 
 const TryLeaveMultispot = () => {
     for (let j = 0; j < icons.length; j++) {
-        icons[j].image.style.pointerEvents = 'all'
+        if (icons[j].image) {
+            icons[j].image.style.pointerEvents = 'all'
+        }
     }
 }
 //#endregion
