@@ -775,7 +775,9 @@ const OnMouseRelease = (out) => {
         }
         return
     }
-    NormalMode()
+    if (IsDrag()) {
+        NormalMode()
+    }
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
@@ -1566,7 +1568,9 @@ const StopAimAtObject = () => {
     if (!aiming) {
         return
     }
-    NormalMode()
+    if (IsRoom()) {
+        NormalMode()
+    }
 
     outlinePassHighlight.selectedObjects = []
     selectedObjects.push(currentObject)
