@@ -768,8 +768,7 @@ const InitializeCameraHandler = (threeData) => {
 
 //#region FREEFORM
 const OnMouseRelease = (out) => {
-    if (!IsDrag() && !IsHotspot() && !out && !InTutorial && collectible_wrapper.style.display === 'none' &&
-        popupWrapper.style.display === 'none'){
+    if (!out && CheckRoomModePossible()){
         if (IsRoom()) {
             console.log(mode)
             TryClickedRoom(currentObject)
@@ -797,7 +796,9 @@ const OnMouseClick = (e) => {
 }
 const OnMouseMove = (e) => {
     e.preventDefault()
-    RaycastOutline(e.clientX, e.clientY)
+    if (CheckRoomModePossible()){
+        RaycastOutline(e.clientX, e.clientY)
+    }
     if (currentMouseX === null) {
         return
     }
@@ -1502,6 +1503,13 @@ let mouse
 let aiming = false
 let currentObject
 
+const CheckRoomModePossible = () => {
+    if (!IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
+    popupWrapper.style.display === 'none') {
+        return true
+    }
+    return false
+}
 const DebugRaycast = (clientX, clientY) => {
     mouse.x = (clientX / window.innerWidth) * 2 - 1
     mouse.y = -(clientY/window.innerHeight) * 2 + 1
