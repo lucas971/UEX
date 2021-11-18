@@ -1676,7 +1676,7 @@ const getCubeMapTexture = ( path ) => {
 
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
-const endTime = (+new Date) + 1000 * (60*1 + 0) + 500;
+const endTime = (+new Date) + 1000 * (60*55 + 0) + 500;
 let isInitialized = false
 let timerWrapper = document.getElementById('timer-wrapper')
 let popupWrapper = document.getElementById('pop-up-wrapper')
