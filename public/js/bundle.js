@@ -1504,11 +1504,9 @@ let aiming = false
 let currentObject
 
 const CheckRoomModePossible = () => {
-    if (!IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
-    popupWrapper.style.display === 'none') {
-        return true
-    }
-    return false
+    return !IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
+        popupWrapper.style.display === 'none';
+    
 }
 const DebugRaycast = (clientX, clientY) => {
     mouse.x = (clientX / window.innerWidth) * 2 - 1
@@ -1551,6 +1549,7 @@ const AimAtObject = (obj) => {
     if (aiming) {
         return
     }
+    console.log(mode)
     RoomMode()
     currentObject = obj
     
