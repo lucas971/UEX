@@ -50,6 +50,9 @@ const IsDrag = () => {
     return mode === drag
 }
 
+const IsHotspot = () => {
+    return mode === hotspot
+}
 const NormalMode = () => {
     document.getElementById('canvas').style.cursor = "grab"
     let interactibles = document.getElementsByClassName('spot-on-map')
@@ -380,7 +383,6 @@ const InitializeIcons = (d) => {
             icons = data["icons"]
             GenerateHtml(d)
             InitializeIconsPosition(d)
-            //InitializeTutorial()
             document.getElementById("loading-screen-stopper").click()
             InitializeSound()
             LoadProgress()
@@ -766,7 +768,8 @@ const InitializeCameraHandler = (threeData) => {
 
 //#region FREEFORM
 const OnMouseRelease = (out) => {
-    if (!IsDrag() && !out && !InTutorial){
+    if (!IsDrag() && !IsHotspot() && !out && !InTutorial && collectible_wrapper.style.display === 'none' &&
+        popupWrapper.style.display === 'none'){
         if (IsRoom()) {
             TryClickedRoom(currentObject)
         }
@@ -1663,18 +1666,20 @@ let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
 const endTime = (+new Date) + 1000 * (60*1 + 0) + 500;
 let isInitialized = false
-
-const Initialized = () => {
-    document.getElementById('timer-wrapper').style.display = 'flex'
+let timerWrapper = document.getElementById('timer-wrapper')
+let popupWrapper = document.getElementById('pop-up-wrapper')
+const InitializeTimer = () => {
+    timerWrapper.style.display = 'flex'
     isInitialized = true
+    //InitializeTutorial()
     ClosePopUp()
 }
 
 const ClosePopUp = () => {
-    document.getElementById('pop-up-wrapper').style.display = 'none'
+    popupWrapper.style.display = 'none'
 }
 
-document.getElementById('yes-button').addEventListener('click', Initialized)
+document.getElementById('yes-button').addEventListener('click', InitializeTimer)
 document.getElementById('no-button').addEventListener('click', ClosePopUp)
 
 const twoDigits = ( n ) =>
@@ -1691,9 +1696,9 @@ const updateTimer = ( ) =>
     }
     msLeft = endTime - (+new Date);
     if ( msLeft < 1000 ) {
-        element.innerHTML = "FIN!";
+        timerWrapper.style.display = 'none'
         isInitialized = false
-        document.getElementById('pop-up-wrapper').style.display = 'inherit'
+        popupWrapper.style.display = 'inherit'
         document.getElementById('pop-up-begin').style.display = 'none'
         document.getElementById('pop-up-end').style.display = 'inherit'
     } else {
