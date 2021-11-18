@@ -771,6 +771,7 @@ const OnMouseRelease = (out) => {
     if (!IsDrag() && !IsHotspot() && !out && !InTutorial && collectible_wrapper.style.display === 'none' &&
         popupWrapper.style.display === 'none'){
         if (IsRoom()) {
+            console.log(mode)
             TryClickedRoom(currentObject)
         }
         return
@@ -1671,12 +1672,12 @@ let popupWrapper = document.getElementById('pop-up-wrapper')
 const InitializeTimer = () => {
     timerWrapper.style.display = 'flex'
     isInitialized = true
-    //InitializeTutorial()
     ClosePopUp()
 }
 
 const ClosePopUp = () => {
     popupWrapper.style.display = 'none'
+    //InitializeTutorial()
 }
 
 document.getElementById('yes-button').addEventListener('click', InitializeTimer)
