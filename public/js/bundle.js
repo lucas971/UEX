@@ -146,6 +146,53 @@ const easeOutQuad = (x) => {
 
 //#endregion
 
+//#region Trophee
+let inclusionTrophee = document.getElementById("trophee-inclusion")
+let devTrophee = document.getElementById("trophee-dev")
+let innovationTrophee = document.getElementById("trophee-innovation")
+let usineTrophee = document.getElementById("trophee-usine")
+
+let gotInclusion = false
+let gotDev = false
+let gotInnovation = false
+let gotUsine = false
+
+const InitializeTrophees = () => {
+    if (localStorage.gotInclusion) {
+        gotInclusion = true
+    } if (localStorage.gotDev) {
+        gotDev = true
+    } if (localStorage.gotInnovation) {
+        gotInnovation = true
+    } if (localStorage.gotUsine) {
+        gotUsine = true
+    }
+}
+
+const CheckTrophees = (inclusionCount, devCount, innovationCount, usineCount) => {
+    if (!gotInclusion && inclusionCount >= 10) {
+        gotInclusion = true
+        localStorage.gotInclusion = 'true'
+        inclusionTrophee.style.display = 'flex'
+    } if (!gotDev && devCount >= 10) {
+        gotDev = true
+        localStorage.gotDev = 'true'
+        devTrophee.style.display = 'flex'
+    }
+    if (!gotInnovation && innovationCount >= 10) {
+        gotInnovation = true
+        localStorage.gotInnovation = 'true'
+        innovationTrophee.style.display = 'flex'
+    }
+    if (!gotUsine && usineCount >= 10) {
+        gotUsine = true
+        localStorage.gotUsine = 'true'
+        usineTrophee.style.display = 'flex'
+    }
+}
+
+//#endregion
+
 //#region HOTSPOT HANDLER
 let hotspotDivs = {}
 let hotspotInfos = []
@@ -516,6 +563,7 @@ const TryClickedLink = (iconId, objectName) => {
 }
 
 const TryLeaveLink = () => {
+    UpdateView()
     NormalMode()
     setAudioOnHotspot(false)
     if (InTutorial && tutoIndex === 3) {
@@ -539,12 +587,12 @@ let link_x_icon
 let link_v_icon
 
 const LoadProgress = () => {
-    document.getElementsByClassName("collect-button-wrapper")[0].addEventListener('click', UpdateView)
     if (localStorage.progress) {
         currentProgress = JSON.parse(localStorage.progress)
     }
     link_x_icon = document.getElementsByClassName("option_icon is--x")[0].src
     link_v_icon = document.getElementsByClassName("option_icon is--check")[0].src
+    UpdateView()
 }
 
 const AddToProgress = (id) => {
@@ -613,6 +661,8 @@ const UpdateView = () => {
             totalList[i].src = link_x_icon
         }
     }
+
+    CheckTrophees(updateViewData["Inclusion"], updateViewData["Développement durable"], updateViewData["Innovation"], updateViewData["Usine du futur"])
 }
 //#endregion
 
@@ -1924,6 +1974,7 @@ const Resize = () => {
 const main = () => {
     updateTimer()
     setup()
+    InitializeTrophees()
     LoadCityScene()
     InitQuizzes()
 }
