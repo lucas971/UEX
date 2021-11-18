@@ -33,7 +33,7 @@
     "ADF": "https://www.groupeadf.com/fr"
   },
   "sponsorsTexts": {
-    "EDF" : "Construire un avenir énergétique neutre en CO2, conciliant préservation de la planète, bien-être et développement, grâce à l'électricité et à des solutions et services innovants.",
+    "EDF" : "Électricité de France est une entreprise française, de production et de fourniture d’électricité. L'entreprise est le premier producteur et le premier fournisseur d’électricité en France et en Europe. Premier énergéticien mondial bas carbone.",
     "UIMM" : "L’UIMM La Fabrique de l’Avenir travaille à l’avenir de l’industrie, des Français et de la France. L’UIMM La Fabrique de l’Avenir aide les entreprises industrielles à conjuguer compétitivité, emploi et développement de leurs salariés, par la voie du dialogue social et en phase avec les nouvelles attentes de la société.",
     "France Chimie" : "France Chimie est l’organisation professionnelle qui représente les entreprises de la Chimie en France. Elle est le porte-parole du secteur auprès des pouvoirs publics nationaux, européens et des instances internationales.",
     "Sartorius" : "Le groupe Sartorius est un partenaire international de premier plan de l’industrie biopharmaceutique et du secteur de la recherche. Nous aidons scientifiques et ingénieurs en biotechnologies du monde entier à développer et fabriquer des médicaments de la première idée à la production. Pour que des médicaments bon marché soient accessibles au plus grand nombre.",
@@ -53,7 +53,7 @@
     "Port de Marseille Fos": "Le port de Marseille Fos place l’excellence environnementale au cœur de sa stratégie. Il mise sur une croissance économique durable par un aménagement industriel responsable et innovant favorisant l’économie circulaire.",
     "ArcelorMittal": "ArcelorMittal est un groupe sidérurgique mondial. Son siège social est installé à Luxembourg. Il est le plus important producteur d'acier au monde, avec 96,42 millions de tonnes produites en 2018. Il est classé 156ᵉ dans le classement 2016 Fortune Global 500 des plus grandes sociétés du monde.",
     "CEA": "Le Commissariat à l’énergie atomique et aux énergies alternatives (CEA) est un organisme public de recherche à caractère scientifique, technique et industriel (EPIC). Acteur majeur de la recherche, du développement et de l'innovation, le CEA intervient dans quatre domaines : la défense et la sécurité, les énergies bas carbone (nucléaire et renouvelables), la recherche technologique pour l'industrie et la recherche fondamentale (sciences de la matière et sciences de la vie).",
-    "Lyondellbasell": "Nous fabriquons des produits et développons des technologies qui améliorent la qualité de vie des gens. Nos produits sont des éléments de base à la fabrication de nombreux biens et produits de la vie quotidienne tels les produits d'hygiène, les emballages pour produits frais, les matériaux de construction, les pièces automobiles, les biocarburants, certains textiles, des applications médicales et bien d'autres choses encore. Grâce à LyondellBasell, des milliers de produits sont aujourd'hui plus sains, plus résistants, plus abordables et plus fiables.",
+    "Lyondellbasell": "Notre monde est fait d’innovations. Jouez avec Hugo, collaborateur de LyondellBasell, pour tout savoir d’une journée au sein d’une usine extraordinaire, spécialisée dans la chimie. Au programme de cette immersion ludique, découverte des produits, des solutions durables mais aussi la diversité des métiers de l’univers de la chimie.",
     "Naval Group" : "Maître d’œuvre industriel, concepteur et intégrateur d’ensemble des navires armés et des systèmes de combat, Naval Group est le leader européen du naval de défense et un acteur majeur dans le monde.",
     "Ardatem": "ARDATEM étudie, installe, met en service et assure la maintenance des équipements électriques, d’instrumentation, d’automatisme et des autres équipements techniques dans les secteurs de l’énergie et du nucléaire.",
     "Total Energies": "TotalEnergies est une compagnie multi-énergies mondiale de production et de fourniture d’énergies : pétrole et biocarburants, gaz naturel et gaz verts, renouvelables et électricité. Nos 105 000 collaborateurs s'engagent pour une énergie toujours plus abordable, plus propre, plus fiable et accessible au plus grand nombre. Présents dans plus de 130 pays, nous inscrivons le développement durable dans toutes ses dimensions au cœur de nos projets et opérations pour contribuer au bien-être des populations.",
@@ -243,10 +243,10 @@
     },
     "trigger10": {
       "type": 0,
-      "title": "Comment vole un hélicoptère ?",
+      "title": "Décollez avec l'apprentissage avec Marie et Jodie",
       "sponsor": "Airbus Helicopters",
       "theme": "Inclusion",
-      "paragraphText" : "",
+      "paragraphText" : "Marie a 23 ans et Jodie 28 ans. Toutes les deux ont une expérience de l’apprentissage chez Airbus Helicopters à partager avec vous. Comment en sont-elles arrivées là et comment ça se passe au quotidien, surtout pour une fille ? Interviews.",
       "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
     },
     "trigger11": {
@@ -395,12 +395,13 @@
       "token": 0
     },
     "trigger29": {
-      "type": 0,
+      "type": 1,
       "title": "Bienvenue dans l’usine extraordinaire de STMicroelectronics Rousset",
       "sponsor": "STMICROELECTRONICS",
       "theme": "Inclusion",
       "paragraphText" : "C’est ici que sont fabriquées les puces électroniques qui font partie de notre quotidien et qui contribuent de façon positive à notre vie. Vous ne les voyez pas et pourtant elles sont partout, dans nos smartphones, ordinateurs, consoles de jeux, objets connectés, robots, voitures…\nLes puces électroniques, imaginées et conçues sur le site ST de Rousset, sont fabriquées à partir de plaquettes de silicium sur lesquelles sont gravés les circuits intégrés au travers de nombreuses étapes de production. Chaque année, ce sont ainsi des milliards de puces qui sont produites dans l’usine de Rousset. Elles sont ensuite testées et envoyées dans nos unités d’assemblage avant d’être expédiées chez nos clients. \nPoussez les portes virtuelles de notre univers de haute technologie et laissez-vous guider dans cette visite immersive qui vous fera découvrir notre salle de fabrication également appelée « salle blanche », ainsi que ses coulisses ! ",
-      "video" : "https://player.vimeo.com/video/641352998?h=467426f39f"
+      "link": "https://www.pladetta.com/uex-content/stm",
+      "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/619506b1ebb07c0557453a08_D3E_LINK_BG_IMAGE.JPG"
     },
     "trigger30": {
       "type": 3,
@@ -572,7 +573,7 @@
     },
     "trigger49": {
       "type": 1,
-      "title": "Escape Game",
+      "title": "Factory game x LyondellBasell",
       "sponsor": "Lyondellbasell",
       "theme": "Usine du futur",
       "paragraphText" : "Découvrez un escape game produit par Lyondellbasell !",
@@ -581,7 +582,7 @@
     },
     "trigger50": {
       "type": 1,
-      "title": "Carte interactive",
+      "title": "Les solutions durables issues de la Chimie",
       "sponsor": "Lyondellbasell",
       "theme": "Développement Durable",
       "paragraphText" : "Découvrez une carte interactive produite par Lyondellbasell !",
@@ -590,7 +591,7 @@
     },
     "trigger51": {
       "type": 0,
-      "title": "We Make A Better Tomorrow Possible",
+      "title": "Les équipes de la chimie rendent possible un meilleur futur",
       "sponsor": "Lyondellbasell",
       "theme": "Inclusion",
       "paragraphText" : "Présentation de Lyondellbasell",
@@ -601,7 +602,7 @@
       "title": "Cap ou pas cap de tout savoir sur le Naval de Défense ?",
       "sponsor": "Naval Group",
       "theme": "Innovation",
-      "paragraphText" : "",
+      "paragraphText" : "Découvrez au travers d'un quizz le secteur du Naval de Défense et une entreprise hors du commun qui conçoit des produits extra-ordinaires.",
       "token" : 3
     },
     "trigger53": {
