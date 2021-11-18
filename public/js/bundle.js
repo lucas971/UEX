@@ -1663,8 +1663,6 @@ let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
 const endTime = (+new Date) + 1000 * (60*1 + 0) + 500;
 let isInitialized = false
-document.getElementById('yes-button').addEventListener(Initialized)
-document.getElementById('no-button').addEventListener(ClosePopUp)
 
 const Initialized = () => {
     isInitialized = true
@@ -1675,6 +1673,9 @@ const ClosePopUp = () => {
     document.getElementById('pop-up-wrapper').style.display = 'none'
 }
 
+document.getElementById('yes-button').addEventListener(Initialized)
+document.getElementById('no-button').addEventListener(ClosePopUp)
+
 const twoDigits = ( n ) =>
 {
     return (n <= 9 ? "0" + n : n);
@@ -1683,6 +1684,7 @@ const twoDigits = ( n ) =>
 const updateTimer = ( ) =>
 {
     if (!isInitialized) {
+        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         return
     }
     msLeft = endTime - (+new Date);
@@ -1697,8 +1699,8 @@ const updateTimer = ( ) =>
         hours = time.getUTCHours();
         mins = time.getUTCMinutes();
         element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
     }
+    setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
 }
 
 
