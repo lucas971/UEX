@@ -473,7 +473,7 @@ const GenerateHtml = (d) => {
         icons[i].image = document.getElementById(icons[i].iconid)
         //MULTI ICONS
         if (icons[i].inside) {
-            icons[i].image.addEventListener('click', () => SwitchMultispot(i))
+            //icons[i].image.addEventListener('click', () => SwitchMultispot(i))
             for (let j = 0; j < icons[i].inside.length; j++) {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
@@ -583,12 +583,12 @@ const TryLeaveLink = () => {
 let inMultiSpot = false
 
 const SwitchMultispot = (i) => {
-    console.log(!inMultiSpot)
     if (inMultiSpot) {
         TryLeaveMultispot()
     } else {
         TryClickedMultispot(i)
     }
+    inMultiSpot = !inMultiSpot
 }
 const TryClickedMultispot = (i) => {
     for (let j = 0; j < icons.length; j++) {
