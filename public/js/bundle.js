@@ -1661,7 +1661,19 @@ const getCubeMapTexture = ( path ) => {
 
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
-const endTime = (+new Date) + 1000 * (60*55 + 0) + 500;
+const endTime = (+new Date) + 1000 * (60*1 + 0) + 500;
+let isInitialized = false
+document.getElementById('yes-button').addEventListener(Initialized)
+document.getElementById('no-button').addEventListener(ClosePopUp)
+
+const Initialized = () => {
+    isInitialized = true
+    ClosePopUp()
+}
+
+const ClosePopUp = () => {
+    document.getElementById('pop-up-wrapper').style.display = 'none'
+}
 
 const twoDigits = ( n ) =>
 {
@@ -1670,9 +1682,16 @@ const twoDigits = ( n ) =>
 
 const updateTimer = ( ) =>
 {
+    if (!isInitialized) {
+        return
+    }
     msLeft = endTime - (+new Date);
     if ( msLeft < 1000 ) {
         element.innerHTML = "FIN!";
+        isInitialized = false
+        document.getElementById('pop-up-wrapper').style.display = 'inherit'
+        document.getElementById('pop-up-begin').style.display = 'none'
+        document.getElementById('pop-up-end').style.display = 'inherit'
     } else {
         time = new Date( msLeft );
         hours = time.getUTCHours();
