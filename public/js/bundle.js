@@ -1727,7 +1727,6 @@ const InitializeTimer = () => {
     timerWrapper.style.display = 'flex'
     localStorage.date = endTime
     isInitialized = true
-    localStorage.date = endTime
     ClosePopUp()
 }
 
@@ -1737,6 +1736,8 @@ const ClosePopUp = () => {
 }
 
 if (localStorage.date) {
+    timerWrapper.style.display = 'flex'
+    isInitialized = true
     ClosePopUp()
 }
 
