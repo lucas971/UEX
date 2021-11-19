@@ -485,9 +485,13 @@ const GenerateHtml = (d) => {
         //MULTI ICONS
         if (icons[i].inside) {
             icons[i].image.addEventListener('click', () => SwitchMultispot(i))
+            
             for (let j = 0; j < icons[i].inside.length; j++) {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
+                if (j === 0) {
+                    icons[i].image.getElementsByClassName('multispot-label-text')[0].innerHTML = data.sponsor
+                }
                 insideDiv.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 insideDiv.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
                 let newColor = blue
