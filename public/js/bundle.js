@@ -1742,8 +1742,14 @@ if (localStorage.date) {
     ClosePopUp()
 }
 
+const MeetingButtonClicked = () => {
+    localStorage.removeItem("date");
+    document.getElementById('pop-up-end').style.display = 'none'
+    icons[0].image.click()
+}
 document.getElementById('yes-button').addEventListener('click', InitializeTimer)
 document.getElementById('no-button').addEventListener('click', ClosePopUp)
+document.getElementById('meeting-button').addEventListener('click', MeetingButtonClicked)
 
 const twoDigits = ( n ) =>
 {
@@ -1767,7 +1773,6 @@ const updateTimer = ( ) =>
         document.getElementById('pop-up-begin').style.display = 'none'
         document.getElementById('pop-up-end').style.display = 'inherit'
         document.getElementById('pop-up-end').style.pointerEvents = 'all'
-        localStorage.removeItem("time");
         return
     } else {
         time = new Date( msLeft );
