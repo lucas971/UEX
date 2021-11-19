@@ -440,6 +440,11 @@ const InitializeIconsPosition = (d) => {
             icons[i].image.style.display = 'none'
         }
     }
+    if (IsRoom()) {
+        const toScreenEtiquette = toScreenPosition(currentObject, d)
+        etiquette.style.left = `${toScreenEtiquette.x - 125}px`
+        etiquette.style.top = `${toScreenEtiquette.y - 30}px`
+    }
 }
 //Update the icons position on the screen using the 3D world space position of the building of interests.
 const UpdateIconsPosition = (d) => {
@@ -467,6 +472,11 @@ const UpdateIconsPosition = (d) => {
         if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
             icons[i].image.style.display = 'none'
         }
+    }
+    if (IsRoom()) {
+        const toScreenEtiquette = toScreenPosition(currentObject, d)
+        etiquette.style.left = `${toScreenEtiquette.x - 125}px`
+        etiquette.style.top = `${toScreenEtiquette.y - 30}px`
     }
 }
 //#endregion
