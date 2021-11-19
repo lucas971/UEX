@@ -1550,6 +1550,7 @@ let outlinePassHighlight
 let mouse
 let aiming = false
 let currentObject
+const etiquette = document.getElementById('zone-name')
 
 const CheckRoomModePossible = () => {
     return !IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
@@ -1597,8 +1598,8 @@ const AimAtObject = (obj) => {
     if (aiming) {
         return
     }
-    console.log(mode)
     RoomMode()
+    etiquette.style.display = 'flex'
     currentObject = obj
     
     selectedObjects = selectedObjects.filter((value) => value !== obj)
@@ -1618,6 +1619,7 @@ const StopAimAtObject = () => {
         NormalMode()
     }
 
+    etiquette.style.display = 'none'
     outlinePassHighlight.selectedObjects = []
     selectedObjects.push(currentObject)
     outlinePass.selectedObjects = selectedObjects
