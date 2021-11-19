@@ -1549,7 +1549,7 @@ let currentObject
 
 const CheckRoomModePossible = () => {
     return !IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
-        popupWrapper.style.display === 'none' && !inMultiSpot;
+        (popupWrapper.style.display === 'none' || !timerFinished) && !inMultiSpot;
     
 }
 const DebugRaycast = (clientX, clientY) => {
@@ -1719,14 +1719,15 @@ const getCubeMapTexture = ( path ) => {
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
 const endTime = localStorage.date ? new Date(parseInt(localStorage.date)) : (+new Date) + 1000 * (60*55 + 0) + 500;
-let isInitialized = false
+let timerInitialized = false
+let timerFinished = false
 let timerWrapper = document.getElementById('timer-wrapper')
 let popupWrapper = document.getElementById('pop-up-wrapper')
 
 const InitializeTimer = () => {
     timerWrapper.style.display = 'flex'
     localStorage.date = endTime
-    isInitialized = true
+    timerInitialized = true
     ClosePopUp()
 }
 
@@ -1737,7 +1738,7 @@ const ClosePopUp = () => {
 
 if (localStorage.date) {
     timerWrapper.style.display = 'flex'
-    isInitialized = true
+    timerInitialized = true
     ClosePopUp()
 }
 
@@ -1751,20 +1752,22 @@ const twoDigits = ( n ) =>
 
 const updateTimer = ( ) =>
 {
-    if (!isInitialized) {
+    if (!timerInitialized) {
         time = new Date( msLeft );
         setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         return
     }
     msLeft = endTime - (+new Date);
     if ( msLeft < 1000 ) {
+        timerFinished = true
         timerWrapper.style.display = 'none'
-        isInitialized = false
+        timerInitialized = false
         popupWrapper.style.display = 'inherit'
         popupWrapper.style.pointerEvents = 'none'
         document.getElementById('pop-up-begin').style.display = 'none'
         document.getElementById('pop-up-end').style.display = 'inherit'
         document.getElementById('pop-up-end').style.pointerEvents = 'all'
+        //localStorage.removeItem("time");
         return
     } else {
         time = new Date( msLeft );
