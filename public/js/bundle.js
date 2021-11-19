@@ -1716,9 +1716,6 @@ const getCubeMapTexture = ( path ) => {
 
 //#region TIMER
 
-if (localStorage.date) {
-    ClosePopUp()
-}
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
 const endTime = localStorage.date ? new Date(parseInt(localStorage.date)) : (+new Date) + 1000 * (60*55 + 0) + 500;
@@ -1737,6 +1734,10 @@ const InitializeTimer = () => {
 const ClosePopUp = () => {
     popupWrapper.style.display = 'none'
     //InitializeTutorial()
+}
+
+if (localStorage.date) {
+    ClosePopUp()
 }
 
 document.getElementById('yes-button').addEventListener('click', InitializeTimer)
