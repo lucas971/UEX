@@ -1763,6 +1763,7 @@ const updateTimer = ( ) =>
         popupWrapper.style.display = 'inherit'
         document.getElementById('pop-up-begin').style.display = 'none'
         document.getElementById('pop-up-end').style.display = 'inherit'
+        return
     } else {
         time = new Date( msLeft );
         hours = time.getUTCHours();
