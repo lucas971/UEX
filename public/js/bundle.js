@@ -475,6 +475,7 @@ const UpdateIconsPosition = (d) => {
     }
 
     if (IsRoom()) {
+        console.log('test')
         const toScreenEtiquette = toScreenPosition(currentObject, d)
         etiquette.style.left = `${toScreenEtiquette.x - 125}px`
         etiquette.style.top = `${toScreenEtiquette.y - 30}px`
