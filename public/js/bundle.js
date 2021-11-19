@@ -1767,7 +1767,7 @@ const updateTimer = ( ) =>
         document.getElementById('pop-up-begin').style.display = 'none'
         document.getElementById('pop-up-end').style.display = 'inherit'
         document.getElementById('pop-up-end').style.pointerEvents = 'all'
-        //localStorage.removeItem("time");
+        localStorage.removeItem("time");
         return
     } else {
         time = new Date( msLeft );
