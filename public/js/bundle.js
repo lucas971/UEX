@@ -1716,15 +1716,21 @@ const getCubeMapTexture = ( path ) => {
 
 //#region TIMER
 
+if (localStorage.date) {
+    ClosePopUp()
+}
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
-const endTime = (+new Date) + 1000 * (60*55 + 0) + 500;
+const endTime = localStorage.date ? new Date(parseInt(localStorage.date)) : (+new Date) + 1000 * (60*55 + 0) + 500;
 let isInitialized = false
 let timerWrapper = document.getElementById('timer-wrapper')
 let popupWrapper = document.getElementById('pop-up-wrapper')
+
 const InitializeTimer = () => {
     timerWrapper.style.display = 'flex'
+    localStorage.date = endTime
     isInitialized = true
+    localStorage.date = endTime
     ClosePopUp()
 }
 
