@@ -1549,7 +1549,7 @@ let currentObject
 
 const CheckRoomModePossible = () => {
     return !IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
-        (popupWrapper.style.display === 'none' || !timerFinished) && !inMultiSpot;
+        (popupWrapper.style.display === 'none' || timerFinished) && !inMultiSpot;
     
 }
 const DebugRaycast = (clientX, clientY) => {
