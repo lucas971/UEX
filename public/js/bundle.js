@@ -1791,6 +1791,7 @@ let tutoIndex;
 let InTutorial = false
 
 const InitializeTutorial = () => {
+    return
     if (localStorage.tutorialDone) {
         return
     }
