@@ -395,6 +395,7 @@ const InitializeIcons = (d) => {
             document.getElementById("loading-screen-stopper").click()
             InitializeSound()
             LoadProgress()
+            InitializePopUp()
         },
         (error) => {
             console.error(error)
@@ -1873,10 +1874,15 @@ const ClosePopUp = () => {
     InitializeTutorial()
 }
 
-if (localStorage.date) {
-    timerWrapper.style.display = 'flex'
-    timerInitialized = true
-    ClosePopUp()
+const InitializePopUp = () => {
+    if (localStorage.date) {
+        timerWrapper.style.display = 'flex'
+        timerInitialized = true
+        ClosePopUp()
+    }
+    document.getElementById('yes-button').addEventListener('click', InitializeTimer)
+    document.getElementById('no-button').addEventListener('click', ClosePopUp)
+    document.getElementById('meeting-button').addEventListener('click', MeetingButtonClicked)
 }
 
 const MeetingButtonClicked = () => {
@@ -1884,9 +1890,7 @@ const MeetingButtonClicked = () => {
     document.getElementById('pop-up-end').style.display = 'none'
     icons[0].image.click()
 }
-document.getElementById('yes-button').addEventListener('click', InitializeTimer)
-document.getElementById('no-button').addEventListener('click', ClosePopUp)
-document.getElementById('meeting-button').addEventListener('click', MeetingButtonClicked)
+
 
 const twoDigits = ( n ) =>
 {
