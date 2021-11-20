@@ -528,6 +528,7 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         
         if (data.type <= 4) {
+            console.log('collectible-' + icons[i].iconid.toString())
             document.getElementById('collectible-' + icons[i].iconid.toString()).parentElement.parentElement.
             parentElement.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
                 
