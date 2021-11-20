@@ -180,7 +180,7 @@
       "title": "La fabuleuse histoire de la fée électricité",
       "sponsor": "EDF",
       "theme": "Innovation",
-      "paragraphText" : "",
+      "paragraphText" : "Le film « La fabuleuse histoire de l’électricité », véritable invitation au voyage, retrace de manière artistique la grande aventure de l’électricité. La fée électricité nous guide dans ce monde merveilleux et nous invite à une balade exceptionnelle autour des grands lieux emblématiques de\nl’histoire industrielle de l’électricité et d’EDF. Foudre, ou électron, la fée apporte la lumière et la vie tout au long de son épopée.",
       "video" : "https://player.vimeo.com/video/643120272?h=7bcaa4aace"
     },
     "trigger3": {
@@ -635,14 +635,14 @@
       "title": "Stories métiers",
       "sponsor": "Ardatem",
       "theme": "Inclusion",
-      "paragraphText" : ""
+      "paragraphText" : "Découvrez nos métiers dans ces stories."
     },
     "trigger57": {
       "type": 3,
       "title": "Testez vos connaissances !",
       "sponsor": "Ardatem",
       "theme": "Inclusion",
-      "paragraphText" : "",
+      "paragraphText" : "Testez vos connaissances en énergie !",
       "token": 4
     },
     "trigger58": {
