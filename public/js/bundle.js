@@ -1802,7 +1802,7 @@ const InitializeTutorial = () => {
         icons[i].image.style.display = 'none'
     }
     document.getElementById('trigger-tutoriel').style.display = 'flex'
-    
+    document.getElementById('trigger-tutoriel').addEventListener("click", () => document.getElementById('tutoHotspot').style.display ='flex')
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
     tutorialRight.addEventListener('click', () => MoveTutorial(true))
     tutorialLeft.style.pointerEvents = 'none'
@@ -1813,7 +1813,7 @@ const MoveTutorial = (right) => {
     } else {
         tutoIndex--
     }
-    
+    document.getElementById('tutoHotspot').style.display ='none'
     if (tutoIndex > tutorialTexts.length) {
         tutorialDiv.style.display = 'none'
         InTutorial = false
