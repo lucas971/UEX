@@ -1804,7 +1804,7 @@ const InitializeTutorial = () => {
         }
         icons[i].image.style.display = 'none'
     }
-    document.getElementById('trigger-tuto').style.display = 'flex'
+    document.getElementById('trigger-tutoriel').style.display = 'flex'
     
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
     tutorialRight.addEventListener('click', () => MoveTutorial(true))
@@ -1823,7 +1823,7 @@ const MoveTutorial = (right) => {
         for (let i = 0; i < icons.length; i++) {
             icons[i].image.style.display = 'flex'
         }
-        document.getElementById('trigger-tuto').style.display = 'none'
+        document.getElementById('trigger-tutoriel').style.display = 'none'
         return
     }
     UpdateTutorialView()
