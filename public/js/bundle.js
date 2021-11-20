@@ -1769,7 +1769,7 @@ const tutorialTexts = [
     'Bienvenue dans l\'Usine Extraordinaire ! La ville vient d\'ouvrir ses portes aux visiteurs.',
     'Pour vous déplacer, cliquez et tirez avec la souris. Essayez !',
     'Pour ouvrir des contenus, cliquez sur les icones sur la carte. Essayez !',
-    'Cliquez sur la flèche de droite pour continuer'
+    'Cliquez sur la flèche de droite pour continuer',
     'Ici, c\'est l\'Agora, un lieu de présentation en direct !',
     'Certains bâtiments sont visitables !',
     'Bonne exploration à vous !'
