@@ -1802,7 +1802,6 @@ const InitializeTutorial = () => {
         icons[i].image.style.display = 'none'
     }
     document.getElementById('trigger-tutoriel').addEventListener("click", () => {
-        document.getElementById('tutoHotspot').style.display ='flex'
         MoveTutorial(true)
     })
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
@@ -1848,6 +1847,9 @@ const UpdateTutorialView = () => {
     }
     if (tutoIndex === 2) {
         document.getElementById('trigger-tutoriel').style.display = 'flex'
+    }
+    if (tutoIndex === 3) {
+        document.getElementById('tutoHotspot').style.display ='flex'
     }
     
 }
