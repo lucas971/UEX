@@ -1792,7 +1792,7 @@ const InitializeTutorial = () => {
         return
     }
     InTutorial = true
-    tutoIndex = 0
+    tutoIndex = -1
     tutorialDiv.style.display = 'flex'
     
     for (let i = 0; i < icons.length; i++) {
@@ -1807,6 +1807,7 @@ const InitializeTutorial = () => {
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
     tutorialRight.addEventListener('click', () => MoveTutorial(true))
     tutorialLeft.style.pointerEvents = 'none'
+    MoveTutorial(true)
 }
 const MoveTutorial = (right) => {
     if (right) {
@@ -1816,11 +1817,14 @@ const MoveTutorial = (right) => {
     }
     document.getElementById('tutoHotspot').style.display ='none'
     if (tutoIndex >= tutorialTexts.length) {
-        tutorialDiv.style.display = 'none'
         InTutorial = false
         for (let i = 0; i < icons.length; i++) {
+            if (icons[i].image === null) {
+                continue
+            }
             icons[i].image.style.display = 'flex'
         }
+        tutorialDiv.style.display = 'none'
         return
     }
     UpdateTutorialView()
