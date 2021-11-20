@@ -1793,6 +1793,7 @@ const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
     }
+    return
     InTutorial = true
     tutoIndex = -1
     tutorialDiv.style.display = 'flex'
