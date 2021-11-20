@@ -1841,7 +1841,7 @@ const UpdateTutorialView = () => {
     if (tutoIndex === 0) {
         tutorialLeft.style.pointerEvents = 'none'
     } 
-    if (tutoIndex === 1 || tutoIndex === 2 || tutoIndex === 3) {
+    if (tutoIndex === 1) {
         tutorialRight.style.pointerEvents = 'none'
     }
 }
