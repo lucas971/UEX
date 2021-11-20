@@ -1,6 +1,10 @@
 {
   "icons": [
     {
+      "id" : "Cube061",
+      "iconid" : "trigger-tutoriel"
+    },
+    {
       "id" : "campus_roof_gardens_E",
       "iconid" : "trigger-classroom"
     },

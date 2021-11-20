@@ -97,7 +97,11 @@
     "ADF": "https://media-exp1.licdn.com/dms/image/C4D1BAQHvNoku43jpww/company-background_10000/0/1519798657442?e=1636398000&v=beta&t=4rLhPaRKXDVcu-F1nvFEsBcvldihZTtqCtfvs3d4PyE"
   },
   "hotspotInfos": {
-    "_comment": "video 0 / lien 1 / slideshow 2 / quizz 3 / classroom 4 / room 5",
+    "_comment": "video 0 / lien 1 / slideshow 2 / quizz 3 / classroom 4 / room 5 / tuto 6",
+    "trigger-tutoriel" : {
+      "title" : "Clique ici !",
+      "type" : 6
+    },
     "trigger-classroom" : {
       "title": "Classroom",
       "type": 4

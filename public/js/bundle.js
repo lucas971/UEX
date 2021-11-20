@@ -570,6 +570,11 @@ const GenerateHtml = (d) => {
             continue;
         }
         
+        if (data.type === 6) {
+            icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
+            iconDiv.appendChild(icons[i].image)
+            continue
+        }
         //ROOMS
         icons[i].image = null
         const obj = d.scene.getObjectByName(icons[i].id)
@@ -1775,7 +1780,7 @@ const InitializeTimer = () => {
 
 const ClosePopUp = () => {
     popupWrapper.style.display = 'none'
-    //InitializeTutorial()
+    InitializeTutorial()
 }
 
 if (localStorage.date) {
@@ -1855,6 +1860,7 @@ const tutorialPos = [
 
 let tutoIndex;
 let InTutorial = false
+
 const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
@@ -1862,6 +1868,11 @@ const InitializeTutorial = () => {
     InTutorial = true
     tutoIndex = 0
     tutorialDiv.style.display = 'flex'
+    
+    for (let i = 0; i < icons.length; i++) {
+        icons[i].image.style.display = 'none'
+    }
+    document.getElementById('trigger-tuto').style.display = 'flex'
     
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
     tutorialRight.addEventListener('click', () => MoveTutorial(true))
@@ -1877,6 +1888,10 @@ const MoveTutorial = (right) => {
     if (tutoIndex > tutorialTexts.length) {
         tutorialDiv.style.display = 'none'
         InTutorial = false
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].image.style.display = 'flex'
+        }
+        document.getElementById('trigger-tuto').style.display = 'none'
         return
     }
     UpdateTutorialView()
