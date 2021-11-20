@@ -501,8 +501,11 @@ const GenerateHtml = (d) => {
                 let data = GetHotspotData(icons[i].inside[j])
 
                 console.log('collectible-' + icons[i].inside[j].toString())
-                document.getElementById('collectible-' + icons[i].inside[j].toString()).parentElement.parentElement.
-                parentElement.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
+                let collectibleDiv = document.getElementById('collectible-' + icons[i].inside[j].toString())
+                if (collectibleDiv) {
+                    collectibleDiv.parentElement.parentElement.parentElement.addEventListener("click",
+                        () => TryClickedLink(icons[i].inside[j], icons[i].id))
+                }
                 if (j === 0) {
                     icons[i].image.getElementsByClassName('multispot-label-text')[0].innerHTML = data.sponsor
                 }
