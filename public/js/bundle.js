@@ -1769,7 +1769,6 @@ const tutorialTexts = [
     'Bienvenue dans l\'Usine Extraordinaire ! La ville vient d\'ouvrir ses portes aux visiteurs.',
     'Pour vous déplacer, cliquez et tirez avec la souris. Essayez !',
     'Pour ouvrir des contenus, cliquez sur les icones sur la carte.',
-    'Quand vous trouvez un contenu, votre progression est sauvegardée dans le cube, en haut à droite !',
     'Ici, c\'est l\'Agora, un lieu de présentation en direct !',
     'Certains bâtiments sont visitables !',
     'Bonne exploration à vous !'
@@ -1778,7 +1777,6 @@ const tutorialPos = [
     false,
     false,
     [-5,1.1,-2.5,1.2],
-    false,
     [24,1.1,-1.4,1.2],
     [54,1.1,-40,0.8],
     [38,1.1,8,0.6],
@@ -1801,7 +1799,6 @@ const InitializeTutorial = () => {
         }
         icons[i].image.style.display = 'none'
     }
-    document.getElementById('trigger-tutoriel').style.display = 'flex'
     document.getElementById('trigger-tutoriel').addEventListener("click", () => document.getElementById('tutoHotspot').style.display ='flex')
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
     tutorialRight.addEventListener('click', () => MoveTutorial(true))
@@ -1814,13 +1811,12 @@ const MoveTutorial = (right) => {
         tutoIndex--
     }
     document.getElementById('tutoHotspot').style.display ='none'
-    if (tutoIndex > tutorialTexts.length) {
+    if (tutoIndex >= tutorialTexts.length) {
         tutorialDiv.style.display = 'none'
         InTutorial = false
         for (let i = 0; i < icons.length; i++) {
             icons[i].image.style.display = 'flex'
         }
-        document.getElementById('trigger-tutoriel').style.display = 'none'
         return
     }
     UpdateTutorialView()
@@ -1833,6 +1829,7 @@ const MoveTutorial = (right) => {
 }
 
 const UpdateTutorialView = () => {
+    document.getElementById('trigger-tutoriel').style.display = 'none'
     tutorialNumber.innerHTML = (tutoIndex + 1).toString()
     tutorialText.innerHTML = tutorialTexts[tutoIndex]
     
@@ -1844,6 +1841,10 @@ const UpdateTutorialView = () => {
     if (tutoIndex === 1) {
         tutorialRight.style.pointerEvents = 'none'
     }
+    if (tutoIndex === 2) {
+        document.getElementById('trigger-tutoriel').style.display = 'flex'
+    }
+    
 }
 const TutorialResume = () =>{
     tutorialLeft.style.pointerEvents = 'all'
