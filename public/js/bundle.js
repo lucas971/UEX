@@ -1768,7 +1768,8 @@ const tutorialText = document.getElementById('tutorial-text')
 const tutorialTexts = [
     'Bienvenue dans l\'Usine Extraordinaire ! La ville vient d\'ouvrir ses portes aux visiteurs.',
     'Pour vous déplacer, cliquez et tirez avec la souris. Essayez !',
-    'Pour ouvrir des contenus, cliquez sur les icones sur la carte.',
+    'Pour ouvrir des contenus, cliquez sur les icones sur la carte. Essayez !',
+    'Cliquez sur la flèche de droite pour continuer'
     'Ici, c\'est l\'Agora, un lieu de présentation en direct !',
     'Certains bâtiments sont visitables !',
     'Bonne exploration à vous !'
@@ -1777,6 +1778,7 @@ const tutorialPos = [
     false,
     false,
     [-5,1.1,-2.5,1.2],
+    false,
     [28,1.1,20,1.2],
     [54,1.1,-40,1],
     [38,1.1,8,0.6],
@@ -1799,7 +1801,10 @@ const InitializeTutorial = () => {
         }
         icons[i].image.style.display = 'none'
     }
-    document.getElementById('trigger-tutoriel').addEventListener("click", () => document.getElementById('tutoHotspot').style.display ='flex')
+    document.getElementById('trigger-tutoriel').addEventListener("click", () => {
+        document.getElementById('tutoHotspot').style.display ='flex'
+        MoveTutorial(true)
+    })
     tutorialLeft.addEventListener('click', () => MoveTutorial(false))
     tutorialRight.addEventListener('click', () => MoveTutorial(true))
     tutorialLeft.style.pointerEvents = 'none'
