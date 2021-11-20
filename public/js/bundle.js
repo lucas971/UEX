@@ -1761,78 +1761,6 @@ const getCubeMapTexture = ( path ) => {
 
 //#endregion
 
-//#region TIMER
-
-let hours, mins, msLeft, time;
-const element = document.getElementById( 'countdown' );
-const endTime = localStorage.date ? new Date(parseInt(localStorage.date)) : (+new Date) + 1000 * (60*55 + 0) + 500;
-let timerInitialized = false
-let timerFinished = false
-let timerWrapper = document.getElementById('timer-wrapper')
-let popupWrapper = document.getElementById('pop-up-wrapper')
-
-const InitializeTimer = () => {
-    timerWrapper.style.display = 'flex'
-    localStorage.date = endTime
-    timerInitialized = true
-    ClosePopUp()
-}
-
-const ClosePopUp = () => {
-    popupWrapper.style.display = 'none'
-    InitializeTutorial()
-}
-
-if (localStorage.date) {
-    timerWrapper.style.display = 'flex'
-    timerInitialized = true
-    ClosePopUp()
-}
-
-const MeetingButtonClicked = () => {
-    localStorage.removeItem("date");
-    document.getElementById('pop-up-end').style.display = 'none'
-    icons[0].image.click()
-}
-document.getElementById('yes-button').addEventListener('click', InitializeTimer)
-document.getElementById('no-button').addEventListener('click', ClosePopUp)
-document.getElementById('meeting-button').addEventListener('click', MeetingButtonClicked)
-
-const twoDigits = ( n ) =>
-{
-    return (n <= 9 ? "0" + n : n);
-}
-
-const updateTimer = ( ) =>
-{
-    if (!timerInitialized) {
-        time = new Date( msLeft );
-        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-        return
-    }
-    msLeft = endTime - (+new Date);
-    if ( msLeft < 1000 ) {
-        timerFinished = true
-        timerWrapper.style.display = 'none'
-        timerInitialized = false
-        popupWrapper.style.display = 'inherit'
-        popupWrapper.style.pointerEvents = 'none'
-        document.getElementById('pop-up-begin').style.display = 'none'
-        document.getElementById('pop-up-end').style.display = 'inherit'
-        document.getElementById('pop-up-end').style.pointerEvents = 'all'
-        return
-    } else {
-        time = new Date( msLeft );
-        hours = time.getUTCHours();
-        mins = time.getUTCMinutes();
-        element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-    }
-    setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-}
-
-
-//#endregion
-
 //region TUTORIAL
 const tutorialDiv = document.getElementById('tutorial-wrapper')
 const tutorialLeft = document.getElementById('tutorial-left')
@@ -1921,6 +1849,78 @@ const TutorialResume = () =>{
     tutorialRight.style.pointerEvents = 'all'
     UpdateTutorialView()
 }
+//#endregion
+
+//#region TIMER
+
+let hours, mins, msLeft, time;
+const element = document.getElementById( 'countdown' );
+const endTime = localStorage.date ? new Date(parseInt(localStorage.date)) : (+new Date) + 1000 * (60*55 + 0) + 500;
+let timerInitialized = false
+let timerFinished = false
+let timerWrapper = document.getElementById('timer-wrapper')
+let popupWrapper = document.getElementById('pop-up-wrapper')
+
+const InitializeTimer = () => {
+    timerWrapper.style.display = 'flex'
+    localStorage.date = endTime
+    timerInitialized = true
+    ClosePopUp()
+}
+
+const ClosePopUp = () => {
+    popupWrapper.style.display = 'none'
+    InitializeTutorial()
+}
+
+if (localStorage.date) {
+    timerWrapper.style.display = 'flex'
+    timerInitialized = true
+    ClosePopUp()
+}
+
+const MeetingButtonClicked = () => {
+    localStorage.removeItem("date");
+    document.getElementById('pop-up-end').style.display = 'none'
+    icons[0].image.click()
+}
+document.getElementById('yes-button').addEventListener('click', InitializeTimer)
+document.getElementById('no-button').addEventListener('click', ClosePopUp)
+document.getElementById('meeting-button').addEventListener('click', MeetingButtonClicked)
+
+const twoDigits = ( n ) =>
+{
+    return (n <= 9 ? "0" + n : n);
+}
+
+const updateTimer = ( ) =>
+{
+    if (!timerInitialized) {
+        time = new Date( msLeft );
+        setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        return
+    }
+    msLeft = endTime - (+new Date);
+    if ( msLeft < 1000 ) {
+        timerFinished = true
+        timerWrapper.style.display = 'none'
+        timerInitialized = false
+        popupWrapper.style.display = 'inherit'
+        popupWrapper.style.pointerEvents = 'none'
+        document.getElementById('pop-up-begin').style.display = 'none'
+        document.getElementById('pop-up-end').style.display = 'inherit'
+        document.getElementById('pop-up-end').style.pointerEvents = 'all'
+        return
+    } else {
+        time = new Date( msLeft );
+        hours = time.getUTCHours();
+        mins = time.getUTCMinutes();
+        element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+    }
+    setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+}
+
+
 //#endregion
 
 //#region Quizz
