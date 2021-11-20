@@ -1799,6 +1799,9 @@ const InitializeTutorial = () => {
     tutorialDiv.style.display = 'flex'
     
     for (let i = 0; i < icons.length; i++) {
+        if (icons[i].image === null) {
+            continue
+        }
         icons[i].image.style.display = 'none'
     }
     document.getElementById('trigger-tuto').style.display = 'flex'
