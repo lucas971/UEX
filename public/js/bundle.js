@@ -332,7 +332,7 @@ const PopulateHotspot = (hotspotInfo) => {
         div.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = hotspotInfo.video
     }
     
-    if (hotspotInfo.token) {
+    if (hotspotInfo.type === 3) {
         for (let i = 0; i < tripettos.length; i++) {
             tripettos[i].style.display = i === hotspotInfo.token ? 'inherit' : 'none'
         }

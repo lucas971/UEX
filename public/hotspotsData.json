@@ -235,7 +235,7 @@
     },
     "trigger9": {
       "type": 0,
-      "title": "Carole Chevaleau, cheffe de quart ",
+      "title": "Portrait de femme chez Elengy : Carole Chevaleau, cheffe de quart adjointe sur les terminal de Fos Cavaou",
       "sponsor": "ELENGY",
       "theme": "Inclusion",
       "paragraphText" : "Découvrez le portrait d'une de nos agent de quart, Carole Chevaleau.",
@@ -254,7 +254,7 @@
       "title": "KSB, champion industriel caché…",
       "sponsor": "KSB",
       "theme": "Usine du futur",
-      "paragraphText" : "",
+      "paragraphText" : "Des pompes et des vannes, il y en a partout ! Au pied de la Tour Eiffel, au mont Saint Michel, sur les pistes de Val d’Isère ou à proximité des plages de l’atlantique… Dès qu’il y a un fluide à transporter, retrouvez KSB !",
       "video" : "https://player.vimeo.com/video/646880381?h=f11df8be8f"
     },
     "trigger12": {
@@ -270,7 +270,7 @@
       "title": "Entrez par la grande porte",
       "sponsor": "SNEF",
       "theme": "Inclusion",
-      "paragraphText" : "",
+      "paragraphText" : "Quel que soit leur métier, les apprentis de Fouré-Lagadec affrontent la caméra avec enthousiasme pour nous conter leur parcours d’alternant et nous expliquer les avantages de ce statut au sein de l’entreprise. Le Groupe SNEF et ses filiales offrent de nombreuses opportunités d’apprendre et de s’épanouir au travail, la preuve en images.",
       "video" : "https://player.vimeo.com/video/641354706?h=17ca253908"
     },
     "trigger14": {
@@ -544,7 +544,7 @@
       "title": "Le RJH un Réacteur expérimental",
       "sponsor": "CEA",
       "theme": "Usine du futur",
-      "paragraphText" : "Tous les talents ont leur place chez nous !",
+      "paragraphText" : "Le projet de réacteur de recherche Jules Horowitz (RJH), piloté par le CEA, répond à un défi scientifique et technologique essentiel : tester le comportement de matériaux et combustibles sous irradiation, en soutien aux réacteurs nucléaires actuels et futurs. Le RJH, actuellement en construction sur le site CEA de Cadarache, constituera un outil expérimental d’irradiation unique en Europe à la disposition de l’industrie nucléaire, des organismes de recherche, ainsi que des autorités de sûreté nucléaire et leurs appuis techniques. Il assurera également la production de radioéléments pour la médecine nucléaire et l’industrie non-nucléaire.",
       "video" : "https://player.vimeo.com/video/643121589?h=be3ba96475"
     },
     "trigger48": {
@@ -595,7 +595,7 @@
       "sponsor": "Lyondellbasell",
       "theme": "Inclusion",
       "paragraphText" : "Notre monde est fait d’innovations. Arrêtez-vous un instant pour découvrir les visages des femmes et des hommes qui se cachent derrière nos usines extraordinaires. Nos équipes travaillent chaque jour pour développer et fabriquer les solutions durables d’aujourd’hui et de demain. Ces produits sont rendus possibles grâce à la richesse des métiers de la chimie.",
-      "lien" : "https://player.vimeo.com/video/645030374?h=526118bfbb"
+      "video" : "https://player.vimeo.com/video/645030374?h=526118bfbb"
     },
     "trigger52": {
       "type": 3,
@@ -679,10 +679,10 @@
     },
     "trigger59": {
       "type": 0,
-      "title": "Team Henri Fabre",
+      "title": "L’Industrie du Futur présentée par la TEAM Henri-Fabre",
       "sponsor": "Team Henri Fabre",
       "theme": "Innovation",
-      "paragraphText" : "",
+      "paragraphText" : "La TEAM Henri-Fabre a décidé de vous présenter l'industrie du futur à travers 6 volets :  • Transition énergétique et Écologique • Transition numérique • Organisation de l'entreprise • Evolution des marchés • Offre Technologique • Méthodes et process",
       "video" : "https://player.vimeo.com/video/645036827?h=7aff785aee"
     },
     "trigger60": {
