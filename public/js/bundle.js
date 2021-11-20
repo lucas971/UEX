@@ -503,7 +503,7 @@ const GenerateHtml = (d) => {
                 console.log('collectible-' + icons[i].inside[j].toString())
                 let collectibleDiv = document.getElementById('collectible-' + icons[i].inside[j].toString())
                 if (collectibleDiv) {
-                    collectibleDiv.parentElement.parentElement.parentElement.addEventListener("click",
+                    collectibleDiv.parentElement.parentElement.addEventListener("click",
                         () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 }
                 if (j === 0) {
@@ -535,7 +535,7 @@ const GenerateHtml = (d) => {
         if (data.type <= 4) {
             let collectibleLink = document.getElementById('collectible-' + icons[i].iconid.toString())
             if (collectibleLink) {
-                collectibleLink.parentElement.parentElement.parentElement.addEventListener("click", 
+                collectibleLink.parentElement.parentElement.addEventListener("click", 
                     () => TryClickedLink(icons[i].iconid, icons[i].id))
             }
                 
