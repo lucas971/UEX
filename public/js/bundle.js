@@ -499,6 +499,8 @@ const GenerateHtml = (d) => {
             for (let j = 0; j < icons[i].inside.length; j++) {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
+
+                console.log('collectible-' + icons[i].inside[j].toString())
                 document.getElementById('collectible-' + icons[i].inside[j].toString()).parentElement.parentElement.
                 parentElement.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 if (j === 0) {
@@ -528,7 +530,6 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         
         if (data.type <= 4) {
-            console.log('collectible-' + icons[i].iconid.toString())
             let collectibleLink = document.getElementById('collectible-' + icons[i].iconid.toString())
             if (collectibleLink) {
                 collectibleLink.parentElement.parentElement.parentElement.addEventListener("click", 
