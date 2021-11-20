@@ -1561,6 +1561,7 @@ let mouse
 let aiming = false
 let currentObject
 const etiquette = document.getElementById('zone-name')
+etiquette.style.pointerEvents = 'none'
 
 const CheckRoomModePossible = () => {
     return !IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
