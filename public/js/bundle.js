@@ -1771,7 +1771,7 @@ const tutorialTexts = [
     'Pour ouvrir des contenus, cliquez sur les icones sur la carte. Essayez !',
     'Cliquez sur la flèche de droite pour continuer',
     'Ici, c\'est l\'Agora, un lieu de présentation en direct !',
-    'Certains bâtiments sont visitables !',
+    'Les bâtiments en surbrillance comme celui-ci sont visitables. Vous pourrez y entrer en cliquant dessus, après la fin de ce tutoriel',
     'Bonne exploration à vous !'
 ]
 const tutorialPos = [
@@ -1780,7 +1780,7 @@ const tutorialPos = [
     [-5,1.1,-2.5,1.2],
     false,
     [28,1.1,20,1.2],
-    [54,1.1,-40,1],
+    [145,1.1,1.17,1.2],
     [38,1.1,8,0.6],
 ]
 
@@ -1899,6 +1899,7 @@ const InitializePopUp = () => {
 
 const MeetingButtonClicked = () => {
     localStorage.removeItem("date");
+    localStorage.removeItem("tutorialDone")
     document.getElementById('pop-up-end').style.display = 'none'
     icons[0].image.click()
 }
