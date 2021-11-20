@@ -1793,7 +1793,6 @@ const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
     }
-    return
     InTutorial = true
     tutoIndex = -1
     tutorialDiv.style.display = 'flex'
@@ -2016,6 +2015,15 @@ let InitQuizzes = () => {
         attachments: tripetto5.attachments,
         onSubmit: tripetto5.onSubmit
     })
+}
+
+//#endregion
+
+//#region RESET
+
+const reset = () => {
+    localStorage.clear()
+    window.location.reload(true)
 }
 
 //#endregion
