@@ -1945,6 +1945,7 @@ const updateTimer = ( ) =>
 //#region Quizz
 const tripettos = []
 let InitQuizzes = () => {
+    return
     tripettos[0] = document.getElementById("tripetto1")
     tripettos[1] = document.getElementById("tripetto2")
     tripettos[2] = document.getElementById("tripetto3")
