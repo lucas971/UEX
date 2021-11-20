@@ -529,8 +529,11 @@ const GenerateHtml = (d) => {
         
         if (data.type <= 4) {
             console.log('collectible-' + icons[i].iconid.toString())
-            document.getElementById('collectible-' + icons[i].iconid.toString()).parentElement.parentElement.
-            parentElement.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
+            let collectibleLink = document.getElementById('collectible-' + icons[i].iconid.toString())
+            if (collectibleLink) {
+                collectibleLink.parentElement.parentElement.parentElement.addEventListener("click", 
+                    () => TryClickedLink(icons[i].iconid, icons[i].id))
+            }
                 
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
