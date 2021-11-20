@@ -666,10 +666,10 @@ const TryLeaveMultispot = () => {
 //#region Progress
 
 let currentProgress = []
-const total_Inclusion = 18.0
-const total_Futur = 19.0
-const total_Innovation = 18.0
-const total_Ecologie = 10.0
+const total_Inclusion = 19.0
+const total_Futur = 23.0
+const total_Innovation = 17.0
+const total_Ecologie = 11.0
 let link_x_icon
 let link_v_icon
 
