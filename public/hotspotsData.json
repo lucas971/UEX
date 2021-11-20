@@ -719,10 +719,10 @@
     },
     "trigger64": {
       "type": 0,
-      "title": "Témoignage métier",
+      "title": "Vers l’Industrie, et au-delà",
       "sponsor": "ADF",
       "theme": "Inclusion",
-      "paragraphText" : "Vers l’Industrie, et au-delà",
+      "paragraphText" : "Les métiers de l’industrie évoluent et se digitalisent. Cela permet de construire mieux, plus vite et en préservant notre santé. Tout le monde peut participer à cette évolution, dans tous les secteurs.",
       "video" : "https://player.vimeo.com/video/645034368?h=6fdeebed5a"
     }
   }
