@@ -504,7 +504,10 @@ const GenerateHtml = (d) => {
                 let collectibleDiv = document.getElementById('collectible-' + icons[i].inside[j].toString())
                 if (collectibleDiv) {
                     collectibleDiv.parentElement.parentElement.addEventListener("click",
-                        () => TryClickedLink(icons[i].inside[j], icons[i].id))
+                        () => {
+                            TryClickedLink(icons[i].inside[j], icons[i].id)
+                            insideDiv.click()
+                        })
                 }
                 if (j === 0) {
                     icons[i].image.getElementsByClassName('multispot-label-text')[0].innerHTML = data.sponsor
@@ -535,8 +538,11 @@ const GenerateHtml = (d) => {
         if (data.type <= 4) {
             let collectibleLink = document.getElementById('collectible-' + icons[i].iconid.toString())
             if (collectibleLink) {
-                collectibleLink.parentElement.parentElement.addEventListener("click", 
-                    () => TryClickedLink(icons[i].iconid, icons[i].id))
+                collectibleLink.parentElement.parentElement.addEventListener("click",
+                    () => {
+                        TryClickedLink(icons[i].iconid, icons[i].id)
+                        icons[i].image.click()
+                    })
             }
                 
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
