@@ -429,7 +429,9 @@ const InitializeIconsPosition = (d) => {
         }
         const toScreen = toScreenPosition(obj, d)
         
-        icons[i].image.style.display = 'flex'
+        if (!InTutorial) {
+            icons[i].image.style.display = 'flex'
+        }
         icons[i].image.style.left = `${toScreen.x - iconWidth/2}px`
         icons[i].image.style.top = `${toScreen.y - iconHeight/2}px`
         positionMapping[i] = toScreen
@@ -467,7 +469,9 @@ const UpdateIconsPosition = (d) => {
         if (icons[i].image === null) {
             continue
         }
-        icons[i].image.style.display = 'flex'
+        if (!InTutorial) {
+            icons[i].image.style.display = 'flex'
+        }
         icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
         icons[i].image.style.top = `${positionMapping[i].y + offsetY - iconHeight/2}px`
         if (!checkIconVisible(positionMapping[i].x + offsetX, positionMapping[i].y + offsetY)) {
