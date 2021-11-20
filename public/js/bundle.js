@@ -499,6 +499,8 @@ const GenerateHtml = (d) => {
             for (let j = 0; j < icons[i].inside.length; j++) {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
+                document.getElementById('collectible-' + icons[i].inside[j].iconid.toString()).parentElement.parentElement.
+                parentElement.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 if (j === 0) {
                     icons[i].image.getElementsByClassName('multispot-label-text')[0].innerHTML = data.sponsor
                 }
@@ -526,6 +528,9 @@ const GenerateHtml = (d) => {
         let data = GetHotspotData(icons[i].iconid)
         
         if (data.type <= 4) {
+            document.getElementById('collectible-' + icons[i].iconid.toString()).parentElement.parentElement.
+            parentElement.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
+                
             icons[i].image.getElementsByClassName('hotspot-name')[0].innerHTML = data.title
             icons[i].image.addEventListener("click", () => TryClickedLink(icons[i].iconid, icons[i].id))
             icons[i].image.getElementsByClassName("hotspot-name-div")[0].style.pointerEvents = "none"
