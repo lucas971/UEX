@@ -1846,7 +1846,7 @@ const UpdateTutorialView = () => {
     if (tutoIndex === 1 || tutoIndex === 2) {
         tutorialRight.style.pointerEvents = 'none'
     }
-    if (tutoIndex === 2) {
+    if (tutoIndex === 3) {
         document.getElementById('trigger-tutoriel').style.display = 'flex'
     }
     
