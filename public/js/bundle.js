@@ -278,7 +278,7 @@ String.prototype.convertToRGBClamped = function(){
 }
 
 const PopulateHotspot = (hotspotInfo) => {
-    if (hotspotInfo.type > 3 || hotspotInfo.type === 2) {
+    if (hotspotInfo.type > 3) {
         return
     }
     const div = hotspotDivs[hotspotInfo.type]
