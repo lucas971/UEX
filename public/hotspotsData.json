@@ -37,7 +37,7 @@
     "UIMM" : "L’UIMM La Fabrique de l’Avenir travaille à l’avenir de l’industrie, des Français et de la France. L’UIMM La Fabrique de l’Avenir aide les entreprises industrielles à conjuguer compétitivité, emploi et développement de leurs salariés, par la voie du dialogue social et en phase avec les nouvelles attentes de la société.",
     "France Chimie" : "France Chimie Méditerranée fédère les entreprises de la Chimie. Sur plus de 500 sites, 19 000 salariés élaborent et produisent les matières indispensables à l’industrie (pharmacie, automobile, électronique, bâtiment) et les produits du quotidien (hygiène, parfumerie, agriculture).Par ses innovations, la Chimie agit pour la transition écologique. La Chimie est au cœur des défis sociétaux et environnementaux. Pour inventer les solutions durables de demain, elle recrutera d'ici 2026 près de 120 000 nouveaux talents et plus de 8 000 alternants.",
     "Sartorius" : "Le groupe Sartorius est un partenaire international de premier plan de l’industrie biopharmaceutique et du secteur de la recherche. Nous aidons scientifiques et ingénieurs en biotechnologies du monde entier à développer et fabriquer des médicaments de la première idée à la production. Pour que des médicaments bon marché soient accessibles au plus grand nombre.",
-    "ITER" : "ITER est l'un des projets les plus ambitieux au monde dans le domaine de l'énergie. Celui ci démontrer que la fusion — l'énergie du Soleil et des étoiles — peut être utilisée comme source d'énergie à grande échelle, non émettrice de CO2, pour produire de l'électricité.",
+    "ITER" : "ITER est l'un des projets les plus ambitieux au monde dans le domaine de l'énergie. Celui ci a pour objectif de démontrer que la fusion — l'énergie du Soleil et des étoiles — peut être utilisée comme source d'énergie à grande échelle, non émettrice de CO2, pour produire de l'électricité.",
     "Pôle Formation UIMM Sud" : "Le Pôle Formation est l’outil régional d’ingénierie, de conseil et de formation répondant aux besoins des industriels en déployant des moyens humains, techniques et pédagogiques adaptés aux enjeux de l’Industrie du Futur.",
     "OPCO2I" : "OPCO 2i accompagne 32 branches professionnelles dans leur stratégie de développement des compétences. Il représente plus de 60 000 entreprises et plus de 2 600 000 salariés.",
     "ELENGY" : "Elengy est un opérateur français de terminaux méthaniers. Filiale de ENGIE, est au service de tous les opérateurs qui souhaitent importer du gaz naturel liquéfié pour approvisionner les marchés français et européens. ",
@@ -218,7 +218,7 @@
     },
     "trigger7": {
       "type": 1,
-      "title": "Découverte de nos plateaux techniques orientés Industrie du Futur",
+      "title": "Entrez dans la fabrique des compétences",
       "sponsor": "Pôle Formation UIMM Sud",
       "theme": "Usine du futur",
       "paragraphText" : "Visitez virtuellement notre centre basé à Istres, ses ateliers et plateaux techniques, espaces co-working, hub, espaces détente et cafétéria. Pour profiter pleinement de la vision à 360°, faites pivoter l’image vers la gauche ou la droite.",
