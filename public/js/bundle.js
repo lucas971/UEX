@@ -1790,7 +1790,9 @@ let tutoIndex;
 let InTutorial = false
 
 const InitializeTutorial = () => {
-    return
+    document.getElementById('tutoHotspot').parentElement.style.pointerEvents = 'none'
+    document.getElementById('tutoHotspot').style.pointerEvents = 'all'
+    document.getElementById('tutoHotspot2').style.pointerEvents = 'all'
     if (localStorage.tutorialDone) {
         return
     }
@@ -1819,6 +1821,7 @@ const MoveTutorial = (right) => {
         tutoIndex--
     }
     document.getElementById('tutoHotspot').style.display ='none'
+    document.getElementById('tutoHotspot1').style.display ='none'
     if (tutoIndex >= tutorialTexts.length) {
         InTutorial = false
         for (let i = 0; i < icons.length; i++) {
