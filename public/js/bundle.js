@@ -333,6 +333,7 @@ const PopulateHotspot = (hotspotInfo) => {
     }
     
     if (hotspotInfo.type === 3) {
+        return
         for (let i = 0; i < tripettos.length; i++) {
             tripettos[i].style.display = i === hotspotInfo.token ? 'inherit' : 'none'
         }
