@@ -499,7 +499,7 @@ const GenerateHtml = (d) => {
             for (let j = 0; j < icons[i].inside.length; j++) {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
-                document.getElementById('collectible-' + icons[i].inside[j].iconid.toString()).parentElement.parentElement.
+                document.getElementById('collectible-' + icons[i].inside[j].toString()).parentElement.parentElement.
                 parentElement.addEventListener("click", () => TryClickedLink(icons[i].inside[j], icons[i].id))
                 if (j === 0) {
                     icons[i].image.getElementsByClassName('multispot-label-text')[0].innerHTML = data.sponsor
