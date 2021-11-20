@@ -1861,6 +1861,9 @@ const UpdateTutorialView = () => {
     if (tutoIndex === 3) {
         document.getElementById('tutoHotspot').style.display ='flex'
     }
+    if (tutoIndex === 5) {
+        document.getElementById('tutoHotspot2').style.display ='flex'
+    }
     
 }
 const TutorialResume = () =>{
