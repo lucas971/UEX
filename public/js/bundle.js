@@ -579,6 +579,7 @@ const TryClickedRoom = (obj) => {
     RequestHotspotTranslation(worldPos, roomMapping[obj.name])
 }
 const TryClickedLink = (iconId, objectName) => {
+    document.getElementById('close-collectibles').click()
     const obj = d.scene.getObjectByName(objectName)
     let worldPos = new d.THREE.Vector3()
     obj.getWorldPosition(worldPos)
