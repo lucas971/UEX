@@ -348,9 +348,6 @@ const PopulateHotspot = (hotspotInfo) => {
             'linear-gradient(131deg, rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0), ' +
             'rgba('+rgb[0].toString() +', ' + rgb[1].toString() + ', '+ rgb[2].toString() +', 0.72) 50%,' + newColor.toString() + '), ' +
             'url('+ hotspotInfo.background +')'
-        console.log('linear-gradient(131deg, rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0), ' +
-            'rgba('+rgb[0] +', ' + rgb[1] + ', '+ rgb[2] +', 0.72) 50%,' + newColor + '), ' +
-            'url('+ hotspotInfo.background +')')
     }
 }
 
@@ -505,7 +502,6 @@ const GenerateHtml = (d) => {
                 const insideDiv = document.getElementById(icons[i].inside[j])
                 let data = GetHotspotData(icons[i].inside[j])
 
-                console.log('collectible-' + icons[i].inside[j].toString())
                 let collectibleDiv = document.getElementById('collectible-' + icons[i].inside[j].toString())
                 if (collectibleDiv) {
                     collectibleDiv.parentElement.parentElement.addEventListener("click",
@@ -594,8 +590,6 @@ const GenerateHtml = (d) => {
     for (let i = 0; i < backButtons.length; i++) {
         backButtons[i].addEventListener("click", TryLeaveLink)
     }
-    
-    console.log(d.scene)
 }
 
 //#endregion
@@ -855,7 +849,6 @@ const InitializeCameraHandler = (threeData) => {
 const OnMouseRelease = (out) => {
     if (!out && CheckRoomModePossible()){
         if (IsRoom()) {
-            console.log(mode)
             TryClickedRoom(currentObject)
         }
         return
