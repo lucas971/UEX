@@ -1772,6 +1772,7 @@ const tutorialTexts = [
     'Cliquez sur la flèche de droite pour continuer',
     'Ici, c\'est l\'Agora, un lieu de présentation en direct !',
     'Les bâtiments en surbrillance comme celui-ci sont visitables. Vous pourrez y entrer en cliquant dessus, après la fin de ce tutoriel',
+    'Le point info vous permet d\'obtenir des informations complémentaires.',
     'Bonne exploration à vous !'
 ]
 const tutorialPos = [
@@ -1781,6 +1782,7 @@ const tutorialPos = [
     false,
     [28,1.1,20,1.2],
     [145,1.1,1.17,1.2],
+    [37.6,1.1,-4.9,1.2],
     [38,1.1,8,0.6],
 ]
 
