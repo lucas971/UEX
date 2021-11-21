@@ -1625,6 +1625,7 @@ let currentObject
 const etiquette = document.getElementById('zone-name')
 const etiquette_name = document.getElementById('zone-text')
 const menuWrapper = document.getElementById('color-div-wrapper')
+menuWrapper.style.display = 'none'
 etiquette.style.pointerEvents = 'none'
 
 const CheckRoomModePossible = () => {
