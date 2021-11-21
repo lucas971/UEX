@@ -1654,7 +1654,7 @@ const AimAtObject = (obj) => {
         return
     }
     RoomMode()
-    etiquette_name.innerHTML = etiquetteNames[obj]
+    etiquette_name.innerHTML = etiquetteNames[obj.name]
     etiquette.click()
     etiquette.style.display = 'flex'
     currentObject = obj
