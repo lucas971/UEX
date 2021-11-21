@@ -602,6 +602,9 @@ const TryClickedRoom = (obj) => {
     RequestHotspotTranslation(worldPos, roomMapping[obj.name])
 }
 const TryClickedLink = (iconId, objectName) => {
+    if (inMultiSpot) {
+        SwitchMultispot()
+    }
     document.getElementById('close-collectibles').click()
     const obj = d.scene.getObjectByName(objectName)
     let worldPos = new d.THREE.Vector3()
@@ -641,7 +644,10 @@ const SwitchMultispot = (i) => {
 }
 
 const TryClickedMultispot = (i) => {
-    currentMulti = i
+    if (inMultiSpot) {
+        SwitchMultispot()
+    }
+    currentMulti = i/*
     for (let j = 0; j < icons.length; j++) {
         if (j===i) {
             continue
@@ -649,7 +655,7 @@ const TryClickedMultispot = (i) => {
         if (icons[j].image) {
             icons[j].image.style.pointerEvents = 'none'
         }
-    }
+    }*/
 }
 
 const TryLeaveMultispot = () => {
