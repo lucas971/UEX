@@ -644,9 +644,14 @@ const TryLeaveLink = () => {
     const ele1 = document.getElementById('slidevideo1').getElementsByTagName("iframe")[0]
     const ele2 = document.getElementById('slidevideo2').getElementsByTagName("iframe")[0]
     const ele3 = document.getElementById('slidevideo3').getElementsByTagName("iframe")[0]
-    ele1.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    ele2.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    ele3.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    var iframeSrc1 = ele1.src;
+    ele1.src = iframeSrc1;
+
+    var iframeSrc2 = ele2.src;
+    ele2.src = iframeSrc2;
+
+    var iframeSrc3 = ele3.src;
+    ele3.src = iframeSrc3;
     clickedLink = false
 }
 
