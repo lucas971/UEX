@@ -641,10 +641,12 @@ const TryLeaveLink = () => {
         MoveTutorial(true)
     }
     document.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = ""
-    console.log(document.getElementById('slidevideo1').getElementsByTagName("iframe")[0])
-    document.getElementById('slidevideo1').getElementsByTagName("iframe")[0].postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    document.getElementById('slidevideo2').getElementsByTagName("iframe")[0].postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    document.getElementById('slidevideo3').getElementsByTagName("iframe")[0].postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    const ele1 = document.getElementById('slidevideo1').getElementsByTagName("iframe")[0]
+    const ele2 = document.getElementById('slidevideo2').getElementsByTagName("iframe")[0]
+    const ele3 = document.getElementById('slidevideo3').getElementsByTagName("iframe")[0]
+    ele1.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    ele2.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    ele3.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
     clickedLink = false
 }
 
