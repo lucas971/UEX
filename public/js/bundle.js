@@ -886,8 +886,8 @@ const OnMouseClick = (e) => {
 const OnMouseMove = (e) => {
     if (inMultiSpot) {
         const divRect = icons[currentMulti].image.getBoundingClientRect()
-        if (e.clientX >= divRect.left + 50 && e.clientX <= divRect.right - 50 &&
-            e.clientY >= divRect.top + 50 && e.clientY <= divRect.bottom - 50) {
+        if (e.clientX >= divRect.left - 50 && e.clientX <= divRect.right + 50 &&
+            e.clientY >= divRect.top - 50 && e.clientY <= divRect.bottom + 50) {
             // Mouse is inside element.
         } else {
             icons[currentMulti].image.click()
@@ -1808,13 +1808,14 @@ let tutoIndex;
 let InTutorial = false
 
 const InitializeTutorial = () => {
-    return
     document.getElementById('tutoHotspot').parentElement.style.pointerEvents = 'none'
     document.getElementById('tutoHotspot').style.pointerEvents = 'all'
     document.getElementById('tutoHotspot2').style.pointerEvents = 'all'
     if (localStorage.tutorialDone) {
         return
     }
+
+    return
     InTutorial = true
     tutoIndex = -1
     tutorialDiv.style.display = 'flex'
