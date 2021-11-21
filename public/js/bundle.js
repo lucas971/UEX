@@ -1920,7 +1920,7 @@ const InitializePopUp = () => {
     if (localStorage.date) {
         timerWrapper.style.display = 'flex'
         timerInitialized = true
-        ClosePopUp()
+        popupWrapper.style.display = 'none'
     }
     document.getElementById('yes-button').addEventListener('click', InitializeTimer)
     document.getElementById('no-button').addEventListener('click', ClosePopUp)
