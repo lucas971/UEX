@@ -282,7 +282,14 @@ const PopulateHotspot = (hotspotInfo) => {
     if (hotspotInfo.type > 3) {
         return
     }
-    const div = hotspotDivs[hotspotInfo.type]
+    let div
+    if (hotspotInfo.type !== 2) {
+        div = hotspotDivs[hotspotInfo.type]
+    }
+    else {
+        div = hotspotInfo[hotspotInfo.slide]
+    }
+    
     
     div.getElementsByClassName("theme-tag-div")[0].style.display = 'flex'
     div.getElementsByClassName("hotspot-descrip-div")[0].style.display='flex'
