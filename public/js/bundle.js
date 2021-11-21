@@ -230,12 +230,12 @@ const InitializeHotspots = (d) => {
     hotspotDivs[0] = document.getElementById('hotspot-content-video')
     hotspotDivs[1] = document.getElementById('hotspot-content-embed')
     hotspotDivs[3] = document.getElementById('hotspot-content-quizz')
-    hotspotDivs[31] = document.getElementById('hotspots-content-slideshow-31')
-    hotspotDivs[39] = document.getElementById('hotspots-content-slideshow-39')
-    hotspotDivs[40] = document.getElementById('hotspots-content-slideshow-40')
-    hotspotDivs[48] = document.getElementById('hotspots-content-slideshow-48')
-    hotspotDivs[56] = document.getElementById('hotspots-content-slideshow-56')
-    hotspotDivs[61] = document.getElementById('hotspots-content-slideshow-61')
+    hotspotDivs[31] = document.getElementById('hotspot-content-slideshow-31')
+    hotspotDivs[39] = document.getElementById('hotspot-content-slideshow-39')
+    hotspotDivs[40] = document.getElementById('hotspot-content-slideshow-40')
+    hotspotDivs[48] = document.getElementById('hotspot-content-slideshow-48')
+    hotspotDivs[56] = document.getElementById('hotspot-content-slideshow-56')
+    hotspotDivs[61] = document.getElementById('hotspot-content-slideshow-61')
     loadJSON("https://lucas971.github.io/UEX/public/hotspotsData.json",
         (data) => {
             hotspotInfos = data["hotspotInfos"]
