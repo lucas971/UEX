@@ -401,9 +401,9 @@ const InitializeIcons = (d) => {
             GenerateHtml(d)
             InitializeIconsPosition(d)
             document.getElementById("loading-screen-stopper").click()
-            InitializeSound()
             LoadProgress()
             InitializePopUp()
+            InitializeSound()
         },
         (error) => {
             console.error(error)
@@ -1230,10 +1230,9 @@ const generateCity = (d) => {
             InitializeCursor(threeData)
             setupEnvironment()
             d.scene.getObjectByName('Eau').material = ocean_mat
-            console.log(ocean_uniforms.waterCol)
             d.scene.getObjectByName('Eau001').material.color.setRGB(0.26,0.53,0.8)
             d.scene.getObjectByName('Eau002').material.color.setRGB(0.26,0.53,0.8)
-            console.log(d.scene.getObjectByName('Eau'))
+            console.log(d.scene.getObjectByName('Plane002'))
             animate()
         },
         (xhr) => {
