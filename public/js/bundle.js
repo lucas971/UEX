@@ -427,7 +427,7 @@ const InitializeIconsPosition = (d) => {
         }
         const toScreen = toScreenPosition(obj, d)
         
-        if (!InTutorial) {
+        if (!InTutorial && icons[i].iconid !=='trigger-tutoriel') {
             icons[i].image.style.display = 'flex'
         }
         icons[i].image.style.left = `${toScreen.x - iconWidth/2}px`
@@ -467,7 +467,7 @@ const UpdateIconsPosition = (d) => {
         if (icons[i].image === null) {
             continue
         }
-        if (!InTutorial) {
+        if (!InTutorial && icons[i].iconid !=='trigger-tutoriel') {
             icons[i].image.style.display = 'flex'
         }
         icons[i].image.style.left = `${positionMapping[i].x + offsetX - iconWidth/2}px`
