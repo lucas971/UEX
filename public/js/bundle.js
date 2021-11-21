@@ -641,9 +641,10 @@ const TryLeaveLink = () => {
         MoveTutorial(true)
     }
     document.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = ""
-    document.getElementById('slidevideo1').getElementsByTagName("iframe")[0].pause()
-    document.getElementById('slidevideo2').getElementsByTagName("iframe")[0].pause()
-    document.getElementById('slidevideo3').getElementsByTagName("iframe")[0].pause()
+    console.log(document.getElementById('slidevideo1').getElementsByTagName("iframe")[0])
+    document.getElementById('slidevideo1').getElementsByTagName("iframe")[0].stop()
+    document.getElementById('slidevideo2').getElementsByTagName("iframe")[0].stop()
+    document.getElementById('slidevideo3').getElementsByTagName("iframe")[0].stop()
     clickedLink = false
 }
 
