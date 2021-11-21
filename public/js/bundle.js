@@ -641,9 +641,9 @@ const TryLeaveLink = () => {
         MoveTutorial(true)
     }
     document.getElementsByClassName("video embed")[0].getElementsByTagName("iframe")[0].src = ""
-    document.getElementById(slidevideo1).pause()
-    document.getElementById(slidevideo2).pause()
-    document.getElementById(slidevideo3).pause()
+    document.getElementById('slidevideo1').pause()
+    document.getElementById('slidevideo2').pause()
+    document.getElementById('slidevideo3').pause()
     clickedLink = false
 }
 
