@@ -1652,7 +1652,7 @@ const AimAtObject = (obj) => {
     }
     RoomMode()
     etiquette.click()
-    
+    etiquette.style.display = 'flex'
     currentObject = obj
 
     const toScreenEtiquette = toScreenPosition(currentObject, d)
