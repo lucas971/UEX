@@ -603,7 +603,7 @@ const TryClickedRoom = (obj) => {
 }
 const TryClickedLink = (iconId, objectName) => {
     if (inMultiSpot) {
-        SwitchMultispot()
+        icons[currentMulti].image.click()
     }
     document.getElementById('close-collectibles').click()
     const obj = d.scene.getObjectByName(objectName)
@@ -644,8 +644,9 @@ const SwitchMultispot = (i) => {
 }
 
 const TryClickedMultispot = (i) => {
-    if (inMultiSpot) {
-        SwitchMultispot()
+    if (inMultiSpot && i !== currentMulti) {
+        icons[currentMulti].image.click()
+        
     }
     currentMulti = i/*
     for (let j = 0; j < icons.length; j++) {
