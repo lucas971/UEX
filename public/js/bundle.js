@@ -1849,6 +1849,7 @@ const MoveTutorial = (right) => {
             }
             icons[i].image.style.display = 'flex'
         }
+        document.getElementById('trigger-tutoriel').style.display = 'none'
         tutorialDiv.style.display = 'none'
         localStorage.tutorialDone = 'true'
         return
