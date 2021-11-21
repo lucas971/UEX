@@ -1814,8 +1814,6 @@ const InitializeTutorial = () => {
     if (localStorage.tutorialDone) {
         return
     }
-
-    return
     InTutorial = true
     tutoIndex = -1
     tutorialDiv.style.display = 'flex'
@@ -1851,6 +1849,7 @@ const MoveTutorial = (right) => {
             icons[i].image.style.display = 'flex'
         }
         tutorialDiv.style.display = 'none'
+        localStorage.tutorialDone = 'true'
         return
     }
     UpdateTutorialView()
@@ -1927,10 +1926,8 @@ const InitializePopUp = () => {
 }
 
 const MeetingButtonClicked = () => {
-    localStorage.removeItem("date");
-    localStorage.removeItem("tutorialDone")
     document.getElementById('pop-up-end').style.display = 'none'
-    icons[0].image.click()
+    document.getElementById('trigger-classroom').click()
 }
 
 
