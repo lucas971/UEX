@@ -65,6 +65,10 @@
       "iconid" : "trigger1"
     },
     {
+      "id" : "Eolienne009",
+      "iconid" : "trigger1b"
+    },
+    {
       "id" : "EDF_Building2_1",
       "iconid" : "trigger2"
     },

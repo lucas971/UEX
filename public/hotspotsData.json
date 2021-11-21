@@ -179,6 +179,14 @@
       "paragraphText" : "Bienvenue en 2035, dans un monde où l’énergie se partage, se préserve et se réinvente. Adam nous fait découvrir son quotidien et celui de son quartier. Tour à tour, il nous présente ses modes de transport ainsi que les possibilités pour se charger, il nous fait pénétrer dans son foyer où ses usages domestiques et ses outils de travail sont ultra connectés. Pour clore la visite, Adam nous montre la manière dont l’énergie est partagée entre les panneaux solaires de sa maison et l’usine installée en face de chez lui.\nEn fait, Adam nous présente son quotidien tel qu’il sera en 2035.",
       "video" : "https://player.vimeo.com/video/641377158?h=faa2f47f49"
     },
+    "trigger1b": {
+      "type": 0,
+      "title": "Le fonctionnement d’une centrale éolienne",
+      "sponsor": "EDF",
+      "theme": "Développement durable",
+      "paragraphText" : "Découvrez de façon simple et pédagogique comment fonctionne une centrale éolienne, où la production d'électricité est issue de la force du vent.",
+      "video" : "https://player.vimeo.com/video/645825921?h=b1a081841e"
+    },
     "trigger2": {
       "type": 0,
       "title": "La fabuleuse histoire de la fée électricité",
