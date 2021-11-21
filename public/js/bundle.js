@@ -886,8 +886,8 @@ const OnMouseClick = (e) => {
 const OnMouseMove = (e) => {
     if (inMultiSpot) {
         const divRect = icons[currentMulti].image.getBoundingClientRect()
-        if (e.clientX >= divRect.left - 50 && e.clientX <= divRect.right + 50 &&
-            e.clientY >= divRect.top - 50 && e.clientY <= divRect.bottom + 50) {
+        if (e.clientX >= divRect.left - 100 && e.clientX <= divRect.right + 100 &&
+            e.clientY >= divRect.top - 100 && e.clientY <= divRect.bottom + 100) {
             // Mouse is inside element.
         } else {
             icons[currentMulti].image.click()
