@@ -868,19 +868,6 @@ const OnMouseRelease = (out) => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
-    if (inMultiSpot) {
-        const elements = document.elementsFromPoint(e.clientX, e.clientY)
-        let found = false
-        for (let i = 0; i < elements.length; i++) {
-            if (elements[i].id === icons[currentMulti].image.id) {
-                found = true
-                break
-            }
-        }
-        if (!found) {
-            icons[currentMulti].image.click()
-        }
-    }
     DebugRaycast(e.clientX, e.clientY)
     e.preventDefault()
     if (InTutorial && tutoIndex !== 1) {
@@ -897,6 +884,19 @@ const OnMouseClick = (e) => {
     positionTracker = cameraHolder.position.clone()
 }
 const OnMouseMove = (e) => {
+    if (inMultiSpot) {
+        const elements = document.elementsFromPoint(e.clientX, e.clientY)
+        let found = false
+        for (let i = 0; i < elements.length; i++) {
+            if (elements[i].id === icons[currentMulti].image.id) {
+                found = true
+                break
+            }
+        }
+        if (!found) {
+            icons[currentMulti].image.click()
+        }
+    }
     e.preventDefault()
     if (CheckRoomModePossible()){
         RaycastOutline(e.clientX, e.clientY)
