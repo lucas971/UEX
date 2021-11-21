@@ -699,8 +699,8 @@ const TryLeaveMultispot = () => {
 let currentProgress = []
 const total_Inclusion = 19.0
 const total_Futur = 23.0
-const total_Innovation = 17.0
-const total_Ecologie = 11.0
+const total_Innovation = 15.0
+const total_Ecologie = 12.0
 let link_x_icon
 let link_v_icon
 
