@@ -1808,6 +1808,7 @@ let tutoIndex;
 let InTutorial = false
 
 const InitializeTutorial = () => {
+    document.getElementById('trigger-tutoriel').style.display = 'none'
     document.getElementById('tutoHotspot').parentElement.style.pointerEvents = 'none'
     document.getElementById('tutoHotspot').style.pointerEvents = 'all'
     document.getElementById('tutoHotspot2').style.pointerEvents = 'all'
