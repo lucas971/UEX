@@ -1624,11 +1624,13 @@ let aiming = false
 let currentObject
 const etiquette = document.getElementById('zone-name')
 const etiquette_name = document.getElementById('zone-text')
+const menuWrapper = document.getElementById('color-div-wrapper')
 etiquette.style.pointerEvents = 'none'
 
 const CheckRoomModePossible = () => {
     return !IsDrag() && !IsHotspot() && !InTutorial && collectible_wrapper.style.display === 'none' &&
-        (popupWrapper.style.display === 'none' || timerFinished) && !inMultiSpot;
+        (popupWrapper.style.display === 'none' || timerFinished) && !inMultiSpot &&
+        menuWrapper.style.display === 'none';
     
 }
 const DebugRaycast = (clientX, clientY) => {
