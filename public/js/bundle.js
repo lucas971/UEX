@@ -59,6 +59,7 @@ const NormalMode = () => {
     for (let i = 0; i < interactibles.length; i++) {
         interactibles[i].style.pointerEvents = "all"
     }
+    /*
     if (mode === drag && inMultiSpot) {
         for (let j = 0; j < icons.length; j++) {
             if (j===currentMulti) {
@@ -68,7 +69,7 @@ const NormalMode = () => {
                 icons[j].image.style.pointerEvents = 'none'
             }
         }
-    }
+    }*/
     mode = normal
 }
 
