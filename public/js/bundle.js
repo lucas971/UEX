@@ -1807,12 +1807,12 @@ const tutorialPos = [
 let tutoIndex;
 let InTutorial = false
 
-const InitializeTutorial = () => {
+const InitializeTutorial = (skip) => {
     document.getElementById('trigger-tutoriel').style.display = 'none'
     document.getElementById('tuto-wrapper').style.pointerEvents = 'none'
     document.getElementById('tutoHotspot').style.pointerEvents = 'all'
     document.getElementById('tutoHotspot2').style.pointerEvents = 'all'
-    if (localStorage.tutorialDone) {
+    if (localStorage.tutorialDone || skip) {
         return
     }
     InTutorial = true
@@ -1913,7 +1913,7 @@ const InitializeTimer = () => {
 
 const ClosePopUp = () => {
     popupWrapper.style.display = 'none'
-    InitializeTutorial()
+    InitializeTutorial(false)
 }
 
 const InitializePopUp = () => {
@@ -1921,6 +1921,7 @@ const InitializePopUp = () => {
         timerWrapper.style.display = 'flex'
         timerInitialized = true
         popupWrapper.style.display = 'none'
+        InitializeTutorial(true)
     }
     document.getElementById('yes-button').addEventListener('click', InitializeTimer)
     document.getElementById('no-button').addEventListener('click', ClosePopUp)
