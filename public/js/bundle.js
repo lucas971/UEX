@@ -1651,7 +1651,7 @@ const AimAtObject = (obj) => {
         return
     }
     RoomMode()
-    etiquette.style.display = 'flex'
+    etiquette.click()
     
     currentObject = obj
 
@@ -1676,7 +1676,7 @@ const StopAimAtObject = () => {
         NormalMode()
     }
 
-    etiquette.style.display = 'none'
+    etiquette.click()
     outlinePassHighlight.selectedObjects = []
     selectedObjects.push(currentObject)
     outlinePass.selectedObjects = selectedObjects
