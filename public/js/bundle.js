@@ -288,6 +288,7 @@ const PopulateHotspot = (hotspotInfo) => {
     }
     else {
         div = hotspotInfo[hotspotInfo.slide]
+        console.log(div)
     }
     
     
