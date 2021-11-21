@@ -1987,6 +1987,7 @@ const reset = () => {
     window.location.reload(true)
 }
 
+document.getElementById('reset-confirm-button').addEventListener('click', reset)
 //#endregion
 
 //#region MAIN
