@@ -1135,15 +1135,15 @@ let stats = null
 let a_light
 
 const InitGUI = (d) => {
-    const guiWrap = document.getElementById('gui')
-    stats = new Stats()
-    guiWrap.appendChild(stats.dom)
-    stats.dom.style.left = '75%'
-    
     if (!ShowDatGUI) { 
         guiWrap.style.pointerEvents = 'none'
         return 
     }
+    
+    const guiWrap = document.getElementById('gui')
+    stats = new Stats()
+    guiWrap.appendChild(stats.dom)
+    stats.dom.style.left = '75%'
     
     gui = new GUI({autoPlace: false, width: 260, hideable: true})
     let params = {
