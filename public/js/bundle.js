@@ -635,6 +635,10 @@ const TryLeaveLink = () => {
 let inMultiSpot = false
 let currentMulti = 0
 const SwitchMultispot = (i) => {
+    if (inMultiSpot && i !== currentMulti) {
+        icons[currentMulti].image.click()
+        inMultiSpot = false
+    }
     if (inMultiSpot) {
         TryLeaveMultispot()
     } else {
@@ -644,10 +648,7 @@ const SwitchMultispot = (i) => {
 }
 
 const TryClickedMultispot = (i) => {
-    if (inMultiSpot && i !== currentMulti) {
-        icons[currentMulti].image.click()
-        
-    }
+    
     currentMulti = i/*
     for (let j = 0; j < icons.length; j++) {
         if (j===i) {
