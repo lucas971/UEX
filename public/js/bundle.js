@@ -1815,6 +1815,7 @@ const InitializeTutorial = (skip) => {
     if (localStorage.tutorialDone || skip) {
         return
     }
+    document.getElementById('collectible-button').style.pointerEvents = 'none'
     InTutorial = true
     tutoIndex = -1
     tutorialDiv.style.display = 'flex'
@@ -1852,6 +1853,7 @@ const MoveTutorial = (right) => {
         document.getElementById('trigger-tutoriel').style.display = 'none'
         tutorialDiv.style.display = 'none'
         localStorage.tutorialDone = 'true'
+        document.getElementById('collectible-button').style.pointerEvents = 'all'
         return
     }
     UpdateTutorialView()
