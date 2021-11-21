@@ -850,9 +850,6 @@ const InitializeCameraHandler = (threeData) => {
     document.getElementById("zoom-minus").addEventListener("click",( () => OnWheel({deltaY:1})))
     document.addEventListener('keydown', () => console.log(d.camera.zoom + '  ' + cameraHolder.position))
     document.addEventListener('keydown', () => console.log(cameraHolder.position))
-    threeData.canvas.addEventListener("click", () => {if (inMultiSpot) {
-        icons[currentMulti].image.click()
-    }})
 }
 
 //#endregion
@@ -871,6 +868,19 @@ const OnMouseRelease = (out) => {
     currentMouseX = null
 }
 const OnMouseClick = (e) => {
+    if (inMultiSpot) {
+        const elements = document.elementsFromPoint(e.clientX, e.clientY)
+        let found = false
+        for (let i = 0; i < elements.length; i++) {
+            if (elements[i].id === icons[currentMulti].image.id) {
+                found = true
+                break
+            }
+        }
+        if (!found) {
+            icons[currentMulti].image.click()
+        }
+    }
     DebugRaycast(e.clientX, e.clientY)
     e.preventDefault()
     if (InTutorial && tutoIndex !== 1) {
