@@ -586,7 +586,7 @@ const GenerateHtml = (d) => {
         }
         AddToSelectedObjects(obj)
         roomMapping[obj.name] = document.getElementById(data.room_link)
-        etiquetteNames[obj.name] = data.etiquette
+        etiquetteNames[obj.name] = icons[i].etiquette
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
