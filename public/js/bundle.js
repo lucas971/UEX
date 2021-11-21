@@ -365,6 +365,7 @@ const iconHeight = 50
 //Array of icons struct. See ../iconsData.json for more information on the structure.
 let icons
 let roomMapping = {}
+let etiquetteNames = {}
 let positionMapping = []
 let positionRef = null
 let zoomRef
@@ -585,6 +586,7 @@ const GenerateHtml = (d) => {
         }
         AddToSelectedObjects(obj)
         roomMapping[obj.name] = document.getElementById(data.room_link)
+        etiquetteNames[obj.name] = data.etiquette
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
@@ -1602,6 +1604,7 @@ let mouse
 let aiming = false
 let currentObject
 const etiquette = document.getElementById('zone-name')
+const etiquette_name = document.getElementById('zone-text')
 etiquette.style.pointerEvents = 'none'
 
 const CheckRoomModePossible = () => {
@@ -1651,6 +1654,7 @@ const AimAtObject = (obj) => {
         return
     }
     RoomMode()
+    etiquette_name.innerHTML = etiquetteNames[obj]
     etiquette.click()
     etiquette.style.display = 'flex'
     currentObject = obj

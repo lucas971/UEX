@@ -9,54 +9,67 @@
       "iconid" : "trigger-classroom"
     },
     {
+      "etiquette" : "Nom",
       "id" : "EDF_Building1_1",
       "iconid" : "trigger-room1"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Cube1048",
       "iconid" : "trigger-room2"
     },
     {
+      "etiquette" : "Nom",
       "id" : "campus_roof_gardens_B002",
       "iconid" : "trigger-room3"
     },
     {
+      "etiquette" : "Nom",
       "id" : "France_chimie_A001",
       "iconid" : "trigger-room4"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Building_Total_1",
       "iconid" : "trigger-room5"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Building_Iter",
       "iconid" : "trigger-room6"
     },
     {
+      "etiquette" : "Nom",
       "id" : "campus_0030012",
       "iconid" : "trigger-room7"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Plane097",
       "iconid" : "trigger-room8"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Elengy",
       "iconid" : "trigger-room9"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Building_Airbus",
       "iconid" : "trigger-room10"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Building_KSB",
       "iconid" : "trigger-room11"
     },
     {
+      "etiquette" : "Nom",
       "id" : "Building_CCI",
       "iconid" : "trigger-room12"
     },
     {
+      "etiquette" : "Nom",
       "id" : "esplanade",
       "iconid" : "trigger-agora"
     },
