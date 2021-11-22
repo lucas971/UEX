@@ -1943,6 +1943,10 @@ const ClosePopUp = () => {
 }
 
 const InitializePopUp = () => {
+    if (localStorage.noTimer) {
+        ClosePopUp()
+        return
+    }
     if (localStorage.date) {
         timerWrapper.style.display = 'flex'
         timerInitialized = true
@@ -1950,7 +1954,10 @@ const InitializePopUp = () => {
         InitializeTutorial(true)
     }
     document.getElementById('yes-button').addEventListener('click', InitializeTimer)
-    document.getElementById('no-button').addEventListener('click', ClosePopUp)
+    document.getElementById('no-button').addEventListener('click', () => {
+        localStorage.noTimer = 'true'
+        ClosePopUp()
+    })
     document.getElementById('meeting-button').addEventListener('click', MeetingButtonClicked)
 }
 
