@@ -24,7 +24,7 @@
     "Lyondellbasell": "https://www.lyondellbasell.com/",
     "Naval Group" : "https://www.naval-group.com/fr",
     "Ardatem": "https://www.ardatem.fr/",
-    "Total Energies": "https://totalenergies.com/fr",
+    "TotalEnergies": "https://totalenergies.com/fr",
     "Team Henri Fabre": "https://team-henri-fabre.com/",
     "Solamat Merex": "https://www.sarpi.veolia.com/fr",
     "ONET" : "https://www.groupeonet.com/",
@@ -47,7 +47,7 @@
     "SNEF" : "Nous sommes ingénieurs/concepteurs, intégrateurs, mainteneurs et opérateurs de solutions multitechniques dans les domaines de l’énergie, de la mécanique et du numérique. Nous ne cessons de nous réinventer, promoteurs de la révolution numérique, des Objets Connectés, du Big Data, de la cybersécurité, de l’industrie 4.0, de l’Intelligence Artificielle et de la Réalité mixte.",
     "Ponticelli" : "Ponticelli fournit des services aux grands acteurs de l’énergie, de l’industrie et des infrastructures et les accompagne partout dans le monde dans la conception, la réalisation et la maintenance de leurs installations afin d’en garantir durablement la sécurité et la performance.",
     "Enedis" : "Enedis est une filiale indépendante du groupe EDF depuis 2008. Nous gérons équitablement le réseau de distribution d’électricité public sur 95 % du territoire français et réalisons toutes les interventions techniques (raccordement au réseau électrique, dépannage, relevé de compteur…), quel que soit le fournisseur d’électricité du client.",
-    "D3E" : "Située près de Troyes, et créée en 1986, D3E Electronique fait partie du groupe JLB GLOBAL TECHNOLOGY tout comme la sociétéi3map.Laa première activité de l’entreprise a été la distribution de composants électroniques et d’automatismes industriels.",
+    "D3E" : "Créée en 1982, D3E est une entreprise régionale qui réalise des travaux et installations électriques dans les secteurs industriels, tertiaires et désormais le résidentiel.\nDepuis 35 ans, notre savoir-faire s’est affirmé dans de multiples domaines sur lesquels nos équipes sont capables de vous accompagner de manière optimale.\nDes services “clés en main” qui se résument en 3 mots : écoute, réactivité et performance. Nous analysons avec vous vos besoins, puis concevons et installons la solution la plus appropriée.",
     "STMICROELECTRONICS": "STMicroelectronics est une multinationale franco -italienne, dont le siège opérationnel et exécutif est situé à Plan-les-Ouates, près de Genève en Suisse, qui conçoit, fabrique et commercialise des puces électroniques.",
     "POLYVIA": "Polyvia est l’Union des transformateurs de polymères. Née de la volonté des syndicats interrégionaux de la plasturgie, Allizé-Plasturgie, Gipco, Plasti Ouest, de la Fédération de la plasturgie et des composites et du GPIC (Groupement de la plasturgie industrielle et des composites), Polyvia représentera les industriels de la plasturgie et des composites sur l’ensemble du territoire national à partir du 31 décembre 2020.",
     "Port de Marseille Fos": "Le port de Marseille Fos place l’excellence environnementale au cœur de sa stratégie. Il mise sur une croissance économique durable par un aménagement industriel responsable et innovant favorisant l’économie circulaire.",
@@ -56,7 +56,7 @@
     "Lyondellbasell": "Nous fabriquons des produits et développons des technologies qui améliorent la qualité de vie des gens. Nos produits sont des éléments de base à la fabrication de nombreux biens et produits de la vie quotidienne tels les produits d'hygiène, les emballages pour produits frais, les matériaux de construction, les pièces automobiles, les biocarburants, certains textiles, des applications médicales et bien d'autres choses encore. Grâce à LyondellBasell, des milliers de produits sont aujourd'hui plus sains, plus résistants, plus abordables et plus fiables.",
     "Naval Group" : "Maître d’œuvre industriel, concepteur et intégrateur d’ensemble des navires armés et des systèmes de combat, Naval Group est le leader européen du naval de défense et un acteur majeur dans le monde.",
     "Ardatem": "ARDATEM étudie, installe, met en service et assure la maintenance des équipements électriques, d’instrumentation, d’automatisme et des autres équipements techniques dans les secteurs de l’énergie et du nucléaire.",
-    "Total Energies": "TotalEnergies est une compagnie multi-énergies mondiale de production et de fourniture d’énergies : pétrole et biocarburants, gaz naturel et gaz verts, renouvelables et électricité. Nos 105 000 collaborateurs s'engagent pour une énergie toujours plus abordable, plus propre, plus fiable et accessible au plus grand nombre. Présents dans plus de 130 pays, nous inscrivons le développement durable dans toutes ses dimensions au cœur de nos projets et opérations pour contribuer au bien-être des populations.",
+    "TotalEnergies": "TotalEnergies est une compagnie multi-énergies mondiale de production et de fourniture d’énergies : pétrole et biocarburants, gaz naturel et gaz verts, renouvelables et électricité. Nos 105 000 collaborateurs s'engagent pour une énergie toujours plus abordable, plus propre, plus fiable et accessible au plus grand nombre. Présents dans plus de 130 pays, nous inscrivons le développement durable dans toutes ses dimensions au cœur de nos projets et opérations pour contribuer au bien-être des populations.",
     "Team Henri Fabre": "Construire un nouveau modèle de développement industriel : plus collectif, plus collaboratif, tiré par l’innovation et les opportunités technologiques, du numérique en particulier.",
     "Solamat Merex": "Maîtriser durablement le risque déchet pour pérenniser l’activité industrielle.",
     "ONET" : "Notre mission est d’accompagner nos clients dans des environnements toujours plus sains, sûrs et fiables. Au travers de nos métiers, nous intervenons dans tous les écosystèmes clés de nos sociétés : espaces de travail, production, énergie, transport, soins, loisirs, éducation.",
@@ -79,7 +79,7 @@
     "SNEF" : "https://www.snef.fr/images/home/groupesnef_bg_home_header_desk.jpg",
     "Ponticelli" : "https://www.ponticelli.com/wp-content/uploads/2018/03/ban03.jpg",
     "Enedis" :"https://www.enedis.fr/sites/default/files/styles/image_full/public/images/2020-07/PH719_214.jpg?itok=OjxV49_U",
-    "D3E" : "https://www.d3e.fr/images/d3e_electronique.jpg",
+    "D3E" : "https://www.pladetta.com/uex-content/D3Ecouverture.jpg",
     "STMICROELECTRONICS": "https://gomet.net/wp-content/uploads/2020/07/photo_usine_stmicro.png",
     "POLYVIA": "https://www.polyvia.fr/sites/default/files/2021-10/3000-800-pole-marche_v2.jpg",
     "Port de Marseille Fos": "https://www.environnement-magazine.fr/e-docs/00/02/07/DE/port-marseille-fos-adopte-projet-strategique-faveur-transition-energetique_620x350.jpg",
@@ -88,7 +88,7 @@
     "Lyondellbasell": "https://www.lyondellbasell.com/globalassets/home-page/sliders/earnings_call_2.jpg",
     "Naval Group" : "https://www.naval-group.com/sites/default/files/styles/heading_content/public/2020-09/cinemagraph_batiments-de-surface.jpg?itok=yXO3Qw-O",
     "Ardatem": "https://www.ardatem.fr/wp-content/uploads/slider_energies.jpg",
-    "Total Energies": "https://totalenergies.com/sites/g/files/nytnzq121/files/styles/1524x433/public/images/2021-05/Bandeau_Industries_0.jpg",
+    "TotalEnergies": "https://totalenergies.com/sites/g/files/nytnzq121/files/styles/1524x433/public/images/2021-05/Bandeau_Industries_0.jpg",
     "Team Henri Fabre": "https://www.investinprovence.com/sites/default/files/technocentrehenrifabre850x280px_0.jpg",
     "Solamat Merex": "https://www.sarpi.veolia.com/sites/g/files/dvc2626/files/styles/crop_freeform/public/image/2018/01/SARPI_nos-fondamentaux_0.jpg",
     "ONET" : "https://www.groupeonet.com/wp-content/uploads/2020/12/siege-vf.jpg",
@@ -660,7 +660,7 @@
     "trigger58": {
       "type": 0,
       "title": "Découvrez notre atelier !",
-      "sponsor": "Total Energies",
+      "sponsor": "TotalEnergies",
       "theme": "Inclusion",
       "paragraphText" : "Insertion professionnelle des jeunes",
       "video" : "https://player.vimeo.com/video/645032880?h=7b5e317714"
@@ -668,7 +668,7 @@
     "trigger58b": {
       "type": 0,
       "title": "L’industreet en 30sec",
-      "sponsor": "Total Energies",
+      "sponsor": "TotalEnergies",
       "theme": "Inclusion",
       "paragraphText" : "Insertion professionnelle des jeunes",
       "video" : "https://player.vimeo.com/video/645032893?h=0b41b28c7a"
@@ -676,7 +676,7 @@
     "trigger58c": {
       "type": 0,
       "title": "Samira & Narjisse présentent le mentorat à L’Industreet",
-      "sponsor": "Total Energies",
+      "sponsor": "TotalEnergies",
       "theme": "Inclusion",
       "paragraphText" : "Insertion professionnelle des jeunes",
       "video" : "https://player.vimeo.com/video/645032887?h=d054d7aa14"
@@ -684,7 +684,7 @@
     "trigger58d": {
       "type": 0,
       "title": "Vidéo Métier : Technicien/Technicienne jumeau numérique",
-      "sponsor": "Total Energies",
+      "sponsor": "TotalEnergies",
       "theme": "Inclusion",
       "paragraphText" : "Insertion professionnelle des jeunes",
       "video" : "https://player.vimeo.com/video/645032905?h=68d328030f"
