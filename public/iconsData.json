@@ -9,66 +9,79 @@
       "iconid" : "trigger-classroom"
     },
     {
+      "sponsor" : "EDF",
       "etiquette" : "Inventer les énergies de demain",
       "id" : "EDF_Building1_1",
       "iconid" : "trigger-room1"
     },
     {
+      "sponsor" : "EDF",
       "etiquette" : "Produire les énergies de demain",
       "id" : "Cube1048",
       "iconid" : "trigger-room2"
     },
     {
+      "sponsor" : "UIMM",
       "etiquette" : "La fabrique de l'avenir",
       "id" : "campus_roof_gardens_B002",
       "iconid" : "trigger-room3"
     },
     {
+      "sponsor" : "France Chimie",
       "etiquette" : "Voyage au coeur de la matière",
       "id" : "France_chimie_A001",
       "iconid" : "trigger-room4"
     },
     {
+      "sponsor" : "Sartorius",
       "etiquette" : "Plongée au coeur des biotechnologies",
       "id" : "Building_Total_1",
       "iconid" : "trigger-room5"
     },
     {
+      "sponsor" : "ITER",
       "etiquette" : "Une énergie pour notre avenir",
       "id" : "Building_Iter",
       "iconid" : "trigger-room6"
     },
     {
+      "sponsor" : "AFPI",
       "etiquette" : "La fabrique des compétences",
       "id" : "Plane097",
       "iconid" : "trigger-room7"
     },
     {
+      "sponsor" : "OPCO2I",
       "etiquette" : "L’industrie des possibles",
       "id" : "campus_0030012",
       "iconid" : "trigger-room8"
     },
     {
+      "sponsor" : "ELENGY",
       "etiquette" : "Elengy, acteur de la transition énergétique",
       "id" : "Elengy",
       "iconid" : "trigger-room9"
     },
     {
+      "sponsor" : "Airbus Helicopters",
       "etiquette" : "L’avenir décolle avec vous",
       "id" : "Building_Airbus",
       "iconid" : "trigger-room10"
     },
     {
+      "sponsor" : "KSB",
       "etiquette" : "Les fluides sont partout, KSB aussi",
       "id" : "Building_KSB",
       "iconid" : "trigger-room11"
     },
     {
+      "sponsor" : "CCI",
       "etiquette" : "Point info",
       "id" : "Building_CCI",
       "iconid" : "trigger-room12"
     },
     {
+      "sponsor" : "",
       "etiquette" : "Agora",
       "id" : "esplanade",
       "iconid" : "trigger-agora"

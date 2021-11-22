@@ -375,6 +375,7 @@ const iconHeight = 50
 let icons
 let roomMapping = {}
 let etiquetteNames = {}
+let etiquetteSponsor = {}
 let positionMapping = []
 let positionRef = null
 let zoomRef
@@ -596,6 +597,7 @@ const GenerateHtml = (d) => {
         AddToSelectedObjects(obj)
         roomMapping[obj.name] = document.getElementById(data.room_link)
         etiquetteNames[obj.name] = icons[i].etiquette
+        etiquetteSponsor[obj.name] = icons[i].sponsor
     }
 
     let backButtons = document.getElementsByClassName("hotspot-back-button")
@@ -1624,6 +1626,7 @@ let aiming = false
 let currentObject
 const etiquette = document.getElementById('zone-name')
 const etiquette_name = document.getElementById('zone-text')
+const etiquette_sponsor = document.getElementById('ZoneMecene-text')
 const menuWrapper = document.getElementById('color-div-wrapper')
 menuWrapper.style.display = 'none'
 etiquette.style.pointerEvents = 'none'
@@ -1677,6 +1680,9 @@ const AimAtObject = (obj) => {
     }
     RoomMode()
     etiquette_name.innerHTML = etiquetteNames[obj.name]
+    if (etiquette_sponsor) {
+        etiquette_sponsor.innerHTML = etiquetteSponsor[obj.name]
+    }
     etiquette.click()
     etiquette.style.display = 'flex'
     currentObject = obj
