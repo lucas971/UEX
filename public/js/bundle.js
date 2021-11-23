@@ -578,9 +578,11 @@ const GenerateHtml = (d) => {
             } else if (data.theme === "") {
                 newColor = black
             }
-            const paths = Array.from(icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path'))
-            for (let j = 0; j < paths.length; j++) {
-                paths[j].style.fill = newColor
+            if (icons[i].image.getElementsByClassName("pictosvg_embed")[0]) {
+                const paths = Array.from(icons[i].image.getElementsByClassName("pictosvg_embed")[0].getElementsByTagName('path'))
+                for (let j = 0; j < paths.length; j++) {
+                    paths[j].style.fill = newColor
+                }
             }
             iconDiv.appendChild(icons[i].image)
             continue;
