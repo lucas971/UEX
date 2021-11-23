@@ -226,6 +226,10 @@
     {
       "id" : "Building_V2_01045",
       "iconid" : "trigger64"
+    },
+    {
+      "id" : "Cylinder028",
+      "iconid" : "trigger65"
     }
   ]
 }
