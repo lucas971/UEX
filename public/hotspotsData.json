@@ -413,11 +413,11 @@
       "theme": "Inclusion",
       "paragraphText" : "C’est ici que sont fabriquées les puces électroniques qui font partie de notre quotidien et qui contribuent de façon positive à notre vie. Vous ne les voyez pas et pourtant elles sont partout, dans nos smartphones, ordinateurs, consoles de jeux, objets connectés, robots, voitures…\nLes puces électroniques, imaginées et conçues sur le site ST de Rousset, sont fabriquées à partir de plaquettes de silicium sur lesquelles sont gravés les circuits intégrés au travers de nombreuses étapes de production. Chaque année, ce sont ainsi des milliards de puces qui sont produites dans l’usine de Rousset. Elles sont ensuite testées et envoyées dans nos unités d’assemblage avant d’être expédiées chez nos clients. \nPoussez les portes virtuelles de notre univers de haute technologie et laissez-vous guider dans cette visite immersive qui vous fera découvrir notre salle de fabrication également appelée « salle blanche », ainsi que ses coulisses ! ",
       "link": "https://www.uex2021.com/stm-visite",
-      "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/619ca64fd7a3fa148adc5c96_fond-stm.jpg"
+      "background": "https://uploads-ssl.webflow.com/6135e92e6af6232e9ad0fc25/61a0ebbbfa8f13a344d4c6a0_fondstmv2.jpg"
     },
     "trigger30": {
       "type": 3,
-      "title": "Le quizz ST : que savez-vous du monde de l'infiniment petit?",
+      "title": "Le quiz ST : que savez-vous du monde de l'infiniment petit?",
       "sponsor": "STMICROELECTRONICS",
       "theme": "Usine du futur",
       "paragraphText" : "STMICROELECTRONICS vous propose de vous tester sur l'infiniment petit !",
@@ -465,7 +465,7 @@
     },
     "trigger36": {
       "type": 3,
-      "title": "Quizz - Découverte de la plasturgie",
+      "title": "Quiz - Découverte de la plasturgie",
       "sponsor": "POLYVIA",
       "theme": "Usine du futur",
       "paragraphText" : "Testez vos connaissances sur la filière et découvrez les perspectives.",
@@ -614,7 +614,7 @@
       "title": "Cap ou pas cap de tout savoir sur le Naval de Défense ?",
       "sponsor": "Naval Group",
       "theme": "Innovation",
-      "paragraphText" : "Découvrez au travers d'un quizz le secteur du Naval de Défense et une entreprise hors du commun qui conçoit des produits extra-ordinaires.",
+      "paragraphText" : "Découvrez au travers d'un quiz le secteur du Naval de Défense et une entreprise hors du commun qui conçoit des produits extra-ordinaires.",
       "token" : 3
     },
     "trigger53": {
