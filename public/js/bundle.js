@@ -2173,6 +2173,7 @@ let popupWrapper = document.getElementById('pop-up-wrapper')
 const main = () => {
     /*updateTimer()*/
     popupWrapper.style.display = 'none'
+    popupWrapper.style.pointerEvents = 'none'
     setup()
     InitializeTrophees()
     LoadCityScene()
