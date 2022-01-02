@@ -2171,6 +2171,8 @@ const Resize = () => {
 
 const main = () => {
     /*updateTimer()*/
+    let popupWrapper = document.getElementById('pop-up-wrapper')
+    popupWrapper.style.display = 'none'
     setup()
     InitializeTrophees()
     LoadCityScene()
