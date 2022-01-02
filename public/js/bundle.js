@@ -407,7 +407,10 @@ const InitializeIcons = (d) => {
             document.getElementById("loading-screen-stopper").click()
             LoadProgress()
             //InitializePopUp()
+
+            InitializeTutorial(false)
             InitializeSound()
+            
         },
         (error) => {
             console.error(error)
@@ -2174,7 +2177,6 @@ const main = () => {
     /*updateTimer()*/
     popupWrapper.style.display = 'none'
     popupWrapper.style.pointerEvents = 'none'
-    InitializeTutorial(false)
     setup()
     InitializeTrophees()
     LoadCityScene()
