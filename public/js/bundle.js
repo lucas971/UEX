@@ -2174,6 +2174,7 @@ const main = () => {
     /*updateTimer()*/
     popupWrapper.style.display = 'none'
     popupWrapper.style.pointerEvents = 'none'
+    InitializeTutorial(false)
     setup()
     InitializeTrophees()
     LoadCityScene()
