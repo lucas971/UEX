@@ -2169,9 +2169,9 @@ const Resize = () => {
 
 //#endregion
 
+let popupWrapper = document.getElementById('pop-up-wrapper')
 const main = () => {
     /*updateTimer()*/
-    let popupWrapper = document.getElementById('pop-up-wrapper')
     popupWrapper.style.display = 'none'
     setup()
     InitializeTrophees()
