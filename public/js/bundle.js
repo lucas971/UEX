@@ -406,7 +406,7 @@ const InitializeIcons = (d) => {
             InitializeIconsPosition(d)
             document.getElementById("loading-screen-stopper").click()
             LoadProgress()
-            InitializePopUp()
+            //InitializePopUp()
             InitializeSound()
         },
         (error) => {
@@ -1932,7 +1932,7 @@ const TutorialResume = () =>{
 //#endregion
 
 //#region TIMER
-
+/*
 let hours, mins, msLeft, time;
 const element = document.getElementById( 'countdown' );
 const endTime = localStorage.date ? new Date(parseInt(localStorage.date)) : (+new Date) + 1000 * (60*55 + 0) + 500;
@@ -2010,7 +2010,7 @@ const updateTimer = ( ) =>
     setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
 }
 
-
+*/
 //#endregion
 
 //#region Quizz
@@ -2170,7 +2170,7 @@ const Resize = () => {
 //#endregion
 
 const main = () => {
-    updateTimer()
+    /*updateTimer()*/
     setup()
     InitializeTrophees()
     LoadCityScene()
